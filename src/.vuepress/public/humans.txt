@@ -1,0 +1,14 @@
+Humans.txt é uma iniciativa legal da (humanstxt.org), para falar um pouco sobre quem está por trás dos aplicativos construídos na web, a equipe envolvida e a pilha usada. 
+Lembrando, somos seres humanos e não máquinas.
+Muito obrigado a você que acessou o Impresssd - Comentários para suas fotos pessoais e profissionais
+
+/* SITE */
+  Site name: HTML Moderno
+  Site URL: https://htmlmoderno.com.br
+  Last update: 2020/09/02
+  Language: Portuguese
+  Twitter: @htmlmoderno
+  Facebook: https://fb.com/htmlmoderno
+  Contact: htmlmoderno@gmail.com
+  Built with: Vue.js (Vuepress), HTML5, CSS3 (Tailwind CSS), Técnicas de acessibilidade, PWA e SEO
+  Software: Visual Code Studio (VS Code)

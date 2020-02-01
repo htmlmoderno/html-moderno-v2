@@ -1,0 +1,15 @@
+@import 'settings/index';
+@import 'globals/index';
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	@apply bg-gray-100 text-gray-800 tracking-wide antialiased;
+	font-family: $font-stack;
+}
+
+h1, h2, h3 {
+	@apply leading-none;
+}

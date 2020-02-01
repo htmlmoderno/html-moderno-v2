@@ -1,0 +1,27 @@
+{
+  "name": "vuepress-theme-neumorphic-blog",
+  "version": "1.0.0",
+  "description": "Vuepress blog theme using neumorphic ui",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ktquez/vuepress-theme-neumorphic-blog.git"
+  },
+  "keywords": [
+    "neumorphic",
+    "neumorphism",
+    "blog",
+    "vue.js",
+    "vuepress",
+    "theme",
+    "ktquez"
+  ],
+  "author": "Alan Ktquez <ktquez@gmail.com> (https://ktquez.dev/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ktquez/vuepress-theme-neumorphic-blog/issues"
+  },
+  "homepage": "https://github.com/ktquez/vuepress-theme-neumorphic-blog#readme"
+}

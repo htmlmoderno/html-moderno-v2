@@ -1,0 +1,10 @@
+/**
+ *  Globals Index
+ */
+
+@import "transitions";
+@import "a11y";
+
+.container {
+	transition: max-width .5s;
+}
