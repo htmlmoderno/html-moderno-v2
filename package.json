@@ -33,6 +33,7 @@
   "homepage": "https://github.com/ktquez/html-moderno-v2#readme",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.0.5",
+    "@goy/vuepress-plugin-svg-icons": "^4.0.0",
     "@vue/eslint-config-standard": "^5.1.0",
     "@vue/test-utils": "^1.0.0-beta.31",
     "@vuepress/plugin-back-to-top": "^1.2.0",
@@ -42,9 +43,11 @@
     "@vuepress/plugin-register-components": "^1.2.0",
     "@vuepress/plugin-search": "^1.2.0",
     "autoprefixer": "^9.7.4",
+    "babel-eslint": "^10.0.3",
     "babel-jest": "^25.1.0",
     "dotenv": "^8.2.0",
     "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-import-helpers": "^1.0.2",
     "eslint-plugin-vue": "^6.1.2",
     "eslint-plugin-vue-a11y": "0.0.31",
@@ -56,10 +59,12 @@
     "sass-loader": "^8.0.2",
     "vue-jest": "^3.0.5",
     "vuepress": "^1.2.0",
-    "vuepress-plugin-canonical": "^1.0.0"
+    "vuepress-plugin-canonical": "^1.0.0",
+    "vuepress-plugin-minimal-analytics": "^0.1.4"
   },
   "dependencies": {
     "@vue/composition-api": "^0.3.4",
-    "tailwindcss": "^1.1.4"
+    "tailwindcss": "^1.1.4",
+    "webfontloader": "^1.6.28"
   }
 }
