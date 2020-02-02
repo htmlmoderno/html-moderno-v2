@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container mx-auto">
     <the-heading />
     <component :is="layout" />
     <the-footer />
@@ -24,11 +24,7 @@ export default {
 
     onMounted(() => {
       import('webfontloader').then(module => {
-        module.default.load({
-          google: {
-            families: [process.env.VUE_APP_GOOGLE_FONT]
-          }
-        })
+        module.default.load({ ...root.$themeConfig.webFontLoader })
       })
     })
 
