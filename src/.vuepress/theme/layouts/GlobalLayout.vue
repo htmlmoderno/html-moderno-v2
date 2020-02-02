@@ -1,23 +1,39 @@
 <template>
   <div>
-    <header>
-      <h1>Header</h1>
-    </header>
+    <the-heading />
     <component :is="layout" />
-    <footer>
-      <h1>Footer</h1>
-    </footer>
+    <the-footer />
   </div>
 </template>
 
 <script>
+import { computed, onMounted } from '@vue/composition-api'
+
 export default {
   name: 'GlobalLayout',
-  computed: {
-    layout () {
-      if (!this.$page.path) return 'NotFound'
-      if (this.$frontmatter.layout) return this.$frontmatter.layout
+  components: {
+    TheHeading: () => import('@theme/components/layout/TheHeading'),
+    TheFooter: () => import('@theme/components/layout/TheFooter')
+  },
+  setup (_, { root }) {
+    const layout = computed(() => {
+      if (!root.$page.path) return 'NotFound'
+      if (root.$frontmatter.layout) return root.$frontmatter.layout
       return 'Layout'
+    })
+
+    onMounted(() => {
+      import('webfontloader').then(module => {
+        module.default.load({
+          google: {
+            families: [process.env.VUE_APP_GOOGLE_FONT]
+          }
+        })
+      })
+    })
+
+    return {
+      layout
     }
   }
 }

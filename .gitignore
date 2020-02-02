@@ -1,6 +1,7 @@
 node_modules
 *.log
 .env
+dist
 
 # Firebase
 .firebaserc
