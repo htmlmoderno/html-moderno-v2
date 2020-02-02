@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "node_modules/.bin/vuepress dev src",
-    "build": "node_modules/.bin/vuepress build src",
+    "build": "npm run svgo && node_modules/.bin/vuepress build src",
+    "svgo": "vuepress svgo src",
     "deploy": "npm run build && firebase deploy",
     "staging": "surge src/.vuepress/dist/ htmlmoderno.surge.sh"
   },
