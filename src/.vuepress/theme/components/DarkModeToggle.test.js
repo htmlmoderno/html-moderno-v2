@@ -1,13 +1,13 @@
-import DarkTheme from '@/components/DarkTheme.vue'
+import DarkModeToggle from '@/components/DarkModeToggle.vue'
 import { shallowMount } from '@vue/test-utils'
 
-const wrapper = shallowMount(DarkTheme, {
+const wrapper = shallowMount(DarkModeToggle, {
   stubs: {
     'vp-icon': '<span></span>'
   }
 })
 
-describe('DarkTheme', () => {
+describe('DarkModeToggle', () => {
   test('is a Vue instance', () => {
     expect(wrapper.isVueInstance()).toBeTruthy()
   })
