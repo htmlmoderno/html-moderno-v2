@@ -4,7 +4,16 @@
 
 @import "transitions";
 @import "a11y";
+@import "dark";
 
 .container {
 	transition: max-width .5s;
+}
+
+.n9m {
+	@apply rounded bg-light shadow-n9m-light;
+
+	&--inner {
+		@apply shadow-inner-n9m-light;
+	}
 }

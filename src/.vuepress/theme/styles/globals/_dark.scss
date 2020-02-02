@@ -1,0 +1,13 @@
+.mode-dark {
+	body {
+		@apply bg-dark text-textDark;
+	}
+
+  .n9m {
+    @apply bg-dark shadow-n9m-dark;
+
+    &--inner {
+      @apply shadow-inner-n9m-dark;
+    }
+  }
+}
