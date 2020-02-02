@@ -1,7 +1,6 @@
 module.exports = {
   root: true,
   env: {
-    node: true,
     browser: true
   },
   extends: [
@@ -10,7 +9,6 @@ module.exports = {
     'plugin:vue-a11y/base'
   ],
   plugins: [
-    'vue',
     'vue-a11y',
     'eslint-plugin-import-helpers'
   ],
@@ -23,7 +21,6 @@ module.exports = {
         newlinesBetween: 'always',
         groups: [
           '/^vue/',
-          '/^@\//',
           'module',
           ['parent', 'sibling', 'index']
         ],

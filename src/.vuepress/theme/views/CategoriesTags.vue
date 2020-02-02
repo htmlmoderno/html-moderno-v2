@@ -5,9 +5,9 @@
 </template>
 
 <script>
-  export default {
-    name: 'CategoryTags'
-  }
+export default {
+  name: 'CategoryTags'
+}
 </script>
 
 <style lang="scss"></style>

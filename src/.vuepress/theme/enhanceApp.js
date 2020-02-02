@@ -1,5 +1,4 @@
 import VueCompositionApi from '@vue/composition-api'
-
 import WebFontLoader from 'webfontloader'
 
 export default ({ Vue, isServer }) => {

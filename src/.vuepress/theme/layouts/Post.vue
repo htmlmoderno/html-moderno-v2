@@ -5,9 +5,9 @@
 </template>
 
 <script>
-  export default {
-    name: 'PostLayout'
-  }
+export default {
+  name: 'PostLayout'
+}
 </script>
 
 <style lang="scss"></style>

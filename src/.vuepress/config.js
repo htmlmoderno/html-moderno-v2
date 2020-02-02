@@ -1,6 +1,7 @@
 require('dotenv').config()
 const path = require('path')
 const webpack = require('webpack')
+
 const head = require('./config/head')
 const plugins = require('./config/plugins')
 const postcss = require('./config/postcss')
