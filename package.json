@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node_modules/.bin/vuepress dev src",
     "build": "npm run svgo && node_modules/.bin/vuepress build src",
-    "svgo": "vuepress svgo src",
+    "svgo": "svgo --disable=convertColors -f ./src/.vuepress/theme/assets/sprite/svg",
     "deploy": "npm run build && firebase deploy",
     "staging": "surge src/.vuepress/dist/ htmlmoderno.surge.sh"
   },
