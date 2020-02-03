@@ -1,21 +1,18 @@
 <template>
   <button
-    class="p-2"
-    @click="toggleDarkMode"
+    class="p-2" @click="toggleDarkMode"
     @keydown.enter="toggleDarkMode"
   >
     <vp-icon
-      v-if="darkMode"
+      v-show="darkMode"
       title="Mudar para o modo light"
-      class="text-textDark fill-current"
       width="20px"
       height="20px"
       name="day"
     />
     <vp-icon
-      v-else
+      v-show="!darkMode"
       title="Mudar para o modo dark"
-      class="text-textLight fill-current"
       width="20px"
       height="20px"
       name="night"
