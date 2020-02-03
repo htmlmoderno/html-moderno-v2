@@ -4,8 +4,8 @@ module.exports = {
       colors: {
         textLight: '#573E48',
         textDark: '#E3E3E3',
-        light: '#f9f9f9',
-        dark: '#454857',
+        light: '#F4F1EC',
+        dark: '#343743',
         accent: '#FF5733',
         semantic: '#F4F1DF',
         a11y: '#FFB7A8',
