@@ -6,10 +6,15 @@ html {
 }
 
 body {
-	@apply bg-light text-textLight tracking-wide antialiased;
+	@apply bg-light p-0 text-textLight tracking-wide antialiased;
 	font-family: $font-stack;
+	transition: all .5s;
+
+	@screen md {
+		@apply p-4;
+	}
 }
 
 h1, h2, h3 {
-	@apply leading-none;
+	@apply leading-none tracking-wider;
 }

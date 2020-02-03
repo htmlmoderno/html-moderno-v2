@@ -1,7 +1,14 @@
 .mode-dark {
 	body {
-		@apply bg-dark text-textDark;
+		@apply bg-dark text-textDark;    
 	}
+
+  #app {
+    transition: box-shadow .2s;
+    @screen sm {
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, .1), inset -5px -5px 8px rgba(255, 255, 255, .05);
+    }
+  }
 
   .n9m {
     @apply bg-dark shadow-n9m-dark;
