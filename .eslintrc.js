@@ -1,6 +1,7 @@
 module.exports = {
   root: true,
   env: {
+    node: true,
     browser: true
   },
   extends: [
@@ -9,12 +10,11 @@ module.exports = {
     'plugin:vue-a11y/base'
   ],
   plugins: [
+    'vue',
     'vue-a11y',
     'eslint-plugin-import-helpers'
   ],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'import-helpers/order-imports': [
       'warn',
       {
@@ -28,9 +28,9 @@ module.exports = {
       }
     ]
   },
+  parser: "vue-eslint-parser",
   parserOptions: {
     parser: 'babel-eslint',
-    ecmaVersion: 8,
-    sourceType: 'module'
+    sourceType: "module"
   }
 }
