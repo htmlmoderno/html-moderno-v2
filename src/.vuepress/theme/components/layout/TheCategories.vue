@@ -54,18 +54,22 @@ export default {
 
 <style lang="scss">
 .categories-list {
-  margin-left: -40px;
+  margin-left: -50px;
 }
 .categories-list > li {
   @apply w-full;
-  padding-left: 40px;
-  padding-top: 40px;
+  padding-left: 50px;
+  padding-top: 50px;
 
   @screen sm {
     @apply w-1/3;
   }
 
   @screen lg {
+    @apply w-1/4;
+  }
+
+  @screen xl {
     @apply w-1/5;
   }
 }

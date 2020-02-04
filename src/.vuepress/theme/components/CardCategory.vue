@@ -7,7 +7,7 @@
     <div class="w-full text-center">
       <span :class="`bg-${iconName} inline-block mt-8 mb-4 rounded-lg h-3 w-1/3`" />
     </div>
-    <span class="font-medium">
+    <span class="text-center font-medium">
       {{ label }}
     </span>
   </div>
