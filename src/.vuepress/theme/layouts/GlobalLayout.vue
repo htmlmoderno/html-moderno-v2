@@ -1,7 +1,10 @@
 <template>
-  <div class="container mx-auto">
+  <div class="global-layout container mx-auto">
     <the-heading />
     <component :is="layout" />
+    <div class="mt-16 py-16 sm:mt-32 sm:py-32 border-t border-solid border-light-200">
+      <newsletter />    
+    </div>
     <the-footer />
   </div>
 </template>
@@ -13,6 +16,7 @@ export default {
   name: 'GlobalLayout',
   components: {
     TheHeading: () => import('@theme/components/layout/TheHeading'),
+    Newsletter: () => import('@theme/components/Newsletter'),
     TheFooter: () => import('@theme/components/layout/TheFooter')
   },
   setup (_, { root }) {
