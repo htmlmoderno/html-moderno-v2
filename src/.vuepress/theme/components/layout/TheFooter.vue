@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer flex flex-wrap py-12 px-0 lg:w-3/4 lg:mx-auto">
+  <footer class="footer flex flex-wrap pb-12 px-0 lg:w-3/4 lg:mx-auto">
     <div class="w-full md:w-3/5 md:pr-16">
       <div>
         <p>
@@ -11,13 +11,13 @@
       </div>
       <a
         href="mailto:contato@htmlmoderno.com.br"
-        class="text-3xl md:text-4xl tracking-wider leading-none"
+        class="text-3xl md:text-4xl leading-none font-medium"
       >
-        Entrar em contato<span class="text-accent font-medium">.</span>
+        Entrar em contato<span class="text-accent">.</span>
       </a>
     </div>
     <div class="w-full mt-6 md:mt-0 md:w-2/5">
-      <nav class="md:pl-4">
+      <nav class="md:pl-12 lg:pl-24">
         <ul>
           <li
             v-for="(item, index) in nav"
