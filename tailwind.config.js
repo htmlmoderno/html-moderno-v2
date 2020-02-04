@@ -25,6 +25,22 @@ module.exports = {
         'inner-n9m-light': 'inset 4px 4px 10px rgba(180, 167, 145, .3), inset -4px -4px 4px #fff',
         'n9m-dark': '-4px -4px 8px #454857, 9px 9px 16px #272931',
         'inner-n9m-dark': 'inset 7px 5px 18px #2A2C36, inset -4px -4px 4px #4d5060'
+      },
+      margin: {
+        '-px': '-1px',
+        '-1': '-0.25rem',
+        '-2': '-0.5rem',
+        '-3': '-0.75rem',
+        '-4': '-1rem',
+        '-5': '-1.25rem',
+        '-6': '-1.5rem',
+        '-8': '-2rem',
+        '-10': '-2.5rem',
+        '-12': '-3rem',
+        '-16': '-4rem',
+        '-20': '-5rem',
+        '-24': '-6rem',
+        '-32': '-8rem'
       }
     }
   },
