@@ -63,6 +63,7 @@
     "sass-loader": "^8.0.2",
     "tailwindcss-dark-mode": "^1.1.2",
     "vue-jest": "^3.0.5",
+    "vue-masonry-css": "^1.0.3",
     "vuepress": "^1.2.0",
     "vuepress-plugin-canonical": "^1.0.0",
     "vuepress-plugin-minimal-analytics": "^0.1.4"
