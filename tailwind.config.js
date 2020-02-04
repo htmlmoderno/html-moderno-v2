@@ -5,6 +5,7 @@ module.exports = {
         textLight: '#573E48',
         textDark: '#E3E3E3',
         light: '#F4F1EC',
+        'light-200': '#ECE6DC',
         dark: '#343743',
         accent: '#FF5733',
         semantic: '#F4F1DF',
@@ -20,9 +21,9 @@ module.exports = {
       },
       boxShadow: {
         'n9m-light': '-9px -9px 16px #fff, 9px 9px 16px #E0E0E0',
-        'inner-n9m-light': 'inset 7px 5px 18px #E0E0E0, inset -10px -12px 15px #fff',
-        'n9m-dark': '-9px -9px 16px #4f5364, 9px 9px 16px #3b3d4a',
-        'inner-n9m-dark': 'inset 7px 5px 18px #393D4E, inset -10px -12px 15px #4d5060'
+        'inner-n9m-light': 'inset 4px 4px 10px rgba(180, 167, 145, .3), inset -4px -4px 4px #fff',
+        'n9m-dark': '-4px -4px 8px #454857, 9px 9px 16px #272931',
+        'inner-n9m-dark': 'inset 7px 5px 18px #2A2C36, inset -4px -4px 4px #4d5060'
       }
     }
   },
