@@ -40,8 +40,9 @@
 	@apply relative;
 
 	&:before {
-		@apply absolute bottom-0 bg-accent;
+		@apply absolute left-0 bg-accent;
 		content: '';
+		bottom: -6px;
 		width: 40%;
 		height: 2px;
 		transition: width .3s ease-in-out;

@@ -2,14 +2,15 @@
   <div class="home">
     <section>
       <the-presentation
-        firstTitle="HTML Moderno"
-        secondTitle="Tornando o desenvolvimento web ainda mais interessante" />
+        first-title="HTML Moderno"
+        second-title="Tornando o desenvolvimento web ainda mais interessante"
+      />
       <div class="w-full sm:w-1/4 text-center mt-20">
-        <span class="home__scroll-line relative inline-block bg-textLight dark:bg-textDark"></span>
+        <span class="home__scroll-line relative inline-block bg-textLight dark:bg-textDark" />
       </div>
     </section>
     <main>
-      AQUI VAI OS CARDS    
+      AQUI VAI OS CARDS
     </main>
   </div>
 </template>

@@ -3,7 +3,7 @@
     <div class="w-full md:w-3/5 md:pr-16">
       <div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque porttitor lectus, malesuada consectetur metus hendrerit sed. Sed egestas commodo urna, ut feugiat felis malesuada vitae. Sed sollicitudin pulvinar sapien, vitae ullamcorper augue bibendum vitae. 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque porttitor lectus, malesuada consectetur metus hendrerit sed. Sed egestas commodo urna, ut feugiat felis malesuada vitae. Sed sollicitudin pulvinar sapien, vitae ullamcorper augue bibendum vitae.
         </p>
         <p class="my-6">
           Nullam scelerisque id orci non blandit. Sed ex ligula, aliquet at ante sit amet, imperdiet venenatis leo. Cras vulputate arcu in sapien semper sollicitudin.
@@ -27,7 +27,7 @@
             <a
               :href="item.link"
               :title="item.label"
-              class="base-link text-lg py-3 px-4 pl-0"
+              class="base-link py-3 px-4 pl-0 pb-0 text-lg"
             >
               {{ item.label }}
             </a>

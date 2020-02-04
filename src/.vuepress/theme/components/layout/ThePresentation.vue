@@ -12,22 +12,23 @@
     </div>
     <div class="presentation__pattern patterns absolute z-10 top-0 right-0 w-3/4">
       <vp-icon
-        v-show="iconName"
+        v-if="iconName"
         :name="iconName"
-        class="presentation__icon absolute float-right hidden sm:block" />
+        class="presentation__icon absolute float-right hidden sm:block"
+      />
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'ThePresentation',
-    props: {
-      firstTitle: String,
-      secondTitle: String,
-      iconName: String
-    }
+export default {
+  name: 'ThePresentation',
+  props: {
+    firstTitle: String,
+    secondTitle: String,
+    iconName: String
   }
+}
 </script>
 
 <style lang="scss">
