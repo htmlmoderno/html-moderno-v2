@@ -10,7 +10,20 @@
       </div>
     </section>
     <main>
-      AQUI VAI OS CARDS
+      <section class="w-full py-16 sm:py-20">
+        <masonry
+          :cols="{default: 3, 1024: 2, 600: 1}"
+          :gutter="50"
+        >
+          <div
+            v-for="(item, index) in Array(11)"
+            :key="index"
+            class="mb-12"
+          >
+            <card :data="dataCard" />
+          </div>
+        </masonry>
+      </section>
     </main>
   </div>
 </template>
@@ -19,7 +32,23 @@
 export default {
   name: 'Home',
   components: {
+    Card: () => import('@theme/components/Card'),
     ThePresentation: () => import('@theme/components/layout/ThePresentation')
+  },
+  setup () {
+    const dataCard = {
+      title: 'Boas práticas de segurança para campos de senha',
+      image: {
+        src: '/images/posts/2020/02/fake-image.png',
+        alt: 'descrição'
+      },
+      timeago: '1 mês atrás',
+      to: '/post/alguma-coisa'
+    }
+
+    return {
+      dataCard
+    }
   }
 }
 </script>
