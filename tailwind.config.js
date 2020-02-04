@@ -2,22 +2,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        textLight: '#573E48',
-        textDark: '#E3E3E3',
-        light: '#F4F1EC',
-        'light-200': '#ECE6DC',
-        dark: '#343743',
         accent: '#FF5733',
-        semantic: '#F4F1DF',
-        a11y: '#FFB7A8',
-        html: '#FF886E',
-        seo: '#D3EBEC',
-        ux: '#ebebeb',
-        webComponents: '#F2C549',
-        webPerformance: '#88DCCD',
-        webApi: '#FFD8B9',
-        security: '#C7CEEA',
-        videos: '#D84848 '
+        dark: '#343743',
+        textDark: '#E3E3E3',
+        'dark-200': '#4e5161',
+        light: '#F4F1EC',
+        textLight: '#573E48',
+        'light-200': '#ECE6DC',
+        'cat-semantic': '#D9D2A4',
+        'cat-a11y': '#FFB7A8',
+        'cat-html5': '#FF886E',
+        'cat-seo': '#D3EBEC',
+        'cat-ux': '#DBDBDB',
+        'cat-web-components': '#F2C549',
+        'cat-web-performance': '#88DCCD',
+        'cat-web-apis': '#FFD8B9',
+        'cat-security': '#C7CEEA',
+        'cat-videos': '#D84848 '
       },
       boxShadow: {
         'n9m-light': '-9px -9px 16px #fff, 9px 9px 16px #E0E0E0',
@@ -30,7 +31,8 @@ module.exports = {
   variants: {
     backgroundColor: ['dark', 'dark-hover', 'dark-group-hover'],
     borderColor: ['dark', 'dark-focus', 'dark-focus-within'],
-    textColor: ['dark', 'dark-hover', 'dark-active']
+    textColor: ['dark', 'dark-hover', 'dark-active'],
+    boxShadow: ['dark', 'dark-hover', 'dark-active', 'hover']
   },
   plugins: [
     require('tailwindcss-dark-mode')()
