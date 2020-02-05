@@ -9,8 +9,8 @@
         <span class="home__scroll-line relative inline-block bg-textLight dark:bg-textDark" />
       </div>
     </section>
-    <main>
-      <section class="w-full py-16 sm:py-20">
+    <main id="main">
+      <section class="w-full layout-section">
         <masonry
           :cols="{default: 3, 1024: 2, 600: 1}"
           :gutter="50"
@@ -18,11 +18,23 @@
           <div
             v-for="(item, index) in Array(11)"
             :key="index"
-            class="mb-12"
+            class="mt-12"
           >
             <card :data="dataCard" />
           </div>
         </masonry>
+        <div class="flex w-full justify-center mt-20">
+          <router-link
+            to="/posts"
+            class="n9m n9m--active py-3 px-6 flex items-center"
+          >
+            <span class="text-xs mr-3">VER MAIS ARTIGOS</span>
+            <vp-icon
+              name="arrow-thin"
+              class="text-accent text-3xl"
+            />
+          </router-link>
+        </div>
       </section>
     </main>
   </div>
