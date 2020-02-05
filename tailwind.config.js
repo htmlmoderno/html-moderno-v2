@@ -9,15 +9,15 @@ module.exports = {
         light: '#F4F1EC',
         textLight: '#573E48',
         'light-200': '#ECE6DC',
-        'cat-semantic': '#D9D2A4',
-        'cat-a11y': '#FFB7A8',
+        'cat-semantica': '#D9D2A4',
+        'cat-acessibilidade': '#FFB7A8',
         'cat-html5': '#FF886E',
         'cat-seo': '#D3EBEC',
         'cat-ux': '#DBDBDB',
         'cat-web-components': '#F2C549',
         'cat-web-performance': '#88DCCD',
         'cat-web-apis': '#FFD8B9',
-        'cat-security': '#C7CEEA',
+        'cat-seguranca': '#C7CEEA',
         'cat-videos': '#D84848 '
       },
       boxShadow: {
