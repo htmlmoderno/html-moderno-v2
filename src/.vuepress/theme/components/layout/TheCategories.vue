@@ -26,7 +26,7 @@
           <router-link :to="category.to">
             <card-category
               :label="category.label"
-              :icon-name="category.icon"
+              :icon-name="`cat-${category.slug}`"
             />
           </router-link>
         </li>

@@ -1,56 +1,57 @@
 ---
-title: HTML Moderno | Categorias e Tags
 view: CategoriesTags
 lang: pt-BR
 
+title: HTML Moderno | Categorias e Tags
+
 categories:
-  - icon: cat-semantic
+  - slug: semantica
     label: Semântica
     to: /categorias/sematica
     tags:
       - Estrutura de títulos
-  - icon: cat-a11y
+  - slug: acessibilidade
     label: Acessibilidade
     to: /categorias/acessibilidade
     tags:
       - Aria
       - WCAG
-  - icon: cat-html5
+  - slug: html5
     label: HTML 5
     to: /categorias/html5
     tags:
       - doctype
-  - icon: cat-seo
+  - slug: seo
     label: SEO
     to: /categorias/seo
     tags:
       - GSC
-  - icon: cat-ux
+  - slug: ux
     label: UX
     to: /categorias/ux
     tags:
       - Princípios de design
-  - icon: cat-web-components
+  - slug: web-components
     label: Web Components
     to: /categorias/web-components
     tags:
       - Shadow DOM
-  - icon: cat-web-performance
+  - slug: web-performance
     label: Web Perfromance
     to: /categorias/web-performance
     tags:
       - Lighthouse
-  - icon: cat-web-apis
+  - slug: web-apis
     label: Web APIs
     to: /categorias/web-apis
     tags:
       - Fetch API
-  - icon: cat-security
+  - slug: seguranca
     label: Segurança
     to: /categorias/seguranca
     tags:
       - rel noopener
-  - icon: cat-videos
+  - slug: videos
     label: Vídeo & Cursos
     to: /categorias/videos
     tags:
