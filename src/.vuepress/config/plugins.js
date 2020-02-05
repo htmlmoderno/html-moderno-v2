@@ -47,6 +47,11 @@ module.exports = [
     }
   ],
   [
+    'mailchimp', {
+      endpoint: process.env.MAILCHIMP_ENDPOINT
+    }
+  ],
+  [
     'sitemap', {
       hostname: 'https://htmlmoderno.com.br'
     }
