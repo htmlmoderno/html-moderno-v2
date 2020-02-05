@@ -36,27 +36,37 @@ module.exports = [
     // https://github.com/vuepressjs/vuepress-plugin-blog
     '@vuepress/blog',
     {
+      sitemap: {
+        hostname: 'https://htmlmoderno.com.br'
+      },
+      globalPagination: {
+        lengthPerPage: 12
+      },
       directories: [
         {
           id: 'post',
-          dirname: '_posts',
+          title: 'HTML Moderno - Tornando o desenvolvimento web ainda mais interessante',
+          layout: 'Posts',
+          dirname: 'posts',
           path: '/',
           itemPermalink: '/:slug',
           pagination: {
-            lengthPerPage: 12
+            layout: 'Posts',
+            getPaginationPageTitle (pageNumber) {
+              return `HTML Moderno - Tornando o desenvolvimento web ainda mais interessante - página ${pageNumber}`
+            }
           }
         }
-      ]
+      ],
+      comment: {
+        service: 'disqus',
+        shortname: 'htmlmoderno'
+      }
     }
   ],
   [
     'mailchimp', {
       endpoint: process.env.MAILCHIMP_ENDPOINT
-    }
-  ],
-  [
-    'sitemap', {
-      hostname: 'https://htmlmoderno.com.br'
     }
   ]
 ]

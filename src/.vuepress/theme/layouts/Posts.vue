@@ -16,24 +16,19 @@
           :gutter="50"
         >
           <div
-            v-for="(item, index) in Array(11)"
-            :key="index"
+            v-for="page in $pagination.pages"
+            :key="page.key"
             class="mt-12"
           >
-            <card :data="dataCard" />
+            <card :page="page" />
           </div>
         </masonry>
-        <div class="flex w-full justify-center mt-20">
-          <router-link
-            to="/posts"
-            class="n9m n9m--active py-3 px-6 flex items-center"
-          >
-            <span class="text-xs mr-3">VER MAIS ARTIGOS</span>
-            <vp-icon
-              name="arrow-thin"
-              class="text-accent text-3xl"
-            />
-          </router-link>
+        <div
+          v-show="$pagination.hasNext"
+          class="flex w-full justify-center mt-20"
+        >
+          <!-- TODO: Estilizar paginação  -->
+          <pagination />
         </div>
       </section>
     </main>
@@ -42,25 +37,11 @@
 
 <script>
 export default {
-  name: 'Home',
+  name: 'Posts',
   components: {
     Card: () => import('@theme/components/Card'),
+    Pagination: () => import('@vuepress/plugin-blog/lib/client/components/Pagination'),
     ThePresentation: () => import('@theme/components/layout/ThePresentation')
-  },
-  setup () {
-    const dataCard = {
-      title: 'Boas práticas de segurança para campos de senha',
-      image: {
-        src: '/images/posts/2020/02/fake-image.png',
-        alt: 'descrição'
-      },
-      timeago: '1 mês atrás',
-      to: '/post/alguma-coisa'
-    }
-
-    return {
-      dataCard
-    }
   }
 }
 </script>

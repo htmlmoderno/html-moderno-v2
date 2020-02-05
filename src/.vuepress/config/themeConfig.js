@@ -1,4 +1,5 @@
 module.exports = {
+  smoothScroll: true,
   webFontLoader: {
     google: {
       families: [process.env.GOOGLE_FONT]

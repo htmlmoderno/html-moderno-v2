@@ -2,7 +2,7 @@
 view: CategoriesTags
 lang: pt-BR
 
-title: HTML Moderno | Categorias e Tags
+title: Categorias e Tags
 
 categories:
   - slug: semantica
