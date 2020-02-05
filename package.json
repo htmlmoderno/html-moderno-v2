@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "node_modules/.bin/vuepress dev src",
-    "build": "npm run svgo && node_modules/.bin/vuepress build src",
+    "build": "npm run svgo && npm run buildProject",
+    "buildProject": "node_modules/.bin/vuepress build src",
     "svgo": "svgo --disable=convertColors -f ./src/.vuepress/theme/assets/sprite/svg",
     "deploy": "npm run build && firebase deploy",
     "staging": "surge src/.vuepress/dist/ htmlmoderno.surge.sh"
@@ -66,7 +67,8 @@
     "vue-masonry-css": "^1.0.3",
     "vuepress": "^1.2.0",
     "vuepress-plugin-canonical": "^1.0.0",
-    "vuepress-plugin-minimal-analytics": "^0.1.4"
+    "vuepress-plugin-minimal-analytics": "^0.1.4",
+    "vuepress-plugin-sitemap": "^2.3.1"
   },
   "dependencies": {
     "@vue/composition-api": "^0.3.4",

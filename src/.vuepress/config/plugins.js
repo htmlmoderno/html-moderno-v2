@@ -35,5 +35,10 @@ module.exports = [
   [
     // https://github.com/vuepressjs/vuepress-plugin-blog
     '@vuepress/blog'
+  ],
+  [
+    'sitemap', {
+      hostname: 'https://htmlmoderno.com.br'
+    }
   ]
 ]
