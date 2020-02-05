@@ -16,6 +16,10 @@
     &--inner {
       @apply shadow-inner-n9m-dark;
     }
+
+    &--active:active {
+      @apply shadow-inner-n9m-dark;
+    }
   }
 
   .patterns {

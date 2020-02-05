@@ -2,12 +2,18 @@
   <div class="global-layout container mx-auto">
     <the-heading />
     <component :is="layout" />
-    <div class="py-16 sm:py-20 border-t border-solid border-light-200 dark:border-dark-200">
+    <section
+      id="categories"
+      class="layout-section layout-section--border-top dark:border-dark-200"
+    >
       <the-categories />
-    </div>
-    <div class="py-16 mb-10 sm:py-20 border-t border-solid border-light-200 dark:border-dark-200">
+    </section>
+    <section
+      id="newsletter"
+      class="layout-section layout-section--border-top dark:border-dark-200"
+    >
       <newsletter />
-    </div>
+    </section>
     <the-footer />
   </div>
 </template>

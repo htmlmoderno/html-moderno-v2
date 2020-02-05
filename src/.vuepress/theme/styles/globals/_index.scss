@@ -23,11 +23,30 @@
 	transition: max-width .5s;
 }
 
+.layout-section {
+	@apply py-16;
+
+	&--border-top {
+		@apply border-t border-solid border-light-200;
+	}
+
+	@screen sm {
+		@apply py-24;
+	}
+}
+
 .n9m {
 	@apply rounded bg-light shadow-n9m-light;
 
 	&--inner {
 		@apply shadow-inner-n9m-light;
+	}
+
+	&--active:active {
+		@apply shadow-inner-n9m-light;
+		> * {
+			transform: scale(0.95, 0.95);
+		}
 	}
 }
 

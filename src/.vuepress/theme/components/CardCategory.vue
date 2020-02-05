@@ -1,5 +1,5 @@
 <template>
-  <div class="card-category n9m dark-hover:shadow-inner-n9m-dark hover:shadow-inner-n9m-light flex flex-wrap px-4 py-10 justify-center items-center">
+  <div class="card-category n9m n9m--active flex flex-wrap px-4 py-10 justify-center items-center">
     <vp-icon
       :name="iconName"
       class="card-category__icon"
