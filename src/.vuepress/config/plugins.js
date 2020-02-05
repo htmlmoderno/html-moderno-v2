@@ -39,9 +39,12 @@ module.exports = [
       directories: [
         {
           id: 'post',
-          dirname: 'posts',
+          dirname: '_posts',
           path: '/',
-          itemPermalink: '/:slug'
+          itemPermalink: '/:slug',
+          pagination: {
+            lengthPerPage: 12
+          }
         }
       ]
     }
