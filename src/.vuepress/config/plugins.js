@@ -34,7 +34,17 @@ module.exports = [
   ],
   [
     // https://github.com/vuepressjs/vuepress-plugin-blog
-    '@vuepress/blog'
+    '@vuepress/blog',
+    {
+      directories: [
+        {
+          id: 'post',
+          dirname: 'posts',
+          path: '/',
+          itemPermalink: '/:slug'
+        }
+      ]
+    }
   ],
   [
     'sitemap', {
