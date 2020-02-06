@@ -29,7 +29,7 @@
         {{ data.title }}
       </router-link>
     </h2>
-    <div class="pt-4 border-t border-solid border-light-200 dark:dark-200">
+    <div class="pt-4 border-t border-solid border-light-200 dark:dark-200 dark:border-dark-200">
       <span class="text-xs">{{ data.timeago }}</span>
     </div>
   </div>
