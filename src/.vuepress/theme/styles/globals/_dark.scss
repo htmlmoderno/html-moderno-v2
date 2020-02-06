@@ -25,4 +25,37 @@
   .patterns {
     background-image: linear-gradient(90deg, transparent 40%, #4E5161 30%);
   }
+
+  .posts {
+    .pagination {
+      > li {
+        > a {
+          @apply bg-dark text-textDark shadow-n9m-dark;
+
+          &:hover {
+            @apply bg-dark;
+          }
+
+          &:active {
+            @apply shadow-inner-n9m-dark;
+          }
+        }
+
+        &.active {
+          > a {
+            @apply text-accent bg-dark shadow-inner-n9m-dark;
+          }
+        }
+
+        &.disabled {
+          > a {
+            @apply text-dark-200 #{!important};
+          }
+          > a:active, > a:focus {
+            @apply bg-dark shadow-n9m-dark;
+          }
+        }
+      }
+    }
+  }
 }

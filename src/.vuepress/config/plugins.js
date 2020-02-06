@@ -52,6 +52,8 @@ module.exports = [
           itemPermalink: '/:slug',
           pagination: {
             layout: 'Posts',
+            prevText: '<<',
+            nextText: '>>',
             getPaginationPageTitle (pageNumber) {
               return `HTML Moderno - Tornando o desenvolvimento web ainda mais interessante - página ${pageNumber}`
             }
