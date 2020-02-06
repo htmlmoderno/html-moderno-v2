@@ -2,7 +2,6 @@
   <div class="card n9m p-4">
     <div
       class="w-full rounded-lg overflow-hidden"
-      :class="{ 'mb-6': !data.image.src }"
     >
       <router-link
         :to="data.to"
@@ -14,24 +13,38 @@
           :src="data.image.src"
           :alt="data.image.alt"
         >
-
-        <span
-          v-else
-          :class="`w-full h-3 block rounded-full bg-cat-${data.category}`"
-        />
       </router-link>
     </div>
-    <h2 class="mt-3 mb-10 text-lg font-medium tracking-normal leading-snug">
+    <div
+      class="flex items-center text-xs mt-1 mb-2"
+      :class="{ 'mt-3': data.image.src }"
+    >
+      <span> JAN 31 </span>
+      <span :class="`mx-2 text-cat-${data.category}`">//</span>
+      <router-link
+        to="/autor/ktquez"
+        class="underline"
+      >
+        Alan Ktquez
+      </router-link>
+    </div>
+    <h2 class="mb-10 text-lg font-medium tracking-normal leading-tight">
       <router-link
         :to="data.to"
-        class="hover:text-accent"
+        class="hover:text-accent hover:underline"
       >
         {{ data.title }}
       </router-link>
     </h2>
-    <div class="pt-4 border-t border-solid border-light-200 dark:dark-200 dark:border-dark-200">
-      <span class="text-xs">{{ data.timeago }}</span>
-    </div>
+    <router-link
+      :to="data.to"
+      class="card-bottom-link flex items-center justify-between dark:dark-200"
+    >
+      <div :class="`card-bottom-link__arrow relative border-cat-${data.category} bg-cat-${data.category}`" />
+      <div class="card-bottom-link__text text-xs text-right">
+        VER POST
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -48,6 +61,7 @@ export default {
     const slug = page.path.replace(/\//g, '')
     const data = {
       title: page.title,
+      excerpt: page.frontmatter.excerpt,
       category: '',
       image: {},
       timeago: '1 mês atrás',
@@ -72,4 +86,25 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.card-bottom-link {
+  &__arrow {
+    width: calc(100% - 75px);
+    height: 2px;
+
+    &:after {
+      @apply absolute block;
+      content: '';
+      top: 50%;
+      transform: translateY(-50%);
+      right: -10px;
+      border: 5px solid transparent;
+      border-left-color: inherit;
+    }
+  }
+
+  &__text {
+    width: 75px;
+  }
+}
+</style>
