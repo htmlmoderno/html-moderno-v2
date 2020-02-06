@@ -10,7 +10,7 @@
         </p>
       </div>
       <a
-        href="mailto:contato@htmlmoderno.com.br"
+        :href="`mailto:${$themeConfig.footer.mailto}`"
         class="text-3xl md:text-4xl leading-none font-medium"
       >
         Entrar em contato<span class="text-accent">.</span>
@@ -20,7 +20,7 @@
       <nav class="md:pl-12 lg:pl-24">
         <ul>
           <li
-            v-for="(item, index) in nav"
+            v-for="(item, index) in $themeConfig.footer.links"
             :key="`nav-footer-${index}`"
             class="mb-6"
           >
@@ -35,43 +35,16 @@
         </ul>
       </nav>
     </div>
-    <div class="w-full text-sm mt-20">
-      &copy; HTML Moderno
-    </div>
+    <div
+      class="w-full text-sm mt-20"
+      v-html="$themeConfig.footer.copy"
+    />
   </footer>
 </template>
 
 <script>
 export default {
-  name: 'TheFooter',
-  setup () {
-    const nav = [
-      {
-        label: 'Facebook page',
-        link: 'https://www.facebook.com/htmlmoderno/?ref=website'
-      },
-      {
-        label: 'Facebook group',
-        link: 'https://www.facebook.com/groups/htmlmoderno/?ref=website'
-      },
-      {
-        label: 'Twitter',
-        link: 'https://twitter.com/htmlmoderno/?ref=website'
-      },
-      {
-        label: 'Instagram',
-        link: 'https://www.instagram.com/htmlmoderno/?ref=website'
-      },
-      {
-        label: 'Presskit',
-        link: 'https://github.com/htmlmoderno/press-kit'
-      }
-    ]
-
-    return {
-      nav
-    }
-  }
+  name: 'TheFooter'
 }
 </script>
 
