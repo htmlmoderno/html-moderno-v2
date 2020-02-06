@@ -91,6 +91,7 @@ export default {
   &__arrow {
     width: calc(100% - 75px);
     height: 2px;
+    transition: width .3s;
 
     &:after {
       @apply absolute block;
@@ -105,6 +106,18 @@ export default {
 
   &__text {
     width: 75px;
+    transition: all .3s;
+  }
+
+  &:hover {
+    .card-bottom-link__arrow {
+      width: calc(100% - 90px);
+    }
+
+    .card-bottom-link__text {
+      @apply pr-2;
+      width: 90px;
+    }
   }
 }
 </style>
