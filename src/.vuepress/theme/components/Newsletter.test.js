@@ -1,5 +1,6 @@
-import Newsletter from '@/components/Newsletter.vue'
 import { shallowMount } from '@vue/test-utils'
+import Newsletter from './Newsletter.vue'
+
 
 const wrapper = shallowMount(Newsletter)
 

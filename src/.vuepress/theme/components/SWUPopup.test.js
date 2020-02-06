@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
+import SWUPopup from './SWUPopup.vue'
 
-import SWUPopup from './SWUPopup'
 
 const wrapper = shallowMount(SWUPopup)
 

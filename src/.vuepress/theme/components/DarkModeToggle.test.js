@@ -1,5 +1,6 @@
-import DarkModeToggle from '@/components/DarkModeToggle.vue'
 import { shallowMount } from '@vue/test-utils'
+import DarkModeToggle from './DarkModeToggle.vue'
+
 
 const wrapper = shallowMount(DarkModeToggle, {
   stubs: {
