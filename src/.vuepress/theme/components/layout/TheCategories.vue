@@ -10,7 +10,7 @@
           class="text-xl mt-1"
         />
         <router-link
-          to="/"
+          to="/categorias"
           class="base-link ml-3 text-xs font-medium"
         >
           VER TODAS AS TAGS

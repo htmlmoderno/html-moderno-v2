@@ -10,7 +10,7 @@
         </span>
       </h1>
     </div>
-    <div class="presentation__pattern patterns absolute z-10 top-0 right-0 w-3/4">
+    <div class="presentation__pattern patterns absolute z-10 top-0 right-0 w-4/5">
       <vp-icon
         v-if="iconName"
         :name="iconName"

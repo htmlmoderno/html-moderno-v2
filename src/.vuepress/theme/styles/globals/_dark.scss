@@ -58,4 +58,14 @@
       }
     }
   }
+
+  .tags-page-list {
+    &__link {
+      @apply text-textDark shadow-n9m-dark bg-dark;
+
+      &:active {
+        @apply shadow-inner-n9m-dark;
+      }
+    }
+  }
 }

@@ -19,12 +19,13 @@
 </template>
 
 <script>
+import TheHeading from '@theme/components/layout/TheHeading'
 import { computed, onMounted } from '@vue/composition-api'
 
 export default {
   name: 'GlobalLayout',
   components: {
-    TheHeading: () => import('@theme/components/layout/TheHeading'),
+    TheHeading,
     TheCategories: () => import('@theme/components/layout/TheCategories'),
     Newsletter: () => import('@theme/components/Newsletter'),
     TheFooter: () => import('@theme/components/layout/TheFooter')
