@@ -62,7 +62,7 @@ categories:
       - label: rel noopener
         slug: rel-noopener
   - slug: videos
-    label: Vídeo & Cursos
+    label: Vídeos
     to: /categorias/videos
     tags:
       - label: Séries em vídeo
