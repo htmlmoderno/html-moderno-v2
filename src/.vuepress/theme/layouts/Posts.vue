@@ -1,15 +1,15 @@
 <template>
   <div class="posts">
     <section>
-      <the-presentation
+      <presentation
         first-title="HTML Moderno"
         second-title="Tornando o desenvolvimento web ainda mais interessante"
       />
-      <div class="w-full sm:w-1/4 text-center mt-20">
-        <span class="posts__scroll-line relative inline-block bg-textLight dark:bg-textDark" />
-      </div>
     </section>
-    <main id="main">
+    <main
+      id="main"
+      class="mt-24"
+    >
       <section class="w-full layout-section">
         <masonry
           :cols="{default: 3, 1024: 2, 600: 1}"
@@ -35,31 +35,20 @@
 </template>
 
 <script>
+import Presentation from '@theme/components/Presentation'
+
 export default {
   name: 'Posts',
   components: {
+    Presentation,
     Card: () => import('@theme/components/Card'),
-    Pagination: () => import('@vuepress/plugin-blog/lib/client/components/Pagination'),
-    ThePresentation: () => import('@theme/components/layout/ThePresentation')
+    Pagination: () => import('@vuepress/plugin-blog/lib/client/components/Pagination')
   }
 }
 </script>
 
 <style lang="scss">
 .posts {
-  &__scroll-line {
-    width: 2px;
-    height: 30vh;
-    &:before {
-      @apply absolute bottom-0 rounded-full;
-      background-color: inherit;
-      content: '';
-      width: 6px;
-      height: 6px;
-      left: -2px;
-    }
-  }
-
   .pagination {
     @apply flex flex-wrap;
 
