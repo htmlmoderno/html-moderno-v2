@@ -19,7 +19,7 @@
       class="flex items-center text-xs mt-1 mb-2"
       :class="{ 'mt-3': data.image.src }"
     >
-      <span> JAN 31 </span>
+      <span class="uppercase"> {{ data.date }} </span>
       <span :class="`mx-2 text-cat-${data.category}`">//</span>
       <router-link
         to="/autor/ktquez"
@@ -64,7 +64,7 @@ export default {
       excerpt: page.frontmatter.excerpt,
       category: '',
       image: {},
-      timeago: '1 mês atrás',
+      date: new Intl.DateTimeFormat('default', { month: 'short', day: 'numeric' }).format(new Date(page.frontmatter.date)),
       to: page.path
     }
 
