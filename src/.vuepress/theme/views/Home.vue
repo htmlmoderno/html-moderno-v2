@@ -5,12 +5,10 @@
         first-title="HTML Moderno"
         second-title="Tornando o desenvolvimento web ainda mais interessante"
       />
-      <div class="w-full sm:w-1/4 text-center mt-20">
-        <span class="home__scroll-line relative inline-block bg-textLight dark:bg-textDark" />
-      </div>
     </section>
     <main
       id="main"
+      class="mt-24"
     >
       <section class="w-full layout-section">
         <masonry
@@ -59,9 +57,9 @@ export default {
     const getPosts = computed(() => root.$site.pages.filter(page => page.id === 'post'))
     const getHomePosts = computed(() => {
       if (getPosts.value.length) {
-        return getPosts.value.slice(0, root.$themeConfig.pagination.perPage).sort((a, b) => {
+        return getPosts.value.sort((a, b) => {
           return new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
-        })
+        }).slice(0, root.$themeConfig.pagination.perPage)
       }
       return []
     })
@@ -74,19 +72,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.home {
-  &__scroll-line {
-    width: 2px;
-    height: 30vh;
-    &:before {
-      @apply absolute bottom-0 rounded-full;
-      background-color: inherit;
-      content: '';
-      width: 6px;
-      height: 6px;
-      left: -2px;
-    }
-  }
-}
-</style>
+<style lang="scss"></style>
