@@ -10,11 +10,11 @@
       id="main"
       class="mt-24"
     >
-      <div class="w-full layout-section">
+      <div class="w-full layout-section pb-0">
         <section
           v-for="category in $frontmatter.categories"
           :key="category.slug"
-          class="flex flex-wrap py-24 border-b border-solid border-light-200 dark:border-dark-200"
+          class="tags-page-section"
         >
           <div class="w-full sm:w-1/3 lg:w-1/4 pr-0 sm:pr-12 lg:pr-20">
             <router-link :to="category.to">
@@ -28,7 +28,7 @@
             <div class="text-2xl font-medium">
               <span>Tags<span class="text-accent">.</span></span>
             </div>
-            <ul class="tags-page-list mt-10">
+            <ul class="tags-page-list">
               <li
                 v-for="tag in category.tags"
                 :key="tag.slug"
@@ -63,8 +63,21 @@ export default {
 </script>
 
 <style lang="scss">
+.tags-page-section {
+  @apply flex flex-wrap py-24;
+  &:not(:last-child) {
+    @apply border-b border-solid border-light-200;
+  }
+}
+
+.mode-dark {
+  .tags-page-section:not(:last-child) {
+    @apply border-dark-200;
+  }
+}
+
 .tags-page-list {
-  @apply flex flex-wrap;
+  @apply flex flex-wrap mt-10;
 
   &__item {
     @apply mr-6;
