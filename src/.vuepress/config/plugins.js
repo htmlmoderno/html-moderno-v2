@@ -43,7 +43,7 @@ module.exports = [
           keys: ['tag', 'tags'],
           title: 'Tag - HTML Moderno',
           scopeLayout: 'Posts',
-          path: '/tag/',
+          path: '/tags/',
           pagination: {
             layout: 'Posts',
             getPaginationPageTitle (pageNumber, key) {
@@ -55,8 +55,12 @@ module.exports = [
           id: 'author',
           keys: ['author'],
           title: '- HTML Moderno',
+          layout: 'Layout',
+          frontmatter: {
+            view: 'Author'
+          },
           scopeLayout: 'Posts',
-          path: '/autor/',
+          path: '/autores/',
           pagination: {
             layout: 'Posts',
             getPaginationPageTitle (pageNumber, key) {

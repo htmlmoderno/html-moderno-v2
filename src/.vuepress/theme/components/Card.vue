@@ -22,7 +22,7 @@
       <span class="uppercase"> {{ data.date }} </span>
       <span :class="`mx-2 text-cat-${data.category}`">//</span>
       <router-link
-        :to="`/autor/${encodeURI(data.author.toLowerCase())}`"
+        :to="`/autores/${encodeURI(data.author.toLowerCase())}`"
         class="underline"
       >
         {{ data.author }}

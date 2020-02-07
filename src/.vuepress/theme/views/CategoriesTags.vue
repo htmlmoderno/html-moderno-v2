@@ -31,14 +31,14 @@
             <ul class="tags-page-list">
               <li
                 v-for="tag in category.tags"
-                :key="tag.slug"
+                :key="tag"
                 class="tags-page-list__item"
               >
                 <router-link
                   class="tags-page-list__link"
-                  :to="`/tag/${tag.slug}`"
+                  :to="`/tags/${encodeURI(tag)}`"
                 >
-                  {{ tag.label }}
+                  {{ tag }}
                 </router-link>
               </li>
             </ul>
@@ -54,7 +54,7 @@ import CardCategory from '@theme/components/CardCategory'
 import Presentation from '@theme/components/Presentation'
 
 export default {
-  name: 'CategoryTags',
+  name: 'CategoriesTags',
   components: {
     Presentation,
     CardCategory

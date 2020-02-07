@@ -8,63 +8,50 @@ categories:
   - slug: semantica
     label: Semântica
     to: /categorias/sematica
-    tags:
-      - label: Estrutura de títulos
-        slug: estrutura-de-titulos
+    tags: [Estrutura de títulos]
+
   - slug: acessibilidade
     label: Acessibilidade
     to: /categorias/acessibilidade
-    tags:
-      - label: Aria
-        slug: aria
-      - label: WCAG
-        slug: wcag
+    tags: [Aria, WCAG]
+
   - slug: html5
     label: HTML 5
     to: /categorias/html5
-    tags:
-      - label: Doctype
-        slug: doctype
+    tags: [Doctype, HTML5]
+
   - slug: seo
     label: SEO
     to: /categorias/seo
-    tags:
-      - label: GSC
-        slug: gsc
+    tags: [GSC]
+
   - slug: ux
     label: UX
     to: /categorias/ux
-    tags:
-      - label: Princípios de design
-        slug: principios-de-design
+    tags: [Princípios de design]
+
   - slug: web-components
     label: Web Components
     to: /categorias/web-components
-    tags:
-      - label: Shadow DOM
-        slug: shadow-dom
+    tags: [Shadow DOM]
+    
   - slug: web-performance
     label: Web Perfromance
     to: /categorias/web-performance
-    tags:
-      - label: Lighthouse
-        slug: lighthouse
+    tags: [Lighthouse]
+    
   - slug: web-apis
     label: Web APIs
     to: /categorias/web-apis
-    tags:
-      - label: Fetch API
-        slug: fetch-api
+    tags: [Fetch API]
+    
   - slug: seguranca
     label: Segurança
     to: /categorias/seguranca
-    tags:
-      - label: rel noopener
-        slug: rel-noopener
+    tags: [rel noopener]
+
   - slug: videos
     label: Vídeos
     to: /categorias/videos
-    tags:
-      - label: Séries em vídeo
-        slug: series-em-video
+    tags: [Séries em vídeo]
 ---
