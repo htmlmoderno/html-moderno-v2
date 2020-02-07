@@ -9,6 +9,7 @@
           {{ secondTitle }}<span class="text-accent">.</span>
         </span>
       </h1>
+      <span class="block text-xs">{{ page }}</span>
     </div>
     <div class="presentation__pattern patterns absolute z-10 top-0 right-0 w-4/5">
       <vp-icon
@@ -26,7 +27,8 @@ export default {
   props: {
     firstTitle: String,
     secondTitle: String,
-    iconName: String
+    iconName: String,
+    page: String
   }
 }
 </script>
