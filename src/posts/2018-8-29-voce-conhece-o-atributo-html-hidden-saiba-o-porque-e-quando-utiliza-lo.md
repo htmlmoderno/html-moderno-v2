@@ -9,6 +9,6 @@ demo: https://thepaciellogroup.github.io/AT-browser-tests/test-files/hidden-att.
 audio: https://api.soundcloud.com/tracks/492895791
 categories: [html5, semantica, a11y]
 tags: [a11y, HTML atributos, HTML tags]
-author: ktquez
+author: Alan Ktquez
 date: 2018-08-28
 ---

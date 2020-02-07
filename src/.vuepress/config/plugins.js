@@ -50,6 +50,19 @@ module.exports = [
               return `Tag: ${key} - HTML Moderno - página ${pageNumber}`
             }
           }
+        },
+        {
+          id: 'author',
+          keys: ['author'],
+          title: '- HTML Moderno',
+          scopeLayout: 'Posts',
+          path: '/autor/',
+          pagination: {
+            layout: 'Posts',
+            getPaginationPageTitle (pageNumber, key) {
+              return `Postagens de ${key} - HTML Moderno - página ${pageNumber}`
+            }
+          }
         }
       ]
     }

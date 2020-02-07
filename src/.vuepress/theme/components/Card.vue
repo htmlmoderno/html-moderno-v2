@@ -22,10 +22,10 @@
       <span class="uppercase"> {{ data.date }} </span>
       <span :class="`mx-2 text-cat-${data.category}`">//</span>
       <router-link
-        to="/autor/ktquez"
+        :to="`/autor/${encodeURI(data.author.toLowerCase())}`"
         class="underline"
       >
-        Alan Ktquez
+        {{ data.author }}
       </router-link>
     </div>
     <h2 class="mb-10 text-lg font-medium tracking-normal leading-tight">
@@ -42,7 +42,7 @@
     >
       <div :class="`card-bottom-link__arrow relative border-cat-${data.category} bg-cat-${data.category}`" />
       <div class="card-bottom-link__text text-xs text-right">
-        VER POST
+        VER POST <span class="sr-only">{{ data.title }}</span>
       </div>
     </router-link>
   </div>
@@ -62,6 +62,7 @@ export default {
     const data = {
       title: post.title,
       excerpt: post.frontmatter.excerpt,
+      author: post.frontmatter.author,
       category: '',
       image: {},
       date: new Intl.DateTimeFormat('default', { month: 'short', day: 'numeric' }).format(new Date(post.frontmatter.date)),

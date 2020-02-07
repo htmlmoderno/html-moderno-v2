@@ -58,6 +58,11 @@ export default {
           firstTitle: 'POSTS DA TAG',
           secondTitle: root.$currentTag ? `${root.$currentTag.key}` : '',
           page: root.$pagination ? `Página ${root.$pagination.paginationIndex + 1}` : ''
+        },
+        author: {
+          firstTitle: 'POSTS DE',
+          secondTitle: root.$currentAuthor ? `${root.$currentAuthor.key}` : '',
+          page: root.$pagination ? `Página ${root.$pagination.paginationIndex + 1}` : ''
         }
       }
       return data[root.$route.meta.pid]
