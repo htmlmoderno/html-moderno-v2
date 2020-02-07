@@ -1,5 +1,8 @@
 module.exports = {
   smoothScroll: true,
+  pagination: {
+    perPage: process.env.PAGINATION_PER_PAGE
+  },
   webFontLoader: {
     google: {
       families: [process.env.GOOGLE_FONT]
