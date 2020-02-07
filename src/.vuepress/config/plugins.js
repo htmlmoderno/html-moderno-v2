@@ -2,6 +2,43 @@ const path = require('path')
 const resolve = pathName => path.join(__dirname, pathName)
 
 module.exports = [
+  [
+    // https://github.com/vuepressjs/vuepress-plugin-blog
+    '@vuepress/blog',
+    {
+      sitemap: {
+        hostname: 'https://htmlmoderno.com.br'
+      },
+      feed: {
+        canonical_base: 'https://htmlmoderno.com.br'
+      },
+      globalPagination: {
+        lengthPerPage: process.env.PAGINATION_PER_PAGE
+      },
+      directories: [
+        {
+          id: 'post',
+          title: 'Todos os posts - HTML Moderno',
+          layout: 'Posts',
+          dirname: 'posts',
+          path: '/posts/',
+          itemPermalink: '/posts/:slug',
+          pagination: {
+            layout: 'Posts',
+            prevText: '<<',
+            nextText: '>>',
+            getPaginationPageTitle (pageNumber) {
+              return `Todos os posts - HTML Moderno - página ${pageNumber}`
+            }
+          }
+        }
+      ],
+      comment: {
+        service: 'disqus',
+        shortname: 'htmlmoderno'
+      }
+    }
+  ],
   // https://github.com/ntnyq/vuepress-plugin-svg-icons
   [
     '@goy/svg-icons', {
@@ -30,40 +67,6 @@ module.exports = [
     // https://github.com/webmasterish/vuepress-plugin-minimal-analytics
     'minimal-analytics', {
       ga: 'UA-70393520-2'
-    }
-  ],
-  [
-    // https://github.com/vuepressjs/vuepress-plugin-blog
-    '@vuepress/blog',
-    {
-      sitemap: {
-        hostname: 'https://htmlmoderno.com.br'
-      },
-      globalPagination: {
-        lengthPerPage: 12
-      },
-      directories: [
-        {
-          id: 'post',
-          title: 'HTML Moderno - Tornando o desenvolvimento web ainda mais interessante',
-          layout: 'Posts',
-          dirname: 'posts',
-          path: '/',
-          itemPermalink: '/:slug',
-          pagination: {
-            layout: 'Posts',
-            prevText: '<<',
-            nextText: '>>',
-            getPaginationPageTitle (pageNumber) {
-              return `HTML Moderno - Tornando o desenvolvimento web ainda mais interessante - página ${pageNumber}`
-            }
-          }
-        }
-      ],
-      comment: {
-        service: 'disqus',
-        shortname: 'htmlmoderno'
-      }
     }
   ],
   [

@@ -3,7 +3,7 @@
     <section>
       <presentation
         first-title="HTML Moderno"
-        second-title="Tornando o desenvolvimento web ainda mais interessante"
+        second-title="Todos os posts"
       />
     </section>
     <main
@@ -16,11 +16,11 @@
           :gutter="50"
         >
           <div
-            v-for="page in $pagination.pages"
-            :key="page.key"
+            v-for="post in $pagination.pages"
+            :key="post.key"
             class="mt-12"
           >
-            <card :page="page" />
+            <card :post="post" />
           </div>
         </masonry>
         <div
