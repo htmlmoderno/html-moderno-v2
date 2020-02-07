@@ -63,7 +63,13 @@ module.exports = [
   // https://vuepress.vuejs.org/plugin/official/plugin-register-components.html
   [
     '@vuepress/register-components', {
-      componentsDir: resolve('../theme/views')
+      componentsDir: resolve('../theme/views'),
+      components: [
+        {
+          name: 'Posts',
+          path: resolve('../theme/layouts/Posts')
+        }
+      ]
     }
   ],
   [
