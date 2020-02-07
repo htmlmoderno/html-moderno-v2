@@ -27,7 +27,7 @@
             <a
               :href="item.link"
               :title="item.label"
-              class="base-link py-3 px-4 pl-0 pb-0 text-lg"
+              class="footer__link base-link"
             >
               {{ item.label }}
             </a>
@@ -48,4 +48,10 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.footer {
+  &__link {
+    @apply py-3 px-4 pl-0 pb-0 text-lg;
+  }
+}
+</style>
