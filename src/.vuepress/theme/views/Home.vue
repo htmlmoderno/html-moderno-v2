@@ -56,7 +56,6 @@ export default {
     Card: () => import('@theme/components/Card')
   },
   setup (_, { root }) {
-    console.log(root)
     const getPosts = computed(() => root.$site.pages.filter(page => page.id === 'post'))
     const getHomePosts = computed(() => {
       if (getPosts.value.length) {

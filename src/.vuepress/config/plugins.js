@@ -7,10 +7,14 @@ module.exports = [
     '@vuepress/blog',
     {
       sitemap: {
-        hostname: 'https://htmlmoderno.com.br'
+        hostname: process.env.URL_BASE
       },
       feed: {
-        canonical_base: 'https://htmlmoderno.com.br'
+        canonical_base: process.env.URL_BASE
+      },
+      comment: {
+        service: 'disqus',
+        shortname: 'htmlmoderno'
       },
       globalPagination: {
         lengthPerPage: process.env.PAGINATION_PER_PAGE
@@ -33,10 +37,21 @@ module.exports = [
           }
         }
       ],
-      comment: {
-        service: 'disqus',
-        shortname: 'htmlmoderno'
-      }
+      frontmatters: [
+        {
+          id: 'tag',
+          keys: ['tag', 'tags'],
+          title: 'Tag - HTML Moderno',
+          scopeLayout: 'Posts',
+          path: '/tag/',
+          pagination: {
+            layout: 'Posts',
+            getPaginationPageTitle (pageNumber, key) {
+              return `Tag: ${key} - HTML Moderno - página ${pageNumber}`
+            }
+          }
+        }
+      ]
     }
   ],
   // https://github.com/ntnyq/vuepress-plugin-svg-icons

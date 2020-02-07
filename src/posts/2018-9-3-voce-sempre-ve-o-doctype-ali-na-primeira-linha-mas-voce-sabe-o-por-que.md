@@ -11,12 +11,8 @@ cover:
   - extension: png
     path: /images/posts/2020/02/
     alternativeText: Texto alternativo
-categories:
-  - semantica
-  - seguranca
-tags: 
-  - html5
-  - seguranca web
+categories: [semantica]
+tags: [HTML5, seguranca]
 author: ktquez
 date: 2018-09-03
 ---

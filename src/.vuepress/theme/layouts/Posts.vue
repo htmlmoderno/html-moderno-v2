@@ -2,8 +2,9 @@
   <div class="posts">
     <section>
       <presentation
-        first-title="HTML Moderno"
-        second-title="Todos os posts"
+        :first-title="presentation.firstTitle"
+        :second-title="presentation.secondTitle"
+        :page="presentation.page"
       />
     </section>
     <main
@@ -36,6 +37,7 @@
 
 <script>
 import Presentation from '@theme/components/Presentation'
+import { computed } from '@vue/composition-api'
 
 export default {
   name: 'Posts',
@@ -43,6 +45,27 @@ export default {
     Presentation,
     Card: () => import('@theme/components/Card'),
     Pagination: () => import('@vuepress/plugin-blog/lib/client/components/Pagination')
+  },
+  setup (_, { root }) {
+    const presentation = computed(() => {
+      const data = {
+        post: {
+          firstTitle: 'HTML Moderno',
+          secondTitle: 'Todos os posts',
+          page: root.$pagination ? `Página ${root.$pagination.paginationIndex + 1}` : ''
+        },
+        tag: {
+          firstTitle: 'POSTS DA TAG',
+          secondTitle: root.$currentTag ? `${root.$currentTag.key}` : '',
+          page: root.$pagination ? `Página ${root.$pagination.paginationIndex + 1}` : ''
+        }
+      }
+      return data[root.$route.meta.pid]
+    })
+
+    return {
+      presentation
+    }
   }
 }
 </script>
