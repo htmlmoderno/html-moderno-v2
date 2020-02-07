@@ -11,6 +11,6 @@ cover:
     alternativeText: Texto alternativo
 categories: [html5, semantica, seo, acessibilidade]
 tags: [HTML5, heading, SEO, W3C, HTML5 outline]
-author: Alan Ktquez
+author: ktquez
 date: 2018-09-19
 ---

@@ -24,6 +24,7 @@ module.exports = [
           id: 'post',
           title: 'Todos os posts - HTML Moderno',
           layout: 'Posts',
+          itemLayout: 'Layout',
           dirname: 'posts',
           path: '/posts/',
           itemPermalink: '/posts/:slug',
@@ -48,23 +49,6 @@ module.exports = [
             layout: 'Posts',
             getPaginationPageTitle (pageNumber, key) {
               return `Tag: ${key} - HTML Moderno - página ${pageNumber}`
-            }
-          }
-        },
-        {
-          id: 'author',
-          keys: ['author'],
-          title: '- HTML Moderno',
-          layout: 'Layout',
-          frontmatter: {
-            view: 'Author'
-          },
-          scopeLayout: 'Posts',
-          path: '/autores/',
-          pagination: {
-            layout: 'Posts',
-            getPaginationPageTitle (pageNumber, key) {
-              return `Postagens de ${key} - HTML Moderno - página ${pageNumber}`
             }
           }
         }

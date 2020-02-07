@@ -13,6 +13,6 @@ cover:
     alternativeText: Texto alternativo
 categories: [semantica]
 tags: [HTML5, seguranca]
-author: Alan Ktquez
+author: ktquez
 date: 2018-09-03
 ---
