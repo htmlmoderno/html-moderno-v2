@@ -52,30 +52,30 @@
 export default {
   name: 'Card',
   props: {
-    page: {
+    post: {
       type: Object,
       required: true
     }
   },
-  setup ({ page }) {
-    const slug = page.path.replace(/\//g, '')
+  setup ({ post }) {
+    const slug = post.path.match(/(?<=\/posts\/)(.*?)(?=\/)/g)
     const data = {
-      title: page.title,
-      excerpt: page.frontmatter.excerpt,
+      title: post.title,
+      excerpt: post.frontmatter.excerpt,
       category: '',
       image: {},
-      date: new Intl.DateTimeFormat('default', { month: 'short', day: 'numeric' }).format(new Date(page.frontmatter.date)),
-      to: page.path
+      date: new Intl.DateTimeFormat('default', { month: 'short', day: 'numeric' }).format(new Date(post.frontmatter.date)),
+      to: post.path
     }
 
-    if (page.frontmatter.categories.length) {
-      data.category = page.frontmatter.categories[0]
+    if (post.frontmatter.categories.length) {
+      data.category = post.frontmatter.categories[0]
     }
 
-    if (page.frontmatter.cover) {
+    if (post.frontmatter.cover) {
       data.image = {
-        src: `${page.frontmatter.cover[0].path}${slug}.${page.frontmatter.cover[0].extension}`,
-        alt: page.frontmatter.cover[0].alternativeText
+        src: `${post.frontmatter.cover[0].path}${slug}.${post.frontmatter.cover[0].extension}`,
+        alt: post.frontmatter.cover[0].alternativeText
       }
     }
 
