@@ -11,12 +11,12 @@
       </div>
       <a
         :href="`mailto:${$themeConfig.footer.mailto}`"
-        class="text-3xl md:text-4xl leading-none font-medium"
+        class="my-12 block sm:my-0 text-3xl md:text-4xl leading-none font-medium"
       >
         Entrar em contato<span class="text-accent">.</span>
       </a>
     </div>
-    <div class="w-full mt-6 md:mt-0 md:w-2/5">
+    <div class="w-full md:mt-0 md:w-2/5">
       <nav class="md:pl-12 lg:pl-24">
         <ul>
           <li

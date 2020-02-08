@@ -1,10 +1,10 @@
 <template>
-  <div class="newsletter n9m p-6 md:py-12 md:px-16">
+  <div class="hm-newsletter n9m p-6 md:py-12 md:px-16">
     <div class="relative pb-2">
       <h2 class="text-3xl md:text-4xl relative z-20 sm:pl-8 font-medium">
         Newsletter<span class="text-accent font-medium">.</span>
       </h2>
-      <div class="newsletter__pattern patterns absolute z-10 top-0 left-0 w-full" />
+      <div class="hm-newsletter__pattern patterns absolute z-10 top-0 left-0 w-full" />
     </div>
     <form
       class="flex flex-wrap items-end mt-12"
@@ -77,10 +77,8 @@ export default {
 </script>
 
 <style lang="scss">
-.newsletter {
-  &__pattern {
-    height: 100%;
-    top: 10px;
-  }
+.hm-newsletter__pattern {
+  height: 100%;
+  top: 10px;
 }
 </style>
