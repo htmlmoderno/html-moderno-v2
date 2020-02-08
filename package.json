@@ -67,6 +67,7 @@
     "vue-masonry-css": "^1.0.3",
     "vuepress": "^1.2.0",
     "vuepress-plugin-canonical": "^1.0.0",
+    "vuepress-plugin-clean-urls": "^1.1.1",
     "vuepress-plugin-mailchimp": "^1.4.1",
     "vuepress-plugin-minimal-analytics": "^0.1.4",
     "vuepress-plugin-sitemap": "^2.3.1"

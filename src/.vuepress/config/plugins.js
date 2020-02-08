@@ -55,6 +55,15 @@ module.exports = [
       ]
     }
   ],
+  // https://vuepress.github.io/en/plugins/clean-urls/
+  [
+    'vuepress-plugin-clean-urls',
+    {
+      normalSuffix: '/',
+      indexSuffix: '/',
+      notFoundPath: '/404.html'
+    }
+  ],
   // https://vuepress.vuejs.org/plugin/official/plugin-pwa.html#install
   [
     '@vuepress/pwa',
