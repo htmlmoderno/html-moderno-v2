@@ -20,13 +20,13 @@
     <div class="mt-12">
       <ul class="categories-list flex flex-wrap">
         <li
-          v-for="category in categories"
-          :key="category.label"
+          v-for="category in getAllCategories"
+          :key="category.key"
         >
-          <router-link :to="category.to">
+          <router-link :to="`/categorias/${category.frontmatter.slug}`">
             <card-category
-              :label="category.label"
-              :icon-name="`cat-${category.slug}`"
+              :label="category.title"
+              :icon-name="`cat-${category.frontmatter.slug}`"
             />
           </router-link>
         </li>
@@ -42,11 +42,14 @@ export default {
     CardCategory: () => import('@theme/components/CardCategory')
   },
   setup (_, { root }) {
-    const categoryPage = root.$site.pages.find(page => page.frontmatter.view === 'CategoriesTags')
-    const categories = categoryPage ? categoryPage.frontmatter.categories : []
+    const getAllCategories = root.$site.pages
+      .filter(page => page.frontmatter.view === 'category')
+      .sort((a, b) => {
+        return a.frontmatter.order - b.frontmatter.order
+      })
 
     return {
-      categories
+      getAllCategories
     }
   }
 }

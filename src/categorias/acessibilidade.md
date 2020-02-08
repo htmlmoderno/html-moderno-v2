@@ -1,6 +1,6 @@
 ---
 order: 2
-view: category
+view: Category
 lang: pt-BR
 
 title: Acessibilidade

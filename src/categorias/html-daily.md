@@ -1,6 +1,6 @@
 ---
 order: 8
-view: category
+view: Category
 lang: pt-BR
 
 title: HTML Daily news

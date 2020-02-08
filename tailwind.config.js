@@ -16,7 +16,7 @@ module.exports = {
         'cat-ux': '#DBDBDB',
         'cat-web-components': '#F2C549',
         'cat-web-performance': '#88DCCD',
-        'cat-web-apis': '#FFD8B9',
+        'cat-html-daily': '#FFD8B9',
         'cat-seguranca': '#C7CEEA',
         'cat-videos': '#D84848 '
       },

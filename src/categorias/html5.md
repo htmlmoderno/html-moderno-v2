@@ -1,6 +1,6 @@
 ---
 order: 3
-view: category
+view: Category
 lang: pt-BR
 
 title: HTML5

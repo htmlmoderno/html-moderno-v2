@@ -1,9 +1,9 @@
 ---
-order: 7
-view: category
+order: 10
+view: Category
 lang: pt-BR
 
-title: Cursos e ebooks
+title: Vídeos
 description: HTML5, acessibilidade, UX, SEO, performance e webzcomponents? Sem redundância, mas aqui no HTML Moderno você aprende tudo de mais moderno sobre dev web
 slug: videos
 tags: []

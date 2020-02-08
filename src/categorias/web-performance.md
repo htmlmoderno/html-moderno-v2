@@ -1,6 +1,6 @@
 ---
 order: 7
-view: category
+view: Category
 lang: pt-BR
 
 title: Web performance

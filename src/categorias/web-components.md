@@ -1,6 +1,6 @@
 ---
 order: 6
-view: category
+view: Category
 lang: pt-BR
 
 title: Web components
