@@ -55,6 +55,15 @@ module.exports = [
       ]
     }
   ],
+  // https://vuepress.vuejs.org/plugin/official/plugin-pwa.html#install
+  [
+    '@vuepress/pwa',
+    {
+      serviceWorker: true,
+      popupComponent: 'SWUPopup',
+      updatePopup: true
+    }
+  ],
   // https://github.com/ntnyq/vuepress-plugin-svg-icons
   [
     '@goy/svg-icons', {
@@ -69,6 +78,10 @@ module.exports = [
         {
           name: 'Posts',
           path: resolve('../theme/layouts/Posts')
+        },
+        {
+          name: 'SWUPopup',
+          path: resolve('../theme/components/SWUPopup')
         }
       ]
     }
