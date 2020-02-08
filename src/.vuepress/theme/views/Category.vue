@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="category">
     <section>
       <presentation
         first-title="TODOS OS POSTS"
@@ -14,6 +14,7 @@
     >
       <section class="w-full layout-section">
         <masonry
+          v-show="posts.length"
           :cols="{default: 3, 1024: 2, 600: 1}"
           :gutter="50"
         >
@@ -25,6 +26,15 @@
             <card :post="post" />
           </div>
         </masonry>
+        <div v-show="!posts.length">
+          <span class="font-medium text-xl">
+            <span
+              role="img"
+              aria-label="emoji carinha triste"
+            >😔</span>
+            Em breve teremos artigos para essa categoria.
+          </span>
+        </div>
       </section>
     </main>
   </div>

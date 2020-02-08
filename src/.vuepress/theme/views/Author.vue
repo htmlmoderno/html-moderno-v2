@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="author">
     <section>
       <presentation
         first-title="POSTS DO AUTOR"
