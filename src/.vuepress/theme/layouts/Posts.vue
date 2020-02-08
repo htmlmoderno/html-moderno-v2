@@ -17,7 +17,7 @@
           :gutter="50"
         >
           <div
-            v-for="post in $pagination.pages"
+            v-for="post in posts"
             :key="post.key"
             class="mt-12"
           >
@@ -37,6 +37,7 @@
 
 <script>
 import Presentation from '@theme/components/Presentation'
+import prepareCardPost from '@theme/utils/prepareCardPost'
 import { computed } from '@vue/composition-api'
 
 export default {
@@ -63,7 +64,10 @@ export default {
       return data[root.$route.meta.pid]
     })
 
+    const posts = prepareCardPost(root.$pagination.pages)
+
     return {
+      posts,
       presentation
     }
   }

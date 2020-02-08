@@ -4,45 +4,45 @@
       class="w-full rounded-lg overflow-hidden"
     >
       <router-link
-        :to="data.to"
+        :to="post.to"
         class="hover:text-accent"
       >
         <img
-          v-if="data.image.src"
+          v-if="post.image.src"
           class="w-full"
-          :src="data.image.src"
-          :alt="data.image.alt"
+          :src="post.image.src"
+          :alt="post.image.alt"
         >
       </router-link>
     </div>
     <div
       class="flex items-center text-xs mt-1 mb-2"
-      :class="{ 'mt-3': data.image.src }"
+      :class="{ 'mt-3': post.image.src }"
     >
-      <span class="uppercase"> {{ data.date }} </span>
-      <span :class="`mx-2 text-cat-${data.category}`">//</span>
+      <span class="uppercase"> {{ post.date }} </span>
+      <span :class="`mx-2 text-cat-${post.category}`">//</span>
       <router-link
-        :to="`/autores/${encodeURI(data.author.toLowerCase())}`"
+        :to="`/autores/${encodeURI(post.author.toLowerCase())}`"
         class="underline"
       >
-        {{ data.author }}
+        {{ post.author }}
       </router-link>
     </div>
     <h2 class="mb-10 text-lg font-medium tracking-normal leading-tight">
       <router-link
-        :to="data.to"
+        :to="post.to"
         class="hover:text-accent hover:underline"
       >
-        {{ data.title }}
+        {{ post.title }}
       </router-link>
     </h2>
     <router-link
-      :to="data.to"
+      :to="post.to"
       class="card-bottom-link flex items-center justify-between dark:dark-200"
     >
-      <div :class="`card-bottom-link__arrow relative border-cat-${data.category} bg-cat-${data.category}`" />
+      <div :class="`card-bottom-link__arrow relative border-cat-${post.category} bg-cat-${post.category}`" />
       <div class="card-bottom-link__text text-xs text-right">
-        VER POST <span class="sr-only">{{ data.title }}</span>
+        VER POST <span class="sr-only">{{ post.title }}</span>
       </div>
     </router-link>
   </div>
@@ -55,33 +55,6 @@ export default {
     post: {
       type: Object,
       required: true
-    }
-  },
-  setup ({ post }) {
-    const slug = post.path.match(/(?<=\/posts\/)(.*?)(?=\/)/g)
-    const data = {
-      title: post.title,
-      excerpt: post.frontmatter.excerpt,
-      author: post.frontmatter.author,
-      category: '',
-      image: {},
-      date: new Intl.DateTimeFormat('default', { month: 'short', day: 'numeric' }).format(new Date(post.frontmatter.date)),
-      to: post.path
-    }
-
-    if (post.frontmatter.categories.length) {
-      data.category = post.frontmatter.categories[0]
-    }
-
-    if (post.frontmatter.cover) {
-      data.image = {
-        src: `${post.frontmatter.cover[0].path}${slug}.${post.frontmatter.cover[0].extension}`,
-        alt: post.frontmatter.cover[0].alternativeText
-      }
-    }
-
-    return {
-      data
     }
   }
 }

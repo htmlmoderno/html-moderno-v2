@@ -16,7 +16,7 @@
           :gutter="50"
         >
           <div
-            v-for="post in getHomePosts"
+            v-for="post in posts"
             :key="post.key"
             class="mt-12"
           >
@@ -45,6 +45,7 @@
 
 <script>
 import Presentation from '@theme/components/Presentation'
+import prepareCardPost from '@theme/utils/prepareCardPost'
 import { computed } from '@vue/composition-api'
 
 export default {
@@ -64,9 +65,11 @@ export default {
       return []
     })
 
+    const posts = prepareCardPost(getHomePosts.value)
+
     return {
-      getPosts,
-      getHomePosts
+      posts,
+      getPosts
     }
   }
 }

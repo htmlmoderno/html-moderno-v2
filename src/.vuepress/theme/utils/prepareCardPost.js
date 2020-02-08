@@ -1,0 +1,27 @@
+export default function prepareCardPost (posts) {
+  return posts.map(post => {
+    const slug = post.path.match(/(?<=\/posts\/)(.*?)(?=\/)/g)
+    const data = {
+      title: post.title,
+      excerpt: post.frontmatter.excerpt,
+      author: post.frontmatter.author,
+      category: '',
+      image: {},
+      date: new Intl.DateTimeFormat('default', { month: 'short', day: 'numeric' }).format(new Date(post.frontmatter.date)),
+      to: post.path
+    }
+
+    if (post.frontmatter.categories.length) {
+      data.category = post.frontmatter.categories[0]
+    }
+
+    if (post.frontmatter.cover) {
+      data.image = {
+        src: `${post.frontmatter.cover[0].path}${slug}.${post.frontmatter.cover[0].extension}`,
+        alt: post.frontmatter.cover[0].alternativeText
+      }
+    }
+
+    return data
+  })
+}
