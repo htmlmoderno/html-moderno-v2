@@ -6,6 +6,7 @@ module.exports = {
         dark: '#343743',
         textDark: '#E3E3E3',
         'dark-200': '#4e5161',
+        'dark-800': '#3A3C4A',
         light: '#F4F1EC',
         textLight: '#573E48',
         'light-200': '#ECE6DC',
