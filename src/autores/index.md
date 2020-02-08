@@ -1,5 +1,5 @@
 ---
-layout: Authors
+view: Authors
 title: Todos os autores do HTML Moderno
 meta:
   - property: og:image
