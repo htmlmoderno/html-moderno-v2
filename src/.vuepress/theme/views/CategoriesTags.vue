@@ -12,15 +12,15 @@
     >
       <div class="w-full layout-section pb-0">
         <section
-          v-for="category in $frontmatter.categories"
-          :key="category.slug"
+          v-for="category in getAllCategories"
+          :key="category.key"
           class="tags-page-section"
         >
           <div class="w-full sm:w-1/3 lg:w-1/4 pr-0 sm:pr-12 lg:pr-20">
-            <router-link :to="category.to">
+            <router-link :to="`/categorias/${category.frontmatter.slug}`">
               <card-category
-                :label="category.label"
-                :icon-name="`cat-${category.slug}`"
+                :label="category.title"
+                :icon-name="`cat-${category.frontmatter.slug}`"
               />
             </router-link>
           </div>
@@ -28,9 +28,12 @@
             <div class="text-2xl font-medium">
               <span>Tags<span class="text-accent">.</span></span>
             </div>
-            <ul class="tags-page-list">
+            <ul
+              v-show="category.frontmatter.tags.length"
+              class="tags-page-list"
+            >
               <li
-                v-for="tag in category.tags"
+                v-for="tag in category.frontmatter.tags"
                 :key="tag"
                 class="tags-page-list__item"
               >
@@ -42,6 +45,12 @@
                 </router-link>
               </li>
             </ul>
+            <div
+              v-show="!category.frontmatter.tags.length"
+              class="mt-8"
+            >
+              Sem tags até o momento.
+            </div>
           </div>
         </section>
       </div>
@@ -50,6 +59,7 @@
 </template>
 
 <script>
+import categoriesMixin from '@/theme/mixins/categories'
 import CardCategory from '@theme/components/CardCategory'
 import Presentation from '@theme/components/Presentation'
 
@@ -58,7 +68,8 @@ export default {
   components: {
     Presentation,
     CardCategory
-  }
+  },
+  mixins: [categoriesMixin]
 }
 </script>
 

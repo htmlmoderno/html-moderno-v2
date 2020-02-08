@@ -36,22 +36,14 @@
 </template>
 
 <script>
+import categoriesMixin from '@/theme/mixins/categories'
+
 export default {
   name: 'TheCategories',
   components: {
     CardCategory: () => import('@theme/components/CardCategory')
   },
-  setup (_, { root }) {
-    const getAllCategories = root.$site.pages
-      .filter(page => page.frontmatter.view === 'category')
-      .sort((a, b) => {
-        return a.frontmatter.order - b.frontmatter.order
-      })
-
-    return {
-      getAllCategories
-    }
-  }
+  mixins: [categoriesMixin]
 }
 </script>
 
