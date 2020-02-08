@@ -2,7 +2,7 @@
 module.exports = [
   ['meta', { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' }],
   ['meta', { name: 'apple-mobile-web-app-title', content: 'HTML Moderno | Tornando o HTML ainda mais interessante.' }],
-  ['meta', { name: 'theme-color', content: '#F9F9F9' }],
+  ['meta', { name: 'theme-color', content: '#F4F1EC' }],
   ['meta', { name: 'msapplication-navbutton-color', content: '#fe5634' }],
   ['meta', { name: 'mobile-web-app-capable', content: 'yes' }],
   ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }],
@@ -11,7 +11,7 @@ module.exports = [
 
   // Microsoft
   ['meta', { name: 'application-name', content: 'HTML Moderno | Tornando o HTML ainda mais interessante.' }],
-  ['meta', { name: 'msapplication-TileColor', content: '#F9F9F9' }],
+  ['meta', { name: 'msapplication-TileColor', content: '#F4F1EC' }],
   ['meta', { name: 'msapplication-config', content: '/browserconfig.xml' }],
   ['meta', { name: 'msapplication-square70x70logo', content: '/favicon/ms-icon-70x70.png' }],
   ['meta', { name: 'msapplication-TileImage', content: '/favicon/ms-icon-144x144.png' }],

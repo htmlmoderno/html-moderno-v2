@@ -1,6 +1,7 @@
 <template>
   <button
-    class="p-2" @click="toggleDarkMode"
+    class="p-2"
+    @click="toggleDarkMode"
     @keydown.enter="toggleDarkMode"
   >
     <vp-icon
@@ -42,11 +43,13 @@ export default {
     function setDarkMode () {
       localStorage.setItem('darkMode', 'on')
       document.documentElement.classList.add('mode-dark')
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#343743')
     }
 
     function removeDarkMode () {
       localStorage.removeItem('darkMode')
       document.documentElement.classList.remove('mode-dark')
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#F4F1EC')
     }
 
     function toggleDarkMode () {
