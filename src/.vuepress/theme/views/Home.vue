@@ -44,28 +44,22 @@
 </template>
 
 <script>
+import Card from '@theme/components/Card'
 import Presentation from '@theme/components/Presentation'
+import { filterPosts, sortPostsByDate } from '@theme/utils'
 import prepareCardPost from '@theme/utils/prepareCardPost'
-import { computed } from '@vue/composition-api'
 
 export default {
   name: 'Home',
   components: {
     Presentation,
-    Card: () => import('@theme/components/Card')
+    Card
   },
   setup (_, { root }) {
-    const getPosts = computed(() => root.$site.pages.filter(page => page.id === 'post'))
-    const getHomePosts = computed(() => {
-      if (getPosts.value.length) {
-        return getPosts.value.sort((a, b) => {
-          return new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
-        }).slice(0, root.$themeConfig.pagination.perPage)
-      }
-      return []
-    })
+    const getPosts = filterPosts(root.$site.pages)
+    const getHomePosts = sortPostsByDate(getPosts).slice(0, root.$themeConfig.pagination.perPage)
 
-    const posts = prepareCardPost(getHomePosts.value)
+    const posts = prepareCardPost(getHomePosts)
 
     return {
       posts,

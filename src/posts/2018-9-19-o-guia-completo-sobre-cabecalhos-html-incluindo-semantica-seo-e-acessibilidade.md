@@ -9,7 +9,7 @@ cover:
   - extension: png
     path: /images/posts/2020/02/
     alternativeText: Texto alternativo
-categories: [html5, semantica, seo, acessibilidade]
+categories: [html5, seo, semantica, acessibilidade]
 tags: [HTML5, heading, SEO, W3C]
 author: ktquez
 date: 2018-09-19

@@ -3,7 +3,7 @@
     <the-heading />
     <component :is="layout" />
     <section
-      v-show="!$route.path.includes('categorias')"
+      v-show="$frontmatter.view !== 'CategoriesTags'"
       id="categories"
       class="layout-section layout-section--border-top dark:border-dark-200"
     >

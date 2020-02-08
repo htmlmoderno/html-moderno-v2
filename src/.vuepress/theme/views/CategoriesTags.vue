@@ -2,6 +2,7 @@
   <div class="tags-page">
     <section>
       <presentation
+        class="py-4"
         first-title="HTML Moderno"
         :second-title="$frontmatter.title"
       />
