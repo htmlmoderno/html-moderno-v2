@@ -10,7 +10,8 @@ module.exports = {
   },
   responsive: {
     active: true,
-    breakpoints: [400, 640, 800]
+    extension: 'png',
+    breakpoints: [400, 640, 800, 1024]
   },
   footer: {
     links: [
