@@ -36,7 +36,7 @@
 }
 
 .n9m {
-	@apply rounded bg-light shadow-n9m-light;
+	@apply rounded-lg bg-light shadow-n9m-light;
 
 	&--inner {
 		@apply shadow-inner-n9m-light;
