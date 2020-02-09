@@ -1,5 +1,8 @@
 <template>
-  <main id="#main">
+  <main
+    id="#main"
+    class="single-post"
+  >
     <article
       class="w-full layout-section"
       itemscope="itemscope"
@@ -10,7 +13,7 @@
         itemprop="mainEntityOfPage"
         :content="$route.fullPath"
       >
-      <header class="w-full md:w-4/5 xl:w-3/5 mx-auto">
+      <div class="single-post__container">
         <h1
           class="w-full text-3xl sm:text-4xl font-medium"
           itemprop="name headline"
@@ -50,7 +53,7 @@
             </router-link>
           </div>
         </div>
-      </header>
+      </div>
       <section
         v-if="post.cover"
         itemprop="image"
@@ -79,8 +82,16 @@
         </figure>
       </section>
 
-      <section class="w-full md:w-4/5 xl:w-3/5 mx-auto my-24">
+      <section class="single-post__container mt-24">
         <table-contents :headers="post.headers" />
+      </section>
+
+      <section class="single-post__container mt-24">
+        <newsletter :small="true" />
+      </section>
+
+      <section class="single-post__container mt-24">
+        <comment />
       </section>
     </article>
   </main>
@@ -95,7 +106,9 @@ export default {
   name: 'Post',
   components: {
     TableContents,
-    ResponsivePicture
+    ResponsivePicture,
+    Comment: () => import('@vuepress/plugin-blog/lib/client/components/Comment'),
+    newsletter: () => import('@theme/components/Newsletter')
   },
   setup (_, { root }) {
     const fm = root.$frontmatter
@@ -136,4 +149,18 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.single-post {
+  .single-post__container {
+    @apply w-full mx-auto;
+
+    @screen md {
+      @apply w-4/5;
+    }
+
+    @screen xl {
+      @apply w-3/5;
+    }
+  }
+}
+</style>
