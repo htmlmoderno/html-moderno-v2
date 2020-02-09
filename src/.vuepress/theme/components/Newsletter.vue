@@ -1,5 +1,11 @@
 <template>
-  <div class="hm-newsletter n9m p-6 md:py-12 md:px-16">
+  <div
+    class="hm-newsletter n9m"
+    :class="{
+      'p-6 md:py-12 md:px-16': !small,
+      'p-6': small
+    }"
+  >
     <div class="relative pb-2">
       <h2 class="text-3xl md:text-4xl relative z-20 sm:pl-8 font-medium">
         Newsletter<span class="text-accent font-medium">.</span>
@@ -39,7 +45,8 @@
       <div class="w-full lg:w-1/5">
         <button
           type="submit"
-          class="n9m w-full bg-accent text-white font-medium py-4 px-6"
+          class="n9m w-full bg-accent text-white font-medium py-4"
+          :class="{ 'px-3': small, 'px-6': !small }"
         >
           INSCREVER-SE
         </button>
@@ -55,6 +62,12 @@ import { ref } from '@vue/composition-api'
 
 export default {
   name: 'Newsletter',
+  props: {
+    small: {
+      type: Boolean,
+      default: false
+    }
+  },
   setup (_, { root }) {
     const name = ref(null)
     const email = ref(null)
