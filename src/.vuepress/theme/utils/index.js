@@ -13,3 +13,7 @@ export function sortPostsByDate (posts, orderByDesc = true) {
     return new Date(a.frontmatter.date) - new Date(b.frontmatter.date)
   })
 }
+
+export function getSlugPost (path) {
+  return path.match(/(?<=\/posts\/)(.*?)(?=\/)/g)
+}

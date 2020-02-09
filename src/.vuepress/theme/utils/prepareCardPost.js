@@ -1,6 +1,8 @@
+import { getSlugPost } from './index'
+
 export default function prepareCardPost (posts) {
   return posts.map(post => {
-    const slug = post.path.match(/(?<=\/posts\/)(.*?)(?=\/)/g)
+    const slug = getSlugPost(post.path)
     const data = {
       title: post.title,
       excerpt: post.frontmatter.excerpt,
