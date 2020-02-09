@@ -17,7 +17,7 @@ export default function prepareCardPost (posts) {
 
     if (post.frontmatter.cover) {
       data.image = {
-        src: `${post.frontmatter.cover[0].path}${slug}.${post.frontmatter.cover[0].extension}`,
+        src: `${post.frontmatter.cover[0].path}${slug},w_400.${post.frontmatter.cover[0].extension}`,
         alt: post.frontmatter.cover[0].alternativeText
       }
     }
