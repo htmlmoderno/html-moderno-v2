@@ -1,14 +1,33 @@
 <template>
-  <header class="flex pt-8 lg:pt-16">
+  <header
+    class="flex pt-8 lg:pt-16"
+    itemscope="itemscope"
+    itemtype="https://schema.org/Organization"
+  >
     <div class="w-3/12 md:w-1/2">
-      <router-link to="/">
+      <router-link
+        to="/"
+        itemprop="url"
+      >
         <img
           class="inline"
           src="/images/html-moderno-logo.svg"
           alt="Logo do HTML Moderno 4 quadrados laranja com 1 letra do HTML cada mais símbolo universal acessibilidade no centro"
           title="HTML Moderno"
+          itemprop="logo"
         >
       </router-link>
+
+      <meta
+        itemprop="name"
+        content="HTML Moderno"
+      >
+      <meta
+        v-for="item in $themeConfig.footer.links"
+        :key="item.label"
+        itemprop="sameAs"
+        :content="item.link"
+      >
     </div>
     <div class="w-9/12 md:w-1/2 flex items-center justify-end">
       <div>
