@@ -10,7 +10,7 @@
         itemprop="mainEntityOfPage"
         :content="$route.fullPath"
       >
-      <div class="w-full md:w-4/5 xl:w-3/5 mx-auto">
+      <header class="w-full md:w-4/5 xl:w-3/5 mx-auto">
         <h1
           class="w-full text-3xl sm:text-4xl font-medium"
           itemprop="name headline"
@@ -50,8 +50,8 @@
             </router-link>
           </div>
         </div>
-      </div>
-      <div
+      </header>
+      <section
         v-if="post.cover"
         itemprop="image"
         itemscope="itemscope"
@@ -77,18 +77,24 @@
             {{ post.cover.caption }}
           </div>
         </figure>
-      </div>
+      </section>
+
+      <section class="w-full md:w-4/5 xl:w-3/5 mx-auto my-24">
+        <table-contents :headers="post.headers" />
+      </section>
     </article>
   </main>
 </template>
 
 <script>
 import ResponsivePicture from '@theme/components/ResponsivePicture'
+import TableContents from '@theme/components/TableContents'
 import { getSlugPost } from '@theme/utils'
 
 export default {
   name: 'Post',
   components: {
+    TableContents,
     ResponsivePicture
   },
   setup (_, { root }) {
@@ -102,11 +108,16 @@ export default {
       author: author,
       mainCategory: fm.categories[0],
       updated_at: root.$page.lastUpdated,
+      headers: [],
       date: {
         short: new Intl.DateTimeFormat('default', { month: 'short', day: 'numeric' }).format(datePost),
         datetime: fm.date
       },
       cover: {}
+    }
+
+    if (root.$page.headers && root.$page.headers.length) {
+      post.headers = root.$page.headers.filter(header => header.level < 3)
     }
 
     if (fm.cover) {
@@ -115,6 +126,8 @@ export default {
         path: `${fm.cover[0].path}${slug}`
       }
     }
+
+    console.log(post)
 
     return {
       post
