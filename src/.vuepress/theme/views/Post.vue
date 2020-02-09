@@ -1,12 +1,125 @@
 <template>
-  <div>
-    <h1>POST</h1>
-  </div>
+  <main id="#main">
+    <article
+      class="w-full layout-section"
+      itemscope="itemscope"
+      itemprop="blogPost"
+      itemtype="https://schema.org/BlogPosting"
+    >
+      <meta
+        itemprop="mainEntityOfPage"
+        :content="$route.fullPath"
+      >
+      <div class="w-full md:w-4/5 xl:w-3/5 mx-auto">
+        <h1
+          class="w-full text-3xl sm:text-4xl font-medium"
+          itemprop="name headline"
+        >
+          {{ post.title }}<span class="text-accent">.</span>
+        </h1>
+        <meta
+          itemprop="description"
+          :content="post.description"
+        >
+        <div class="w-full flex items-center text-xs mt-4">
+          <time
+            :datetime="post.date.datetime"
+            itemprop="datePublished"
+            class="uppercase"
+          >
+            {{ post.date.short }}
+          </time>
+          <meta
+            itemprop="dateModified"
+            :content="post.updated_at"
+          >
+          <span :class="`mx-2 text-cat-${post.mainCategory}`">//</span>
+          <div
+            class="inline"
+            itemprop="author"
+            itemscope="itemscope"
+            itemtype="https://schema.org/Person"
+          >
+            <router-link
+              :to="post.author.path"
+              class="underline"
+              itemprop="url"
+            >
+              <span class="sr-only">Ver posts do autor</span>
+              <span itemprop="name">{{ post.author.frontmatter.name }}</span>
+            </router-link>
+          </div>
+        </div>
+      </div>
+      <div
+        v-if="post.cover"
+        itemprop="image"
+        itemscope="itemscope"
+        itemtype="https://schema.org/ImageObject"
+      >
+        <figure
+          role="figure"
+          :aria-label="post.cover.caption"
+        >
+          <responsive-picture
+            :cover-name="post.cover.path"
+            class="n9m block mt-12 w-full p-4"
+          >
+            <img
+              class="w-full inline rounded-lg"
+              itemprop="url"
+              :src="`${post.cover.path}.${post.cover.extension}`"
+              :title="post.cover.alternativeText"
+              :alt="post.cover.alternativeText"
+            >
+          </responsive-picture>
+          <div class="text-center text-xs mt-4 text-gray-500 italic tracking-wider">
+            {{ post.cover.caption }}
+          </div>
+        </figure>
+      </div>
+    </article>
+  </main>
 </template>
 
 <script>
+import ResponsivePicture from '@theme/components/ResponsivePicture'
+import { getSlugPost } from '@theme/utils'
+
 export default {
-  name: 'Post'
+  name: 'Post',
+  components: {
+    ResponsivePicture
+  },
+  setup (_, { root }) {
+    const fm = root.$frontmatter
+    const datePost = new Date(fm.date)
+    const slug = getSlugPost(root.$route.fullPath)
+    const author = root.$site.pages.find(page => page.frontmatter.nickname === fm.author)
+    const post = {
+      title: fm.title,
+      description: fm.description,
+      author: author,
+      mainCategory: fm.categories[0],
+      updated_at: root.$page.lastUpdated,
+      date: {
+        short: new Intl.DateTimeFormat('default', { month: 'short', day: 'numeric' }).format(datePost),
+        datetime: fm.date
+      },
+      cover: {}
+    }
+
+    if (fm.cover) {
+      post.cover = {
+        ...fm.cover[0],
+        path: `${fm.cover[0].path}${slug}`
+      }
+    }
+
+    return {
+      post
+    }
+  }
 }
 </script>
 
