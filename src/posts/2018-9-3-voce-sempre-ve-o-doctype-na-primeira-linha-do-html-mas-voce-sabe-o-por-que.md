@@ -11,6 +11,7 @@ cover:
   - extension: png
     path: /images/posts/2020/02/
     alternativeText: Texto alternativo
+    caption: Ilustração de desenvolvimento web da undraw.co
 categories: [semantica]
 tags: [HTML5, seguranca]
 author: ktquez

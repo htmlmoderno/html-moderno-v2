@@ -9,6 +9,7 @@ cover:
   - extension: png
     path: /images/posts/2020/02/
     alternativeText: Texto alternativo
+    caption: Nossa máscara de carnaval favorita
 categories: [html5, seo, semantica, acessibilidade]
 tags: [HTML5, heading, SEO, W3C]
 author: ktquez
