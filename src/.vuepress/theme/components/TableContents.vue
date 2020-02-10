@@ -1,6 +1,6 @@
 <template>
   <nav class="toc">
-    <h2 class="text-2xl mb-12">
+    <h2 class="text-2xl mb-12 font-medium">
       Índice<span class="text-accent">.</span>
     </h2>
     <ul class="toc__list">
