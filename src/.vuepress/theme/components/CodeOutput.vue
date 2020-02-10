@@ -5,9 +5,9 @@
       class="output flex flex-wrap n9m overflow-hidden"
       :class="{ 'output--fullscreen': isFullScreen }"
     >
-      <div class="output__header w-full flex justify-between px-6 py-2 bg-light-200">
+      <div class="output__header w-full flex justify-between px-6 py-2 bg-light-200 dark:bg-dark-800">
         <span class="output__browser-btns" />
-        <div class="flex items-center text-xs text-light-700">
+        <div class="flex items-center text-xs text-light-700 dark:text-textDark">
           <span>
             {{ console ? 'CONSOLE' : 'OUTPUT' }}
           </span>
@@ -35,8 +35,8 @@
       </div>
 
       <div
-        class="output__body w-full px-6 pt-4 pb-2 bg-light"
-        :style="`height: ${isFullScreen ? '90%' : height }`"
+        class="output__body w-full px-6 pt-4 pb-2 bg-light dark:bg-dark dark:text-textDark"
+        :style="`height: ${isFullScreen ? '100%' : height }`"
       >
         <iframe
           ref="outputIframe"
@@ -88,17 +88,22 @@ export default {
 
     onMounted(() => {
       const snippet = document.querySelector(`${selector} > pre`)
-      window.addEventListener('keypress', escFullScreen, true)
+      window.addEventListener('keydown', escFullScreen, true)
       root.$nextTick(() => {
-        refs.outputIframe.contentDocument.getElementsByTagName('body')[0].innerHTML = snippet.textContent
+        const iframeBody = refs.outputIframe.contentDocument.getElementsByTagName('body')[0]
+        iframeBody.innerHTML = snippet.textContent
+        if (localStorage.getItem('darkMode')) {
+          iframeBody.style.color = '#e3e3e3'
+        }
       })
     })
 
     onUnmounted(() => {
-      window.removeEventListener('keypress', escFullScreen, true)
+      window.removeEventListener('keydown', escFullScreen, true)
     })
 
     function escFullScreen (e) {
+      console.log(e)
       if (e.key === 'Escape' && isFullScreen.value) setFullScreen()
     }
 

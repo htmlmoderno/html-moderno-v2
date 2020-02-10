@@ -74,4 +74,11 @@
       @apply text-gray-400;
     }
   }
+
+  .output__browser-btns {
+    &:before {
+      @apply bg-textDark;
+      box-shadow: 18px 0 0 0 #E3E3E3, 36px 0 0 0 #E3E3E3;
+    }
+  }
 }
