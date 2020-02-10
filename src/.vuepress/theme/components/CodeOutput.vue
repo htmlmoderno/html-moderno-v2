@@ -17,7 +17,7 @@
             :title="ariaLabel"
             :aria-label="ariaLabel"
             @click="setFullScreen"
-            @keydown.enter="setFullScreen"
+            @keydown.enter.prevent="setFullScreen"
           >
             <vp-icon
               v-show="isFullScreen"
@@ -103,7 +103,6 @@ export default {
     })
 
     function escFullScreen (e) {
-      console.log(e)
       if (e.key === 'Escape' && isFullScreen.value) setFullScreen()
     }
 
