@@ -34,11 +34,15 @@
         </div>
       </div>
 
-      <div class="w-full h-full p-6 pb-2 bg-light">
+      <div
+        class="output__body w-full px-6 pt-4 pb-2 bg-light"
+        :style="`height: ${isFullScreen ? '90%' : height }`"
+      >
         <iframe
           ref="outputIframe"
           :title="title"
           width="100%"
+          height="100%"
           frameborder="0"
           allowfullscreen="true"
           scrolling="yes"
@@ -72,6 +76,10 @@ export default {
     console: {
       type: Boolean,
       default: false
+    },
+    height: {
+      type: String,
+      default: '280px'
     }
   },
   setup ({ selector }, { root, refs }) {
@@ -82,8 +90,7 @@ export default {
       const snippet = document.querySelector(`${selector} > pre`)
       window.addEventListener('keydown', escFullScreen, true)
       root.$nextTick(() => {
-        refs.outputIframe.contentWindow.document.getElementsByTagName('body')[0].innerHTML = snippet.textContent
-        refs.outputIframe.height = (refs.outputIframe.contentWindow.innerHeight + 35) + 'px'
+        refs.outputIframe.contentDocument.getElementsByTagName('body')[0].innerHTML = snippet.textContent
       })
     })
 
