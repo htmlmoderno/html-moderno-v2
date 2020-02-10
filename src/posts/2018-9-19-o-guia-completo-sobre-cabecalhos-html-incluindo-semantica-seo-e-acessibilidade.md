@@ -26,6 +26,7 @@ As tags de cabeçalho devem seguir uma lógica estruturada dentro da sua página
 
 Exemplo de todos os níveis do cabeçalho:
 
+::: figurecode > Estrutura com todos os níveis de cabeçalho HTML do h1 até o h6
 ```html block-main
 <h1>Cabeçalho nível 1</h1>
 <h2>Cabeçalho nível 2</h2>
@@ -34,10 +35,11 @@ Exemplo de todos os níveis do cabeçalho:
 <h5>Cabeçalho nível 5</h5>
 <h6>Cabeçalho nível 6</h6>
 ```
+:::
 
 <code-output
   class="my-10"
-  title="Saída de uma estrutura com todos os níveis de cabeçalho HTML do h1 até o h6"
+  title="Saída renderizada da estrutura com todos os níveis de cabeçalho HTML do h1 até o h6"
   selector=".block-main"
   height="300px"
 />

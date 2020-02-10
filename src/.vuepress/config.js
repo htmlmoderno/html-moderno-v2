@@ -2,6 +2,7 @@ require('dotenv').config()
 const path = require('path')
 const webpack = require('webpack')
 
+const extendMarkdown = require('./config/extendMarkdown')
 const head = require('./config/head')
 const plugins = require('./config/plugins')
 const postcss = require('./config/postcss')
@@ -20,6 +21,9 @@ module.exports = {
     '/': {
       lang: 'pt-br'
     }
+  },
+  markdown: {
+    extendMarkdown
   },
   configureWebpack () {
     return {

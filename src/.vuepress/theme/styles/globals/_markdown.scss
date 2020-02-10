@@ -281,4 +281,20 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
+
+  .figurecode {
+    @apply relative;
+    
+    &__caption {
+      @apply absolute z-20 text-xs text-right w-full italic;
+      color: #6C7391;
+      top: 25px;
+      right: 40px;
+    }
+
+    > div {
+      @apply relative z-10;
+    }
+
+  }
 }
