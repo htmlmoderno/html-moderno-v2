@@ -26,9 +26,21 @@ As tags de cabeçalho devem seguir uma lógica estruturada dentro da sua página
 
 Exemplo de todos os níveis do cabeçalho:
 
-<lazy-hydrate :when-visible="{ rootMargin: '100px' }">
-  <iframe src="https://codepen.io/ktquez/embed/gdZBGg/?height=265&default-tab=html,result&embed-version=2" width="100%" height="400" allowfullscreen="true" frameborder="0"></iframe>
-</lazy-hydrate>
+```html block-main
+<h1>Cabeçalho nível 1</h1>
+<h2>Cabeçalho nível 2</h2>
+<h3>Cabeçalho nível 3</h3>
+<h4>Cabeçalho nível 4</h4>
+<h5>Cabeçalho nível 5</h5>
+<h6>Cabeçalho nível 6</h6>
+```
+
+<code-output
+  class="my-10"
+  title="Saída de uma estrutura com todos os níveis de cabeçalho HTML do h1 até o h6"
+  selector=".block-main"
+  height="300px"
+/>
 
 Uma coisa interessante é que a hierarquia acontece de maneira obrigatória de cima para baixo, porém, é possível usar a estrutura de baixo para cima sem problemas, como, por exemplo um `H2` vindo logo após de um `H3`:
 
@@ -55,30 +67,28 @@ A resposta é **SIM**, as especificações do HTML5 para as tags de cabeçalho i
 
 Por exemplo:
 
-```html block-one
-<main>
-  <article>
-    <header>
-      <h1>Título do meu post</h1> 
-    </header>
-    <section>
-      <h1>Título da seção 1 (simulando nível 2)</h1>
+```html
+<body>
+  ...
+  <main>
+    <article>
+      <header>
+        <h1>Título do meu post</h1> 
+      </header>
       <section>
-        <h2>Item da seção 1 (simulando nível 3)</h2>
+        <h1>Título da seção 1 (simulando nível 2)</h1>
+        <section>
+          <h2>Item da seção 1 (simulando nível 3)</h2>
+        </section>
       </section>
-    </section>
-    <section>
-      <h1>Título da seção 2 (simulando nível 2)</h1>
-    </section>
-  </article>
-</main>
+      <section>
+        <h1>Título da seção 2 (simulando nível 2)</h1>
+      </section>
+    </article>
+  </main>
+  ...
+</body>
 ```
-
-<code-output
-  class="my-10"
-  title="oi"
-  selector=".block-one"
-/>
 
 Quando se trata de SEO também não tem problemas utilizar mais de um H1 na página, é um mito achar que um H1 é fator decisivo para melhorar o ranqueamento, mito maior ainda é achar que vários H1 melhoraria ainda mais sua posição.
 
@@ -97,7 +107,7 @@ Recomendação da W3C desde 2014: (Saiba mais através [desse link](https://w3c.
 
 Exemplo retirado da documentação da W3C para o HTML:
 
-```html
+```html block-two
 <body>
   <h1>Apples</h1>
   <p>Apples are fruit.</p>
@@ -115,6 +125,13 @@ Exemplo retirado da documentação da W3C para o HTML:
   </section>
 </body>
 ```
+
+<code-output
+  class="my-10"
+  title="oi"
+  height="380px"
+  selector=".block-two"
+/>
 
 ## Quando usamos cabeçalhos H2-H6?
 Os cabeçalhos H2-H6 são usados para continuar com a estrutura do documento, normalmente como pode ter múltiplos H2 usamos ele para títulos de seções do conteúdo (subtítulos) e H3 para algum subtítulo com um nível abaixo dele. 
@@ -180,25 +197,67 @@ Não existe fórmula mágica e nem estrutura que sirva para tudo, mas juntei alg
 ### Cabeçalhos HTML em uma landing page
 Vamos simular uma landing page do segmento produtos medicinais.
 
-<lazy-hydrate :when-visible="{ rootMargin: '100px' }">
-  <iframe src="https://codepen.io/ktquez/embed/dqwQad/?height=265&default-tab=html,result&embed-version=2" width="100%" height="400" allowfullscreen="true" frameborder="0"></iframe>
-</lazy-hydrate>
+```html
+<h1>Cansado o dia inteiro? Com Vitaforte esses dias acabaram.</h1>
+
+<h2> O que é a Vitaforte? </h2>
+<p>...</p>
+
+<h2>Principais benefícios das vitaminas </h2>
+<h3>Disposição</h3>
+<p>...</p>
+  
+<h3>Aumenta a imunidade</h3>
+<p>...</p>
+
+<h2>Perguntas frequentes</h2>
+<h3>Quais vitaminas são mais importantes?</h3>
+  <p>...</p>
+<h3>A Vitaforte é indicada para gestantes?</h3>
+<p>...</p>
+```
 
 ### Cabeçalhos HTML em uma single post (blog)
 Dentre os cabeçalhos mais importantes primeiramente usamos o H1 que é o título do post e representa o tópico mais relevante da página, logo em seguida os subtítulos aparecem organizando as seções do conteúdo da postagem.
 
 Tiramos esse exemplo do blog [rico.com](rico.com):
 
-<lazy-hydrate :when-visible="{ rootMargin: '100px' }">
-  <iframe src="https://codepen.io/ktquez/embed/ZMVmgp/?height=265&default-tab=html,result&embed-version=2" width="100%" height="400" allowfullscreen="true" frameborder="0"></iframe>
-</lazy-hydrate>
+```html
+<h1>14 Dicas Para Você Dar um Jeito Na Sua Vida Financeira.</h1>
+
+<h2>Por que Você Precisa Organizar Sua Vida Financeira</h2>
+<p>...</p>
+
+<h2>14 Dicas Para Você Dar um Jeito Na Sua Vida Financeira</h2>
+<h3>Deixe as desculpas de lado</h3>
+<p>...</p>
+  
+<h3>Pague as suas dívidas</h3>
+<p>...</p>
+
+<h2>Conclusão</h2>
+<p>...</p>
+```
 
 ### Cabeçalhos HTML em uma página de produto (e-commerce)
 Como no exemplo do post de um blog, a ideia será a mesma. Vamos pegar um exemplo do site Magazine Luiza:
 
-<lazy-hydrate :when-visible="{ rootMargin: '100px' }">
-  <iframe src="//codepen.io/ktquez/embed/mGaaya/?height=265&default-tab=html,result&embed-version=2" width="100%" height="400" allowfullscreen="true" frameborder="0"></iframe>
-</lazy-hydrate>
+```html
+<h1>IPhone 6s Apple 32GB Ouro Rosa 4G Tela 4.7.</h1>
+
+<h2>Informações do produto</h2>
+<p>...</p>
+
+<h2>Mais detalhes</h2>
+<h3>Especificações Técnicas</h3>
+x<p>...</p>
+
+<h3>Conteúdo da embalagem</h3>
+<p>...</p>
+  
+<h3>Avaliação dos clientes</h3>
+<p>...</p>
+```
 
 ### Veja como os grandes players estão fazendo
 Particularmente gosto de ver como os grandes players estruturam seus cabeçalhos, os melhores especialistas em HTML e SEO participam desses players e constantemente fazem diversos testes, levando-os a uma estrutura próximo da prática que melhor otimiza sua classificação nos mecanismos de busca.

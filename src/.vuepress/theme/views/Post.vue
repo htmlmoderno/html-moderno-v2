@@ -82,7 +82,7 @@
         </figure>
       </section>
 
-      <section class="single-post__container">
+      <section class="single-post__container pb-6">
         <table-contents :headers="post.headers" />
       </section>
 
