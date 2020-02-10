@@ -9,7 +9,7 @@
         {{ message }}<br>
         <button
           @click="reload"
-          @keypress.enter="reload"
+          @keydown.enter="reload"
         >
           {{ buttonText }}
         </button>

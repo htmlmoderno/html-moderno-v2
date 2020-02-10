@@ -14,7 +14,7 @@
           :href="`#${header.slug}`"
           :title="header.title"
           @click.prevent="scrollToHeader(`${header.slug}`)"
-          @keypress.enter="scrollToHeader(`${header.slug}`)"
+          @keydown.enter="scrollToHeader(`${header.slug}`)"
         >
           <span>{{ header.title }}</span>
         </a>

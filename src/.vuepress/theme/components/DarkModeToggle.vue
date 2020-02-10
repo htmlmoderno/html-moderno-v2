@@ -2,7 +2,7 @@
   <button
     class="p-2"
     @click="toggleDarkMode"
-    @keypress.enter="toggleDarkMode"
+    @keydown.enter="toggleDarkMode"
   >
     <vp-icon
       v-show="darkMode"

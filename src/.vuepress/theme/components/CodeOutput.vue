@@ -17,7 +17,7 @@
             :title="ariaLabel"
             :aria-label="ariaLabel"
             @click="setFullScreen"
-            @keypress.enter="setFullScreen"
+            @keydown.enter="setFullScreen"
           >
             <vp-icon
               v-show="isFullScreen"
