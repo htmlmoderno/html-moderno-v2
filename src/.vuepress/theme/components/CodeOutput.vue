@@ -17,7 +17,7 @@
             :title="ariaLabel"
             :aria-label="ariaLabel"
             @click="setFullScreen"
-            @keydown.enter="setFullScreen"
+            @keypress.enter="setFullScreen"
           >
             <vp-icon
               v-show="isFullScreen"
@@ -88,14 +88,14 @@ export default {
 
     onMounted(() => {
       const snippet = document.querySelector(`${selector} > pre`)
-      window.addEventListener('keydown', escFullScreen, true)
+      window.addEventListener('keypress', escFullScreen, true)
       root.$nextTick(() => {
         refs.outputIframe.contentDocument.getElementsByTagName('body')[0].innerHTML = snippet.textContent
       })
     })
 
     onUnmounted(() => {
-      window.removeEventListener('keydown', escFullScreen, true)
+      window.removeEventListener('keypress', escFullScreen, true)
     })
 
     function escFullScreen (e) {
