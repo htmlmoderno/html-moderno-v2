@@ -10,6 +10,7 @@ module.exports = {
         light: '#F4F1EC',
         textLight: '#573E48',
         'light-200': '#ECE6DC',
+        'light-700': '#8B7A5C',
         'cat-semantica': '#D9D2A4',
         'cat-acessibilidade': '#FFB7A8',
         'cat-html5': '#FF886E',

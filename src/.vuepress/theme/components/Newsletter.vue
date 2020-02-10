@@ -94,4 +94,10 @@ export default {
   height: 100%;
   top: 10px;
 }
+
+.hm-newsletter {
+  h2 {
+    @apply tracking-wider mb-0 z-20;
+  }
+}
 </style>

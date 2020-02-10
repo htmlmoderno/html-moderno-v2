@@ -89,6 +89,14 @@ module.exports = [
           path: resolve('../theme/layouts/Posts')
         },
         {
+          name: 'CodeOutput',
+          path: resolve('../theme/components/CodeOutput')
+        },
+        {
+          name: 'Newsletter',
+          path: resolve('../theme/components/Newsletter')
+        },
+        {
           name: 'SWUPopup',
           path: resolve('../theme/components/SWUPopup')
         }

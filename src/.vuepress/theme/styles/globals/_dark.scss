@@ -68,4 +68,10 @@
       }
     }
   }
+
+  .content__default {
+    blockquote {
+      @apply text-gray-400;
+    }
+  }
 }

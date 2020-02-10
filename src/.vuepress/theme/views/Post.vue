@@ -13,7 +13,7 @@
         itemprop="mainEntityOfPage"
         :content="$route.fullPath"
       >
-      <div class="single-post__container">
+      <div class="single-post__container single-post__container--no-mt">
         <h1
           class="w-full text-3xl sm:text-4xl font-medium"
           itemprop="name headline"
@@ -82,16 +82,24 @@
         </figure>
       </section>
 
-      <section class="single-post__container mt-24">
+      <section class="single-post__container">
         <table-contents :headers="post.headers" />
       </section>
 
-      <section class="single-post__container mt-24">
-        <newsletter :small="true" />
+      <section class="single-post__container">
+        <Content />
       </section>
 
-      <section class="single-post__container mt-24">
-        <comment />
+      <section class="single-post__container single-post__box-comment">
+        <lazy-hydrate :when-visible="{ rootMargin: '100px' }">
+          <comments />
+        </lazy-hydrate>
+      </section>
+
+      <section class="single-post__container">
+        <lazy-hydrate :when-visible="{ rootMargin: '100px' }">
+          <web-mentions />
+        </lazy-hydrate>
       </section>
     </article>
   </main>
@@ -107,8 +115,8 @@ export default {
   components: {
     TableContents,
     ResponsivePicture,
-    Comment: () => import('@vuepress/plugin-blog/lib/client/components/Comment'),
-    newsletter: () => import('@theme/components/Newsletter')
+    WebMentions: () => import('@theme/components/WebMentions'),
+    Comments: () => import('@theme/components/Comments')
   },
   setup (_, { root }) {
     const fm = root.$frontmatter
@@ -151,8 +159,12 @@ export default {
 
 <style lang="scss">
 .single-post {
-  .single-post__container {
-    @apply w-full mx-auto;
+  &__container {
+    @apply w-full mx-auto mt-24;
+
+    &--no-mt {
+      @apply mt-0;
+    }
 
     @screen md {
       @apply w-4/5;
@@ -160,6 +172,19 @@ export default {
 
     @screen xl {
       @apply w-3/5;
+    }
+  }
+
+  &__box-comment {
+    @apply relative mt-24 pt-24;
+
+    &:before {
+      @apply absolute top-0 bg-accent;
+      content: '';
+      width: 100px;
+      height: 2px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }
