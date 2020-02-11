@@ -76,7 +76,7 @@
               :alt="post.cover.alternativeText"
             >
           </responsive-picture>
-          <div class="text-center text-xs mt-4 text-gray-500 italic tracking-wider">
+          <div class="text-center text-sm mt-4 text-gray-600">
             {{ post.cover.caption }}
           </div>
         </figure>
@@ -115,6 +115,7 @@
 import ResponsivePicture from '@theme/components/ResponsivePicture'
 import TableContents from '@theme/components/TableContents'
 import { getSlugPost } from '@theme/utils'
+import { onMounted } from '@vue/composition-api'
 
 export default {
   name: 'Post',
@@ -154,6 +155,13 @@ export default {
         path: `${fm.cover[0].path}${slug}`
       }
     }
+
+    onMounted(() => {
+      const anchors = document.querySelectorAll('.header-anchor')
+      anchors.forEach(link => {
+        link.setAttribute('aria-label', `Link âncora para: ${link.parentElement.textContent.replace('#', '').trim()}`)
+      })
+    })
 
     console.log(post)
 
