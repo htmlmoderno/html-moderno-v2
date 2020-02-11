@@ -108,6 +108,15 @@ module.exports = [
     }
   ],
   [
+    // https://vuepress.vuejs.org/plugin/official/plugin-medium-zoom.html
+    '@vuepress/medium-zoom', {
+      selector: '.content__default img',
+      options: {
+        margin: 16
+      }
+    }
+  ],
+  [
     // https://vuepress.vuejs.org/plugin/official/plugin-search.html
     '@vuepress/search', {
       searchMaxSuggestions: 10
