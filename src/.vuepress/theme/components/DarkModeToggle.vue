@@ -1,19 +1,20 @@
 <template>
   <button
     class="p-2"
+    :aria-label="ariaLabel"
     @click="toggleDarkMode"
     @keydown.enter="toggleDarkMode"
   >
     <vp-icon
       v-show="darkMode"
-      title="Mudar para o modo light"
+      :title="title.isDark"
       width="20px"
       height="20px"
       name="day"
     />
     <vp-icon
       v-show="!darkMode"
-      title="Mudar para o modo dark"
+      :title="title.isLight"
       width="20px"
       height="20px"
       name="night"
@@ -22,12 +23,19 @@
 </template>
 
 <script>
-import { ref, onMounted } from '@vue/composition-api'
+import { ref, computed, onMounted } from '@vue/composition-api'
 
 export default {
   name: 'DarkModeToggle',
   setup () {
     const darkMode = ref(false)
+    const title = {
+      isLight: 'Mudar para o modo dark',
+      isDark: 'Mudar para o modo light'
+    }
+    const ariaLabel = computed(() => {
+      return darkMode.value ? title.isDark : title.isLight
+    })
 
     onMounted(() => {
       if (prefersDark() || !!localStorage.getItem('darkMode')) {
@@ -59,7 +67,9 @@ export default {
     }
 
     return {
+      title,
       darkMode,
+      ariaLabel,
       toggleDarkMode
     }
   }
