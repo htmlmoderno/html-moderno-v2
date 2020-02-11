@@ -9,9 +9,9 @@
     margin-bottom: 40px;
 
     code {
-      @apply text-sm bg-dark text-textDark;
+      @apply text-sm bg-light-200 text-textLight font-bold;
       border-radius: 4px;
-      padding: 4px 10px;
+      padding: 2px 5px;
     }
 
     abbr {
@@ -96,7 +96,7 @@
     }
   }
 
-  a {
+  a:not(.header-anchor) {
     @apply border-b-2 border-dotted border-accent;
     position: relative;
     text-decoration: none;

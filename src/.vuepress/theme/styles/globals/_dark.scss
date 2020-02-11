@@ -73,6 +73,9 @@
     blockquote {
       @apply text-gray-400;
     }
+    p code {
+      @apply bg-gray-900 text-textDark;
+    }
   }
 
   .output__browser-btns {
