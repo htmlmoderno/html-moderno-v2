@@ -1,5 +1,8 @@
 <template>
-  <div class="copy-snippet flex items-center">
+  <div
+    ref="copySnippet"
+    class="copy-snippet flex items-center"
+  >
     <span
       class="mr-2 opacity-0 transition-opacity duration-500"
       :class="{ 'opacity-100': copied }"
@@ -7,7 +10,6 @@
       COPIADO
     </span>
     <button
-      ref="copySnippet"
       class="copy-snippet__button p-4"
       :aria-labelledby="`${labelledbyId}_text ${labelledbyId}`"
       @click="copy"

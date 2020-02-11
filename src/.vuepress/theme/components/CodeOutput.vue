@@ -15,10 +15,10 @@
             type="button"
             class="ml-2 p-2"
             :title="ariaLabel"
-            :aria-label="ariaLabel"
             @click="setFullScreen"
             @keydown.enter.prevent="setFullScreen"
           >
+            <span class="sr-only">{{ ariaLabel }} {{ title }}</span>
             <vp-icon
               v-show="isFullScreen"
               class="text-xs"
