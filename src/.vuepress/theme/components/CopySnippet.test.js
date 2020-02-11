@@ -1,10 +1,10 @@
 import { shallowMount } from '@vue/test-utils'
-import CodeCopy from './CodeCopy.vue'
+import CopySnippet from './CopySnippet.vue'
 
 
-const wrapper = shallowMount(CodeCopy)
+const wrapper = shallowMount(CopySnippet)
 
-describe('CodeCopy', () => {
+describe('CopySnippet', () => {
   test('is a Vue instance', () => {
     expect(wrapper.isVueInstance()).toBeTruthy()
   })

@@ -3,7 +3,6 @@
   min-height: 150px;
   font-size: 16px;
   line-height: 1.8;
-  margin-bottom: 60px;
 
   p {
     word-wrap: break-word;
@@ -220,10 +219,11 @@
   }
 
   pre[class*=language-] {
-    @apply px-8 pt-16 pb-8 rounded-lg;
+    @apply px-8 pt-16 pb-8;
     position: relative;
     margin: .5em 0;
     overflow: auto;
+    border-radius: 0.7rem;
 
     code {
       margin: 0;
@@ -286,15 +286,20 @@
     @apply relative;
     
     &__caption {
-      @apply absolute z-20 text-xs text-right w-full italic;
+      @apply absolute z-20 text-xs right-0 text-right w-full;
       color: #6C7391;
       top: 25px;
-      right: 40px;
+      padding-right: 30px;
     }
 
-    > div {
+    &__content {
       @apply relative z-10;
     }
 
+    &__copy {
+      @apply absolute text-xs text-textDark tracking-wider;
+      right: 16px;
+      bottom: 10px;
+    }
   }
 }

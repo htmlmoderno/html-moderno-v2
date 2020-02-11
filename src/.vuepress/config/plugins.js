@@ -89,6 +89,10 @@ module.exports = [
           path: resolve('../theme/layouts/Posts')
         },
         {
+          name: 'CopySnippet',
+          path: resolve('../theme/components/CopySnippet')
+        },
+        {
           name: 'CodeOutput',
           path: resolve('../theme/components/CodeOutput')
         },
