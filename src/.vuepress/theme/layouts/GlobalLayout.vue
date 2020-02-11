@@ -33,6 +33,7 @@
       <newsletter />
     </section>
     <the-footer />
+    <back-to-top />
   </div>
 </template>
 
@@ -44,9 +45,10 @@ export default {
   name: 'GlobalLayout',
   components: {
     TheHeading,
-    TheCategories: () => import('@theme/components/layout/TheCategories'),
+    BackToTop: () => import('@theme/components/BackToTop'),
     Newsletter: () => import('@theme/components/Newsletter'),
-    TheFooter: () => import('@theme/components/layout/TheFooter')
+    TheFooter: () => import('@theme/components/layout/TheFooter'),
+    TheCategories: () => import('@theme/components/layout/TheCategories')
   },
   setup (_, { root }) {
     const layout = computed(() => {
