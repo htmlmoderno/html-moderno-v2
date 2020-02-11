@@ -1,0 +1,85 @@
+<template>
+  <div class="share-post">
+    <h2 class="text-2xl font-medium">
+      Contamos com você<span class="text-accent">.</span>
+    </h2>
+    <div class="mt-2">
+      <h3 class="text-xs">
+        Você pode nos ajudar compartilhando e/ou curtindo nossas redes sociais.
+      </h3>
+
+      <ul class="share-post__list mt-12 flex">
+        <li
+          v-for="social in socialLinks"
+          :key="`social-link-${social.name}`"
+        >
+          <a
+            :href="social.link"
+            target="_blank"
+            class="n9m"
+          >
+            <span class="sr-only">Compartilhar o post no {{ social.name }}</span>
+            <vp-icon :name="social.name" />
+          </a>
+        </li>
+      </ul>
+
+      <div class="mt-20 tracking-wider">
+        Obrigado pela sua leitura!
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'SharePost',
+  setup (_, { root }) {
+    const currentURL = root.$el.baseURI
+    const title = root.$frontmatter.title
+    const description = root.$frontmatter.description
+
+    const socialLinks = [
+      {
+        name: 'facebook',
+        link: `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`
+      },
+      {
+        name: 'twitter',
+        link: `https://twitter.com/share?url=${currentURL}&text=${encodeURI(title)}&via=htmlmoderno`
+      },
+      {
+        name: 'linkedin',
+        link: `https://www.linkedin.com/shareArticle?mini=true&url=${currentURL}&title=${encodeURI(title)}&summary=${encodeURI(description)}&source=website`
+      },
+      {
+        name: 'whatsapp',
+        link: `whatsapp://send?text=${encodeURI(title + ' - ' + currentURL)}`
+      },
+      {
+        name: 'telegram',
+        link: `https://telegram.me/share/url?url=${currentURL}&text=${encodeURI(title)}`
+      },
+      {
+        name: 'email',
+        link: `mailto:info@example.com?&subject=${encodeURI(title)}&body=${currentURL}`
+      }
+    ]
+
+    return {
+      socialLinks,
+      description
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+.share-post {
+  &__list {
+    > li > a {
+      @apply rounded-full block text-2xl p-4 mr-5;
+    }
+  }
+}
+</style>

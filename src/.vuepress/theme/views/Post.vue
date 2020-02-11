@@ -90,7 +90,13 @@
         <Content />
       </section>
 
-      <section class="single-post__container single-post__box-comment">
+      <section class="single-post__container single-post__box-share border-t border-solid border-light-200 dark:border-dark-200">
+        <lazy-hydrate :when-visible="{ rootMargin: '100px' }">
+          <share-post />
+        </lazy-hydrate>
+      </section>
+
+      <section class="single-post__container single-post__box-comment border-t border-solid border-light-200 dark:border-dark-200">
         <lazy-hydrate :when-visible="{ rootMargin: '100px' }">
           <comments />
         </lazy-hydrate>
@@ -116,6 +122,7 @@ export default {
     TableContents,
     ResponsivePicture,
     WebMentions: () => import('@theme/components/WebMentions'),
+    SharePost: () => import('@theme/components/SharePost'),
     Comments: () => import('@theme/components/Comments')
   },
   setup (_, { root }) {
@@ -175,17 +182,12 @@ export default {
     }
   }
 
-  &__box-comment {
-    @apply relative mt-24 pt-24;
+  &__box-share {
+    @apply mt-20 pt-16;
+  }
 
-    &:before {
-      @apply absolute top-0 bg-accent;
-      content: '';
-      width: 100px;
-      height: 2px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+  &__box-comment {
+    @apply mt-16 pt-24;
   }
 }
 </style>

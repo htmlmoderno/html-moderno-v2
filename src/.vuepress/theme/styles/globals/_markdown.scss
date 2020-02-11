@@ -174,14 +174,7 @@
   }
 
   hr {
-    @apply border border-solid border-accent;
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-    &.divider {
-      @apply mx-auto my-24;
-      width: 100px;
-    }
+    @apply border border-solid border-light-200;
   }
 
   video, audio {

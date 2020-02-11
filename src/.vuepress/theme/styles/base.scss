@@ -8,7 +8,6 @@ html {
 body {
 	@apply bg-light p-0 text-textLight tracking-wide antialiased;
 	font-family: $font-stack;
-	transition: all .5s;
 
 	@screen md {
 		@apply p-4;
