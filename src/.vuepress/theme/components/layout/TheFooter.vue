@@ -27,6 +27,8 @@
             <a
               :href="item.link"
               :title="item.label"
+              :rel="item.rel"
+              target="_blank"
               class="footer__link base-link"
             >
               {{ item.label }}
