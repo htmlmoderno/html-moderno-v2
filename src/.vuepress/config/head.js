@@ -37,7 +37,11 @@ module.exports = [
 
   // Link
   ['link', { rel: 'author', href: '/humans.txt' }],
+  ['link', { rel: 'author', href: 'https://twitter.com/ktquez' }],
+  ['link', { rel: 'publisher', href: 'https://twitter.com/htmlmoderno' }],
   ['link', { rel: 'manifest', href: '/manifest.json' }],
+  ['link', { rel: 'webmention', href: 'https://webmention.io/htmlmoderno.com.br/webmention' }],
+  ['link', { rel: 'pingback', href: 'https://webmention.io/htmlmoderno.com.br/xmlrpc' }],
 
   ['link', { rel: 'apple-touch-icon', sizes: '57x57', href: '/favicon/apple-icon-57x57.png' }],
   ['link', { rel: 'apple-touch-icon', sizes: '60x60', href: '/favicon/apple-icon-60x60.png' }],

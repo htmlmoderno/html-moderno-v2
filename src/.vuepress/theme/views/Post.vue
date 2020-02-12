@@ -102,10 +102,8 @@
         </lazy-hydrate>
       </section>
 
-      <section class="single-post__container">
-        <lazy-hydrate :when-visible="{ rootMargin: '100px' }">
-          <web-mentions />
-        </lazy-hydrate>
+      <section class="single-post__container single-post__box-comment border-t border-solid border-light-200 dark:border-dark-200">
+        <web-mentions />
       </section>
     </article>
   </main>

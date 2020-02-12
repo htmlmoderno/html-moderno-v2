@@ -8,7 +8,7 @@
         Você pode nos ajudar compartilhando e/ou curtindo nossas redes sociais.
       </h3>
 
-      <ul class="share-post__list mt-12 flex">
+      <ul class="share-post__list mt-12 flex flex-wrap">
         <li
           v-for="social in socialLinks"
           :key="`social-link-${social.name}`"

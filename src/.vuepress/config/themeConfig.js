@@ -13,6 +13,10 @@ module.exports = {
     extension: 'png',
     breakpoints: [400, 640, 800, 1024]
   },
+  webmentions: {
+    active: true,
+    endpoint: 'https://webmention.io/api/mentions.jf2?target=#URLPOST#'
+  },
   footer: {
     links: [
       {
@@ -25,7 +29,8 @@ module.exports = {
       },
       {
         label: 'Twitter',
-        link: 'https://twitter.com/htmlmoderno/?ref=website'
+        link: 'https://twitter.com/htmlmoderno/?ref=website',
+        rel: 'me'
       },
       {
         label: 'Instagram',
