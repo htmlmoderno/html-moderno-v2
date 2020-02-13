@@ -6,7 +6,7 @@ lang: pt-BR
 title: Acessibilidade
 description: Acessibilidade web é democratizar a informação para o maior número de pessoas, aqui você fica por dentro das melhores práticas sobre acessibilidade web
 slug: acessibilidade
-tags: [a11y]
+tags_by_cat: [a11y]
 
 meta:
   - property: og:image

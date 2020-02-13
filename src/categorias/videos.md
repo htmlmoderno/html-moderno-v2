@@ -6,7 +6,7 @@ lang: pt-BR
 title: Vídeos
 description: HTML5, acessibilidade, UX, SEO, performance e webzcomponents? Sem redundância, mas aqui no HTML Moderno você aprende tudo de mais moderno sobre dev web
 slug: videos
-tags: []
+tags_by_cat: []
 
 meta:
   - property: og:image

@@ -6,7 +6,7 @@ lang: pt-BR
 title: HTML Daily news
 description: Links de artigos e comentários relevantes da comunidade HTML nas redes sociais todos os dias
 slug: html-daily
-tags: [Março 2020]
+tags_by_cat: [Março 2020]
 
 meta:
   - property: og:image

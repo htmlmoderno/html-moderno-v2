@@ -6,7 +6,7 @@ lang: pt-BR
 title: UX
 description: Focar na experiência do usuário é essencial quando usam o seu produto ou serviço, aqui você conhecerá algumas táticas de UX utilizando o HTML moderno
 slug: ux
-tags: []
+tags_by_cat: []
 
 meta:
   - property: og:image

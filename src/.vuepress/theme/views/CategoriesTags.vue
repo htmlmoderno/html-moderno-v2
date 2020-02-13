@@ -30,11 +30,11 @@
               <span>Tags<span class="text-accent">.</span></span>
             </div>
             <ul
-              v-show="category.frontmatter.tags.length"
+              v-show="category.frontmatter.tags_by_cat.length"
               class="tags-page-list"
             >
               <li
-                v-for="tag in category.frontmatter.tags"
+                v-for="tag in category.frontmatter.tags_by_cat"
                 :key="tag"
                 class="tags-page-list__item"
               >
@@ -47,7 +47,7 @@
               </li>
             </ul>
             <div
-              v-show="!category.frontmatter.tags.length"
+              v-show="!category.frontmatter.tags_by_cat.length"
               class="mt-8"
             >
               Sem tags até o momento.

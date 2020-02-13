@@ -6,7 +6,7 @@ lang: pt-BR
 title: Segurança
 description: Segurança web é algo importantíssimo e uma boa escrita HTML garante menos vulnerabilidade em seu documento. Dicas, boas práticas e muito mais.
 slug: seguranca
-tags: []
+tags_by_cat: []
 
 meta:
   - property: og:image

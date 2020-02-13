@@ -6,7 +6,7 @@ lang: pt-BR
 title: Web performance
 description: Otimização é uma meta complexa, performance ajudar na experiência do usuário e SEO. Confira algumas dicas e boas práticas de como otimizar sua aplicação
 slug: web-performance
-tags: []
+tags_by_cat: []
 
 meta:
   - property: og:image
