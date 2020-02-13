@@ -46,19 +46,26 @@
         <button
           type="submit"
           class="n9m w-full bg-accent text-white font-medium py-4"
-          :class="{ 'px-3': small, 'px-6': !small }"
+          :class="{ 'px-3': small, 'px-6': !small, 'opacity-50': isSubmitted }"
+          :disabled="isSubmitted"
         >
           INSCREVER-SE
         </button>
       </div>
     </form>
+    <span
+      v-show="message.result"
+      class="hm-newsletter__msg inline-block rounded-lg text-sm mt-4 py-2 px-4"
+      :class="{ 'hm-newsletter__msg--error': message.result === 'error' }"
+      v-html="message.msg"
+    />
   </div>
 </template>
 
 <script>
 import subscribeToMailchimp from 'vuepress-plugin-mailchimp/src/mailchimpSubscribe'
 
-import { ref } from '@vue/composition-api'
+import { ref, computed } from '@vue/composition-api'
 
 export default {
   name: 'Newsletter',
@@ -71,18 +78,25 @@ export default {
   setup (_, { root }) {
     const name = ref(null)
     const email = ref(null)
+    const message = ref({})
+    const isSubmitted = ref(false)
 
     async function submitNewsletter () {
+      isSubmitted.value = true
       try {
         const res = await subscribeToMailchimp(email.value, { FNAME: name.value })
-        if (res.result === 'error') throw new Error(res.msg)
+        isSubmitted.value = false
+        message.value = res
       } catch (e) {
-        console.log(e.message)
+        isSubmitted.value = false
+        message.value = { result: 'error', msg: e.message }
       }
     }
     return {
       name,
       email,
+      message,
+      isSubmitted,
       submitNewsletter
     }
   }
@@ -90,14 +104,26 @@ export default {
 </script>
 
 <style lang="scss">
-.hm-newsletter__pattern {
-  height: 100%;
-  top: 10px;
-}
-
 .hm-newsletter {
   h2 {
     @apply tracking-wider mb-0 z-20;
+  }
+
+  &__pattern {
+    height: 100%;
+    top: 10px;
+  }
+
+  &__msg {
+    @apply bg-green-200 text-green-900;
+
+    &--error {
+      @apply bg-red-200 text-red-800;
+    }
+
+    a {
+      @apply underline;
+    }
   }
 }
 </style>
