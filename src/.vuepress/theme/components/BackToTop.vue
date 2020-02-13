@@ -37,7 +37,7 @@ export default {
   methods: {
     fired () {
       this.fire = true
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+      window.scrollTo({ top: 0, behavior: 'auto' })
     },
 
     handleScrollEffectBackToTop () {
