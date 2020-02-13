@@ -7,6 +7,11 @@
       ({{ webmentions.length }}) Webmentions<span class="text-accent">.</span>
     </h2>
 
+    <meta
+      itemprop="commentCount"
+      :content="mentions.length"
+    >   
+
     <div class="webmentions-interact my-12">
       <div
         v-if="likes.length"
@@ -109,36 +114,58 @@
         <li
           v-for="(mention, index) in mentions"
           :key="`mention${index}`"
+          class="mb-16"
         >
-          <div class="w-3/12 md:w-1/12 flex justify-center">
-            <a
-              :href="mention.author.url"
-              :title="mention.author.name"
-              :aria-label="`Ir para o site do ${mention.author.name}`"
-              rel="nofollow"
+          <article
+            class="flex flex-wrap"
+            itemprop="comment"
+            itemscope="itemscope"
+            itemtype="https://schema.org/Comment"
+            itemref="author-comment-image"
+          >
+            <div
+              class="w-full flex items-center"
+              itemprop="author"
+              itemscope="itemscope"
+              itemtype="https://schema.org/Person"
             >
-              <img
-                class="rounded-full"
-                :src="mention.author.photo"
-                :alt="`Avatar de ${mention.author.name}`"
+              <a
+                :href="mention.author.url"
+                :title="mention.author.name"
+                :aria-label="`Ir para o site do ${mention.author.name}`"
+                rel="nofollow"
+                itemprop="url"
               >
-            </a>
-          </div>
-          <div class="w-9/12 md:w-11/12 pl-3 md:pl-6">
-            <span class="font-medium">
-              {{ mention.author.name }}
-            </span>
-            <time
-              :datetime="mention.published"
-              class="text-gray-600 text-xs block sm:inline sm:ml-2"
-            >
-              {{ new Intl.DateTimeFormat('default', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(mention.published)) }}
-            </time>
-            <p
-              class="text-sm mt-2"
-              v-html="mention.content.html || mention.content.text"
-            />
-          </div>
+                <img
+                  id="author-comment-image"
+                  class="rounded-full"
+                  itemprop="image"
+                  :src="mention.author.photo"
+                  :alt="`Avatar de ${mention.author.name}`"
+                >
+              </a>
+              <p
+                class="font-medium ml-4"
+                itemprop="name"
+              >
+                {{ mention.author.name }}
+              </p>                
+            </div>
+            <div class="w-full mt-2">
+              <p
+                itemprop="text"
+                class="text-sm"
+                v-html="mention.content.html || mention.content.text"
+              />
+              <time
+                itemprop="datePublished"
+                :datetime="mention.published"
+                class="text-gray-600 text-xs"
+              >
+                {{ new Intl.DateTimeFormat('default', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(mention.published)) }}
+              </time>
+            </div>          
+          </article>
         </li>
       </ul>
     </div>
@@ -248,10 +275,8 @@ export default {
 .webmentions-comments {
   &__list {
     > li {
-      @apply flex mb-16;
-
       img {
-        width: 80px;
+        width: 50px;
       }
 
       a {
