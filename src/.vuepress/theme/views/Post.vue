@@ -55,7 +55,7 @@
         </div>
       </div>
       <section
-        v-if="post.cover"
+        v-if="post.cover && post.cover.path"
         itemprop="image"
         itemscope="itemscope"
         itemtype="https://schema.org/ImageObject"
@@ -160,8 +160,6 @@ export default {
         link.setAttribute('aria-label', `Link âncora para: ${link.parentElement.textContent.replace('#', '').trim()}`)
       })
     })
-
-    console.log(post)
 
     return {
       post
