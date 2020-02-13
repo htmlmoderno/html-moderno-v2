@@ -35,7 +35,7 @@
 export default {
   name: 'SharePost',
   setup (_, { root }) {
-    const currentURL = root.$el.baseURI
+    const currentURL = `${process.env.URL_BASE}${root.$route.fullPath}`
     const title = root.$frontmatter.title
     const description = root.$frontmatter.description
 
