@@ -6,7 +6,7 @@ title: Alan Albuquerque (Ktquez)
 description: Alan Albuquerque é desenvolvedor web a 10 anos, criador de conteúdo em HTML, acessibilidade, SEO, Vue.js e javascript.
 name: Alan Ktquez
 nickname: ktquez
-role: Desenvolvedor web
+jobTitle: Desenvolvedor web na Nyx Technology
 avatar: /autores/ktquez.png
 date: 2018-08-13
 social:
