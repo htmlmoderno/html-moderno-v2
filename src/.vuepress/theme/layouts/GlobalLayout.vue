@@ -46,7 +46,6 @@ export default {
   components: {
     TheHeading,
     BackToTop: () => import('@theme/components/BackToTop'),
-    Newsletter: () => import('@theme/components/Newsletter'),
     TheFooter: () => import('@theme/components/layout/TheFooter'),
     TheCategories: () => import('@theme/components/layout/TheCategories')
   },
