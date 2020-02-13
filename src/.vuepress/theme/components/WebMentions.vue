@@ -4,7 +4,7 @@
     class="webmentions"
   >
     <h2 class="text-2xl font-medium">
-      Webmentions<span class="text-accent">.</span>
+      ({{ webmentions.length }}) Webmentions<span class="text-accent">.</span>
     </h2>
 
     <div class="webmentions-interact my-12">
@@ -149,13 +149,16 @@
 import { useWindowSize } from 'vue-use-web'
 
 import { ref, watch, computed } from '@vue/composition-api'
+import fetch from 'node-fetch'
+
 
 export default {
   name: 'WebMentions',
   setup (_, { root }) {
     const webmentions = ref([])
     const avatarLimits = ref(16)
-    const urlFetch = root.$themeConfig.webmentions.endpoint.replace('#URLPOST#', root.$el.baseURI)
+    // const urlFetch = root.$themeConfig.webmentions.endpoint.replace('#URLPOST#', `${process.env.URL_BASE}${root.$route.fullPath}`)
+    const urlFetch = root.$themeConfig.webmentions.endpoint.replace('#URLPOST#', 'https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade.html')
 
     const mentions = computed(() => {
       if (!webmentions.value.length) return []
