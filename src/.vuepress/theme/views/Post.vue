@@ -3,63 +3,34 @@
     id="#main"
     class="single-post"
   >
-    <article
-      class="w-full layout-section"
-      itemscope="itemscope"
-      itemprop="blogPost"
-      itemtype="https://schema.org/BlogPosting"
-    >
-      <meta
-        itemprop="mainEntityOfPage"
-        :content="$route.fullPath"
-      >
+    <article class="w-full layout-section">
+      <meta :content="$route.fullPath">
       <div class="single-post__container single-post__container--no-mt">
-        <h1
-          class="w-full text-3xl sm:text-4xl font-medium"
-          itemprop="name headline"
-        >
+        <h1 class="w-full text-3xl sm:text-4xl font-medium">
           {{ post.title }}<span class="text-accent">.</span>
         </h1>
-        <meta
-          itemprop="description"
-          :content="post.description"
-        >
+        <meta :content="post.description">
         <div class="w-full flex items-center text-xs mt-4">
           <time
             :datetime="post.date.datetime"
-            itemprop="datePublished"
             class="uppercase"
           >
             {{ post.date.short }}
           </time>
-          <meta
-            itemprop="dateModified"
-            :content="post.updated_at"
-          >
+          <meta :content="post.updated_at">
           <span :class="`mx-2 text-cat-${post.mainCategory}`">//</span>
-          <div
-            class="inline"
-            itemprop="author"
-            itemscope="itemscope"
-            itemtype="https://schema.org/Person"
-          >
+          <div class="inline">
             <router-link
               :to="post.author.path"
               class="underline"
-              itemprop="url"
             >
               <span class="sr-only">Ver posts do autor</span>
-              <span itemprop="name">{{ post.author.frontmatter.name }}</span>
+              <span>{{ post.author.frontmatter.name }}</span>
             </router-link>
           </div>
         </div>
       </div>
-      <section
-        v-if="post.cover && post.cover.path"
-        itemprop="image"
-        itemscope="itemscope"
-        itemtype="https://schema.org/ImageObject"
-      >
+      <section v-if="post.cover && post.cover.path">
         <figure
           role="figure"
           :aria-label="post.cover.caption"
@@ -70,7 +41,6 @@
           >
             <img
               class="w-full inline rounded-lg"
-              itemprop="url"
               :src="`${post.cover.path}.${post.cover.extension}`"
               :title="post.cover.alternativeText"
               :alt="post.cover.alternativeText"
@@ -96,6 +66,13 @@
         </lazy-hydrate>
       </section>
 
+      <component
+        :is="'script'"
+        type="application/ld+json"
+      >
+        {{ schema.trim() }}
+      </component>
+
       <section class="single-post__container single-post__box-comment border-t border-solid border-light-200 dark:border-dark-200">
         <lazy-hydrate :when-visible="{ rootMargin: '100px' }">
           <comments />
@@ -113,6 +90,7 @@
 import ResponsivePicture from '@theme/components/ResponsivePicture'
 import TableContents from '@theme/components/TableContents'
 import { getSlugPost } from '@theme/utils'
+import { generateSchemaPost } from '@theme/utils/generateSchema'
 import { onMounted } from '@vue/composition-api'
 
 export default {
@@ -161,8 +139,14 @@ export default {
       })
     })
 
+    const schema = generateSchemaPost({
+      ...post,
+      fullPath: root.$route.fullPath
+    })
+
     return {
-      post
+      post,
+      schema
     }
   }
 }

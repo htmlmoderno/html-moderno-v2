@@ -1,22 +1,5 @@
 <template>
-  <div
-    class="global-layout container mx-auto"
-    itemscope
-    itemtype="https://schema.org/WebPage"
-  >
-    <meta
-      itemprop="name"
-      content="HTML Moderno"
-    >
-    <meta
-      itemprop="alternateName"
-      content="HTML Moderno"
-    >
-    <meta
-      itemprop="url"
-      content="https://htmlmoderno.com.br/"
-    >
-
+  <div class="global-layout container mx-auto">
     <the-heading />
     <component :is="layout" />
     <section
