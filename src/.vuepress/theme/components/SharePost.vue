@@ -77,8 +77,11 @@ export default {
 <style lang="scss">
 .share-post {
   &__list {
-    > li > a {
-      @apply rounded-full block text-2xl p-4 mr-5;
+    > li {
+      @apply mr-5 mb-5;
+      > a {
+        @apply rounded-full block text-2xl p-4;
+      }
     }
   }
 }
