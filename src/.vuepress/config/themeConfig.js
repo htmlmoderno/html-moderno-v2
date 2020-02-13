@@ -37,8 +37,12 @@ module.exports = {
         link: 'https://www.instagram.com/htmlmoderno/?ref=website'
       },
       {
+        label: 'Youtube',
+        link: 'https://www.youtube.com/channel/UCByMpqccsCqL42LMzKIMnBg/?ref=website'
+      },
+      {
         label: 'RSS Feed',
-        link: 'https://htmlmoderno-2.surge.sh/rss.xml'
+        link: 'https://htmlmoderno.com.br/rss.xml'
       },
       {
         label: 'Presskit',
