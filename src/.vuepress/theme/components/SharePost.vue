@@ -16,7 +16,7 @@
           <a
             :href="social.link"
             target="_blank"
-            class="n9m"
+            class="n9m n9m--active"
           >
             <span class="sr-only">Compartilhar o post no {{ social.name }}</span>
             <vp-icon :name="social.name" />
