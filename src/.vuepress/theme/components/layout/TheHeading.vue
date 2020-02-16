@@ -1,37 +1,48 @@
 <template>
-  <header class="flex pt-8 lg:pt-16">
-    <div class="w-3/12 md:w-1/2">
-      <router-link to="/">
-        <img
-          class="inline"
-          src="/images/html-moderno-logo.svg"
-          alt="Logo do HTML Moderno 4 quadrados laranja com 1 letra do HTML cada mais símbolo universal acessibilidade no centro"
-          title="HTML Moderno"
-        >
-      </router-link>
-    </div>
-    <div class="w-9/12 md:w-1/2 flex items-center justify-end">
-      <div>
-        <dark-mode-toggle />
+  <header class="flex flex-wrap pt-8 lg:pt-16">
+    <div class="flex w-full">
+      <div class="w-3/12 md:w-1/2">
+        <router-link to="/">
+          <img
+            class="inline"
+            src="/images/html-moderno-logo.svg"
+            alt="Logo do HTML Moderno 4 quadrados laranja com 1 letra do HTML cada mais símbolo universal acessibilidade no centro"
+            title="HTML Moderno"
+          >
+        </router-link>
       </div>
-      <div class="sm:mx-4 sm:pr-3 border-r border-solid border-textLight dark:border-textDark">
+      <div class="w-9/12 md:w-1/2 flex items-center justify-end">
+        <div class="border-r border-solid border-textLight dark:border-textDark">
+          <dark-mode-toggle class="px-6" />
+        </div>
         <button
           type="button"
-          class="py-2 px-6 font-medium"
-        >
-          MENU
-        </button>
-      </div>
-      <div>
-        <button
-          type="button"
-          class="py-2 px-6 font-medium"
+          class="-mr-5 sm:mr-0 py-2 px-6 font-medium"
         >
           <span class="sr-only">Pesquisar no site</span>
           <vp-icon name="search" />
         </button>
       </div>
     </div>
+    <nav class="header-menu w-full max-w-full flex p-2 justify-start sm:justify-end overflow-auto sm:overflow-hidden">
+      <h2 class="sr-only">
+        Menu de navegação
+      </h2>
+      <ul class="flex mt-4 relative p-2">
+        <li
+          v-for="link in $themeConfig.menu.links"
+          :key="link.label"
+          class="text-xs mr-4"
+        >
+          <router-link
+            :to="link.to"
+            class="block n9m n9m--active py-3 px-4 font-medium hover:text-accent"
+          >
+            {{ link.label }}
+          </router-link>
+        </li>
+      </ul>
+    </nav>
   </header>
 </template>
 
@@ -44,4 +55,19 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.header-menu {
+  > ul {
+    transition: all .5s;
+    width: 200vw;
+
+    @screen sm {
+      width: auto;
+    }
+
+    > li {
+      width: max-content;
+    }
+  }
+}
+</style>

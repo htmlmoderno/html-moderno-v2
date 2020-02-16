@@ -1,16 +1,11 @@
 <template>
   <div class="posts">
-    <section>
-      <presentation
-        :first-title="presentation.firstTitle"
-        :second-title="presentation.secondTitle"
-        :page="presentation.page"
-      />
-    </section>
-    <main
-      id="main"
-      class="mt-24"
-    >
+    <presentation
+      :first-title="presentation.firstTitle"
+      :second-title="presentation.secondTitle"
+      :page="presentation.page"
+    />
+    <the-main>
       <section class="w-full layout-section">
         <masonry
           :cols="{default: 3, 1024: 2, 600: 1}"
@@ -31,11 +26,12 @@
           <pagination />
         </div>
       </section>
-    </main>
+    </the-main>
   </div>
 </template>
 
 <script>
+import TheMain from '@theme/components/layout/TheMain'
 import Presentation from '@theme/components/Presentation'
 import prepareCardPost from '@theme/utils/prepareCardPost'
 import { computed } from '@vue/composition-api'
@@ -44,6 +40,7 @@ export default {
   name: 'Posts',
   components: {
     Presentation,
+    TheMain,
     Card: () => import('@theme/components/Card'),
     Pagination: () => import('@vuepress/plugin-blog/lib/client/components/Pagination')
   },

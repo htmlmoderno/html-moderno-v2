@@ -17,6 +17,26 @@ module.exports = {
     active: true,
     endpoint: 'https://webmention.io/api/mentions.jf2?target=#URLPOST#'
   },
+  menu: {
+    links: [
+      {
+        label: 'SOBRE',
+        to: '/sobre'
+      },
+      {
+        label: 'TODOS OS POSTS',
+        to: '/posts'
+      },
+      {
+        label: 'CATEGORIAS',
+        to: '/categorias'
+      },
+      {
+        label: 'CONFIGURAÇÕES',
+        to: '/configuracoes'
+      }
+    ]
+  },
   footer: {
     links: [
       {
@@ -31,10 +51,6 @@ module.exports = {
         label: 'Twitter',
         link: 'https://twitter.com/htmlmoderno/?ref=website',
         rel: 'me'
-      },
-      {
-        label: 'Instagram',
-        link: 'https://www.instagram.com/htmlmoderno/?ref=website'
       },
       {
         label: 'Youtube',

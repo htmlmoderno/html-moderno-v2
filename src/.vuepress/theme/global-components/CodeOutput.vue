@@ -104,7 +104,6 @@ export default {
     })
 
     function escFullScreen (e) {
-      console.log('CodeOutput', e)
       if (e.key === 'Escape' && isFullScreen.value) setFullScreen()
     }
 
