@@ -6,6 +6,7 @@
 @import "a11y";
 @import "dark";
 @import "markdown";
+@import "override-components";
 
 #app {
 	@apply w-full rounded-lg px-8;

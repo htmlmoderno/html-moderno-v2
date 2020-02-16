@@ -15,13 +15,12 @@
         <div class="border-r border-solid border-textLight dark:border-textDark">
           <dark-mode-toggle class="px-6" />
         </div>
-        <button
-          type="button"
-          class="-mr-5 sm:mr-0 py-2 px-6 font-medium"
-        >
-          <span class="sr-only">Pesquisar no site</span>
-          <vp-icon name="search" />
-        </button>
+        <div class="w-2/4 ml-8">
+          <search-box
+            placeholder="Tecle 's' para pesquisar"
+            class="n9m-search n9m--inner"
+          />
+        </div>
       </div>
     </div>
     <nav class="header-menu w-full max-w-full flex p-2 justify-start sm:justify-end overflow-auto sm:overflow-hidden">
@@ -32,7 +31,7 @@
         <li
           v-for="link in $themeConfig.menu.links"
           :key="link.label"
-          class="text-xs mr-4"
+          class="text-xs mr-4 last:mr-0"
         >
           <router-link
             :to="link.to"
@@ -47,9 +46,12 @@
 </template>
 
 <script>
+import SearchBox from '@SearchBox'
+
 export default {
   name: 'TheHeading',
   components: {
+    SearchBox,
     DarkModeToggle: () => import('@theme/components/DarkModeToggle')
   }
 }

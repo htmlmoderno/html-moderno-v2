@@ -1,5 +1,6 @@
 module.exports = {
   smoothScroll: true,
+  searchPlaceholder: 'Tecle "s" para pesquisar',
   pagination: {
     perPage: process.env.PAGINATION_PER_PAGE
   },
