@@ -17,3 +17,7 @@ body {
 h1, h2, h3 {
 	@apply leading-none tracking-wider;
 }
+
+input::placeholder {
+	@apply text-light-700 #{!important};
+}

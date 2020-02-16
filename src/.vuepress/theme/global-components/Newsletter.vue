@@ -22,7 +22,7 @@
           <input
             id="name"
             v-model="name"
-            class="n9m n9m--inner py-4 px-6 w-full placeholder-orange-600"
+            class="n9m n9m--inner py-4 px-6 w-full"
             placeholder="Seu nome"
             type="text"
             required
@@ -35,7 +35,7 @@
           <input
             id="email"
             v-model="email"
-            class="n9m n9m--inner py-4 px-6 w-full placeholder-orange-600"
+            class="n9m n9m--inner py-4 px-6 w-full"
             placeholder="Seu email"
             type="email"
             required

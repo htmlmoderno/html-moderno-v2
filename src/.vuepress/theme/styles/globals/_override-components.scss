@@ -8,10 +8,6 @@
     &:focus {
       @apply shadow-outline;
     }
-
-    &::placeholder {
-      @apply text-light-700;
-    }
   }
 
   > ul {
