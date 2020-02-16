@@ -1,10 +1,11 @@
 <template>
+  <!-- eslint-disable -->
   <button
     class="p-2"
     :aria-label="ariaLabel"
     @click="toggleDarkMode"
-    @keydown.enter="toggleDarkMode"
   >
+  <!-- eslint-enable -->
     <vp-icon
       v-show="darkMode"
       :title="title.isDark"

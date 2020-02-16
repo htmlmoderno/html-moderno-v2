@@ -11,13 +11,14 @@
           <span>
             {{ console ? 'CONSOLE' : 'OUTPUT' }}
           </span>
+          <!-- eslint-disable -->
           <button
             type="button"
             class="ml-2 p-2"
             :title="ariaLabel"
             @click="setFullScreen"
-            @keydown.enter.prevent="setFullScreen"
           >
+          <!-- eslint-enable -->
             <span class="sr-only">{{ ariaLabel }} {{ title }}</span>
             <vp-icon
               v-show="isFullScreen"
@@ -103,6 +104,7 @@ export default {
     })
 
     function escFullScreen (e) {
+      console.log('CodeOutput', e)
       if (e.key === 'Escape' && isFullScreen.value) setFullScreen()
     }
 

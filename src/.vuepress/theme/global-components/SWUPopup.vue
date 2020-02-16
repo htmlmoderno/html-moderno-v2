@@ -2,15 +2,12 @@
   <SWUpdatePopup>
     <template v-slot="{ enabled, reload, message, buttonText }">
       <div
-        v-if="
-          enabled"
+        v-if="enabled"
         class="my-sw-update-popup"
       >
         {{ message }}<br>
-        <button
-          @click="reload"
-          @keydown.enter="reload"
-        >
+        <!-- eslint-disable-next-line -->
+        <button @click="reload">
           {{ buttonText }}
         </button>
       </div>

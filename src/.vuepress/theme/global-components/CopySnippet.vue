@@ -9,12 +9,13 @@
     >
       COPIADO
     </span>
+    <!-- eslint-disable -->
     <button
       class="copy-snippet__button p-4"
       :aria-labelledby="`${labelledbyId}_text ${labelledbyId}`"
       @click="copy"
-      @keydown.enter="copy"
     >
+    <!-- eslint-enable -->
       <vp-icon
         name="copy"
         class="text-lg text-textDark"

@@ -1,12 +1,13 @@
 <template>
   <div class="back-to-top">
+    <!-- eslint-disable -->
     <a
       ref="arrowTop"
       class="back-to-top__link"
       :class="{ 'back-to-top__link--show': show, 'back-to-top__link--fire': fire }"
       @click="fired"
-      @keydown.enter="fired"
     >
+    <!-- eslint-enable -->
       <vp-icon
         name="back-to-top-button"
         class="back-to-top__icon text-6xl"
