@@ -7,10 +7,7 @@
         :second-title="$frontmatter.title"
       />
     </section>
-    <main
-      id="main"
-      class="mt-24"
-    >
+    <the-main>
       <div class="w-full layout-section pb-0">
         <section
           v-for="category in getAllCategories"
@@ -25,7 +22,7 @@
               />
             </router-link>
           </div>
-          <div class="w-full sm:w-2/3 lg:w-3/4">
+          <div class="w-full mt-10 sm:mt-0 sm:w-2/3 lg:w-3/4">
             <div class="text-2xl font-medium">
               <span>Tags<span class="text-accent">.</span></span>
             </div>
@@ -55,18 +52,20 @@
           </div>
         </section>
       </div>
-    </main>
+    </the-main>
   </div>
 </template>
 
 <script>
 import categoriesMixin from '@/theme/mixins/categories'
 import CardCategory from '@theme/components/CardCategory'
+import TheMain from '@theme/components/layout/TheMain'
 import Presentation from '@theme/components/Presentation'
 
 export default {
   name: 'CategoriesTags',
   components: {
+    TheMain,
     Presentation,
     CardCategory
   },

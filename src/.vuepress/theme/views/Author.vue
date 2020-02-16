@@ -1,16 +1,11 @@
 <template>
   <div class="author">
-    <section>
-      <presentation
-        first-title="POSTS DO AUTOR"
-        :second-title="$frontmatter.title"
-        class="py-4"
-      />
-    </section>
-    <main
-      id="main"
-      class="mt-24"
-    >
+    <presentation
+      first-title="POSTS DO AUTOR"
+      :second-title="$frontmatter.title"
+      class="py-4"
+    />
+    <the-main>
       <section class="w-full layout-section">
         <masonry
           :cols="{default: 3, 1024: 2, 600: 1}"
@@ -25,12 +20,13 @@
           </div>
         </masonry>
       </section>
-    </main>
+    </the-main>
   </div>
 </template>
 
 <script>
 import Card from '@theme/components/Card'
+import TheMain from '@theme/components/layout/TheMain'
 import Presentation from '@theme/components/Presentation'
 import { filterPosts, sortPostsByDate } from '@theme/utils'
 import prepareCardPost from '@theme/utils/prepareCardPost'
@@ -38,8 +34,9 @@ import prepareCardPost from '@theme/utils/prepareCardPost'
 export default {
   name: 'Category',
   components: {
-    Presentation,
-    Card
+    Card,
+    TheMain,
+    Presentation
   },
   setup (_, { root }) {
     const allPosts = filterPosts(root.$site.pages)

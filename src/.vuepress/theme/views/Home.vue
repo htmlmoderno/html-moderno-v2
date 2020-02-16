@@ -1,15 +1,10 @@
 <template>
   <div class="home">
-    <section>
-      <presentation
-        first-title="HTML Moderno"
-        second-title="Tornando o desenvolvimento web ainda mais interessante"
-      />
-    </section>
-    <main
-      id="main"
-      class="mt-24"
-    >
+    <presentation
+      first-title="HTML Moderno"
+      second-title="Tornando o desenvolvimento web ainda mais interessante"
+    />
+    <the-main>
       <section class="w-full layout-section">
         <masonry
           :cols="{default: 3, 1024: 2, 600: 1}"
@@ -39,12 +34,13 @@
           </router-link>
         </div>
       </section>
-    </main>
+    </the-main>
   </div>
 </template>
 
 <script>
 import Card from '@theme/components/Card'
+import TheMain from '@theme/components/layout/TheMain'
 import Presentation from '@theme/components/Presentation'
 import { filterPosts, sortPostsByDate } from '@theme/utils'
 import prepareCardPost from '@theme/utils/prepareCardPost'
@@ -52,8 +48,9 @@ import prepareCardPost from '@theme/utils/prepareCardPost'
 export default {
   name: 'Home',
   components: {
+    Card,
+    TheMain,
     Presentation,
-    Card
   },
   setup (_, { root }) {
     const getPosts = filterPosts(root.$site.pages)
