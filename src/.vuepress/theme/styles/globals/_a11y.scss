@@ -1,0 +1,12 @@
+@media (prefers-reduced-motion: reduce) {
+	*, :before, :after {
+		transition: none !important;
+	}
+}
+
+
+html {
+	@media (prefers-reduced-motion: reduce) {
+		scroll-behavior: auto !important;
+	}
+}
