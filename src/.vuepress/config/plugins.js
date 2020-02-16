@@ -109,7 +109,8 @@ module.exports = [
   [
     // https://github.com/IOriens/vuepress-plugin-canonical
     'vuepress-plugin-canonical', {
-      baseURL: 'https://htmlmoderno.com.br'
+      baseURL: 'https://htmlmoderno.com.br',
+      stripExtension: true
     }
   ],
   [
