@@ -1,11 +1,11 @@
 <template>
-  <div class="presentation relative mt-24 sm:mt-40">
+  <section class="presentation relative mt-16 sm:mt-32">
     <div class="relative z-20">
-      <h1 class="font-medium w-full break-all sm:break-normal sm:w-3/4 lg:w-2/4">
+      <h1 class="font-medium w-full sm:w-3/4 lg:w-2/4">
         <span class="uppercase block mb-2 text-accent">
           {{ firstTitle }}
         </span>
-        <span class="text-4xl">
+        <span class="text-3xl sm:text-4xl">
           {{ secondTitle }}<span class="text-accent">.</span>
         </span>
       </h1>
@@ -18,7 +18,7 @@
         class="presentation__icon absolute float-right hidden sm:block"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
