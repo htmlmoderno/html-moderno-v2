@@ -23,9 +23,9 @@ module.exports = {
         'cat-videos': '#D84848 '
       },
       boxShadow: {
-        'n9m-light': '-5px -5px 10px #FFFBF5, 9px 9px 16px #E0E0E0',
+        'n9m-light': '-5px -5px 10px #FFFBF5, 5px 5px 16px #E0E0E0',
         'inner-n9m-light': 'inset 4px 4px 10px rgba(180, 167, 145, .3), inset -4px -4px 4px #FFFBF5',
-        'n9m-dark': '-4px -4px 8px #454857, 9px 9px 16px #272931',
+        'n9m-dark': '-4px -4px 8px #454857, 5px 5px 16px #272931',
         'inner-n9m-dark': 'inset 7px 5px 18px #2A2C36, inset -4px -4px 4px #4d5060'
       },
       margin: {
