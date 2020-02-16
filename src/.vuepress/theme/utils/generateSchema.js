@@ -22,6 +22,10 @@ const publisher = `{
       ]
     }`
 
+export function generateSchemaNavigation (menuItens) {
+  console.log(menuItens)
+}
+
 export function generateSchemaAuthor (author) {
   console.log(author)
 }
@@ -31,7 +35,7 @@ export function generateSchemaCategory (category) {
 }
 
 export function generateSchemaPost (post) {
-  const a = `{
+  return `{
     "@context": "http://schema.org",
     "@type": "Article",
     "@id": "${process.env.URL_BASE}${post.fullPath}#article",
@@ -81,6 +85,4 @@ export function generateSchemaPost (post) {
     ],
     "publisher": ${publisher}    
   }`
-
-  return a
 }
