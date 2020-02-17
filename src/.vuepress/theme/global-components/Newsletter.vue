@@ -14,6 +14,7 @@
     </div>
     <form
       class="flex flex-wrap items-end mt-12"
+      aria-label="Assinar newsletter"
       @submit.prevent="submitNewsletter"
     >
       <div class="w-full lg:w-2/5 p-0 lg:pr-3">
@@ -23,7 +24,7 @@
             id="name"
             v-model="name"
             class="n9m n9m--inner py-4 px-6 w-full"
-            placeholder="Seu nome"
+            aria-label="Digite seu nome"
             type="text"
             required
           >
@@ -36,7 +37,7 @@
             id="email"
             v-model="email"
             class="n9m n9m--inner py-4 px-6 w-full"
-            placeholder="Seu email"
+            aria-label="Digite seu email"
             type="email"
             required
           >
@@ -50,6 +51,7 @@
           :disabled="isSubmitted"
         >
           INSCREVER-SE
+          <span class="sr-only"> na Newsletter do HTMl Moderno</span>
         </button>
       </div>
     </form>
@@ -63,9 +65,8 @@
 </template>
 
 <script>
-import subscribeToMailchimp from 'vuepress-plugin-mailchimp/src/mailchimpSubscribe'
-
 import { ref, computed } from '@vue/composition-api'
+import subscribeToMailchimp from 'vuepress-plugin-mailchimp/src/mailchimpSubscribe'
 
 export default {
   name: 'Newsletter',
