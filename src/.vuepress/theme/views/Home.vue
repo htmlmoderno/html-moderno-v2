@@ -50,7 +50,7 @@ export default {
   components: {
     Card,
     TheMain,
-    Presentation,
+    Presentation
   },
   setup (_, { root }) {
     const getPosts = filterPosts(root.$site.pages)

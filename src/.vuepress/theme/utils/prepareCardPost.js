@@ -4,6 +4,7 @@ export default function prepareCardPost (posts) {
   return posts.map(post => {
     const slug = getSlugPost(post.path)
     const data = {
+      id: post.key,
       title: post.title,
       excerpt: post.frontmatter.excerpt,
       author: post.frontmatter.author,

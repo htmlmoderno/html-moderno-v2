@@ -3,17 +3,12 @@
     <div
       class="w-full rounded-lg overflow-hidden"
     >
-      <router-link
-        :to="post.to"
-        class="hover:text-accent"
+      <img
+        v-if="post.image.src"
+        class="w-full"
+        :src="post.image.src"
+        :alt="post.image.alt"
       >
-        <img
-          v-if="post.image.src"
-          class="w-full"
-          :src="post.image.src"
-          :alt="post.image.alt"
-        >
-      </router-link>
     </div>
     <div
       class="flex items-center text-xs mt-1 mb-2"
@@ -22,29 +17,36 @@
       <span class="uppercase"> {{ post.date }} </span>
       <span :class="`mx-2 text-cat-${post.category}`">//</span>
       <router-link
+        tabindex="-1"
         :to="`/autores/${encodeURI(post.author.toLowerCase())}`"
         class="underline"
       >
         {{ post.author }}
       </router-link>
     </div>
-    <h2 class="mb-10 text-lg font-medium tracking-normal leading-tight">
+    <h2 class="card-title mb-10 text-lg font-medium tracking-normal leading-tight">
       <router-link
         :to="post.to"
         class="hover:text-accent hover:underline"
       >
+        <span class="sr-only">Ver post sobre</span>
         {{ post.title }}
       </router-link>
     </h2>
-    <router-link
+    <div
       :to="post.to"
-      class="card-bottom-link flex items-center justify-between dark:dark-200"
+      class="card-bottom-link cursor-pointer flex items-center justify-between dark:dark-200"
+      @click="$router.push(post.to)"
+      @keydown.enter="$router.push(post.to)"
     >
       <div :class="`card-bottom-link__arrow relative border-cat-${post.category} bg-cat-${post.category}`" />
-      <div class="card-bottom-link__text text-xs text-right">
-        VER POST <span class="sr-only">{{ post.title }}</span>
-      </div>
-    </router-link>
+      <span
+        aria-hidden="true"
+        class="card-bottom-link__text text-xs text-right"
+      >
+        VER POST
+      </span>
+    </div>
   </div>
 </template>
 
@@ -61,6 +63,16 @@ export default {
 </script>
 
 <style lang="scss">
+.card-title {
+  > a:focus {
+    outline: none;
+  }
+
+  &:focus-within ~ .card-bottom-link {
+    @apply shadow-outline;
+  }
+}
+
 .card-bottom-link {
   &__arrow {
     width: calc(100% - 75px);
