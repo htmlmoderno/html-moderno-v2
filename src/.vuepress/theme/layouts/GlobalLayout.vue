@@ -1,5 +1,9 @@
 <template>
   <div class="global-layout container mx-auto">
+    <vue-skip-to
+      to="#main"
+      text="Pular para o conteúdo principal"
+    />
     <the-heading />
     <component :is="layout" />
     <section
@@ -17,12 +21,15 @@
     </section>
     <the-footer />
     <back-to-top />
+    <vue-announcer v-if="announcerHasLoaded" />
   </div>
 </template>
 
 <script>
-import TheHeading from '@theme/components/layout/TheHeading'
 import { computed, onMounted } from '@vue/composition-api'
+
+import TheHeading from '@theme/components/layout/TheHeading'
+import AnnouncerMixin from '@theme/mixins/Announcer'
 
 export default {
   name: 'GlobalLayout',
@@ -32,6 +39,7 @@ export default {
     TheFooter: () => import('@theme/components/layout/TheFooter'),
     TheCategories: () => import('@theme/components/layout/TheCategories')
   },
+  mixins: [AnnouncerMixin],
   setup (_, { root }) {
     const layout = computed(() => {
       if (!root.$page.path) return 'NotFound'

@@ -18,6 +18,10 @@ module.exports = {
     active: true,
     endpoint: 'https://webmention.io/api/mentions.jf2?target=#URLPOST#'
   },
+  announcer: {
+    frontmatterKey: 'announcer',
+    complementRoute: 'foi carregada'
+  },
   menu: {
     links: [
       {

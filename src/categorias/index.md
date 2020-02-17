@@ -2,7 +2,8 @@
 view: CategoriesTags
 lang: pt-BR
 
-title: Categorias e Tags
+title: Categorias e Tags do HTML Moderno
+announcer: Página %title% %complementRoute%
 
 meta:
   - property: og:image

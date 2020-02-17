@@ -5,6 +5,8 @@ lang: pt-BR
 title: O guia completo sobre cabeçalhos HTML incluindo semântica, SEO e acessibilidade
 description: D...
 excerpt: Saber estruturar cabeçalhos HTML é uma boa prática e traz muitos benefícios em acessibilidade e em SEO, esse artigo tenta cobrir ao máximo o que tem de mais atual sobre esse assunto.
+announcer: Postagem %title% %complementRoute%
+
 cover: 
   - extension: png
     path: /images/posts/2018/09/

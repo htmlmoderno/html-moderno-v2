@@ -28,6 +28,9 @@ module.exports = [
           dirname: 'posts',
           path: '/posts/',
           itemPermalink: '/posts/:slug',
+          frontmatter: {
+            announcer: 'Todos os posts %complementRoute%'
+          },
           pagination: {
             layout: 'Posts',
             prevText: '<<',
