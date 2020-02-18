@@ -5,7 +5,9 @@
       text="Pular para o conteúdo principal"
     />
     <the-heading />
-    <component :is="layout" />
+    <transition name="fade">
+      <component :is="layout" />
+    </transition>
     <section
       v-show="$frontmatter.view !== 'CategoriesTags'"
       id="categories"
