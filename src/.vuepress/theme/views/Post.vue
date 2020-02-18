@@ -4,12 +4,10 @@
     class="single-post"
   >
     <article class="w-full layout-section">
-      <meta :content="$route.fullPath">
       <div class="single-post__container single-post__container--no-mt">
         <h1 class="w-full text-3xl sm:text-4xl font-medium">
           {{ post.title }}<span class="text-accent">.</span>
         </h1>
-        <meta :content="post.description">
         <div class="w-full flex items-center text-xs mt-4">
           <time
             :datetime="post.date.datetime"
@@ -17,7 +15,6 @@
           >
             {{ post.date.short }}
           </time>
-          <meta :content="post.updated_at">
           <span :class="`mx-2 text-cat-${post.mainCategory}`">//</span>
           <div class="inline">
             <router-link
@@ -87,11 +84,12 @@
 </template>
 
 <script>
+import { onMounted } from '@vue/composition-api'
+
 import ResponsivePicture from '@theme/components/ResponsivePicture'
 import TableContents from '@theme/components/TableContents'
 import { getSlugPost } from '@theme/utils'
 import { generateSchemaPost } from '@theme/utils/generateSchema'
-import { onMounted } from '@vue/composition-api'
 
 export default {
   name: 'Post',

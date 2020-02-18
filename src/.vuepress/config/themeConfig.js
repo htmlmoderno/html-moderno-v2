@@ -35,11 +35,11 @@ module.exports = {
       {
         label: 'CATEGORIAS',
         to: '/categorias'
-      },
-      {
-        label: 'CONFIGURAÇÕES',
-        to: '/configuracoes'
       }
+      // {
+      //   label: 'ACESSIBILIDADE',
+      //   to: '/acessibilidade'
+      // }
     ]
   },
   footer: {

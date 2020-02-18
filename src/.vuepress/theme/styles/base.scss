@@ -15,7 +15,7 @@ body {
 }
 
 h1, h2, h3 {
-	@apply leading-none tracking-wider;
+	@apply leading-none;
 }
 
 input::placeholder {

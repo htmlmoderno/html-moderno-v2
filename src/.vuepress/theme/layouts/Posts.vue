@@ -3,7 +3,7 @@
     <presentation
       :first-title="presentation.firstTitle"
       :second-title="presentation.secondTitle"
-      :page="presentation.page"
+      :more-info="presentation.page"
     />
     <the-main>
       <section class="w-full layout-section">
@@ -31,10 +31,11 @@
 </template>
 
 <script>
+import { computed } from '@vue/composition-api'
+
 import TheMain from '@theme/components/layout/TheMain'
 import Presentation from '@theme/components/Presentation'
 import prepareCardPost from '@theme/utils/prepareCardPost'
-import { computed } from '@vue/composition-api'
 
 export default {
   name: 'Posts',
