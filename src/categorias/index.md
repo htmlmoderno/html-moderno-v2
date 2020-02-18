@@ -2,7 +2,7 @@
 view: CategoriesTags
 lang: pt-BR
 
-title: Categorias e Tags do HTML Moderno
+title: Categorias e Tags
 announcer: Página %title% %complementRoute%
 
 meta:
