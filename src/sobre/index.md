@@ -10,13 +10,13 @@ Announcer: Página %title% %complementRoute%
 
 # Sobre o HTML Moderno
 
-Somos um site sobre desenvolvimento web focado no HTML e suas vertentes como semântica, acessibilidade, SEO, boas práticas e etc.
+Somos um site sobre desenvolvimento web focado no HTML e suas vertentes como semântica, acessibilidade, SEO, UX e etc.
 
 A palavra moderno nesse caso não se remete a algo novo especificamente, mas uma forma de desenvolver para web nos tempos atuais sem negligenciar os padrões e boas práticas que o HTML traz para a web.
 
 ## O porque do projeto
 
-Por não se tratar de uma linguagem de programação (meme constante na comunidade),por ser a prota de entrada para esse mundo e para outras tecnologias e pelo HTML ser brando com os desenvolvedores e desenvolvedoras, passamos por ela muito rápido e a sua utilização permance na jornada do dev sempre na sua utilização básica.
+Por não se tratar de uma linguagem de programação (meme constante na comunidade), por ser a porta de entrada para esse mundo e/ou para outras tecnologias e pelo HTML ser brando com os desenvolvedores e desenvolvedoras, passamos por ela muito rápido e a sua utilização permance na jornada do dev sempre de maneira básica.
 
 A ideia é tentar trazer tanto para iniciantes, quanto para quem já é dev experiente (Frontend ou backend), uma abodagem mais atualizada do HTML e padrões web, onde hoje não só é mais uma linguagem de marcação, mas uma forma essencial de construir webpages que façam sentido, que não sejam exclusivas e otimizadas tanto para experiência do usuário, quanto para mecanismos de busca.
 
@@ -28,7 +28,7 @@ Inicialmente começou com uma página no Facebook onde eram postadas imagens com
 
 ## Onde encontrar o HTML Moderno
 
-Postamos outras coisas sobre HTML em outros formatos nas redes sociais, caso queira conferir e nos ajudar compartilhando, somo muito gratos por você fazer os conteúdos chegarem a mais pessoas.
+Postamos outras coisas sobre HTML em outros formatos nas redes sociais, caso queira conferi, você nos ajuda muito compartilhando, somos muito gratos por você fazer os conteúdos chegarem a mais pessoas.
 
 - [Twitter](https://twitter.com/htmlmoderno)
 - [Facebook page](https://www.facebook.com/htmlmoderno/)
