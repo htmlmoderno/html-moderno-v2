@@ -54,7 +54,7 @@ export default {
       },
       {
         name: 'whatsapp',
-        link: `whatsapp://send?text=${encodeURI(title + ' - ' + currentURL)}`
+        link: `https://wa.me/?text=${encodeURI(title + ' - ' + currentURL)}`
       },
       {
         name: 'telegram',
