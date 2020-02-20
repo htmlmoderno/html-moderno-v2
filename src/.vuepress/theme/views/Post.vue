@@ -57,7 +57,7 @@
         <Content />
       </section>
 
-      <section class="single-post__container single-post__box-share border-t border-solid border-light-200 dark:border-dark-200">
+      <section class="single-post__container single-post__box-share border-t border-light-200 dark:border-dark-200">
         <lazy-hydrate :when-visible="{ rootMargin: '100px' }">
           <share-post />
         </lazy-hydrate>
@@ -70,13 +70,13 @@
         {{ schema.trim() }}
       </component>
 
-      <section class="single-post__container single-post__box-comment border-t border-solid border-light-200 dark:border-dark-200">
+      <section class="single-post__container single-post__box-comment border-t border-light-200 dark:border-dark-200">
         <lazy-hydrate :when-visible="{ rootMargin: '100px' }">
           <comments />
         </lazy-hydrate>
       </section>
 
-      <section class="single-post__container single-post__box-comment border-t border-solid border-light-200 dark:border-dark-200">
+      <section class="single-post__container single-post__box-comment border-t border-light-200 dark:border-dark-200">
         <web-mentions />
       </section>
     </article>

@@ -115,7 +115,7 @@
   }
 
   blockquote {
-    @apply text-light-700 border-accent border-solid;
+    @apply text-light-700 border-accent;
     margin: 2em 0 2em 1em;
     padding: 4px 24px;
     font-style: italic;
@@ -178,7 +178,7 @@
   }
 
   hr {
-    @apply border border-solid border-light-200;
+    @apply border border-light-200;
   }
 
   video, audio {

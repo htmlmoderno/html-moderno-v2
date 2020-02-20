@@ -12,7 +12,7 @@
         </router-link>
       </div>
       <div class="w-9/12 md:w-1/2 flex items-center justify-end">
-        <div class="border-r border-solid border-textLight dark:border-textDark">
+        <div class="border-r border-textLight dark:border-textDark">
           <dark-mode-toggle class="px-6" />
         </div>
         <div class="w-2/4 ml-8">

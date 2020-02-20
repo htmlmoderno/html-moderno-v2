@@ -10,7 +10,7 @@
     <meta
       itemprop="commentCount"
       :content="mentions.length"
-    >   
+    >
 
     <div class="webmentions-interact my-12">
       <div
@@ -149,10 +149,11 @@
                 itemprop="name"
               >
                 {{ mention.author.name }}
-              </p>                
+              </p>
             </div>
             <div class="w-full mt-2">
               <p
+                v-if="mention.content"
                 itemprop="text"
                 class="text-sm"
                 v-html="mention.content.html || mention.content.text"
@@ -164,7 +165,7 @@
               >
                 {{ new Intl.DateTimeFormat('default', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(mention.published)) }}
               </time>
-            </div>          
+            </div>
           </article>
         </li>
       </ul>
@@ -173,19 +174,17 @@
 </template>
 
 <script>
+import { ref, watch, computed } from '@vue/composition-api'
 import { useWindowSize } from 'vue-use-web'
 
-import { ref, watch, computed } from '@vue/composition-api'
 import fetch from 'node-fetch'
-
 
 export default {
   name: 'WebMentions',
   setup (_, { root }) {
     const webmentions = ref([])
     const avatarLimits = ref(16)
-    // const urlFetch = root.$themeConfig.webmentions.endpoint.replace('#URLPOST#', `${process.env.URL_BASE}${root.$route.fullPath}`)
-    const urlFetch = root.$themeConfig.webmentions.endpoint.replace('#URLPOST#', 'https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade.html')
+    const urlFetch = root.$themeConfig.webmentions.endpoint.replace('#URLPOST#', `${process.env.URL_BASE}${root.$route.fullPath}`)
 
     const mentions = computed(() => {
       if (!webmentions.value.length) return []
@@ -214,9 +213,9 @@ export default {
 
     function responsiveAvatars (val) {
       const sizes = {
-        '480': 7,
-        '1024': 10,
-        '1400': 14
+        480: 7,
+        1024: 10,
+        1400: 14
       }
       for (const size in sizes) {
         if (val < Number(size)) {
@@ -232,8 +231,7 @@ export default {
       .then(res => {
         webmentions.value = res.children
       })
-      .catch(console.log)
-    
+
     return {
       likes,
       reposts,

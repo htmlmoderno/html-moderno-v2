@@ -77,7 +77,7 @@ export default {
 .tags-page-section {
   @apply flex flex-wrap py-24;
   &:not(:last-child) {
-    @apply border-b border-solid border-light-200;
+    @apply border-b border-light-200;
   }
 }
 
