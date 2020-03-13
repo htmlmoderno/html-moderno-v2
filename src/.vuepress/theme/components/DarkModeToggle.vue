@@ -29,6 +29,7 @@ import { ref, computed, onMounted } from '@vue/composition-api'
 export default {
   name: 'DarkModeToggle',
   setup () {
+    let themeColorMeta = null
     const darkMode = ref(false)
     const title = {
       isLight: 'Mudar para o modo dark',
@@ -41,6 +42,7 @@ export default {
     onMounted(() => {
       if (prefersDark() || !!localStorage.getItem('darkMode')) {
         darkMode.value = true
+        themeColorMeta = document.querySelector('meta[name="theme-color"]')
         setDarkMode()
       }
     })
@@ -49,16 +51,24 @@ export default {
       return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
     }
 
+    function setThemeColor (color) {
+      if (themeColorMeta) return themeColorMeta.setAttribute('content', color)
+    }
+
+    function toggleClass () {
+      document.documentElement.classList.toggle('mode-dark')
+    }
+
     function setDarkMode () {
       localStorage.setItem('darkMode', 'on')
-      document.documentElement.classList.add('mode-dark')
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#343743')
+      toggleClass()
+      setThemeColor('#343743')
     }
 
     function removeDarkMode () {
       localStorage.removeItem('darkMode')
-      document.documentElement.classList.remove('mode-dark')
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#F4F1EC')
+      toggleClass()
+      setThemeColor('#F4F1EC')
     }
 
     function toggleDarkMode () {
