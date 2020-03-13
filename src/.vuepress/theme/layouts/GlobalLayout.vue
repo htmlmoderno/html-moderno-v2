@@ -1,9 +1,6 @@
 <template>
   <div class="global-layout container mx-auto">
-    <vue-skip-to
-      to="#main"
-      text="Pular para o conteúdo principal"
-    />
+    <vue-skip-to v-if="skipToHasLoaded" />
     <the-heading />
     <transition name="fade">
       <component :is="layout" />
@@ -31,7 +28,7 @@
 import { computed, onMounted } from '@vue/composition-api'
 
 import TheHeading from '@theme/components/layout/TheHeading'
-import AnnouncerMixin from '@theme/mixins/Announcer'
+import A11yMixin from '@theme/mixins/a11y'
 
 export default {
   name: 'GlobalLayout',
@@ -41,7 +38,7 @@ export default {
     TheFooter: () => import('@theme/components/layout/TheFooter'),
     TheCategories: () => import('@theme/components/layout/TheCategories')
   },
-  mixins: [AnnouncerMixin],
+  mixins: [A11yMixin],
   setup (_, { root }) {
     const layout = computed(() => {
       if (!root.$page.path) return 'NotFound'
@@ -50,9 +47,10 @@ export default {
     })
 
     onMounted(() => {
-      import('webfontloader').then(module => {
-        module.default.load({ ...root.$themeConfig.webFontLoader })
-      })
+      import('webfontloader')
+        .then(module => {
+          module.default.load({ ...root.$themeConfig.webFontLoader })
+        })
     })
 
     return {
