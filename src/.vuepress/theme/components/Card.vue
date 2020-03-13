@@ -29,7 +29,7 @@
         :to="post.to"
         class="hover:text-accent hover:underline"
       >
-        <span class="sr-only">Ver post sobre</span>
+        <span class="sr-only">Acessar post: </span>
         {{ post.title }}
       </router-link>
     </h2>
@@ -44,7 +44,7 @@
         aria-hidden="true"
         class="card-bottom-link__text text-xs text-right"
       >
-        VER POST
+        ACESSAR POST
       </span>
     </div>
   </div>
@@ -75,7 +75,7 @@ export default {
 
 .card-bottom-link {
   &__arrow {
-    width: calc(100% - 75px);
+    width: calc(100% - 110px);
     height: 2px;
     transition: width .3s;
 
@@ -91,18 +91,18 @@ export default {
   }
 
   &__text {
-    width: 75px;
+    width: 110px;
     transition: all .3s;
   }
 
   &:hover {
     .card-bottom-link__arrow {
-      width: calc(100% - 90px);
+      width: calc(100% - 135px);
     }
 
     .card-bottom-link__text {
       @apply pr-2;
-      width: 90px;
+      width: 135px;
     }
   }
 }
