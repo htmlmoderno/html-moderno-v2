@@ -2,6 +2,7 @@
 order: 8
 view: Category
 lang: pt-BR
+active: false
 
 title: HTML Daily news
 description: Links de artigos e comentários relevantes da comunidade HTML nas redes sociais todos os dias

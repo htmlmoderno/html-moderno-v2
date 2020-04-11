@@ -10,7 +10,7 @@
     <the-main>
       <div class="w-full layout-section pb-0">
         <section
-          v-for="category in getAllCategories"
+          v-for="category in getCategories"
           :key="category.key"
           class="tags-page-section"
         >
@@ -57,10 +57,10 @@
 </template>
 
 <script>
-import categoriesMixin from '@/theme/mixins/categories'
 import CardCategory from '@theme/components/CardCategory'
 import TheMain from '@theme/components/layout/TheMain'
 import Presentation from '@theme/components/Presentation'
+import Views from '@theme/utils/views'
 
 export default {
   name: 'CategoriesTags',
@@ -69,7 +69,17 @@ export default {
     Presentation,
     CardCategory
   },
-  mixins: [categoriesMixin]
+  setup (_, { root }) {
+    const getCategories = Views(root.$site.pages)
+      .select('Category')
+      .status()
+      .orderBy()
+      .get()
+
+    return {
+      getCategories
+    }
+  }
 }
 </script>
 

@@ -2,6 +2,7 @@
 order: 6
 view: Category
 lang: pt-BR
+active: false
 
 title: Web components
 description: Reutilizar componentes web é uma excelente prática e esse conceito surgiu para solucionar e descentralizar a sua utilização, tudo a ver com o HTML Moderno

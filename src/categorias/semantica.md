@@ -2,6 +2,7 @@
 order: 1
 view: Category
 lang: pt-BR
+active: true
 
 title: Semântica
 description: Semântica HTML é dar sentido a sua informação, algo essencial para todo desenvolvedor. Dicas para você desenvolver de maneira moderna e semântica.

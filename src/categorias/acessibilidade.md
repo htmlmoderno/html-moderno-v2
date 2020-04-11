@@ -2,6 +2,7 @@
 order: 2
 view: Category
 lang: pt-BR
+active: true
 
 title: Acessibilidade
 description: Acessibilidade web é democratizar a informação para o maior número de pessoas, aqui você fica por dentro das melhores práticas sobre acessibilidade web

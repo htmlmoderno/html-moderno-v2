@@ -20,7 +20,7 @@
     <div class="mt-12">
       <ul class="categories-list flex flex-wrap">
         <li
-          v-for="category in getAllCategories"
+          v-for="category in getCategories"
           :key="category.key"
         >
           <router-link :to="`/categorias/${category.frontmatter.slug}`">
@@ -36,14 +36,24 @@
 </template>
 
 <script>
-import categoriesMixin from '@/theme/mixins/categories'
+import Views from '@theme/utils/views'
 
 export default {
   name: 'TheCategories',
   components: {
     CardCategory: () => import('@theme/components/CardCategory')
   },
-  mixins: [categoriesMixin]
+  setup (_, { root }) {
+    const getCategories = Views(root.$site.pages)
+      .select('Category')
+      .status()
+      .orderBy()
+      .get()
+
+    return {
+      getCategories
+    }
+  }
 }
 </script>
 

@@ -2,6 +2,7 @@
 order: 10
 view: Category
 lang: pt-BR
+active: false
 
 title: Vídeos
 description: HTML5, acessibilidade, UX, SEO, performance e webzcomponents? Sem redundância, mas aqui no HTML Moderno você aprende tudo de mais moderno sobre dev web

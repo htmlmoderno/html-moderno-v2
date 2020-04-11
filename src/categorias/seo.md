@@ -2,6 +2,7 @@
 order: 4
 view: Category
 lang: pt-BR
+active: true
 
 title: SEO
 description: Otimizar sua aplicação para mecanismos de busca (SEO) e ter bons resultados ficará simples com algumas táticas utilizando um HTML moderno e boas práticas
