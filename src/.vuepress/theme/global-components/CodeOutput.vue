@@ -56,9 +56,8 @@
 </template>
 
 <script>
-import FocusLock from 'vue-focus-lock'
-
 import { ref, onMounted, onUnmounted } from '@vue/composition-api'
+import FocusLock from 'vue-focus-lock'
 
 export default {
   name: 'CodeOutput',
@@ -69,6 +68,10 @@ export default {
     selector: {
       type: String,
       required: true
+    },
+    styleSelector: {
+      type: String,
+      default: ''
     },
     title: {
       type: String,
@@ -83,19 +86,15 @@ export default {
       default: '280px'
     }
   },
-  setup ({ selector }, { root, refs }) {
+  setup ({ selector, styleSelector }, { root, refs }) {
     const isFullScreen = ref(false)
     const ariaLabel = isFullScreen.value ? 'Sair da tela cheia' : 'Ver em tela cheia'
 
     onMounted(() => {
-      const snippet = document.querySelector(`${selector} > pre`)
       window.addEventListener('keydown', escFullScreen, true)
       root.$nextTick(() => {
-        const iframeBody = refs.outputIframe.contentDocument.getElementsByTagName('body')[0]
-        iframeBody.innerHTML = snippet.textContent
-        if (localStorage.getItem('darkMode')) {
-          iframeBody.style.color = '#e3e3e3'
-        }
+        insertContent(refs.outputIframe, selector)
+        insertStyle(refs.outputIframe, styleSelector)
       })
     })
 
@@ -110,6 +109,32 @@ export default {
     function setFullScreen () {
       isFullScreen.value = !isFullScreen.value
       document.getElementsByTagName('body')[0].style.overflow = isFullScreen.value ? 'hidden' : 'auto'
+    }
+
+    function insertContent (iframe) {
+      const snippet = document.querySelector(`${selector} > pre`)
+      const iframeBody = iframe.contentDocument.getElementsByTagName('body')[0]
+      iframeBody.innerHTML = snippet.textContent
+    }
+
+    function insertStyle (iframe, styleSelector) {
+      let defaultStyle = `
+        body {
+          font-family: Roboto, Calibri, Arial;
+          color: ${localStorage.getItem('darkMode') ? '#E3E3E3' : '#573E48'}
+        }
+      `
+      if (styleSelector) {
+        const elWithStyle = document.querySelector(`${styleSelector} > pre`)
+        defaultStyle = `
+          ${defaultStyle}
+          ${elWithStyle ? elWithStyle.textContent : ''}
+        `
+      }
+      const iframeHead = iframe.contentDocument.getElementsByTagName('head')[0]
+      const styleElement = document.createElement('style')
+      styleElement.innerHTML = defaultStyle
+      iframeHead.appendChild(styleElement)
     }
 
     return {
