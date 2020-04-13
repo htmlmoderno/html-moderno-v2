@@ -23,25 +23,6 @@
         </div>
       </div>
     </div>
-    <nav class="header-menu w-full max-w-full flex p-2 justify-start sm:justify-end overflow-auto sm:overflow-hidden">
-      <h2 class="sr-only">
-        Menu de navegação
-      </h2>
-      <ul class="flex mt-4 relative p-2">
-        <li
-          v-for="link in $themeConfig.menu.links"
-          :key="link.label"
-          class="text-xs mr-4 last:mr-0"
-        >
-          <router-link
-            :to="link.to"
-            class="block n9m n9m--active py-3 px-4 font-medium hover:text-accent"
-          >
-            {{ link.label }}
-          </router-link>
-        </li>
-      </ul>
-    </nav>
   </header>
 </template>
 
@@ -57,19 +38,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.header-menu {
-  > ul {
-    transition: all .5s;
-    width: 200vw;
-
-    @screen sm {
-      width: auto;
-    }
-
-    > li {
-      width: max-content;
-    }
-  }
-}
-</style>
+<style lang="scss"></style>
