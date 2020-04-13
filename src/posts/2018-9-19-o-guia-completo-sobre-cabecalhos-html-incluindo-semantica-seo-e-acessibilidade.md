@@ -16,6 +16,7 @@ categories: [html5, seo, semantica, acessibilidade]
 tags: [HTML5, heading, SEO, W3C]
 author: ktquez
 date: 2018-09-19
+
 ---
 
 ## Introdução
@@ -28,7 +29,7 @@ As tags de cabeçalho devem seguir uma lógica estruturada dentro da sua página
 
 Exemplo de todos os níveis do cabeçalho:
 
-::: figurecode Estrutura com todos os níveis de cabeçalho HTML do h1 até o h6
+::: figurecode Cabeçalhos HTML do h1 até o h6
 ```html block-main
 <h1>Cabeçalho nível 1</h1>
 <h2>Cabeçalho nível 2</h2>
@@ -48,6 +49,7 @@ Exemplo de todos os níveis do cabeçalho:
 
 Uma coisa interessante é que a hierarquia acontece de maneira obrigatória de cima para baixo, porém, é possível usar a estrutura de baixo para cima sem problemas, como, por exemplo um `H2` vindo logo após de um `H3`:
 
+::: figurecode
 ```html
 <h1>Título do meu post</h1>
 <h2>Subtítulo do post</h2>
@@ -59,6 +61,7 @@ Uma coisa interessante é que a hierarquia acontece de maneira obrigatória de c
 <h2>Item seção</h2>
 <p>...</p>
 ```
+:::
 
 ## Porque devemos usar cabeçalhos HTML
 Como já mencionado os títulos de cabeçalhos não são sobre a aparência, a estilização é algo gerado pelos navegadores, o fator principal é seu nível de relevância. Uma boa estrutura de títulos é importante tanto para acessibilidade, quanto para mecanismos de busca.
@@ -71,6 +74,7 @@ A resposta é **SIM**, as especificações do HTML5 para as tags de cabeçalho i
 
 Por exemplo:
 
+::: figurecode Ex.: Multiplos cabeçahos h1
 ```html
 <body>
   ...
@@ -93,6 +97,7 @@ Por exemplo:
   ...
 </body>
 ```
+:::
 
 Quando se trata de SEO também não tem problemas utilizar mais de um H1 na página, é um mito achar que um H1 é fator decisivo para melhorar o ranqueamento, mito maior ainda é achar que vários H1 melhoraria ainda mais sua posição.
 
@@ -111,6 +116,7 @@ Recomendação da W3C desde 2014: (Saiba mais através [desse link](https://w3c.
 
 Exemplo retirado da documentação da W3C para o HTML:
 
+::: figurecode Ex.: Cabeçahos h1 único (recomendado)
 ```html block-two
 <body>
   <h1>Apples</h1>
@@ -129,6 +135,7 @@ Exemplo retirado da documentação da W3C para o HTML:
   </section>
 </body>
 ```
+:::
 
 <code-output
   class="my-10"
@@ -201,6 +208,7 @@ Não existe fórmula mágica e nem estrutura que sirva para tudo, mas juntei alg
 ### Cabeçalhos HTML em uma landing page
 Vamos simular uma landing page do segmento produtos medicinais.
 
+::: figurecode Ex.: Cabeçalhos landing page
 ```html
 <h1>Cansado o dia inteiro? Com Vitaforte esses dias acabaram.</h1>
 
@@ -220,12 +228,14 @@ Vamos simular uma landing page do segmento produtos medicinais.
 <h3>A Vitaforte é indicada para gestantes?</h3>
 <p>...</p>
 ```
+:::
 
 ### Cabeçalhos HTML em uma single post (blog)
 Dentre os cabeçalhos mais importantes primeiramente usamos o H1 que é o título do post e representa o tópico mais relevante da página, logo em seguida os subtítulos aparecem organizando as seções do conteúdo da postagem.
 
 Tiramos esse exemplo do blog [rico.com](rico.com):
 
+::: figurecode Ex.: Cabeçalhos single blog post
 ```html
 <h1>14 Dicas Para Você Dar um Jeito Na Sua Vida Financeira.</h1>
 
@@ -242,10 +252,12 @@ Tiramos esse exemplo do blog [rico.com](rico.com):
 <h2>Conclusão</h2>
 <p>...</p>
 ```
+:::
 
 ### Cabeçalhos HTML em uma página de produto (e-commerce)
 Como no exemplo do post de um blog, a ideia será a mesma. Vamos pegar um exemplo do site Magazine Luiza:
 
+::: figurecode Ex.: Cabeçalhos produto e-commerce
 ```html
 <h1>IPhone 6s Apple 32GB Ouro Rosa 4G Tela 4.7.</h1>
 
@@ -262,6 +274,7 @@ x<p>...</p>
 <h3>Avaliação dos clientes</h3>
 <p>...</p>
 ```
+:::
 
 ### Veja como os grandes players estão fazendo
 Particularmente gosto de ver como os grandes players estruturam seus cabeçalhos, os melhores especialistas em HTML e SEO participam desses players e constantemente fazem diversos testes, levando-os a uma estrutura próximo da prática que melhor otimiza sua classificação nos mecanismos de busca.
@@ -282,6 +295,8 @@ Também é possível ver o outline de uma página através do [validador HTML da
 Os usuários de tecnologia assistiva, assim como os de visão, também conseguem navegar em páginas através de estrutura de cabeçalho. De acordo com uma [pesquisa da WebAIM de 2012](https://webaim.org/projects/screenreadersurvey4/#levels) mostra de cerca de 47,4% acham muito úteis os cabeçalhos e 34,7% afirmam ter alguma utilidade, mostrando que os cabeçalhos são úteis para cerca de 82% dos usuários de leitores de tela que participaram da pesquisa.
 
 Sabendo disso se o documento tiver uma estrutura de cabeçalho com múltiplos H1, mesmo que dentro de seções podem atrapalhar no entendimento do conteúdo, por exemplo:
+
+::: figurecode
 ```html
 <body>
   <h1>5 passos para a felicidade</h1> => (nível 1)
@@ -295,6 +310,7 @@ Sabendo disso se o documento tiver uma estrutura de cabeçalho com múltiplos H1
   </section>
 </body>
 ```
+:::
 
 Os navegadores e leitores de tela irão expor:
 
