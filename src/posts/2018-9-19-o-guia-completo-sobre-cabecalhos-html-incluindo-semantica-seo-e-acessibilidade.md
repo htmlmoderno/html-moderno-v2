@@ -3,7 +3,7 @@ view: Post
 lang: pt-BR
 
 title: O guia completo sobre cabeçalhos HTML incluindo semântica, SEO e acessibilidade
-description: D...
+description: Tags de cabeçalhos HTML H1-H6 indicam a relevância entre os títulos, otimiza para mecanismos de busca e estrutura de maneira semântica para acessibilidade.
 excerpt: Saber estruturar cabeçalhos HTML é uma boa prática e traz muitos benefícios em acessibilidade e em SEO, esse artigo tenta cobrir ao máximo o que tem de mais atual sobre esse assunto.
 announcer: Postagem %title% %complementRoute%
 
@@ -16,6 +16,27 @@ categories: [html5, seo, semantica, acessibilidade]
 tags: [HTML5, heading, SEO, W3C]
 author: ktquez
 date: 2018-09-19
+
+meta:
+  # Facebook
+  - name: og:url
+    content: https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade/
+  - name: og:title
+    content: O guia completo sobre cabeçalhos HTML incluindo semântica, SEO e acessibilidade.
+  - name: og:description
+    content: Tags de cabeçalhos HTML H1-H6 indicam a relevância entre os títulos, otimiza para mecanismos de busca e estrutura de maneira semântica para acessibilidade.
+  - name: og:image
+    content: https://htmlmoderno.com.br/images/posts/2018/09/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade.png
+  # Twitter
+  - name: twitter:url
+    content: https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade/
+  - name: twitter:title
+    content: O guia completo sobre cabeçalhos HTML incluindo semântica, SEO e acessibilidade.
+  - name: twitter:description
+    content: Tags de cabeçalhos HTML H1-H6 indicam a relevância entre os títulos, otimiza para mecanismos de busca e estrutura de maneira semântica para acessibilidade.
+  - name: twitter:image
+    content: https://htmlmoderno.com.br/images/posts/2018/09/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade.png
+
 
 ---
 
