@@ -44,7 +44,7 @@ Exemplo de todos os níveis do cabeçalho:
   class="my-10"
   title="Saída renderizada da estrutura com todos os níveis de cabeçalho HTML do h1 até o h6"
   selector=".block-main"
-  height="300px"
+  height="330px"
 />
 
 Uma coisa interessante é que a hierarquia acontece de maneira obrigatória de cima para baixo, porém, é possível usar a estrutura de baixo para cima sem problemas, como, por exemplo um `H2` vindo logo após de um `H3`:
