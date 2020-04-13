@@ -8,7 +8,7 @@ module.exports = (md) => {
         return `
           <figure class="figurecode">\n
             <figcaption class="figurecode__caption" id="codeblock${idx}">
-              ${md.utils.escapeHtml(m[1])}
+              ${md.utils.escapeHtml(m ? m[1] : '')}
             </figcaption>\n
             <div class="figurecode__content">\n
         `
