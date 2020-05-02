@@ -1,6 +1,6 @@
 ---
 view: Page
-lang: pt-BR
+lang: pt-br
 
 title: Sobre o HTML Moderno
 description: O HTML Moderno é um site sobre as melhores práticas atuais de desenvolvimento web aproveitando o máximo das features do HTML5 para ganhos de semântica, seo, acessibilidade, ux e etc.

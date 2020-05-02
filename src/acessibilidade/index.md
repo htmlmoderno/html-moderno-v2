@@ -1,6 +1,6 @@
 ---
 view: Page
-lang: pt-BR
+lang: pt-br
 
 title: Configurando acessibilidade
 description: Configuração de acessibilidade do site HTML Moderno

@@ -1,7 +1,7 @@
 ---
 order: 2
 view: Category
-lang: pt-BR
+lang: pt-br
 active: true
 
 title: Acessibilidade

@@ -1,6 +1,6 @@
 ---
 view: Post
-lang: pt-BR
+lang: pt-br
 
 title: Você conhece o atributo HTML hidden? Saiba quando utilizá-lo.
 description: Um atributo desconhecido pelos desenvolvedores é o atributo global do HTML chamado &#96;hidden&#96;, nesse post vamos abordar quando utilizá-lo da melhor maneira.

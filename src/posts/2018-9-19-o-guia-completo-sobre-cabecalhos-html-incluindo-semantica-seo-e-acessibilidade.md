@@ -1,6 +1,6 @@
 ---
 view: Post
-lang: pt-BR
+lang: pt-br
 
 title: O guia completo sobre cabeçalhos HTML incluindo semântica, SEO e acessibilidade
 description: Tags de cabeçalhos HTML H1-H6 indicam a relevância entre os títulos, otimiza para mecanismos de busca e estrutura de maneira semântica para acessibilidade.

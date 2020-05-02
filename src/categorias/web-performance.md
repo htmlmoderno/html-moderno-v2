@@ -1,7 +1,7 @@
 ---
 order: 7
 view: Category
-lang: pt-BR
+lang: pt-br
 active: false
 
 title: Web performance

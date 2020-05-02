@@ -1,7 +1,7 @@
 ---
 order: 1
 view: Category
-lang: pt-BR
+lang: pt-br
 active: true
 
 title: Semântica

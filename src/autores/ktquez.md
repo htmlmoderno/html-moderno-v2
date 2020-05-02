@@ -1,6 +1,6 @@
 ---
 view: Author
-lang: pt-BR
+lang: pt-br
 
 title: Alan Albuquerque (Ktquez)
 description: Alan Albuquerque é desenvolvedor web a 10 anos, criador de conteúdo em HTML, acessibilidade, SEO, Vue.js e javascript.

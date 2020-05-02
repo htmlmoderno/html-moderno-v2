@@ -1,6 +1,6 @@
 ---
 view: CategoriesTags
-lang: pt-BR
+lang: pt-br
 
 title: Categorias e Tags
 announcer: Página %title% %complementRoute%

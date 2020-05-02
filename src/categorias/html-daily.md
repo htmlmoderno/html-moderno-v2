@@ -1,7 +1,7 @@
 ---
 order: 8
 view: Category
-lang: pt-BR
+lang: pt-br
 active: false
 
 title: HTML Daily news
