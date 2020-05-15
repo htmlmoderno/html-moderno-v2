@@ -126,5 +126,23 @@ module.exports = [
     'mailchimp', {
       endpoint: process.env.MAILCHIMP_ENDPOINT
     }
+  ],
+  [
+    'vuepress-plugin-container',
+    {
+      type: 'figurecode',
+      before: info => `
+        <figure class="figurecode">\n
+            <figcaption class="figurecode__caption">
+              ${info === 'FIGURECODE' ? '' : info}
+            </figcaption>\n
+            <div class="figurecode__content">\n
+      `,
+      after: `
+            <copy-snippet class="figurecode__copy" />
+          </div>\n
+        </figure>\n
+      `
+    }
   ]
 ]
