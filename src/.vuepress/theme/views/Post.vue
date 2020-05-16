@@ -28,10 +28,7 @@
         </div>
       </div>
       <section v-if="post.cover && post.cover.path">
-        <figure
-          role="figure"
-          :aria-label="post.cover.caption"
-        >
+        <figure :aria-label="post.cover.caption">
           <responsive-picture
             :cover-name="post.cover.path"
             class="n9m block mt-12 w-full p-4"
@@ -43,9 +40,9 @@
               :alt="post.cover.alternativeText"
             >
           </responsive-picture>
-          <div class="text-center text-sm mt-4 text-gray-600">
+          <figcaption class="text-center text-sm mt-4 text-gray-600">
             {{ post.cover.caption }}
-          </div>
+          </figcaption>
         </figure>
       </section>
 
