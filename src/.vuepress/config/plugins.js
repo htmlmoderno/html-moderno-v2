@@ -138,7 +138,7 @@ module.exports = [
         if (tokens[idx].nesting === 1) {
           const caption = m ? md.utils.escapeHtml(m[1]) : ''
           return `
-          <figure role="figure" aria-label="${caption}" class="figurecode">\n
+          <figure aria-label="${caption}" class="figurecode">\n
             <figcaption class="figurecode__caption">
               ${caption}
             </figcaption>\n
