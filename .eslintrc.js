@@ -5,13 +5,13 @@ module.exports = {
     browser: true
   },
   extends: [
-    'plugin:vue/recommended',
     '@vue/standard',
-    'plugin:vue-a11y/base'
+    'plugin:vue/recommended',
+    'plugin:vuejs-accessibility/recommended'
   ],
   plugins: [
     'vue',
-    'vue-a11y',
+    'vuejs-accessibility',
     'eslint-plugin-import-helpers'
   ],
   rules: {
