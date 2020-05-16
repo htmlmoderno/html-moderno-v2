@@ -195,7 +195,8 @@ Evitando sobrescrita utilizando `!important`
 </p>
 
 <p hidden class="desc">
-  Esse elemento mesmo com o display: block não é exibido por conta do !important para todos os elementos com o atributo hidden.
+  Esse elemento mesmo com o display: block não é exibido por conta 
+  do !important para todos os elementos com o atributo hidden.
 </p>
 ```
 :::

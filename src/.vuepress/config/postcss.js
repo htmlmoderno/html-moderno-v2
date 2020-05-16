@@ -9,8 +9,17 @@ const plugins = [
 if (process.env.NODE_ENV !== 'development') {
   plugins.push(
     require('@fullhuman/postcss-purgecss')({
-      whitelist: ['html', 'body', 'h1', 'h2', 'h3', 'mode-dark'],
-      whitelistPatterns: [/bg-cat-/],
+      whitelist: [
+        'html',
+        'body',
+        'mode-dark'
+      ],
+      whitelistPatterns: [
+        /-cat-/
+      ],
+      whitelistPatternsChildren: [
+        /content__default$/
+      ],
       content: ['./src/.vuepress/**/*.vue'],
       defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
     })
