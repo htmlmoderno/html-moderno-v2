@@ -2,7 +2,7 @@
   <focus-lock :disabled="!isFullScreen">
     <div
       ref="output"
-      class="output flex flex-wrap n9m overflow-hidden"
+      class="output flex flex-wrap n9m overflow-hidden pt-3"
       :class="{ 'output--fullscreen': isFullScreen }"
     >
       <div class="output__header w-full flex justify-between px-6 py-2 bg-light-200 dark:bg-dark-800">
