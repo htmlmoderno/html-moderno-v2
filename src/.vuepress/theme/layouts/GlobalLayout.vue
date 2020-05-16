@@ -1,6 +1,8 @@
 <template>
   <div class="global-layout container mx-auto">
-    <vue-skip-to v-if="skipToHasLoaded" />
+    <ClientOnly>
+      <VueSkipTo />
+    </ClientOnly>
     <the-heading />
     <transition name="fade">
       <component :is="layout" />
@@ -20,7 +22,9 @@
     </section>
     <the-footer />
     <back-to-top />
-    <vue-announcer v-if="announcerHasLoaded" />
+    <ClientOnly>
+      <VueAnnouncer />
+    </ClientOnly>
   </div>
 </template>
 
@@ -28,7 +32,6 @@
 import { computed, onMounted } from '@vue/composition-api'
 
 import TheHeading from '@theme/components/layout/TheHeading'
-import A11yMixin from '@theme/mixins/a11y'
 
 export default {
   name: 'GlobalLayout',
@@ -38,7 +41,6 @@ export default {
     TheFooter: () => import('@theme/components/layout/TheFooter'),
     TheCategories: () => import('@theme/components/layout/TheCategories')
   },
-  mixins: [A11yMixin],
   setup (_, { root }) {
     const layout = computed(() => {
       if (!root.$page.path) return 'NotFound'
