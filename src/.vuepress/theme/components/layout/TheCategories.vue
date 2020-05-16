@@ -23,7 +23,10 @@
           v-for="category in getCategories"
           :key="category.key"
         >
-          <router-link :to="`/categorias/${category.frontmatter.slug}`">
+          <router-link
+            :to="`/categorias/${category.frontmatter.slug}`"
+            :aria-label="`Ver posts da categoria ${category.title.toLowerCase()}`"
+          >
             <card-category
               :label="category.title"
               :icon-name="`cat-${category.frontmatter.slug}`"
