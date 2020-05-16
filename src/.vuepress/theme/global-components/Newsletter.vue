@@ -107,7 +107,7 @@ export default {
 <style lang="scss">
 .hm-newsletter {
   h2 {
-    @apply tracking-wider mb-0 z-20;
+    @apply mb-0 z-20;
   }
 
   &__pattern {

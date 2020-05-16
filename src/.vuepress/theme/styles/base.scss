@@ -6,7 +6,7 @@ html {
 }
 
 body {
-	@apply bg-light p-0 text-textLight tracking-wide antialiased;
+	@apply bg-light p-0 text-textLight antialiased;
 	font-family: $font-stack;
 
 	@screen md {

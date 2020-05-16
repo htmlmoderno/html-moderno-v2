@@ -24,7 +24,7 @@
         </li>
       </ul>
 
-      <div class="mt-20 tracking-wider">
+      <div class="mt-20">
         Obrigado pela sua leitura!
       </div>
     </div>
