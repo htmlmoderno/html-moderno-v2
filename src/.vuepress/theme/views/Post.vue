@@ -8,7 +8,7 @@
         <h1 class="w-full text-3xl sm:text-4xl font-bold">
           {{ post.title }}<span class="text-accent">.</span>
         </h1>
-        <div class="w-full flex items-center text-xs mt-4">
+        <div class="w-full flex items-center text-sm mt-4">
           <time
             :datetime="post.date.datetime"
             class="uppercase"
@@ -40,7 +40,7 @@
               :alt="post.cover.alternativeText"
             >
           </responsive-picture>
-          <figcaption class="text-center text-sm mt-4 text-gray-600">
+          <figcaption class="text-center mt-4 text-gray-600">
             {{ post.cover.caption }}
           </figcaption>
         </figure>

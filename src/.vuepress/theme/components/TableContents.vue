@@ -11,7 +11,7 @@
         <span class="pr-3 text-gray-500 text-sm">{{ index > 9 ? index : `0${index + 1}` }}.</span>
         <!-- eslint-disable -->
         <a
-          class="base-link text-lg"
+          class="base-link text-xl"
           :href="`#${header.slug}`"
           :title="header.title"
           @click.prevent="scrollToHeader(`${header.slug}`)"
