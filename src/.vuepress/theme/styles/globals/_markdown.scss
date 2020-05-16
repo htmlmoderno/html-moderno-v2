@@ -291,16 +291,9 @@
     @apply relative;
     
     &__caption {
-      @apply absolute z-20 text-xs text-right leading-none;
-      color: #6C7391;
+      @apply absolute z-20 text-xs right-0 text-right w-full text-light;
       top: 25px;
-      right: -10px;
-      width: 70%;
       padding-right: 30px;
-
-      @screen md {
-        right: 0;
-      }
     }
 
     &__content {
@@ -308,7 +301,7 @@
     }
 
     &__copy {
-      @apply absolute text-xs text-textDark tracking-wider;
+      @apply absolute z-10 text-xs text-textDark tracking-wider;
       right: 16px;
       bottom: 10px;
     }

@@ -161,7 +161,7 @@ Exemplo retirado da documentação da W3C para o HTML:
 <code-output
   class="my-10"
   title="Output de código de uma estrutura retirada da documentação da w3c"
-  height="380px"
+  height="400px"
   selector=".block-two"
 />
 

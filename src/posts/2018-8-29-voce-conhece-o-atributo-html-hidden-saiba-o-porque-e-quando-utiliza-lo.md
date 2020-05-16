@@ -188,7 +188,7 @@ Revertendo a visibilidade com o CSS `display: block`
 
 Evitando sobrescrita utilizando `!important`
 
-::: figurecode HTML
+::: figurecode
 ```html hidden-display-none-important
 <p hidden>
   Esses elemento deve estar oculto visualmente e para tecnologia assistiva

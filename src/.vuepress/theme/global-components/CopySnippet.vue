@@ -9,21 +9,16 @@
     >
       COPIADO
     </span>
-    <!-- eslint-disable -->
     <button
       class="copy-snippet__button p-4"
-      :aria-labelledby="`${labelledbyId}_text ${labelledbyId}`"
+      :aria-label="figcaptionText"
       @click="copy"
     >
-    <!-- eslint-enable -->
       <vp-icon
         name="copy"
         class="text-lg text-textDark"
       />
-      <span
-        :id="`${labelledbyId}_text`"
-        class="sr-only"
-      >
+      <span class="sr-only">
         COPIAR
       </span>
     </button>
@@ -31,23 +26,23 @@
 </template>
 
 <script>
-import { useClipboard } from 'vue-use-web'
-
 import { ref, onMounted } from '@vue/composition-api'
+import { useClipboard } from 'vue-use-web'
 
 export default {
   name: 'CopySnippet',
   setup (_, { refs }) {
-    const labelledbyId = ref(null)
+    const figcaptionText = ref(null)
     const copied = ref(false)
     const { write } = useClipboard()
 
     onMounted(() => {
-      labelledbyId.value = refs.copySnippet.parentElement.previousElementSibling.getAttribute('id')
+      const caption = refs.copySnippet.parentElement.querySelector('figcaption')
+      figcaptionText.value = `Copiar código ${caption ? caption.textContent : ''}`
     })
 
     function copy () {
-      write(refs.copySnippet.previousElementSibling.textContent)
+      write(refs.copySnippet.parentElement.querySelector('[class^="language-"]').textContent)
       copied.value = true
       setTimeout(() => {
         copied.value = false
@@ -57,7 +52,7 @@ export default {
     return {
       copy,
       copied,
-      labelledbyId
+      figcaptionText
     }
   }
 }
