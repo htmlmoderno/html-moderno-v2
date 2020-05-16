@@ -18,23 +18,23 @@
       @submit.prevent="submitNewsletter"
     >
       <div class="w-full lg:w-2/5 p-0 lg:pr-3">
-        <label for="name">
+        <label :for="`name-${random}`">
           <span>Nome</span>
           <input
-            id="name"
+            :id="`name-${random}`"
             v-model="name"
             class="n9m n9m--inner py-4 px-6 w-full"
-            aria-label="Digite seu nome"
+            aria-label=" nome"
             type="text"
             required
           >
         </label>
       </div>
       <div class="w-full lg:w-2/5 p-0 lg:pr-3 my-4 lg:my-0">
-        <label for="email">
+        <label :for="`email-${random}`">
           <span>Email</span>
           <input
-            id="email"
+            :id="`email-${random}`"
             v-model="email"
             class="n9m n9m--inner py-4 px-6 w-full"
             aria-label="Digite seu email"
@@ -59,13 +59,13 @@
       v-show="message.result"
       class="hm-newsletter__msg inline-block rounded-lg text-sm mt-4 py-2 px-4"
       :class="{ 'hm-newsletter__msg--error': message.result === 'error' }"
-      v-html="message.msg"
+      v-text="message.msg"
     />
   </div>
 </template>
 
 <script>
-import { ref, computed } from '@vue/composition-api'
+import { ref } from '@vue/composition-api'
 import subscribeToMailchimp from 'vuepress-plugin-mailchimp/src/mailchimpSubscribe'
 
 export default {
@@ -81,6 +81,7 @@ export default {
     const email = ref(null)
     const message = ref({})
     const isSubmitted = ref(false)
+    const random = Math.floor(Math.random() * 1000)
 
     async function submitNewsletter () {
       isSubmitted.value = true
@@ -96,6 +97,7 @@ export default {
     return {
       name,
       email,
+      random,
       message,
       isSubmitted,
       submitNewsletter
