@@ -1,6 +1,6 @@
 <template>
   <div class="comments">
-    <h2 class="text-2xl mb-12 font-medium">
+    <h2 class="text-2xl mb-12 font-bold">
       Comentários<span class="text-accent">.</span>
     </h2>
     <div class="mt-12">

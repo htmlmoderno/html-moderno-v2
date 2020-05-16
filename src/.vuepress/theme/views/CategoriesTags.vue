@@ -23,7 +23,7 @@
             </router-link>
           </div>
           <div class="w-full mt-10 sm:mt-0 sm:w-2/3 lg:w-3/4">
-            <div class="text-2xl font-medium">
+            <div class="text-2xl font-bold">
               <span>Tags<span class="text-accent">.</span></span>
             </div>
             <ul
@@ -105,7 +105,7 @@ export default {
   }
 
   &__link {
-    @apply inline font-medium rounded-full py-4 px-6 text-sm shadow-n9m-light bg-light;
+    @apply inline font-bold rounded-full py-4 px-6 text-sm shadow-n9m-light bg-light;
 
     &:active {
       @apply shadow-inner-n9m-light;

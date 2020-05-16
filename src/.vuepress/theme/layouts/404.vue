@@ -5,7 +5,7 @@
   >
     <article class="w-full flex flex-wrap layout-section">
       <div class="w-full lg:w-1/2 xl:w-2/5 xl:pr-16 xl:pt-16">
-        <h2 class="text-3xl md:text-4xl font-medium">
+        <h2 class="text-3xl md:text-4xl font-bold">
           <span class="block md:hidden mb-6 ">404 - Page not found</span>
           <span>Está página está pedida em algum lugar do universo<span class="text-cat-html-daily">.</span></span>
         </h2>
@@ -17,7 +17,7 @@
           Não se preocupe temos outras páginas em terra para você acessar. <br>
           Você pode voltar para página anterior ou para home.
         </p>
-        <div class="flex font-medium text-sm">
+        <div class="flex font-bold text-sm">
           <router-link
             to="/"
             title="ir para home"
@@ -27,7 +27,7 @@
           </router-link>
           <button
             title="voltar para página anterior"
-            class="n9m px-6 py-4 bg-light dark:bg-dark dark:text-textDark font-medium ml-5"
+            class="n9m px-6 py-4 bg-light dark:bg-dark dark:text-textDark font-bold ml-5"
             @click="$router.go(-1)"
           >
             VOLTAR

@@ -1,6 +1,6 @@
 <template>
   <nav class="toc">
-    <h2 class="text-2xl mb-12 font-medium">
+    <h2 class="text-2xl mb-12 font-bold">
       Índice<span class="text-accent">.</span>
     </h2>
     <ul class="toc__list">
@@ -11,7 +11,7 @@
         <span class="pr-3 text-gray-500 text-sm">{{ index > 9 ? index : `0${index + 1}` }}.</span>
         <!-- eslint-disable -->
         <a
-          class="base-link"
+          class="base-link text-lg"
           :href="`#${header.slug}`"
           :title="header.title"
           @click.prevent="scrollToHeader(`${header.slug}`)"

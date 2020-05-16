@@ -1,7 +1,6 @@
 .content__default {
   display: block;
   min-height: 150px;
-  font-size: 16px;
   line-height: 1.8;
 
   p {
@@ -23,12 +22,8 @@
   }
 
   p, ol, ul {
-    font-size: 19px;
+    @apply text-lg;
     line-height: 1.58em;
-
-    @screen sm {
-      font-size: 17px;
-    }
   }
 
   h1, h2, h3, h4, h5, h6, ol, ul, pre, table, figure { margin-bottom: 1.2em; }
@@ -40,7 +35,7 @@
   }
 
   h1 {
-    @apply font-medium text-3xl;
+    @apply font-bold text-3xl;
 
     @screen sm {
       @apply text-4xl;
@@ -48,7 +43,7 @@
   }
 
   h2 {
-    @apply font-medium;
+    @apply font-bold;
     position: relative;
     margin-top: 60px;
     z-index: 2;
@@ -130,7 +125,7 @@
   }
 
   strong {
-    font-weight: 600;
+    font-weight: 700;
     margin: 0 0.2em;
   }
 
@@ -211,7 +206,7 @@
     line-height: 1.5;
     tab-size: 4;
     hyphens: none;
-    font-weight: 500;
+    font-weight: 400;
     color: lighten(#a074c4, 20%);
   }
 

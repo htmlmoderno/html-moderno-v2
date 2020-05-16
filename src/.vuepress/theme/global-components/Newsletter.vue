@@ -7,8 +7,8 @@
     }"
   >
     <div class="relative pb-2">
-      <h2 class="text-3xl md:text-4xl relative z-20 sm:pl-8 font-medium">
-        Newsletter<span class="text-accent font-medium">.</span>
+      <h2 class="text-3xl md:text-4xl relative z-20 sm:pl-8 font-bold">
+        Newsletter<span class="text-accent font-bold">.</span>
       </h2>
       <div class="hm-newsletter__pattern patterns absolute z-10 top-0 left-0 w-full" />
     </div>
@@ -46,7 +46,7 @@
       <div class="w-full lg:w-1/5">
         <button
           type="submit"
-          class="n9m w-full bg-accent text-white font-medium py-4"
+          class="n9m w-full bg-accent text-white font-bold py-4"
           :class="{ 'px-3': small, 'px-6': !small, 'opacity-50': isSubmitted }"
           :disabled="isSubmitted"
         >

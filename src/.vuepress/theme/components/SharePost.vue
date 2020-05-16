@@ -1,6 +1,6 @@
 <template>
   <div class="share-post">
-    <h2 class="text-2xl font-medium">
+    <h2 class="text-2xl font-bold">
       Contamos com você<span class="text-accent">.</span>
     </h2>
     <div class="mt-2">

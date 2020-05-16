@@ -1,7 +1,7 @@
 <template>
   <div class="categories">
     <div class="flex flex-wrap justify-between items-center">
-      <h2 class="w-full sm:w-1/2 text-center sm:text-left text-3xl md:text-4xl font-medium">
+      <h2 class="w-full sm:w-1/2 text-center sm:text-left text-3xl md:text-4xl font-bold">
         Categorias<span class="text-accent">.</span>
       </h2>
       <div class="w-full sm:w-1/2 mt-10 sm:mt-0 justify-center sm:justify-end flex items-center">
@@ -11,7 +11,7 @@
         />
         <router-link
           to="/categorias"
-          class="base-link ml-3 text-xs font-medium"
+          class="base-link ml-3 text-xs font-bold"
         >
           VER TODAS AS TAGS
         </router-link>

@@ -7,7 +7,7 @@
     <div class="w-full text-center">
       <span :class="`bg-${iconName} card-category__bar-no-image`" />
     </div>
-    <span class="text-center font-medium">
+    <span class="text-center font-bold">
       {{ label }}
     </span>
   </div>

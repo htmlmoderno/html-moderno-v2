@@ -5,7 +5,7 @@
   >
     <article class="w-full layout-section">
       <div class="single-post__container single-post__container--no-mt">
-        <h1 class="w-full text-3xl sm:text-4xl font-medium">
+        <h1 class="w-full text-3xl sm:text-4xl font-bold">
           {{ post.title }}<span class="text-accent">.</span>
         </h1>
         <div class="w-full flex items-center text-xs mt-4">

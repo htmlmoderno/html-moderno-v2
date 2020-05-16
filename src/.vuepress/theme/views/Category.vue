@@ -22,7 +22,7 @@
           </div>
         </masonry>
         <div v-show="!posts.length">
-          <span class="font-medium text-xl">
+          <span class="font-bold text-xl">
             <span
               role="img"
               aria-label="emoji carinha triste"

@@ -3,7 +3,7 @@
     v-show="webmentions.length"
     class="webmentions"
   >
-    <h2 class="text-2xl font-medium">
+    <h2 class="text-2xl font-bold">
       ({{ webmentions.length }}) Webmentions<span class="text-accent">.</span>
     </h2>
 
@@ -19,7 +19,7 @@
       >
         <div
           v-show="likes.length < avatarLimits"
-          class="w-full font-medium mb-4 flex items-center"
+          class="w-full font-bold mb-4 flex items-center"
         >
           <vp-icon
             name="like"
@@ -62,7 +62,7 @@
       >
         <div
           v-show="reposts.length < avatarLimits"
-          class="w-full font-medium mb-4 flex items-center"
+          class="w-full font-bold mb-4 flex items-center"
         >
           <vp-icon
             name="share"
@@ -145,7 +145,7 @@
                 >
               </a>
               <p
-                class="font-medium ml-4"
+                class="font-bold ml-4"
                 itemprop="name"
               >
                 {{ mention.author.name }}

@@ -1,6 +1,6 @@
 <template>
   <footer class="footer flex flex-wrap pb-12 px-0 lg:w-3/4 lg:mx-auto">
-    <div class="w-full md:w-3/5 md:pr-16">
+    <div class="w-full md:w-3/5 md:pr-16 text-lg">
       <div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque porttitor lectus, malesuada consectetur metus hendrerit sed. Sed egestas commodo urna, ut feugiat felis malesuada vitae. Sed sollicitudin pulvinar sapien, vitae ullamcorper augue bibendum vitae.
@@ -11,7 +11,7 @@
       </div>
       <a
         :href="`mailto:${$themeConfig.footer.mailto}`"
-        class="my-12 block sm:my-0 text-3xl md:text-4xl leading-none font-medium"
+        class="my-12 block sm:my-0 text-3xl md:text-4xl leading-none font-bold"
       >
         Entrar em contato<span class="text-accent">.</span>
       </a>
