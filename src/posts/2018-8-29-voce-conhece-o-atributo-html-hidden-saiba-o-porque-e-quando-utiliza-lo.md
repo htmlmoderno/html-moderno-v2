@@ -127,9 +127,7 @@ Em outro contexto, em uma edição ou exclusão:
 
 ## Suporte
 
-<lazy-hydrate :when-visible="{ rootMargin: '100px' }">
-  <iframe src="https://caniuse.bitsofco.de/embed/index.html?feat=hidden&periods=future_1,current,past_1,past_2" width="100%" height="420" allowfullscreen="true" frameborder="0"></iframe>
-</lazy-hydrate>
+<iframe src="https://caniuse.bitsofco.de/embed/index.html?feat=hidden&periods=future_1,current,past_1,past_2" width="100%" height="420" allowfullscreen="true" frameborder="0" loading="lazy"></iframe>
 
 O suporte nesse momento já é praticamente completo entre os browsers e dispositivos.
 Porém existe um forma via CSS que você pode usar quando o browser ou leitor de tela que o usuário esteja acessando não dê suporte.
@@ -145,10 +143,8 @@ Porém existe um forma via CSS que você pode usar quando o browser ou leitor de
 O engraçado com esse atributo e sua relação com o CSS display é que essa regra evita também que ocorra uma falha sobre a visibilidade entre os elementos com o atributo hidden. É que no CSS ainda sim é possível utilizando o `display: block`, fazer com que um elemento com o atributo hidden volte a ser exibido. Estranho, mas é possível.
 
 O próprio browser adiciona uma regra css como pode ser visto na imagem abaixo:
-<lazy-hydrate :when-visible="{ rootMargin: '100px' }">
-  <img src="/images/posts/2018/08/browser-atributo-hidden.jpg" alt="Imagem do browser console do browser mostrando um elemento p (tag de parágrafo) utilizando o atributo hidden e no lado esquerdo uma regra css inserido pelo próprio browser com um display none', title: 'Imagem do browser console do browser mostrando um elemento p (tag de parágrafo) utilizando o atributo hidden e no lado esquerdo uma regra css inserido pelo próprio browser com um display none" />
-</lazy-hydrate>
 
+<img loading="lazy" src="/images/posts/2018/08/browser-atributo-hidden.jpg" alt="Imagem do browser console do browser mostrando um elemento p (tag de parágrafo) utilizando o atributo hidden e no lado esquerdo uma regra css inserido pelo próprio browser com um display none', title: 'Imagem do browser console do browser mostrando um elemento p (tag de parágrafo) utilizando o atributo hidden e no lado esquerdo uma regra css inserido pelo próprio browser com um display none" />
 
 Mas se houver um seletor mais forte, ele é sobrescrito, por isso o uso do `!important`
 
