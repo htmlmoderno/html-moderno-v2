@@ -2,7 +2,7 @@
   <focus-lock :disabled="!isFullScreen">
     <div
       ref="output"
-      class="output flex flex-wrap n9m overflow-hidden pt-3"
+      class="output flex flex-wrap n9m overflow-hidden"
       :class="{ 'output--fullscreen': isFullScreen }"
     >
       <div class="output__header w-full flex justify-between px-6 py-2 bg-light-200 dark:bg-dark-800">
@@ -17,6 +17,7 @@
             class="ml-2 p-2"
             :title="ariaLabel"
             @click="setFullScreen"
+            aria-hidden="true"
           >
           <!-- eslint-enable -->
             <span class="sr-only">{{ ariaLabel }} {{ title }}</span>
@@ -41,6 +42,7 @@
       >
         <iframe
           ref="outputIframe"
+          aria-hidden="true"
           :title="title"
           width="100%"
           height="100%"
