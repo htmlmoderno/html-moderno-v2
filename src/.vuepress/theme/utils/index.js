@@ -17,3 +17,15 @@ export function sortPostsByDate (posts, orderByDesc = true) {
 export function getSlugPost (path) {
   return path.match(/(?<=\/posts\/)(.*?)(?=\/)/g)
 }
+
+export function focusTargetElement (id) {
+  if (!id) return
+  const element = document.getElementById(id)
+  if (element) {
+    if (!/^(a|select|input|button|textarea)/i.test(element.tagName.toLowerCase())) {
+      element.setAttribute('tabindex', -1)
+    }
+    element.focus()
+  }
+  return element
+}
