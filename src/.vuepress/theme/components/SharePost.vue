@@ -4,7 +4,7 @@
       Contamos com você<span class="text-accent">.</span>
     </h2>
     <div class="mt-2">
-      <h3 class="text-xs">
+      <h3>
         Você pode nos ajudar compartilhando e/ou curtindo nossas redes sociais.
       </h3>
 

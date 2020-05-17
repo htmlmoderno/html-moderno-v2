@@ -21,6 +21,7 @@
         </div>
         <div class="w-2/4 ml-8">
           <search-box
+            ref="searchBox"
             placeholder="Tecle 's' para pesquisar"
             class="n9m-search n9m--inner"
           />
@@ -31,6 +32,8 @@
 </template>
 
 <script>
+import { onMounted } from '@vue/composition-api'
+
 import SearchBox from '@SearchBox'
 
 export default {
@@ -38,6 +41,11 @@ export default {
   components: {
     SearchBox,
     DarkModeToggle: () => import('@theme/components/DarkModeToggle')
+  },
+  setup (_, { refs }) {
+    onMounted(() => refs.searchBox.$el.querySelector('input').setAttribute('aria-label', 'Pesquisar no site'))
+
+    return {}
   }
 }
 </script>

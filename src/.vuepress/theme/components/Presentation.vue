@@ -1,5 +1,8 @@
 <template>
-  <section class="presentation relative mt-16 sm:mt-32">
+  <section
+    role="complementary"
+    class="presentation relative mt-16 sm:mt-32"
+  >
     <div class="relative z-20">
       <h1 class="font-bold w-full sm:w-3/4 lg:w-2/4">
         <span class="uppercase block mb-2 text-accent">

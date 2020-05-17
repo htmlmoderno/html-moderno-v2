@@ -125,10 +125,17 @@ Quando se trata de SEO também não tem problemas utilizar mais de um H1 na pág
 [John Mueller](https://twitter.com/JohnMu) Webmaster Trends Analyst na Google, muito conhecido dentre os que trabalham com SEO, respondeu a um tweet sobre esse assunto:
 
 <figure>
-<figcaption>Tweet de resposta do John</figcaption>
-<lazy-hydrate :when-visible="{ rootMargin: '100px' }">
-  <iframe src="https://twitframe.com/show?url=https://twitter.com/JohnMu/status/852131231928135680?ref_src=twsrc%5Etfw" width="100%" height="280" allowfullscreen="true" frameborder="0"></iframe>
-</lazy-hydrate>
+  <figcaption class="text-base">Tweet de resposta do John</figcaption>
+  <lazy-hydrate :when-visible="{ rootMargin: '100px' }">
+    <iframe
+      src="https://twitframe.com/show?url=https://twitter.com/JohnMu/status/852131231928135680?ref_src=twsrc%5Etfw"
+      width="100%"
+      height="280"
+      allowfullscreen="true"
+      title="Tweet de resposta do John"
+      frameborder="0"
+    ></iframe>
+  </lazy-hydrate>
 </figure>
 
 ### É recomendado?

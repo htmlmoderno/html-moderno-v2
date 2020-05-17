@@ -8,7 +8,7 @@
         v-for="(header, index) in headers"
         :key="header.slug"
       >
-        <span class="pr-3 text-gray-500 text-sm">{{ index > 9 ? index : `0${index + 1}` }}.</span>
+        <span class="pr-3 text-lightText text-sm">{{ index > 9 ? index : `0${index + 1}` }}.</span>
         <!-- eslint-disable -->
         <a
           class="base-link text-xl"

@@ -3,6 +3,14 @@
 		@apply bg-dark text-textDark;    
 	}
 
+  input::placeholder {
+    @apply text-cat-html-daily #{!important};
+  }
+
+  h1, h2, h3 {
+    @apply text-cat-html-daily;
+  }
+
   #app {
     @screen sm {
       box-shadow: inset 5px 5px 10px rgba(0, 0, 0, .1), inset -5px -5px 8px rgba(255, 255, 255, .05);
@@ -74,7 +82,7 @@
     }
     p code {
       @apply bg-gray-900 text-textDark;
-    }
+    }    
   }
 
   .output__browser-btns {

@@ -17,7 +17,6 @@
             class="ml-2 p-2"
             :title="ariaLabel"
             @click="setFullScreen"
-            aria-hidden="true"
           >
           <!-- eslint-enable -->
             <span class="sr-only">{{ ariaLabel }} {{ title }}</span>

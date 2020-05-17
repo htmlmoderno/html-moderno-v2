@@ -4,19 +4,6 @@
     <transition name="fade">
       <component :is="layout" />
     </transition>
-    <section
-      v-show="$frontmatter.view !== 'CategoriesTags'"
-      id="categories"
-      class="layout-section layout-section--border-top dark:border-dark-200"
-    >
-      <the-categories />
-    </section>
-    <section
-      id="newsletter"
-      class="layout-section layout-section--border-top dark:border-dark-200"
-    >
-      <newsletter />
-    </section>
     <the-footer />
   </div>
 </template>
@@ -30,8 +17,7 @@ export default {
   name: 'GlobalLayout',
   components: {
     TheHeading,
-    TheFooter: () => import('@theme/components/layout/TheFooter'),
-    TheCategories: () => import('@theme/components/layout/TheCategories')
+    TheFooter: () => import('@theme/components/layout/TheFooter')
   },
   setup (_, { root }) {
     const layout = computed(() => {

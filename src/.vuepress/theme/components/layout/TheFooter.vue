@@ -1,46 +1,61 @@
 <template>
-  <footer class="footer flex flex-wrap pb-12 px-0 lg:w-3/4 lg:mx-auto">
-    <div class="w-full md:w-3/5 md:pr-16 text-lg">
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque porttitor lectus, malesuada consectetur metus hendrerit sed. Sed egestas commodo urna, ut feugiat felis malesuada vitae. Sed sollicitudin pulvinar sapien, vitae ullamcorper augue bibendum vitae.
-        </p>
-        <p class="my-6">
-          Nullam scelerisque id orci non blandit. Sed ex ligula, aliquet at ante sit amet, imperdiet venenatis leo. Cras vulputate arcu in sapien semper sollicitudin.
-        </p>
+  <footer>
+    <section
+      v-show="$frontmatter.view !== 'CategoriesTags'"
+      id="categories"
+      class="layout-section layout-section--border-top dark:border-dark-200"
+    >
+      <the-categories />
+    </section>
+    <section
+      id="newsletter"
+      class="layout-section layout-section--border-top dark:border-dark-200"
+    >
+      <newsletter />
+    </section>
+    <section class="footer flex flex-wrap pb-12 px-0 lg:w-3/4 lg:mx-auto">
+      <div class="w-full md:w-3/5 md:pr-16 text-lg">
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque porttitor lectus, malesuada consectetur metus hendrerit sed. Sed egestas commodo urna, ut feugiat felis malesuada vitae. Sed sollicitudin pulvinar sapien, vitae ullamcorper augue bibendum vitae.
+          </p>
+          <p class="my-6">
+            Nullam scelerisque id orci non blandit. Sed ex ligula, aliquet at ante sit amet, imperdiet venenatis leo. Cras vulputate arcu in sapien semper sollicitudin.
+          </p>
+        </div>
+        <a
+          :href="`mailto:${$themeConfig.footer.mailto}`"
+          class="my-12 block sm:my-0 text-3xl md:text-4xl leading-none font-bold dark:text-cat-html-daily"
+        >
+          Entrar em contato<span class="text-accent">.</span>
+        </a>
       </div>
-      <a
-        :href="`mailto:${$themeConfig.footer.mailto}`"
-        class="my-12 block sm:my-0 text-3xl md:text-4xl leading-none font-bold"
-      >
-        Entrar em contato<span class="text-accent">.</span>
-      </a>
-    </div>
-    <div class="w-full md:mt-0 md:w-2/5">
-      <nav class="md:pl-12 lg:pl-24">
-        <ul>
-          <li
-            v-for="(item, index) in $themeConfig.footer.links"
-            :key="`nav-footer-${index}`"
-            class="mb-6"
-          >
-            <a
-              :href="item.link"
-              :title="item.label"
-              :rel="item.rel"
-              target="_blank"
-              class="footer__link base-link"
+      <div class="w-full md:mt-0 md:w-2/5">
+        <nav class="md:pl-12 lg:pl-24">
+          <ul>
+            <li
+              v-for="(item, index) in $themeConfig.footer.links"
+              :key="`nav-footer-${index}`"
+              class="mb-6"
             >
-              {{ item.label }}
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div
-      class="w-full text-sm mt-20"
-      v-html="$themeConfig.footer.copy"
-    />
+              <a
+                :href="item.link"
+                :title="item.label"
+                :rel="item.rel"
+                target="_blank"
+                class="footer__link base-link"
+              >
+                {{ item.label }}
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        class="w-full text-sm mt-20"
+        v-html="$themeConfig.footer.copy"
+      />
+    </section>
     <back-to-top />
   </footer>
 </template>
@@ -49,7 +64,8 @@
 export default {
   name: 'TheFooter',
   components: {
-    BackToTop: () => import('@theme/components/BackToTop')
+    BackToTop: () => import('@theme/components/BackToTop'),
+    TheCategories: () => import('@theme/components/layout/TheCategories')
   }
 }
 </script>

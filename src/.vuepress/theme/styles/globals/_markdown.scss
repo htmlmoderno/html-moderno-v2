@@ -1,4 +1,5 @@
 .content__default {
+  @apply text-xl;
   display: block;
   min-height: 150px;
   line-height: 1.8;
@@ -21,8 +22,7 @@
     }
   }
 
-  p, ol, ul {
-    @apply text-xl;
+  p, ol, ul {    
     line-height: 1.58em;
   }
 

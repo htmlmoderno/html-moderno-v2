@@ -2,6 +2,7 @@
   <main
     id="main"
     class="single-post"
+    tabindex="-1"
   >
     <article class="w-full layout-section">
       <div class="single-post__container single-post__container--no-mt">
@@ -15,7 +16,7 @@
           >
             {{ post.date.short }}
           </time>
-          <span :class="`mx-2 text-cat-${post.mainCategory}`">//</span>
+          <span :class="`mx-2 font-bold text-cat-${post.mainCategory}`">//</span>
           <div class="inline">
             <router-link
               :to="post.author.path"
@@ -40,7 +41,7 @@
               :alt="post.cover.alternativeText"
             >
           </responsive-picture>
-          <figcaption class="text-center mt-4 text-gray-600">
+          <figcaption class="text-center mt-4 text-lightText">
             {{ post.cover.caption }}
           </figcaption>
         </figure>

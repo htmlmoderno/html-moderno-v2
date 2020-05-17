@@ -15,7 +15,7 @@
       :class="{ 'mt-3': post.image.src }"
     >
       <span class="uppercase"> {{ post.date }} </span>
-      <span :class="`mx-2 text-cat-${post.category}`">//</span>
+      <span :class="`mx-2 font-bold text-cat-${post.category}`">//</span>
       <router-link
         tabindex="-1"
         :to="`/autores/${encodeURI(post.author.toLowerCase())}`"
@@ -27,7 +27,7 @@
     <h2 class="card-title mb-10 text-lg font-bold leading-tight">
       <router-link
         :to="post.to"
-        class="hover:text-accent hover:underline"
+        class="hover:text-textDark hover:underline"
       >
         <span class="sr-only">Acessar post: </span>
         {{ post.title }}

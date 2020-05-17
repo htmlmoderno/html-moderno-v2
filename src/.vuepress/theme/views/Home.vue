@@ -57,6 +57,7 @@ export default {
     const getHomePosts = sortPostsByDate(getPosts).slice(0, root.$themeConfig.pagination.perPage)
 
     const posts = prepareCardPost(getHomePosts)
+    console.log(posts)
 
     return {
       posts,
