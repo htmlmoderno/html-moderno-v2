@@ -83,6 +83,9 @@
     p code {
       @apply bg-gray-900 text-textDark;
     }    
+    ul li:before {
+      @apply text-cat-html-daily;
+    }
   }
 
   .output__browser-btns {

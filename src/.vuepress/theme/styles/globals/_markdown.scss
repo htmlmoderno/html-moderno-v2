@@ -148,8 +148,8 @@
     }
   }
 
-  ul li::before {
-    @apply text-cat-html-daily;
+  ul li:before {
+    @apply text-accent;
     content: "\2192";
     font-weight: bold;
     display: inline-block; 
