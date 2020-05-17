@@ -40,6 +40,5 @@ export default {
 }
 </script>
 
-<style src="vue-lazy-youtube-video/dist/style.css"></style>
 <style lang="scss" src="@theme/styles/base.scss"></style>
 <style src="@theme/styles/tailwind.css"></style>

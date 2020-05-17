@@ -32,7 +32,7 @@ import { filterPosts, sortPostsByDate } from '@theme/utils'
 import prepareCardPost from '@theme/utils/prepareCardPost'
 
 export default {
-  name: 'Category',
+  name: 'Author',
   components: {
     Card,
     TheMain,

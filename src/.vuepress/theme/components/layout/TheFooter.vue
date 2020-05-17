@@ -45,7 +45,7 @@
                 target="_blank"
                 class="footer__link base-link"
               >
-                {{ item.label }}
+                {{ item.label }} <span class="sr-only">(Abre em uma nova janela)</span>
               </a>
             </li>
           </ul>

@@ -28,10 +28,22 @@
 export default {
   name: 'Presentation',
   props: {
-    firstTitle: String,
-    secondTitle: String,
-    iconName: String,
-    moreInfo: String
+    firstTitle: {
+      type: String,
+      required: true
+    },
+    secondTitle: {
+      type: String,
+      required: true
+    },
+    iconName: {
+      type: String,
+      default: ''
+    },
+    moreInfo: {
+      type: String,
+      default: ''
+    }
   }
 }
 </script>
