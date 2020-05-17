@@ -17,7 +17,17 @@
       </div>
       <div class="w-9/12 md:w-1/2 flex items-center justify-end">
         <div class="border-r border-textLight dark:border-textDark">
-          <dark-mode-toggle class="px-6" />
+          <ClientOnly>
+            <VueDarkMode class="px-6 py-2">
+              <template v-slot="{ mode }">
+                <vp-icon
+                  :name="mode"
+                  width="24px"
+                  height="24px"
+                />
+              </template>
+            </VueDarkMode>
+          </ClientOnly>
         </div>
         <div class="w-2/4 ml-8">
           <search-box
