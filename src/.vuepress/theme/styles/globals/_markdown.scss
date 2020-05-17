@@ -139,13 +139,22 @@
 
   ol, ul {
     padding-left: 2em;
-    list-style-type: initial;
     margin-top: 40px;
     margin-bottom: 40px;
 
     li:not(:last-child) {
       margin-bottom: 16px;
     }
+  }
+
+  ul li::before {
+    @apply text-cat-html-daily;
+    content: "\2192";
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -2em;
+    margin-right: 1em;
   }
 
   table {

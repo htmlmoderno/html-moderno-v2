@@ -4,9 +4,9 @@
       Contamos com você<span class="text-accent">.</span>
     </h2>
     <div class="mt-2">
-      <h3>
+      <div>
         Você pode nos ajudar compartilhando e/ou curtindo nossas redes sociais.
-      </h3>
+      </div>
 
       <ul class="share-post__list mt-12 flex flex-wrap">
         <li
