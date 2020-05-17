@@ -107,7 +107,8 @@
     }
 
     .icon.outbound {
-      display: none;
+      color: inherit;
+      margin-left: 6px;
     }
   }
 
@@ -192,6 +193,7 @@
   }
 
   img {
+    @apply w-full shadow-lg rounded-lg;
     max-width: 100%;
     margin: 0 auto;
     margin-top: 30px;

@@ -11,7 +11,7 @@
     </span>
     <button
       class="copy-snippet__button p-4"
-      :aria-label="figcaptionText"
+      aria-label="Copiar código"
       @click="copy"
     >
       <vp-icon
@@ -26,20 +26,14 @@
 </template>
 
 <script>
-import { ref, onMounted } from '@vue/composition-api'
+import { ref } from '@vue/composition-api'
 import { useClipboard } from 'vue-use-web'
 
 export default {
   name: 'CopySnippet',
   setup (_, { refs }) {
-    const figcaptionText = ref(null)
     const copied = ref(false)
     const { write } = useClipboard()
-
-    onMounted(() => {
-      const caption = refs.copySnippet.parentElement.querySelector('figcaption')
-      figcaptionText.value = `Copiar código ${caption ? caption.textContent : ''}`
-    })
 
     function copy () {
       write(refs.copySnippet.parentElement.querySelector('[class^="language-"]').textContent)
@@ -51,8 +45,7 @@ export default {
 
     return {
       copy,
-      copied,
-      figcaptionText
+      copied
     }
   }
 }

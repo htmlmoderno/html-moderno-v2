@@ -56,9 +56,7 @@
       </section>
 
       <section class="single-post__container single-post__box-share border-t border-light-200 dark:border-dark-200">
-        <lazy-hydrate :when-visible="{ rootMargin: '100px' }">
-          <share-post />
-        </lazy-hydrate>
+        <share-post />
       </section>
 
       <component
@@ -69,9 +67,7 @@
       </component>
 
       <section class="single-post__container single-post__box-comment border-t border-light-200 dark:border-dark-200">
-        <lazy-hydrate :when-visible="{ rootMargin: '100px' }">
-          <comments />
-        </lazy-hydrate>
+        <comments />
       </section>
 
       <section class="single-post__container single-post__box-comment border-t border-light-200 dark:border-dark-200">

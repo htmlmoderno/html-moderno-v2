@@ -13,8 +13,6 @@
         <a
           class="base-link text-xl"
           :href="`#${header.slug}`"
-          :title="header.title"
-          @click.prevent="scrollToHeader(`${header.slug}`)"
         >
         <!-- eslint-enable -->
           <span>{{ header.title }}</span>
@@ -31,23 +29,6 @@ export default {
     headers: {
       type: Array,
       required: true
-    }
-  },
-  setup (_, { root }) {
-    function scrollToHeader (selector) {
-      const el = document.getElementById(selector)
-      let i = window.scrollY
-      const int = setInterval(() => {
-        window.requestAnimationFrame(() => {
-          window.scrollTo({ top: i })
-        })
-        i += 50
-        if (i >= (el.offsetTop - 40)) clearInterval(int)
-      }, 1)
-    }
-
-    return {
-      scrollToHeader
     }
   }
 }
