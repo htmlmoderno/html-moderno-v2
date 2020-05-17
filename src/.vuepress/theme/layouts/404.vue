@@ -1,6 +1,6 @@
 <template>
   <main
-    id="#main"
+    id="main"
     class="notfound"
   >
     <article class="w-full flex flex-wrap layout-section">

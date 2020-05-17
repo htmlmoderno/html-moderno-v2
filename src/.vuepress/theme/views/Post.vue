@@ -1,6 +1,6 @@
 <template>
   <main
-    id="#main"
+    id="main"
     class="single-post"
   >
     <article class="w-full layout-section">

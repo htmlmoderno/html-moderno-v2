@@ -1,5 +1,9 @@
 <template>
   <header class="flex flex-wrap pt-8 lg:pt-16">
+    <ClientOnly>
+      <VueSkipTo />
+      <VueAnnouncer />
+    </ClientOnly>
     <div class="flex w-full">
       <div class="w-3/12 md:w-1/2">
         <router-link to="/">

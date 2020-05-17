@@ -41,12 +41,16 @@
       class="w-full text-sm mt-20"
       v-html="$themeConfig.footer.copy"
     />
+    <back-to-top />
   </footer>
 </template>
 
 <script>
 export default {
-  name: 'TheFooter'
+  name: 'TheFooter',
+  components: {
+    BackToTop: () => import('@theme/components/BackToTop')
+  }
 }
 </script>
 

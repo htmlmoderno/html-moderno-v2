@@ -1,8 +1,5 @@
 <template>
   <div class="global-layout container mx-auto">
-    <ClientOnly>
-      <VueSkipTo />
-    </ClientOnly>
     <the-heading />
     <transition name="fade">
       <component :is="layout" />
@@ -21,10 +18,6 @@
       <newsletter />
     </section>
     <the-footer />
-    <back-to-top />
-    <ClientOnly>
-      <VueAnnouncer />
-    </ClientOnly>
   </div>
 </template>
 
@@ -37,7 +30,6 @@ export default {
   name: 'GlobalLayout',
   components: {
     TheHeading,
-    BackToTop: () => import('@theme/components/BackToTop'),
     TheFooter: () => import('@theme/components/layout/TheFooter'),
     TheCategories: () => import('@theme/components/layout/TheCategories')
   },
