@@ -49,8 +49,7 @@ import SearchBox from '@SearchBox'
 export default {
   name: 'TheHeading',
   components: {
-    SearchBox,
-    DarkModeToggle: () => import('@theme/components/DarkModeToggle')
+    SearchBox
   },
   setup (_, { refs }) {
     onMounted(() => refs.searchBox.$el.querySelector('input').setAttribute('aria-label', 'Pesquisar no site'))

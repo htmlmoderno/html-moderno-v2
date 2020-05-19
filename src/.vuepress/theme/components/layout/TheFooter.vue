@@ -17,10 +17,10 @@
       <div class="w-full md:w-3/5 md:pr-16 text-lg">
         <div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque porttitor lectus, malesuada consectetur metus hendrerit sed. Sed egestas commodo urna, ut feugiat felis malesuada vitae. Sed sollicitudin pulvinar sapien, vitae ullamcorper augue bibendum vitae.
+            Somos um site sobre desenvolvimento web focado no HTML e suas vertentes como semântica, acessibilidade, SEO, UX e etc.
           </p>
           <p class="my-6">
-            Nullam scelerisque id orci non blandit. Sed ex ligula, aliquet at ante sit amet, imperdiet venenatis leo. Cras vulputate arcu in sapien semper sollicitudin.
+            A palavra moderno nesse caso não se remete a algo novo especificamente, mas uma forma de desenvolver para web nos tempos atuais sem negligenciar os padrões e boas práticas que o HTML traz para a web...
           </p>
         </div>
         <a
