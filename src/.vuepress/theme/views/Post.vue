@@ -2,7 +2,6 @@
   <main
     id="main"
     class="single-post"
-    tabindex="-1"
   >
     <article class="w-full layout-section">
       <div class="single-post__container single-post__container--no-mt">

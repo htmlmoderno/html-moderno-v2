@@ -17,7 +17,6 @@
       <span class="uppercase"> {{ post.date }} </span>
       <span :class="`mx-2 font-bold text-cat-${post.category}`">//</span>
       <router-link
-        tabindex="-1"
         :to="`/autores/${encodeURI(post.author.toLowerCase())}`"
         class="underline"
       >
