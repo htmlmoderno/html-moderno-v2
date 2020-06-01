@@ -153,11 +153,11 @@ export default {
     }
 
     @screen md {
-      @apply w-4/5;
+      @apply w-5/6;
     }
 
     @screen xl {
-      @apply w-3/5;
+      @apply w-4/6;
     }
   }
 
