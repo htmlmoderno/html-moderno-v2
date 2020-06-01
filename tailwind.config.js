@@ -1,8 +1,5 @@
 module.exports = {
   theme: {
-    theme: {
-      darkSelector: '.dark-mode'
-    },
     extend: {
       colors: {
         accent: '#FF5733',

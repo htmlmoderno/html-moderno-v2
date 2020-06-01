@@ -16,9 +16,12 @@
         </router-link>
       </div>
       <div class="w-9/12 md:w-1/2 flex items-center justify-end">
-        <div class="border-r border-textLight dark:border-textDark">
+        <div class="border-r dark:border-dark-200 border-textLight">
           <ClientOnly>
-            <VueDarkMode class="px-6 py-2">
+            <VueDarkMode
+              class-name="mode-%cm"
+              class="px-6 py-2"
+            >
               <template v-slot="{ mode }">
                 <vp-icon
                   :name="mode"
