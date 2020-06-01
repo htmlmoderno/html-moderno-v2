@@ -12,7 +12,7 @@ if (process.env.NODE_ENV !== 'development') {
       whitelist: [
         'html',
         'body',
-        'mode-dark'
+        'dark-mode'
       ],
       whitelistPatterns: [
         /-cat-/

@@ -36,12 +36,13 @@
 </template>
 
 <script>
+import { ref, watch } from '@vue/composition-api'
+
 import Card from '@theme/components/Card'
 import TheMain from '@theme/components/layout/TheMain'
 import Presentation from '@theme/components/Presentation'
 import { filterPosts, sortPostsByDate } from '@theme/utils'
 import prepareCardPost from '@theme/utils/prepareCardPost'
-import { ref, watch } from '@vue/composition-api'
 
 export default {
   name: 'Category',

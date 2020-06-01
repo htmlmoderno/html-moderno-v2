@@ -32,7 +32,9 @@
 
 <script>
 import { computed } from '@vue/composition-api'
+import Pagination from '@vuepress/plugin-blog/lib/client/components/Pagination'
 
+import Card from '@theme/components/Card'
 import TheMain from '@theme/components/layout/TheMain'
 import Presentation from '@theme/components/Presentation'
 import prepareCardPost from '@theme/utils/prepareCardPost'
@@ -42,8 +44,8 @@ export default {
   components: {
     Presentation,
     TheMain,
-    Card: () => import('@theme/components/Card'),
-    Pagination: () => import('@vuepress/plugin-blog/lib/client/components/Pagination')
+    Card,
+    Pagination
   },
   setup (_, { root }) {
     const presentation = computed(() => {

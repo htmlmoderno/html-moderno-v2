@@ -26,7 +26,7 @@
     <h2 class="card-title mb-10 text-lg font-bold leading-tight">
       <router-link
         :to="post.to"
-        class="hover:text-textDark hover:underline"
+        class="hover:underline"
       >
         <span class="sr-only">Acessar post: </span>
         {{ post.title }}
