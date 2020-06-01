@@ -11,6 +11,10 @@
     @apply text-cat-html-daily;
   }
 
+  :focus {
+    outline-color: #E3E3E3;
+  }
+
   #app {
     @screen sm {
       box-shadow: inset 5px 5px 10px rgba(0, 0, 0, .1), inset -5px -5px 8px rgba(255, 255, 255, .05);
@@ -98,6 +102,9 @@
   .n9m-search.search-box {
     > input {
       @apply text-textDark;
+      &.focused {
+        outline: auto;
+      }
     }
   }
 }

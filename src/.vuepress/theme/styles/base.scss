@@ -21,3 +21,14 @@ h1, h2, h3 {
 input::placeholder {
 	@apply text-light-700 #{!important};
 }
+
+[tabindex]:not([tabindex="-1"]), a, button, input, select, textarea {
+  outline: 2px solid transparent;
+  outline-offset: 6px;
+  transition: outline-offset .1s ease;
+}
+
+:focus {
+  outline-color: #573E48;
+  outline-offset: 3px;
+}
