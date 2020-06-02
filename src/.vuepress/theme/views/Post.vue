@@ -123,13 +123,6 @@ export default {
       }
     }
 
-    onMounted(() => {
-      const anchors = document.querySelectorAll('.header-anchor')
-      anchors.forEach(link => {
-        link.setAttribute('aria-label', `Link âncora para: ${link.parentElement.textContent.replace('#', '').trim()}`)
-      })
-    })
-
     const schema = generateSchemaPost({
       ...post,
       fullPath: root.$route.fullPath

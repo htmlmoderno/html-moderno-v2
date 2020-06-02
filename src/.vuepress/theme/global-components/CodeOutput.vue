@@ -122,7 +122,7 @@ export default {
       let defaultStyle = `
         body {
           font-family: Roboto, Calibri, Arial;
-          color: ${localStorage.getItem('darkMode') ? '#E3E3E3' : '#573E48'}
+          color: ${localStorage.getItem('colorMode') ? '#E3E3E3' : '#573E48'}
         }
       `
       if (styleSelector) {
