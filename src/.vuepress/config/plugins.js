@@ -2,6 +2,8 @@ const md = require('markdown-it')()
 const path = require('path')
 const resolve = pathName => path.join(__dirname, pathName)
 
+let caption = ''
+
 module.exports = [
   [
     // https://github.com/vuepressjs/vuepress-plugin-blog
@@ -130,26 +132,27 @@ module.exports = [
     }
   ],
   [
-    'vuepress-plugin-container',
+    'container',
     {
       type: 'figurecode',
       defaultTitle: '',
       render: (tokens, idx) => {
         const m = tokens[idx].info.trim().match(/^figurecode\s+(.*)$/)
         if (tokens[idx].nesting === 1) {
-          const caption = m ? md.utils.escapeHtml(m[1]) : ''
+          caption = m ? md.utils.escapeHtml(m[1]) : ''
           return `
-          <figure aria-label="${caption}" class="figurecode">\n
-            <figcaption class="figurecode__caption">
-              ${caption}
-            </figcaption>\n
-            <div class="figurecode__content">\n
+          <FigureCode caption="${caption}">
+            <div class="figurecode__content" slot="content">
         `
         } else {
           return `
-            </div>\n
-            <copy-snippet class="figurecode__copy" />
-          </figure>\n
+              <CopySnippet slot="copy" class="figurecode__copy" />
+            </div>
+            <FigureCodeCaption
+              slot="caption"
+              caption="${caption}"
+            />
+          </FigureCode>
         `
         }
       }

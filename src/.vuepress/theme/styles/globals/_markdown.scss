@@ -203,10 +203,6 @@
   .observer {
     text-align: center;
   }
-    
-  div[class*=language-] {
-    margin-bottom: 30px;
-  }
 
   code[class*=language-] ,pre[class*=language-] {
     font-size: 1.10rem;
@@ -224,7 +220,7 @@
   }
 
   pre[class*=language-] {
-    @apply px-4 pb-8;
+    @apply px-4 pb-10;
     position: relative;
     margin: .5em 0;
     overflow: auto;
@@ -296,23 +292,47 @@
     margin-bottom: 20px;
   }
 
-  .figurecode {
-    @apply relative;
+  // .figurecode {
+  //   @apply relative;
     
-    &__caption {
-      @apply absolute z-20 text-sm right-0 text-right w-full text-light;
-      top: 25px;
-      padding-right: 30px;
-    }
+  //   &__caption {
+  //     @apply absolute z-20 text-sm right-0 text-right w-full text-light;
+  //     top: 25px;
+  //     padding-right: 30px;
+  //   }
+
+  //   &__content {
+  //     @apply relative z-10;
+  //   }
+
+  //   &__copy {
+  //     @apply absolute z-10 text-xs text-textDark;
+  //     right: 16px;
+  //     bottom: 10px;
+  //   }
+  // }
+  .figurecode {
+    position: relative;
 
     &__content {
-      @apply relative z-10;
+      position: relative;
     }
 
     &__copy {
       @apply absolute z-10 text-xs text-textDark;
       right: 16px;
-      bottom: 10px;
+      bottom: 16px;
+    }
+
+    &__caption {
+      text-align: center;
+      width: 100%;
+      font-size: 14px;
+      font-style: italic;
+
+      a {
+        text-decoration: underline;
+      }
     }
   }
 }
