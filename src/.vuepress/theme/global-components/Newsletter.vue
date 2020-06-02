@@ -50,7 +50,7 @@
           :class="{ 'px-3': small, 'px-6': !small, 'opacity-50': isSubmitted }"
           :disabled="isSubmitted"
         >
-          INSCREVER-SE
+          ENVIAR
           <span class="sr-only"> na Newsletter do HTMl Moderno</span>
         </button>
       </div>
