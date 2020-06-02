@@ -18,7 +18,7 @@
             target="_blank"
             class="n9m n9m--active"
           >
-            <span class="sr-only">Compartilhar o post no {{ social.name }} (Abre em uma nova janela)</span>
+            <span class="sr-only">Compartilhar o post no {{ social.name }}, abre em uma nova janela</span>
             <vp-icon :name="social.name" />
           </a>
         </li>

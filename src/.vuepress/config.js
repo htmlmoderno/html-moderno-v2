@@ -2,10 +2,12 @@ require('dotenv').config()
 const path = require('path')
 const webpack = require('webpack')
 
+const chainMarkdown = require('./config/chainMarkdown')
 const head = require('./config/head')
 const plugins = require('./config/plugins')
 const postcss = require('./config/postcss')
 const themeConfig = require('./config/themeConfig')
+
 const resolve = pathName => path.join(__dirname, pathName)
 
 module.exports = {
@@ -18,9 +20,11 @@ module.exports = {
   postcss,
   locales: {
     '/': {
-      lang: 'pt-br'
+      lang: 'pt-br',
+      externalLinkTextSrOnly: 'abre em uma nova janela'
     }
   },
+  chainMarkdown,
   configureWebpack () {
     return {
       plugins: [
