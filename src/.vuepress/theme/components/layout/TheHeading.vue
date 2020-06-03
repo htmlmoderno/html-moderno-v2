@@ -39,25 +39,50 @@
             class="n9m-search n9m--inner"
           />
         </div>
+        <button
+          class="ml-2 px-4 py-2 text-sm font-bold"
+          @click="onOpen"
+        >
+          MENU
+        </button>
       </div>
     </div>
+    <NavMenu
+      :show="isOpen"
+      @onClose="onClose"
+    />
   </header>
 </template>
 
 <script>
-import { onMounted } from '@vue/composition-api'
+import { onMounted, watch } from '@vue/composition-api'
 
 import SearchBox from '@SearchBox'
+import NavMenu from '@theme/components/NavMenu'
+import useDisclosure from '@theme/composable/useDisclosure'
 
 export default {
   name: 'TheHeading',
   components: {
+    NavMenu,
     SearchBox
   },
   setup (_, { refs }) {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+
     onMounted(() => refs.searchBox.$el.querySelector('input').setAttribute('aria-label', 'Pesquisar no site'))
 
-    return {}
+    watch('$route', () => {
+      if (isOpen.value) {
+        onClose()
+      }
+    })
+
+    return {
+      isOpen,
+      onOpen,
+      onClose
+    }
   }
 }
 </script>

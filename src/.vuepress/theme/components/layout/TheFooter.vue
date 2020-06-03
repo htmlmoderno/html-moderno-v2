@@ -11,7 +11,7 @@
       id="newsletter"
       class="layout-section layout-section--border-top dark:border-dark-200"
     >
-      <newsletter />
+      <newsletter aria-label="Faça parte e assine a nossa newsletter" />
     </section>
     <section class="footer flex flex-wrap pb-12 px-0 lg:w-3/4 lg:mx-auto">
       <div class="w-full md:w-3/5 md:pr-16 text-lg">
@@ -25,7 +25,7 @@
         </div>
         <a
           :href="`mailto:${$themeConfig.footer.mailto}`"
-          class="my-12 block sm:my-0 text-3xl md:text-4xl leading-none font-bold dark:text-cat-html-daily"
+          class="my-12 block sm:my-0 text-3xl md:text-4xl leading-none font-bold hover:underline dark:text-cat-html-daily"
         >
           Entrar em contato<span class="text-accent">.</span>
         </a>
@@ -34,7 +34,7 @@
         <nav class="md:pl-12 lg:pl-24">
           <ul>
             <li
-              v-for="(item, index) in $themeConfig.footer.links"
+              v-for="(item, index) in links"
               :key="`nav-footer-${index}`"
               class="mb-6"
             >
@@ -66,6 +66,13 @@ export default {
   components: {
     BackToTop: () => import('@theme/components/BackToTop'),
     TheCategories: () => import('@theme/components/layout/TheCategories')
+  },
+  setup (_, { root }) {
+    const links = [...root.$themeConfig.links.social, ...root.$themeConfig.links.footer]
+
+    return {
+      links
+    }
   }
 }
 </script>

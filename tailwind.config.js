@@ -2,13 +2,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        accent: '#FF5733',
+        accent: '#DB2800',
         dark: '#343743',
         textDark: '#E3E3E3',
-        'dark-200': '#4e5161',
-        'dark-800': '#3A3C4A',
         light: '#F4F1EC',
         textLight: '#573E48',
+        overlay: 'rgba(0, 0, 0, 0.3)',
+        'dark-200': '#4e5161',
+        'dark-800': '#3A3C4A',
         'light-200': '#ECE6DC',
         'light-700': '#8B7A5C',
         'cat-semantica': '#D9D2A4',
@@ -20,7 +21,7 @@ module.exports = {
         'cat-web-performance': '#88DCCD',
         'cat-html-daily': '#FFD8B9',
         'cat-seguranca': '#C7CEEA',
-        'cat-videos': '#D84848 '
+        'cat-videos': '#D84848'
       },
       boxShadow: {
         'n9m-light': '-5px -5px 10px #FFFBF5, 5px 5px 16px #E0E0E0',

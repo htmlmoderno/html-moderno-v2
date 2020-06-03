@@ -22,28 +22,26 @@ module.exports = {
     frontmatterKey: 'announcer',
     complementRoute: 'foi carregada'
   },
-  menu: {
-    links: [
+  links: {
+    navMenu: [
       {
-        label: 'SOBRE',
+        label: 'Sobre',
         to: '/sobre'
       },
       {
-        label: 'TODOS OS POSTS',
+        label: 'Posts',
         to: '/posts'
       },
       {
-        label: 'CATEGORIAS',
+        label: 'Categorias',
         to: '/categorias'
       }
       // {
-      //   label: 'ACESSIBILIDADE',
+      //   label: 'Acessibilidade',
       //   to: '/acessibilidade'
       // }
-    ]
-  },
-  footer: {
-    links: [
+    ],
+    social: [
       {
         label: 'Facebook page',
         link: 'https://www.facebook.com/htmlmoderno/?ref=website'
@@ -60,7 +58,9 @@ module.exports = {
       {
         label: 'Youtube',
         link: 'https://www.youtube.com/channel/UCByMpqccsCqL42LMzKIMnBg/?ref=website'
-      },
+      }
+    ],
+    footer: [
       {
         label: 'RSS Feed',
         link: 'https://htmlmoderno.com.br/rss.xml'
@@ -69,7 +69,9 @@ module.exports = {
         label: 'Presskit',
         link: 'https://github.com/htmlmoderno/press-kit'
       }
-    ],
+    ]
+  },
+  footer: {
     mailto: 'contato@htmlmoderno.com.br',
     copy: '&copy; HTML Moderno'
   }
