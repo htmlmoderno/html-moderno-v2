@@ -2,7 +2,8 @@ module.exports = {
   root: true,
   env: {
     node: true,
-    browser: true
+    browser: true,
+    'jest/globals': true
   },
   extends: [
     '@vue/standard',
@@ -11,6 +12,7 @@ module.exports = {
   ],
   plugins: [
     'vue',
+    'jest',
     'vuejs-accessibility',
     'eslint-plugin-import-helpers'
   ],
