@@ -180,7 +180,7 @@ Os cabeçalhos H2-H6 são usados para continuar com a estrutura do documento, no
 Dificilmente você chegará nas tags H4-H6, existem casos de uso sim, não se limite, pode usar a vontade, mas são poucos conteúdos que chegam a esse nível de cabeçalho.
 
 <section class="my-20">
-  <newsletter :small="true" />
+  <newsletter aria-label="Assine a nossa newsletter" :small="true" />
 </section>
 
 ## A importância das tags de cabeçalhos para o SEO

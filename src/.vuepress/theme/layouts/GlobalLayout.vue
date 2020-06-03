@@ -1,7 +1,11 @@
 <template>
   <div class="global-layout container mx-auto">
     <the-heading />
-    <transition name="fade">
+    <transition
+      name="fade"
+      mode="out-in"
+      appear
+    >
       <component :is="layout" />
     </transition>
     <the-footer />
@@ -40,5 +44,5 @@ export default {
 }
 </script>
 
-<style lang="scss" src="@theme/styles/base.scss"></style>
 <style src="@theme/styles/tailwind.css"></style>
+<style lang="scss" src="@theme/styles/base.scss"></style>

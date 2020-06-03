@@ -14,7 +14,7 @@
     </div>
     <form
       class="flex flex-wrap items-end mt-12"
-      aria-label="Assinar newsletter"
+      v-bind="$attrs"
       @submit.prevent="submitNewsletter"
     >
       <div class="w-full lg:w-2/5 p-0 lg:pr-3">
@@ -70,6 +70,7 @@ import subscribeToMailchimp from 'vuepress-plugin-mailchimp/src/mailchimpSubscri
 
 export default {
   name: 'Newsletter',
+  inheritAttrs: false,
   props: {
     small: {
       type: Boolean,
