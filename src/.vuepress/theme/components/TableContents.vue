@@ -1,6 +1,12 @@
 <template>
-  <nav class="toc">
-    <h2 class="text-2xl mb-12 font-bold">
+  <nav
+    class="toc"
+    aria-labelledby="title-toc"
+  >
+    <h2
+      id="title-toc"
+      class="text-2xl mb-12 font-bold"
+    >
       Índice<span class="text-accent">.</span>
     </h2>
     <ul class="toc__list">
