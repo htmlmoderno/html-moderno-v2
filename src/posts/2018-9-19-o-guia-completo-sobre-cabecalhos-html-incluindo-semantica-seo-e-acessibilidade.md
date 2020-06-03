@@ -44,7 +44,9 @@ meta:
 
 Todo desenvolvedor web que estudou HTML sabe que existem seis níveis de títulos que vai do `H1 até o H6`, a ideia é usá-las para fornecer hierarquia e sentido ao seu site. As tags funcionam da seguinte forma: `H1` representa o cabeçalho mais importante e o `H6` o menos importante.
 
-> Muitos devs (por desconhecimento) usam cabeçalhos H1…H6 para estilizar fontes, determinando a espessura e o tamanho da fonte através dos níveis de cabeçalho, mas isso é extremamente o oposto do que os cabeçalhos propõem.
+::: obs
+Muitos devs (por desconhecimento) usam cabeçalhos H1…H6 para estilizar fontes, determinando a espessura e o tamanho da fonte através dos níveis de cabeçalho, mas isso é extremamente o oposto do que os cabeçalhos propõem.
+:::
 
 As tags de cabeçalho devem seguir uma lógica estruturada dentro da sua página e usadas de forma crescente. Por exemplo, se o seu site tiver uma tag H1 e ela for seguida de uma tag H3, teremos uma quebra de hierarquia e possíveis problemas de SEO.
 
@@ -142,7 +144,9 @@ A resposta é **NÃO**, por quê?
 A recomendação HTML5 da W3C com o suporte a múltiplos H1 não foi adotada pelos navegadores de maneira consistente e gerou uma discussão sobre esse assunto (você pode verificar através desta [issue](https://github.com/w3c/html/issues/169) da w3c) que foi o suficiente para uma decisão de modificar os exemplos da documentação a partir do HTML5.1 e retornar a recomendação anterior de utilizar somente uma única tag H1 por documento até que seja realmente implementado pelos navegadores.
 
 Recomendação da W3C desde 2014: (Saiba mais através [desse link](https://w3c.github.io/html/sections.html#headings-and-sections))  
-> **ATENÇÃO**: Atualmente, não há implementações nativas conhecidas do algoritmo de estrutura de tópicos em navegadores gráficos ou agentes de usuário de tecnologia assistencial, embora o algoritmo seja implementado em outros softwares, como verificadores de conformidade e extensões de navegador. Além disso, há um problema HTML W3C pull #3499 e [W3C HTML issue #830](https://github.com/w3c/html/issues/830)). Qualquer implementação e uso dessas diferentes propostas serão rastreadas e podem resultar em alterações futuras significativas no algoritmo de estrutura de tópicos (Outline algorithm).
+::: obs
+**ATENÇÃO**: Atualmente, não há implementações nativas conhecidas do algoritmo de estrutura de tópicos em navegadores gráficos ou agentes de usuário de tecnologia assistencial, embora o algoritmo seja implementado em outros softwares, como verificadores de conformidade e extensões de navegador. Além disso, há um problema HTML W3C pull #3499 e [W3C HTML issue #830](https://github.com/w3c/html/issues/830)). Qualquer implementação e uso dessas diferentes propostas serão rastreadas e podem resultar em alterações futuras significativas no algoritmo de estrutura de tópicos (Outline algorithm).
+:::
 
 Exemplo retirado da documentação da W3C para o HTML:
 
@@ -188,7 +192,9 @@ As tags de cabeçalho tem alguma influência (embora pequena e não determinante
 
 Para os usuários os cabeçalhos são como âncoras que ajuda a encontrar o conteúdo mais facilmente.
 
-> Aqui no HTML Moderno usamos os títulos H2 para criar um índice que fica no topo do artigo.
+::: obs
+Aqui no HTML Moderno usamos os títulos H2 para criar um índice que fica no topo do artigo.
+:::
 
 Esses detalhes contribuem para passar uma boa imagem e consequentemente aumentando a probabilidade de uma melhoria no ranking.
 
@@ -201,9 +207,13 @@ Algumas dicas que podem ajudar na otimização:
 ### Como o Google usa as tags de cabeçalho
 Em um [hangout para webmasters](https://www.youtube.com/watch?v=6MNzdm0K-zE) no Youtube (John Mueller, do Google) disse que para o Google não importa a ordem hierárquica das tags `H` nas páginas web.
 
->  “A ordem não importa realmente. Usamos os títulos para entender o contexto do conteúdo da página um pouco melhor e, para isso, não precisamos de uma ordem rígida das tags de cabeçalho.”
+::: bq
+<q>A ordem não importa realmente. Usamos os títulos para entender o contexto do conteúdo da página um pouco melhor e, para isso, não precisamos de uma ordem rígida das tags de cabeçalho.</q>
 
-> “Às vezes você tem várias [tags] h1, às vezes [...] a ordem é um pouco diferente por causa de seu modelo ou algo em sua página e isso é perfeitamente aceitável.”
+<q>Às vezes você tem várias [tags] h1, às vezes [...] a ordem é um pouco diferente por causa de seu modelo ou algo em sua página e isso é perfeitamente aceitável.</q>
+
+<footer>-- John Miller, <cite> <a href="https://www.youtube.com/watch?v=6MNzdm0K-zE" target="_blank" rel="noopener noreferrer">Youtube hangout <span class="sr-only">, abre em uma nova janela</span></a>, 2018</cite></footer>
+:::
 
 Acho importante sempre estar antenado nas opiniões de especialistas do Google quando se trata de SEO, mas em alguns casos como falamos até aqui neste artigo, uma estrutura consistente e dentro das recomendações do HTML5 beneficiará tanto o SEO, quanto a experiência de usuários de tecnologia assistiva.
 
@@ -228,7 +238,9 @@ Exemplo de um bom título:
 
 Se você não utilizar uma palavra-chave em sua H1, o Google ainda sim consegue encontrar e indexar, então não fique com crise de abstinência se não conseguir inseri-la na tag H1.
 
-> Não quis entrar muito no mérito de explicar o que significa "Head tail" e "Long tail", pois não é o intuito desse post, mas se quiser complementar a leitura, esse link explica direitinho sobre essas técnicas: https://comunidade.rockcontent.com/long-tail-e-head-tail-palavras-chave/
+::: obs
+Não quis entrar muito no mérito de explicar o que significa "Head tail" e "Long tail", pois não é o intuito desse post, mas se quiser complementar a leitura, esse link explica direitinho sobre essas técnicas: https://comunidade.rockcontent.com/long-tail-e-head-tail-palavras-chave/
+:::
 
 ## Dicas de como estruturar cabeçalhos HTML
 Não existe fórmula mágica e nem estrutura que sirva para tudo, mas juntei algumas estruturas de cabeçalhos para determinadas partes de um site ou seguimento, aproveite para  entender o padrão e aplicar em seu site.

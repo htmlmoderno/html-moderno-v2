@@ -8,13 +8,6 @@ export default ({ Vue, router, isServer }) => {
   Vue.use(VueCompositionApi)
   Vue.use(VueMasonry)
 
-  if (process.env.NODE_ENV === 'development') {
-    const VueAxe = require('vue-axe').default
-    Vue.use(VueAxe, {
-      delay: 2000
-    })
-  }
-
   if (!isServer) {
     Vue.use(VueSkipTo)
     Vue.use(VueAnnouncer, {}, router)

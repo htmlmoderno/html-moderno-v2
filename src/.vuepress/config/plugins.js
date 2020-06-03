@@ -157,5 +157,23 @@ module.exports = [
         }
       }
     }
+  ],
+  [
+    'container',
+    {
+      type: 'obs',
+      defaultTitle: '',
+      before: () => '<div class="custom-block-obs n9m">',
+      after: '</div>'
+    }
+  ],
+  [
+    'container',
+    {
+      type: 'bq',
+      defaultTitle: '',
+      before: () => '<blockquote class="custom-block-bq n9m">',
+      after: '</blockquote>'
+    }
   ]
 ]

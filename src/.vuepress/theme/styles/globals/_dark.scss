@@ -90,6 +90,11 @@
     ul li:before {
       @apply text-cat-html-daily;
     }
+    .custom-block {
+      &-obs, &-bq {
+        @apply border-cat-html-daily;
+      }
+    }
   }
 
   .output__browser-btns {

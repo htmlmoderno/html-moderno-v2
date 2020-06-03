@@ -2,7 +2,7 @@
 view: Post
 lang: pt-br
 
-title: Você conhece o atributo HTML hidden? Saiba quando utilizá-lo.
+title: Você conhece o atributo HTML hidden? Saiba quando utilizá-lo
 description: Um atributo desconhecido pelos desenvolvedores é o atributo global do HTML chamado &#96;hidden&#96;, nesse post vamos abordar quando utilizá-lo da melhor maneira.
 excerpt: Um atributo desconhecido pelos desenvolvedores é o atributo global do HTML chamado `hidden`, nesse post vamos abordar quando utilizá-lo da melhor maneira.
 announcer: Postagem %title% %complementRoute%
@@ -83,7 +83,9 @@ Não diretamente! Mas uma das coisas que acho interessante nesse atributo é que
 
 Porém existem algumas aplicações que restringem o acesso no robots.txt o download de assets, a fim de economizar recursos do servidor.
 
-> Não imagino alguém que faça isso atualmente, mas nunca bloqueie CSS e JS para o Google. Ele quer ver seu site do jeito que o visitante humano (usuário) irá ver.
+::: obs
+Não imagino alguém que faça isso atualmente, mas nunca bloqueie CSS e JS para o Google. Ele quer ver seu site do jeito que o visitante humano (usuário) irá ver.
+:::
 
 No caso de restrições de acesso ou que algum bot não seja capaz de analisar elementos ocultos via CSS ou Javascript, o atributo `hidden` tem um uso relevante.
 
@@ -91,7 +93,9 @@ No caso de restrições de acesso ou que algum bot não seja capaz de analisar e
 
 Muitos não utilizam ou desconhecem o atributo `aria-hidden`, que é uma maneira de informar as tecnologias assistivas (<abbr title="Interface de programação de aplicativos">API</abbr> de acessibilidade) que ignore esses elementos onde o atributo foi inserido, mas esse elemento mesmo com o aria-hidden ainda permanecerá visível para o usuário no browser, enquanto isso, elementos com atributo hidden ficam inacessíveis/ocultos para qualquer dispositivo.
 
-> Se você utilizar o hidden não precisa utilizar o aria-hidden=true, mas também não é uma total redundância se utilizar os dois, pois os dispositivos de tecnologia assistiva deveriam também ser mais consistentes/uniformes ao suporte, mas nem sempre é o caso.
+::: obs
+Se você utilizar o hidden não precisa utilizar o aria-hidden=true, mas também não é uma total redundância se utilizar os dois, pois os dispositivos de tecnologia assistiva deveriam também ser mais consistentes/uniformes ao suporte, mas nem sempre é o caso.
+:::
 
 Uma opção de uso do atributo hidden para melhorar a acessibilidade que eu utilizo, é criar blocos de conteúdos que detalham algum outro elemento como ícones, search, campos de input ou outros elementos que precisam de uma descrição mais detalhada, em conjunto com o `aria-labelledby` ou `aria-describedby`.
 
@@ -122,8 +126,9 @@ Em outro contexto, em uma edição ou exclusão:
 ```
 :::
 
-> Os casos de uso são muitos, mas use com moderação.
-
+::: obs
+Os casos de uso são muitos, mas use com moderação.
+:::
 
 ## Suporte
 
