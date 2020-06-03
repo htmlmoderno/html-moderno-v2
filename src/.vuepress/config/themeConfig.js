@@ -74,5 +74,10 @@ module.exports = {
   footer: {
     mailto: 'contato@htmlmoderno.com.br',
     copy: '&copy; HTML Moderno'
+  },
+  locales: {
+    '/': {
+      externalLinkTextSrOnly: 'Abre em uma nova janela'
+    }
   }
 }
