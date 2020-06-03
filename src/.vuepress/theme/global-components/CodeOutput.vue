@@ -16,7 +16,7 @@
             type="button"
             class="ml-2 p-2"
             :title="ariaLabel"
-            @click="setFullScreen"
+            @click="toggleFullScreen"
           >
           <!-- eslint-enable -->
             <span class="sr-only">{{ ariaLabel }} {{ title }}</span>
@@ -57,7 +57,7 @@
 </template>
 
 <script>
-import { ref, onMounted, onUnmounted } from '@vue/composition-api'
+import { ref, onMounted, watch } from '@vue/composition-api'
 import FocusLock from 'vue-focus-lock'
 
 export default {
@@ -91,23 +91,33 @@ export default {
     const isFullScreen = ref(false)
     const ariaLabel = isFullScreen.value ? 'Sair da tela cheia' : 'Ver em tela cheia'
 
+    watch(isFullScreen, (val) => {
+      if (val) return openFullScreen()
+      closeFullScreen()
+    }, { lazy: true })
+
     onMounted(() => {
-      window.addEventListener('keydown', escFullScreen, true)
       root.$nextTick(() => {
         insertContent(refs.outputIframe, selector)
         insertStyle(refs.outputIframe, styleSelector)
       })
     })
 
-    onUnmounted(() => {
-      window.removeEventListener('keydown', escFullScreen, true)
-    })
-
-    function escFullScreen (e) {
-      if (e.key === 'Escape' && isFullScreen.value) setFullScreen()
+    function openFullScreen () {
+      window.addEventListener('keydown', escFullScreen, true)
+      refs.outputIframe.contentWindow.addEventListener('keydown', escFullScreen, true)
     }
 
-    function setFullScreen () {
+    function closeFullScreen () {
+      window.removeEventListener('keydown', escFullScreen, true)
+      refs.outputIframe.contentWindow.removeEventListener('keydown', escFullScreen, true)
+    }
+
+    function escFullScreen (e) {
+      if (e.key === 'Escape' && isFullScreen.value) toggleFullScreen()
+    }
+
+    function toggleFullScreen () {
       isFullScreen.value = !isFullScreen.value
       document.getElementsByTagName('body')[0].style.overflow = isFullScreen.value ? 'hidden' : 'auto'
     }
@@ -142,7 +152,7 @@ export default {
       ariaLabel,
       isFullScreen,
       escFullScreen,
-      setFullScreen
+      toggleFullScreen
     }
   }
 }
