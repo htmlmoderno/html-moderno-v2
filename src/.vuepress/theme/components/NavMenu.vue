@@ -99,6 +99,11 @@ export default {
   },
 
   setup ({ show }, { emit }) {
+    watch('show', (val) => {
+      if (val) return menuOpen()
+      menuClose()
+    }, { lazy: true })
+
     function escFullScreen (e) {
       if (e.key === 'Escape') {
         emit('onClose')
@@ -108,11 +113,6 @@ export default {
     function toggleOverflow (overflow) {
       document.body.style.overflow = overflow
     }
-
-    watch('show', (val) => {
-      if (val) return menuOpen()
-      menuClose()
-    }, { immediate: false })
 
     function menuOpen () {
       window.addEventListener('keydown', escFullScreen, true)
