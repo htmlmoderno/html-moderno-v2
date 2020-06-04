@@ -212,7 +212,7 @@ Em um [hangout para webmasters](https://www.youtube.com/watch?v=6MNzdm0K-zE) no 
 
 <q>Às vezes você tem várias [tags] h1, às vezes [...] a ordem é um pouco diferente por causa de seu modelo ou algo em sua página e isso é perfeitamente aceitável.</q>
 
-<footer>-- John Miller, <cite> <a href="https://www.youtube.com/watch?v=6MNzdm0K-zE" target="_blank" rel="noopener noreferrer">Youtube hangout <span class="sr-only">, abre em uma nova janela</span></a>, 2018</cite></footer>
+<footer>-- John Miller, <cite> <a href="https://www.youtube.com/watch?v=6MNzdm0K-zE" target="_blank" rel="noopener noreferrer">English Google Webmaster Central office-hours hangout <span class="sr-only">, abre em uma nova janela</span> <OutboundLink /></a>, 2018</cite></footer>
 :::
 
 Acho importante sempre estar antenado nas opiniões de especialistas do Google quando se trata de SEO, mas em alguns casos como falamos até aqui neste artigo, uma estrutura consistente e dentro das recomendações do HTML5 beneficiará tanto o SEO, quanto a experiência de usuários de tecnologia assistiva.
@@ -239,7 +239,7 @@ Exemplo de um bom título:
 Se você não utilizar uma palavra-chave em sua H1, o Google ainda sim consegue encontrar e indexar, então não fique com crise de abstinência se não conseguir inseri-la na tag H1.
 
 ::: obs
-Não quis entrar muito no mérito de explicar o que significa "Head tail" e "Long tail", pois não é o intuito desse post, mas se quiser complementar a leitura, esse link explica direitinho sobre essas técnicas: https://comunidade.rockcontent.com/long-tail-e-head-tail-palavras-chave/
+Não quis entrar muito no mérito de explicar o que significa "Head tail" e "Long tail", pois não é o intuito desse post, mas se quiser complementar a leitura, esse link explica direitinho sobre essas técnicas: [Ver post da rockcontent](https://comunidade.rockcontent.com/long-tail-e-head-tail-palavras-chave/)
 :::
 
 ## Dicas de como estruturar cabeçalhos HTML
@@ -273,7 +273,7 @@ Vamos simular uma landing page do segmento produtos medicinais.
 ### Cabeçalhos HTML em uma single post (blog)
 Dentre os cabeçalhos mais importantes primeiramente usamos o H1 que é o título do post e representa o tópico mais relevante da página, logo em seguida os subtítulos aparecem organizando as seções do conteúdo da postagem.
 
-Tiramos esse exemplo do blog [rico.com](rico.com):
+Tiramos esse exemplo do blog [rico.com.vc](https://blog.rico.com.vc/vida-financeira):
 
 ::: figurecode Exemplo: Cabeçalhos single blog post
 ```html
@@ -319,7 +319,7 @@ x<p>...</p>
 ### Veja como os grandes players estão fazendo
 Particularmente gosto de ver como os grandes players estruturam seus cabeçalhos, os melhores especialistas em HTML e SEO participam desses players e constantemente fazem diversos testes, levando-os a uma estrutura próximo da prática que melhor otimiza sua classificação nos mecanismos de busca.
 
-Existe uma extensão para chrome chamada [HeadingsMap](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=en) que expõe os cabeçalhos de uma página de maneira organizada, tanto a estrutura de cabeçalho, quanto HTML5 outline.
+Existe uma extensão para chrome chamada <span lang="en">[Headings Map](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=en)</span> que expõe os cabeçalhos de uma página de maneira organizada, tanto a estrutura de cabeçalho, quanto HTML5 outline.
 
 <img src="/images/posts/2018/09/plugin-headingmap-exemplo-html-moderno.jpg" alt="3 títulos com o mesmo nível H1 no lado direito e ao lado esquerdo o plugin HeadingsMap mostrando a estrutura do cabeçalho" loading="lazy" />
 
@@ -350,7 +350,7 @@ Sabendo disso se o documento tiver uma estrutura de cabeçalho com múltiplos H1
 
 Os navegadores e leitores de tela irão expor:
 
-```
+```text code-no-style
 └→ 1 - 5 passos para a felicidade
 └→ 1 - Meditação
 └→ 1 - Guiada
@@ -358,7 +358,7 @@ Os navegadores e leitores de tela irão expor:
 
 Ao invés de:
 
-```
+```text code-no-style
 └→ 1 - 5 passos para a felicidade
      └→ 1 - Meditação
           └→ 1 - Guiada
