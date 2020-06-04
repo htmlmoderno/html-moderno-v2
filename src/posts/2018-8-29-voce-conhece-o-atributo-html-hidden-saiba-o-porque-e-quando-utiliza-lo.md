@@ -164,7 +164,7 @@ Mas se houver um seletor mais forte, ele é sobrescrito, por isso o uso do `!imp
 
 Por exemplo:  
 Revertendo a visibilidade com o CSS `display: block`
-::: figurecode HTML
+::: figurecode
 ```html display-block
 <p hidden>
   Esses elemento deve ser oculto visualmente e para tecnologia assistiva
@@ -177,7 +177,7 @@ Revertendo a visibilidade com o CSS `display: block`
 ```
 :::
 
-::: figurecode CSS
+::: figurecode
 ```css style-display-block
 .desc {
   display: block;
@@ -212,7 +212,7 @@ Evitando sobrescrita utilizando `!important`
 ```
 :::
 
-::: figurecode CSS
+::: figurecode
 ```css style-hidden-display-none-important
 [hidden] {
   display: none !important;
