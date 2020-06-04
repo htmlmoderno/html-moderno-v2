@@ -41,6 +41,9 @@
         </div>
         <button
           class="ml-2 px-4 py-2 text-sm font-bold"
+          aria-label="Abrir menu de navegaçãao"
+          :disabled="isOpen"
+          :aria-expanded="isOpen ? 'true' : 'false'"
           @click="onOpen"
         >
           MENU
@@ -56,7 +59,6 @@
 
 <script>
 import { onMounted, watch } from '@vue/composition-api'
-import { useWindowSize } from 'vue-use-web'
 
 import SearchBox from '@SearchBox'
 import NavMenu from '@theme/components/NavMenu'
@@ -70,8 +72,6 @@ export default {
   },
   setup (_, { refs }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const { width } = useWindowSize({ throttleMs: 100 })
-    console.log(width)
 
     onMounted(() => refs.searchBox.$el.querySelector('input').setAttribute('aria-label', 'Pesquisar no site'))
 
