@@ -2,7 +2,7 @@
   @apply rounded-lg w-full;
   
   > input {
-    @apply w-full bg-transparent h-auto border-none rounded-lg py-2 px-4;
+    @apply w-full left-0 bg-transparent h-auto border-none rounded-lg py-2 px-4;
     background-position: 95%;
 
     &:focus {

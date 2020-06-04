@@ -21,6 +21,14 @@
         >
           <span aria-hidden="true">&times;</span>
         </button>
+
+        <div class="block sm:hidden w-full mt-10">
+          <search-box
+            placeholder="Tecle 's' para pesquisar"
+            class="n9m-search n9m--inner"
+          />
+        </div>
+
         <nav
           aria-labelledby="title-nav-menu"
           class="mt-12"
@@ -84,11 +92,14 @@
 import { watch } from '@vue/composition-api'
 import FocusLock from 'vue-focus-lock'
 
+import SearchBox from '@SearchBox'
+
 export default {
   name: 'NavMenu',
 
   components: {
-    FocusLock
+    FocusLock,
+    SearchBox
   },
 
   props: {

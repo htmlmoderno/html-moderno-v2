@@ -5,7 +5,7 @@
       <VueAnnouncer />
     </ClientOnly>
     <div class="flex w-full">
-      <div class="w-3/12 md:w-1/2">
+      <div class="w-3/12 md:w-1/3 lg:w-1/4">
         <router-link to="/">
           <img
             class="inline"
@@ -15,7 +15,7 @@
           >
         </router-link>
       </div>
-      <div class="w-9/12 md:w-1/2 flex items-center justify-end">
+      <div class="w-9/12 md:w-2/3 lg:w-3/4 flex items-center justify-end">
         <div class="border-r dark:border-dark-200 border-textLight">
           <ClientOnly>
             <VueDarkMode
@@ -32,7 +32,7 @@
             </VueDarkMode>
           </ClientOnly>
         </div>
-        <div class="w-2/4 ml-8">
+        <div class="hidden sm:block sm:w-2/3 lg:w-2/5 ml-8">
           <search-box
             ref="searchBox"
             placeholder="Tecle 's' para pesquisar"
@@ -56,6 +56,7 @@
 
 <script>
 import { onMounted, watch } from '@vue/composition-api'
+import { useWindowSize } from 'vue-use-web'
 
 import SearchBox from '@SearchBox'
 import NavMenu from '@theme/components/NavMenu'
@@ -69,6 +70,8 @@ export default {
   },
   setup (_, { refs }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const { width } = useWindowSize({ throttleMs: 100 })
+    console.log(width)
 
     onMounted(() => refs.searchBox.$el.querySelector('input').setAttribute('aria-label', 'Pesquisar no site'))
 
