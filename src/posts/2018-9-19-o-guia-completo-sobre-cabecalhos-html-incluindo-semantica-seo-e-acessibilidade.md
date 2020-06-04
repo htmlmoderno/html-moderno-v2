@@ -72,7 +72,7 @@ Exemplo de todos os níveis do cabeçalho:
 
 Uma coisa interessante é que a hierarquia acontece de maneira obrigatória de cima para baixo, porém, é possível usar a estrutura de baixo para cima sem problemas, como, por exemplo um `H2` vindo logo após de um `H3`:
 
-::: figurecode
+::: figurecode Hierarquia de cabeçalhos
 ```html
 <h1>Título do meu post</h1>
 <h2>Subtítulo do post</h2>
@@ -97,7 +97,7 @@ A resposta é **SIM**, as especificações do HTML5 para as tags de cabeçalho i
 
 Por exemplo:
 
-::: figurecode Ex.: Multiplos cabeçahos h1
+::: figurecode Multiplos cabeçahos h1
 ```html
 <body>
   ...
@@ -150,7 +150,7 @@ Recomendação da W3C desde 2014: (Saiba mais através [desse link](https://w3c.
 
 Exemplo retirado da documentação da W3C para o HTML:
 
-::: figurecode Ex.: Cabeçahos h1 único (recomendado)
+::: figurecode Cabeçahos h1 único (recomendado)
 ```html block-two
 <body>
   <h1>Apples</h1>
@@ -174,7 +174,7 @@ Exemplo retirado da documentação da W3C para o HTML:
 <code-output
   class="my-10"
   title="Output de código de uma estrutura retirada da documentação da w3c"
-  height="400px"
+  height="460px"
   selector=".block-two"
 />
 
@@ -248,7 +248,7 @@ Não existe fórmula mágica e nem estrutura que sirva para tudo, mas juntei alg
 ### Cabeçalhos HTML em uma landing page
 Vamos simular uma landing page do segmento produtos medicinais.
 
-::: figurecode Ex.: Cabeçalhos landing page
+::: figurecode Exemplo: Cabeçalhos landing page
 ```html
 <h1>Cansado o dia inteiro? Com Vitaforte esses dias acabaram.</h1>
 
@@ -275,7 +275,7 @@ Dentre os cabeçalhos mais importantes primeiramente usamos o H1 que é o títul
 
 Tiramos esse exemplo do blog [rico.com](rico.com):
 
-::: figurecode Ex.: Cabeçalhos single blog post
+::: figurecode Exemplo: Cabeçalhos single blog post
 ```html
 <h1>14 Dicas Para Você Dar um Jeito Na Sua Vida Financeira.</h1>
 
@@ -297,7 +297,7 @@ Tiramos esse exemplo do blog [rico.com](rico.com):
 ### Cabeçalhos HTML em uma página de produto (e-commerce)
 Como no exemplo do post de um blog, a ideia será a mesma. Vamos pegar um exemplo do site Magazine Luiza:
 
-::: figurecode Ex.: Cabeçalhos produto e-commerce
+::: figurecode Exemplo: Cabeçalhos produto e-commerce
 ```html
 <h1>IPhone 6s Apple 32GB Ouro Rosa 4G Tela 4.7.</h1>
 

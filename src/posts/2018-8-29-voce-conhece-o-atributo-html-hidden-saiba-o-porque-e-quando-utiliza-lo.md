@@ -45,7 +45,7 @@ meta:
 
 Um atributo não muito usado e também não tão conhecido pelos developers é o atributo global `hidden`, por ser um atributo global ele pode ser inserido em qualquer elemento HTML semelhante ao que acontece com os atributos `class`, `id` e `style`.
 
-::: figurecode Ex. de uso do attributo hidden
+::: figurecode Usando attributo hidden em um parágrafo
 ```html
 <p hidden>
   Esse elemento está oculto visualmente e também para tecnologia assistiva
@@ -102,12 +102,21 @@ Uma opção de uso do atributo hidden para melhorar a acessibilidade que eu util
 Por exemplo:  
 Em um contexto de checkout:
 
-::: figurecode
-```html
+::: figurecode Campo para <abbr title="Card Verification Value">CVV</abbr> de cartões de crédito com aria-describedby
+```html{11}
 <div class="form-group">
-  <label for=”cvv”>CVV</label>
-  <input aria-describedby=”cvv-info” type=”text” name=”cvv” id=”cvv” />
-  <span hidden id=”cvv-info”>
+  <label for="cvv">CVV</label>
+  <input
+    id="cvv"
+    name="cvv"
+    type="text"
+    minlength="3"
+    maxlength="4"
+    inputmode="numeric"
+    autocomplete="cc-cvv"
+    aria-describedby="cvv-info"
+  />
+  <span hidden id="cvv-info">
     Digite os 3 dígitos que está na parte de trás do cartão de crédito
   </span>
 </div>
@@ -116,7 +125,7 @@ Em um contexto de checkout:
 
 Em outro contexto, em uma edição ou exclusão:
 
-::: figurecode
+::: figurecode Usando aria-describedby em botão close
 ```html
 <button aria-label="close" aria-describedby="descriptionClose">X</button>
 <div id="descriptionClose" hidden>
@@ -162,7 +171,8 @@ Revertendo a visibilidade com o CSS `display: block`
 </p>
 
 <p hidden class="desc">
-  Esse elemento deveria estar oculto, mas foi revelado através do display: block via CSS
+  Esse elemento deveria estar oculto, mas foi revelado através 
+  do display: block via CSS
 </p>
 ```
 :::
@@ -180,7 +190,7 @@ Revertendo a visibilidade com o CSS `display: block`
   title="Saída renderizada de um elemento com atributo hidden e com o estilo display block, porém, sem o uso do important"
   selector=".display-block"
   styleSelector=".style-display-block"
-  height="130px"
+  height="140px"
 />
 
 <div class="mb-8">
@@ -219,7 +229,7 @@ Evitando sobrescrita utilizando `!important`
   title="Saída renderizada de 2 elementos com atributo hidden, com o estilo display block, porém, não sendo exibido devido ter um display none como importante atrelado ao atributo hidden"
   selector=".hidden-display-none-important"
   styleSelector=".style-hidden-display-none-important"
-  height="130px"
+  height="100px"
 />
 
 Se você inspecionar a saída, verá que as tags estão sendo renderizadas, mas não exibidas devido ao uso do important atribuído a todo elemento com atributo `hidden`, não é nada de novo, mas uma maneira usando CSS de manter o comportamento correto do atributo.
