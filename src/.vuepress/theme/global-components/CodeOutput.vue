@@ -131,6 +131,7 @@ export default {
     function insertStyle (iframe, styleSelector) {
       let defaultStyle = `
         body {
+          font-size: 20px;
           font-family: Roboto, Calibri, Arial;
           color: ${localStorage.getItem('colorMode') === 'dark' ? '#E3E3E3' : '#573E48'}
         }
