@@ -350,15 +350,13 @@ Sabendo disso se o documento tiver uma estrutura de cabeçalho com múltiplos H1
 
 Os navegadores e leitores de tela irão expor:
 
-```text code-no-style
+```
 └→ 1 - 5 passos para a felicidade
 └→ 1 - Meditação
 └→ 1 - Guiada
 ```
-
 Ao invés de:
-
-```text code-no-style
+```
 └→ 1 - 5 passos para a felicidade
      └→ 1 - Meditação
           └→ 1 - Guiada
