@@ -107,6 +107,7 @@
   .n9m-search.search-box {
     > input {
       @apply text-textDark;
+      background-image: url(~@theme/assets/sprite/svg/search-dark.svg);
       &.focused {
         outline: auto;
       }
