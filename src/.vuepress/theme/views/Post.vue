@@ -77,8 +77,6 @@
 </template>
 
 <script>
-import { onMounted } from '@vue/composition-api'
-
 import ResponsivePicture from '@theme/components/ResponsivePicture'
 import TableContents from '@theme/components/TableContents'
 import { getSlugPost } from '@theme/utils'
