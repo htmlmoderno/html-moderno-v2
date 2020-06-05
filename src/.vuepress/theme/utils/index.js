@@ -15,7 +15,11 @@ export function sortPostsByDate (posts, orderByDesc = true) {
 }
 
 export function getSlugPost (path) {
-  return path.match(/(?<=\/posts\/)(.*?)(?=\/)/g)
+  const match = path.match(/(posts\/)(.*?)(\/)/g)
+  if (Array.isArray(match) && match.length) {
+    return match[0].replace(/(posts\/|\/)/g, '')
+  }
+  return ''
 }
 
 export function focusTargetElement (id) {
