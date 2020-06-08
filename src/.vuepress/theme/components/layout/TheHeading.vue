@@ -21,6 +21,7 @@
             <VueDarkMode
               class-name="mode-%cm"
               class="px-6 py-2"
+              @click.native="resetDisqus"
             >
               <template v-slot="{ mode }">
                 <vp-icon
@@ -70,7 +71,7 @@ export default {
     NavMenu,
     SearchBox
   },
-  setup (_, { refs }) {
+  setup (_, { refs, root }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     onMounted(() => refs.searchBox.$el.querySelector('input').setAttribute('aria-label', 'Pesquisar no site'))
@@ -81,10 +82,15 @@ export default {
       }
     })
 
+    function resetDisqus (e) {
+      root.$disqus.reset()
+    }
+
     return {
       isOpen,
       onOpen,
-      onClose
+      onClose,
+      resetDisqus
     }
   }
 }
