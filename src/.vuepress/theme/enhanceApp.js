@@ -1,12 +1,14 @@
 import VueAnnouncer from '@vue-a11y/announcer'
 import VueDarkMode from '@vue-a11y/dark-mode'
 import VueCompositionApi from '@vue/composition-api'
+import VueDisqus from 'vue-disqus'
 import VueMasonry from 'vue-masonry-css'
 import VueSkipTo from 'vue-skip-to'
 
 export default ({ Vue, router, isServer }) => {
   Vue.use(VueCompositionApi)
   Vue.use(VueMasonry)
+  Vue.use(VueDisqus, { shortname: 'htmlmodernotest' })
 
   if (!isServer) {
     Vue.use(VueSkipTo)

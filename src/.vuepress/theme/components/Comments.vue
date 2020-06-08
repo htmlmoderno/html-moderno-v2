@@ -4,7 +4,7 @@
       Comentários<span class="text-accent">.</span>
     </h2>
     <div class="mt-12">
-      <comment />
+      <Disqus />
     </div>
   </div>
 </template>

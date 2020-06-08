@@ -22,6 +22,13 @@
       >
         {{ post.author }}
       </router-link>
+      <span :class="`mx-2 font-bold text-cat-${post.category}`">//</span>
+      <DisqusCount
+        tag="a"
+        :url="`${getUrlBase}${post.to}`"
+        :identifier="post.to"
+        v-text="'0 comments'"
+      />
     </div>
     <h2 class="card-title mb-10 text-lg font-bold leading-tight">
       <router-link
@@ -56,6 +63,11 @@ export default {
     post: {
       type: Object,
       required: true
+    }
+  },
+  computed: {
+    getUrlBase () {
+      return process.env.URL_BASE
     }
   }
 }

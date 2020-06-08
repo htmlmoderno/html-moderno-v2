@@ -15,10 +15,6 @@ module.exports = [
       feed: {
         canonical_base: process.env.URL_BASE
       },
-      comment: {
-        service: 'disqus',
-        shortname: 'htmlmoderno'
-      },
       globalPagination: {
         lengthPerPage: process.env.PAGINATION_PER_PAGE
       },
