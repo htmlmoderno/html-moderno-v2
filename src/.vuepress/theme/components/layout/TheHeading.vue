@@ -18,19 +18,19 @@
       <div class="w-9/12 md:w-2/3 lg:w-3/4 flex items-center justify-end">
         <div class="border-r dark:border-dark-200 border-textLight">
           <ClientOnly>
-            <VueDarkMode
+            <DarkMode
               class-name="mode-%cm"
               class="px-6 py-2"
               @click.native="resetDisqus"
             >
-              <template v-slot="{ mode }">
+              <template v-slot:default="{ mode }">
                 <vp-icon
                   :name="mode"
                   width="24px"
                   height="24px"
                 />
               </template>
-            </VueDarkMode>
+            </DarkMode>
           </ClientOnly>
         </div>
         <div class="hidden sm:block sm:w-2/3 lg:w-2/5 ml-8">
@@ -59,6 +59,7 @@
 </template>
 
 <script>
+import { DarkMode } from '@vue-a11y/dark-mode'
 import { onMounted, watch } from '@vue/composition-api'
 
 import SearchBox from '@SearchBox'
@@ -69,6 +70,7 @@ export default {
   name: 'TheHeading',
   components: {
     NavMenu,
+    DarkMode,
     SearchBox
   },
   setup (_, { refs, root }) {
@@ -83,7 +85,7 @@ export default {
     })
 
     function resetDisqus (e) {
-      root.$disqus.reset()
+      if (root.$disqus.reset) root.$disqus.reset()
     }
 
     return {

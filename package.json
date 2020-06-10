@@ -80,7 +80,7 @@
   },
   "dependencies": {
     "@vue-a11y/announcer": "^2.0.2",
-    "@vue-a11y/dark-mode": "^0.2.0",
+    "@vue-a11y/dark-mode": "^1.0.0",
     "@vue/composition-api": "^0.5.0",
     "node-fetch": "^2.6.0",
     "tailwindcss": "^1.4.6",
