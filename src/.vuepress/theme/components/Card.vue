@@ -1,7 +1,10 @@
 <template>
   <div class="card n9m p-4">
-    <div
-      class="w-full rounded-lg overflow-hidden"
+    <router-link
+      :to="post.to"
+      class="w-full block rounded-lg overflow-hidden"
+      aria-hidden="true"
+      tabindex="-1"
     >
       <img
         v-if="post.image.src"
@@ -9,11 +12,20 @@
         :src="post.image.src"
         :alt="post.image.alt"
       >
-    </div>
-    <div
-      class="flex items-center text-xs mt-1 mb-2"
+    </router-link>
+    <h2
+      class="card-title text-lg font-bold leading-tight"
       :class="{ 'mt-3': post.image.src }"
     >
+      <router-link
+        :to="post.to"
+        class="hover:underline"
+      >
+        <span class="sr-only">Acessar post: </span>
+        {{ post.title }}
+      </router-link>
+    </h2>
+    <div class="flex items-center text-xs mb-8 mt-2">
       <span class="uppercase"> {{ post.date }} </span>
       <span :class="`mx-2 font-bold text-cat-${post.category}`">//</span>
       <router-link
@@ -24,26 +36,16 @@
       </router-link>
       <span :class="`mx-2 font-bold text-cat-${post.category}`">//</span>
       <DisqusCount
-        tag="a"
         :url="`${getUrlBase}${post.to}`"
         :identifier="post.to"
         v-text="'0 comments'"
       />
     </div>
-    <h2 class="card-title mb-10 text-lg font-bold leading-tight">
-      <router-link
-        :to="post.to"
-        class="hover:underline"
-      >
-        <span class="sr-only">Acessar post: </span>
-        {{ post.title }}
-      </router-link>
-    </h2>
-    <div
+    <router-link
       :to="post.to"
       class="card-bottom-link cursor-pointer flex items-center justify-between dark:dark-200"
-      @click="$router.push(post.to)"
-      @keydown.enter="$router.push(post.to)"
+      aria-hidden="true"
+      tabindex="-1"
     >
       <div :class="`card-bottom-link__arrow relative border-cat-${post.category} bg-cat-${post.category}`" />
       <span
@@ -52,7 +54,7 @@
       >
         ACESSAR POST
       </span>
-    </div>
+    </router-link>
   </div>
 </template>
 
@@ -74,16 +76,6 @@ export default {
 </script>
 
 <style lang="scss">
-.card-title {
-  > a:focus {
-    outline: none;
-  }
-
-  &:focus-within ~ .card-bottom-link {
-    @apply shadow-outline;
-  }
-}
-
 .card-bottom-link {
   &__arrow {
     width: calc(100% - 110px);
