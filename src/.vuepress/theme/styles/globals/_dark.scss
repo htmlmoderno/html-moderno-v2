@@ -15,6 +15,10 @@
     outline-color: #E3E3E3;
   }
 
+  #nprogress .bar {
+    @apply bg-cat-html-daily #{!important};    
+  }
+
   #app {
     @screen sm {
       box-shadow: inset 5px 5px 10px rgba(0, 0, 0, .1), inset -5px -5px 8px rgba(255, 255, 255, .05);

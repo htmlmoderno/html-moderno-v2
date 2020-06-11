@@ -26,3 +26,8 @@ div.n9m-search.search-box {
     @apply text-textLight #{!important};
   }
 }
+
+#nprogress .bar {
+  @apply bg-accent #{!important};
+  height: 5px;
+}
