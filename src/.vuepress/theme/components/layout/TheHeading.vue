@@ -20,6 +20,11 @@
           <ClientOnly>
             <DarkMode
               class-name="mode-%cm"
+              :meta-theme-color="{
+                light: '#f4f1ec',
+                dark: '#343743'
+              }"
+              favicon="#favicon"
               class="px-6 py-2"
               @click.native="resetDisqus"
             >
