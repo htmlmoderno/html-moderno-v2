@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
-import NavMenu from './NavMenu.vue'
 
+import NavMenu from './NavMenu.vue'
 
 const wrapper = shallowMount(NavMenu)
 

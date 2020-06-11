@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
-import TableContents from './TableContents.vue'
 
+import TableContents from './TableContents.vue'
 
 const wrapper = shallowMount(TableContents)
 

@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
-import WebMentions from './WebMentions.vue'
 
+import WebMentions from './WebMentions.vue'
 
 const wrapper = shallowMount(WebMentions)
 

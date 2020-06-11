@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
-import CardCategory from './CardCategory.vue'
 
+import CardCategory from './CardCategory.vue'
 
 const wrapper = shallowMount(CardCategory)
 

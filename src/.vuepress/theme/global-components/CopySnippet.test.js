@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
-import CopySnippet from './CopySnippet.vue'
 
+import CopySnippet from './CopySnippet.vue'
 
 const wrapper = shallowMount(CopySnippet)
 

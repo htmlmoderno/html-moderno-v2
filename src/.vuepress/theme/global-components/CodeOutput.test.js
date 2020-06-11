@@ -1,7 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
+
 import CodeOutput from './CodeOutput.vue'
-
-
 
 const wrapper = shallowMount(CodeOutput)
 

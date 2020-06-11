@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
-import Comments from './Comments.vue'
 
+import Comments from './Comments.vue'
 
 const wrapper = shallowMount(Comments)
 

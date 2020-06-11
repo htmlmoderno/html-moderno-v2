@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
-import SharePost from './SharePost.vue'
 
+import SharePost from './SharePost.vue'
 
 const wrapper = shallowMount(SharePost)
 

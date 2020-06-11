@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
-import ResponsivePicture from './ResponsivePicture.vue'
 
+import ResponsivePicture from './ResponsivePicture.vue'
 
 const wrapper = shallowMount(ResponsivePicture)
 

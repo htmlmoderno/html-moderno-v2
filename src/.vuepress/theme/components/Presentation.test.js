@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
-import Presentation from './Presentation.vue'
 
+import Presentation from './Presentation.vue'
 
 const wrapper = shallowMount(Presentation)
 

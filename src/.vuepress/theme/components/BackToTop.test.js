@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
-import BackToTop from './BackToTop.vue'
 
+import BackToTop from './BackToTop.vue'
 
 const wrapper = shallowMount(BackToTop)
 
