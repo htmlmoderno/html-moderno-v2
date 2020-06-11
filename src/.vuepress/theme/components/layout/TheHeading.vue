@@ -43,6 +43,7 @@
         <button
           class="ml-2 px-4 py-2 text-sm font-bold"
           aria-label="Abrir menu de navegaçãao"
+          aria-controls="nav-menu"
           :disabled="isOpen"
           :aria-expanded="isOpen ? 'true' : 'false'"
           @click="onOpen"
@@ -52,6 +53,7 @@
       </div>
     </div>
     <NavMenu
+      id="nav-menu"
       :show="isOpen"
       @onClose="onClose"
     />
