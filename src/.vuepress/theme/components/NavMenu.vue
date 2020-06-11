@@ -43,6 +43,7 @@
           <ul>
             <li
               v-for="(link, index) in $themeConfig.links.navMenu"
+              v-show="link.to !== $route.path"
               :key="`nav-menu-item-${index}`"
             >
               <router-link

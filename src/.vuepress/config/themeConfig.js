@@ -25,20 +25,24 @@ module.exports = {
   links: {
     navMenu: [
       {
+        label: 'Home',
+        to: '/'
+      },
+      {
         label: 'Sobre',
-        to: '/sobre'
+        to: '/sobre/'
       },
       {
         label: 'Posts',
-        to: '/posts'
+        to: '/posts/'
       },
       {
         label: 'Categorias',
-        to: '/categorias'
+        to: '/categorias/'
       }
       // {
       //   label: 'Acessibilidade',
-      //   to: '/acessibilidade'
+      //   to: '/acessibilidade/'
       // }
     ],
     social: [
