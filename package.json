@@ -7,7 +7,7 @@
     "dev": "vuepress dev src --no-cache",
     "build": "npm run svgo && vuepress build src --no-cache && echo htmlmoderno.com.br >> src/.vuepress/dist/CNAME",
     "svgo": "svgo --disable=convertColors -f ./src/.vuepress/theme/assets/sprite/svg",
-    "deploy": "npm run build && gh-pages -d docs/.vuepress/dist",
+    "deploy": "npm run build && gh-pages -d src/.vuepress/dist",
     "staging": "surge src/.vuepress/dist/ https://htmlmoderno-2.surge.sh/"
   },
   "repository": {
