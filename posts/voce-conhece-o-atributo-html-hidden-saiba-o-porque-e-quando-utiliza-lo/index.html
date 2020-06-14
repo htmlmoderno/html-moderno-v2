@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Você conhece o atributo HTML hidden? Saiba quando utilizá-lo</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="author" href="/humans.txt">
+    <link rel="author" href="https://twitter.com/ktquez">
+    <link rel="publisher" href="https://twitter.com/htmlmoderno">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="webmention" href="https://webmention.io/htmlmoderno.com.br/webmention">
+    <link rel="pingback" href="https://webmention.io/htmlmoderno.com.br/xmlrpc">
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon/android-icon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#ff5733">
+    <link id="favicon" rel="icon" href="/favicon/favicon.svg">
+    <link rel="preconnect" href="https://connect.facebook.net/">
+    <link rel="preconnect" href="https://platform.twitter.com/">
+    <link rel="preconnect" href="https://widget.sndcdn.com/">
+    <link rel="preconnect" href="https://api-widget.soundcloud.com/">
+    <link rel="preconnect" href="https://www.youtube.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link rel="preconnect" href="https://c.disquscdn.com/">
+    <link rel="preconnect" href="https://disqus.com/">
+    <link rel="preconnect" href="https://www.google-analytics.com/">
+    <link rel="preconnect" href="https://stats.g.doubleclick.net">
+    <link rel="preload" href="https://www.google-analytics.com/analytics.js" as="script">
+    <link rel="alternate" type="application/rss+xml" href="https://htmlmoderno.com.br/rss.xml" title=" RSS Feed">
+    <link rel="alternate" type="application/atom+xml" href="https://htmlmoderno.com.br/feed.atom" title=" Atom Feed">
+    <link rel="alternate" type="application/json" href="https://htmlmoderno.com.br/feed.json" title=" JSON Feed"><link rel='canonical' href='https://htmlmoderno.com.br/posts/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo/'/>
+    <meta name="description" content="Um atributo desconhecido pelos desenvolvedores é o atributo global do HTML chamado &#96;hidden&#96;, nesse post vamos abordar quando utilizá-lo da melhor maneira.">
+    <meta name="og:url" content="https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade">
+    <meta name="og:title" content="Você conhece o atributo HTML hidden? Saiba quando utilizá-lo.">
+    <meta name="og:description" content="Um atributo desconhecido pelos desenvolvedores é o atributo global do HTML chamado &#96;hidden&#96;, nesse post vamos abordar quando utilizá-lo da melhor maneira.">
+    <meta name="og:image" content="https://htmlmoderno.com.br/images/posts/2018/08/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo.png">
+    <meta name="twitter:url" content="https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade">
+    <meta name="twitter:title" content="Você conhece o atributo HTML hidden? Saiba quando utilizá-lo.">
+    <meta name="twitter:description" content="Um atributo desconhecido pelos desenvolvedores é o atributo global do HTML chamado &#96;hidden&#96;, nesse post vamos abordar quando utilizá-lo da melhor maneira.">
+    <meta name="twitter:image" content="https://htmlmoderno.com.br/images/posts/2018/08/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo.png">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-title" content="HTML Moderno | Tornando o HTML ainda mais interessante.">
+    <meta name="theme-color" content="#F4F1EC">
+    <meta name="msapplication-navbutton-color" content="#fe5634">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="coverage" content="WorldWide">
+    <meta name="rating" content="general">
+    <meta name="application-name" content="HTML Moderno | Tornando o HTML ainda mais interessante.">
+    <meta name="msapplication-TileColor" content="#F4F1EC">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="msapplication-square70x70logo" content="/favicon/ms-icon-70x70.png">
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-square150x150logo" content="/favicon/mstile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="/favicon/ms-icon-310x310.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ktquez">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="HTML Moderno">
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image:width" content="360">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:url" content="https://htmlmoderno.com.br/">
+    <meta name="google-site-verification" content="OvzxEtwcvhlGAQT7HQJ9er54r4_PjzsY_MHtIpZgSd8">
+    <meta name="msvalidate.01" content="D879F8AEF42B5DE5143B8CD3D109EEC4">
+    <meta name="p:domain_verify" content="d982b6ae262730ac300bf7409a8e35ea">
+    <meta name="yandex-verification" content="4f882473380b34b6">
+    <link rel="preload" href="/assets/css/0.styles.dfccdff5.css" as="style"><link rel="preload" href="/assets/js/app.39af4cd9.js" as="script"><link rel="preload" href="/assets/js/26.87902612.js" as="script"><link rel="preload" href="/assets/js/11.ea6fcb29.js" as="script"><link rel="preload" href="/assets/js/42.670107ae.js" as="script"><link rel="preload" href="/assets/js/24.7580b18e.js" as="script"><link rel="preload" href="/assets/js/22.440d7093.js" as="script"><link rel="preload" href="/assets/js/19.d7c01cdb.js" as="script"><link rel="preload" href="/assets/js/4.bc1fe0c9.js" as="script"><link rel="preload" href="/assets/js/20.3211ccb2.js" as="script"><link rel="preload" href="/assets/js/21.124d2dd2.js" as="script"><link rel="preload" href="/assets/js/14.7af6e202.js" as="script"><link rel="preload" href="/assets/js/10.3f18a032.js" as="script"><link rel="preload" href="/assets/js/17.28dc9aec.js" as="script"><link rel="preload" href="/assets/js/12.5cad923d.js" as="script"><link rel="preload" href="/assets/js/13.bbada050.js" as="script"><link rel="prefetch" href="/assets/js/1.3a96fe49.js"><link rel="prefetch" href="/assets/js/15.8071567b.js"><link rel="prefetch" href="/assets/js/16.ef15bd5e.js"><link rel="prefetch" href="/assets/js/18.6ac98a8d.js"><link rel="prefetch" href="/assets/js/23.5e331835.js"><link rel="prefetch" href="/assets/js/25.81d4c9e2.js"><link rel="prefetch" href="/assets/js/27.f96767f3.js"><link rel="prefetch" href="/assets/js/28.1d0f8183.js"><link rel="prefetch" href="/assets/js/29.bbbe5e40.js"><link rel="prefetch" href="/assets/js/30.8d1a7359.js"><link rel="prefetch" href="/assets/js/31.542c421c.js"><link rel="prefetch" href="/assets/js/32.a46f6cf9.js"><link rel="prefetch" href="/assets/js/33.07b4458e.js"><link rel="prefetch" href="/assets/js/34.3155333e.js"><link rel="prefetch" href="/assets/js/35.96f91df7.js"><link rel="prefetch" href="/assets/js/36.454cf4b3.js"><link rel="prefetch" href="/assets/js/37.65d5a926.js"><link rel="prefetch" href="/assets/js/38.89baf4b2.js"><link rel="prefetch" href="/assets/js/39.00f3bd47.js"><link rel="prefetch" href="/assets/js/40.40b590e1.js"><link rel="prefetch" href="/assets/js/41.8cbea6fc.js"><link rel="prefetch" href="/assets/js/43.9f9eb794.js"><link rel="prefetch" href="/assets/js/44.519abd84.js"><link rel="prefetch" href="/assets/js/45.b09adbb7.js"><link rel="prefetch" href="/assets/js/46.443681ef.js"><link rel="prefetch" href="/assets/js/5.f337a974.js"><link rel="prefetch" href="/assets/js/6.14d62844.js"><link rel="prefetch" href="/assets/js/7.f75cb683.js"><link rel="prefetch" href="/assets/js/8.f312581b.js"><link rel="prefetch" href="/assets/js/9.0387d38c.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.0c563c1c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.dfccdff5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="global-layout container mx-auto"><header class="flex flex-wrap pt-8 lg:pt-16"><!----> <div class="flex w-full"><div class="w-3/12 md:w-1/3 lg:w-1/4"><a href="/" class="router-link-active"><img src="/images/html-moderno-logo.svg" alt="Logo do HTML Moderno 4 quadrados laranja com 1 letra do HTML cada mais símbolo universal acessibilidade no centro" title="HTML Moderno" class="inline"></a></div> <div class="w-9/12 md:w-2/3 lg:w-3/4 flex items-center justify-end"><div class="border-r dark:border-dark-200 border-textLight"><!----></div> <div class="hidden sm:block sm:w-2/3 lg:w-2/5 ml-8"><div placeholder="Tecle 's' para pesquisar" class="search-box n9m-search n9m--inner"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div> <button aria-label="Abrir menu de navegaçãao" aria-controls="nav-menu" aria-expanded="false" class="ml-2 px-4 py-2 text-sm font-bold">
+        MENU
+      </button></div></div> <div id="nav-menu" class="nav-menu fixed w-full h-full z-30 top-0 left-0 invisible opacity-0" data-v-0bc7c4d2><div aria-hidden="true" class="nav-menu__overlay z-20 w-full h-full top-0 left-0 fixed bg-overlay" data-v-0bc7c4d2></div> <section class="nav-menu__content fixed z-30 w-full h-full sm:w-1/2 md:w-4/12 top-0 bg-light dark:bg-dark overflow-auto px-6 md:p-12 py-16 shadow-md" data-v-0bc7c4d2><div data-v-0bc7c4d2><div tabIndex="0"></div> <div tabIndex="1"></div> <div data-lock=""><button aria-label="Fechar menu de navegação" class="absolute text-4xl px-4 top-0 left-0 mt-4 ml-2 md:ml-8" data-v-0bc7c4d2><span aria-hidden="true" data-v-0bc7c4d2>×</span></button> <div class="block sm:hidden w-full mt-10" data-v-0bc7c4d2><div placeholder="Tecle 's' para pesquisar" class="search-box n9m-search n9m--inner" data-v-0bc7c4d2><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div> <nav aria-labelledby="title-nav-menu" class="mt-12" data-v-0bc7c4d2><h2 id="title-nav-menu" class="text-3xl font-bold mb-8" data-v-0bc7c4d2>
+          Menu de Navegação
+        </h2> <ul data-v-0bc7c4d2><li data-v-0bc7c4d2><a href="/" class="flex justify-between items-center py-4 border-b border-solid border-cat-semantica dark:border-dark-200 hover:underline router-link-active" data-v-0bc7c4d2>Home</a></li><li data-v-0bc7c4d2><a href="/sobre/" class="flex justify-between items-center py-4 border-b border-solid border-cat-semantica dark:border-dark-200 hover:underline" data-v-0bc7c4d2>Sobre</a></li><li data-v-0bc7c4d2><a href="/posts/" class="flex justify-between items-center py-4 border-b border-solid border-cat-semantica dark:border-dark-200 hover:underline router-link-active" data-v-0bc7c4d2>Posts</a></li><li data-v-0bc7c4d2><a href="/categorias/" class="flex justify-between items-center py-4 border-b border-solid border-cat-semantica dark:border-dark-200 hover:underline" data-v-0bc7c4d2>Categorias</a></li></ul></nav> <nav aria-labelledby="title-nav-menu-social" class="mt-12" data-v-0bc7c4d2><h2 id="title-nav-menu-social" class="text-3xl font-bold mb-8" data-v-0bc7c4d2>
+          Redes sociais
+        </h2> <ul data-v-0bc7c4d2><li data-v-0bc7c4d2><a href="https://www.facebook.com/htmlmoderno/?ref=website" target="_blank" rel="noopener" class="flex justify-between items-center py-4 border-b border-solid border-cat-semantica dark:border-dark-200 hover:underline" data-v-0bc7c4d2><span data-v-0bc7c4d2>
+                Facebook page
+                <span class="sr-only" data-v-0bc7c4d2>, abre em uma nova janela</span></span> <vp-icon name="external-link" data-v-0bc7c4d2></vp-icon></a></li><li data-v-0bc7c4d2><a href="https://www.facebook.com/groups/htmlmoderno/?ref=website" target="_blank" rel="noopener" class="flex justify-between items-center py-4 border-b border-solid border-cat-semantica dark:border-dark-200 hover:underline" data-v-0bc7c4d2><span data-v-0bc7c4d2>
+                Facebook group
+                <span class="sr-only" data-v-0bc7c4d2>, abre em uma nova janela</span></span> <vp-icon name="external-link" data-v-0bc7c4d2></vp-icon></a></li><li data-v-0bc7c4d2><a href="https://twitter.com/htmlmoderno/?ref=website" target="_blank" rel="noopener" class="flex justify-between items-center py-4 border-b border-solid border-cat-semantica dark:border-dark-200 hover:underline" data-v-0bc7c4d2><span data-v-0bc7c4d2>
+                Twitter
+                <span class="sr-only" data-v-0bc7c4d2>, abre em uma nova janela</span></span> <vp-icon name="external-link" data-v-0bc7c4d2></vp-icon></a></li><li data-v-0bc7c4d2><a href="https://www.youtube.com/channel/UCByMpqccsCqL42LMzKIMnBg/?ref=website" target="_blank" rel="noopener" class="flex justify-between items-center py-4 border-b border-solid border-cat-semantica dark:border-dark-200 hover:underline" data-v-0bc7c4d2><span data-v-0bc7c4d2>
+                Youtube
+                <span class="sr-only" data-v-0bc7c4d2>, abre em uma nova janela</span></span> <vp-icon name="external-link" data-v-0bc7c4d2></vp-icon></a></li></ul></nav></div> <div tabIndex="0"></div></div></section></div></header> <main id="main" class="single-post"><article class="w-full layout-section"><div class="single-post__container single-post__container--no-mt"><h1 class="w-full text-3xl sm:text-4xl font-bold">
+        Você conhece o atributo HTML hidden? Saiba quando utilizá-lo<span class="text-accent">.</span></h1> <div class="w-full flex items-center text-sm mt-4"><time datetime="2018-08-28T00:00:00.000Z" class="uppercase">
+          27 ├F3: M08┤
+        </time> <span class="mx-2 font-bold text-cat-html5">//</span> <div class="inline"><a href="/autores/ktquez/" class="underline"><span class="sr-only">Ver posts do autor</span> <span>Alan Ktquez</span></a></div></div></div> <section><figure aria-label="Nossa máscara de carnaval favorita"><picture class="n9m block mt-12 w-full p-4"><source media="(max-width: 400px)" srcset="/images/posts/2018/08/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo,w_400.png" style="display:;"><source media="(max-width: 640px)" srcset="/images/posts/2018/08/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo,w_640.png" style="display:;"><source media="(max-width: 800px)" srcset="/images/posts/2018/08/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo,w_800.png" style="display:;"><source media="(max-width: 1024px)" srcset="/images/posts/2018/08/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo,w_1024.png" style="display:;"> <img src="/images/posts/2018/08/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo.png" title="Texto alternativo" alt="Texto alternativo" class="w-full inline rounded-lg"></picture> <figcaption class="text-center mt-4 text-lightText">
+          Nossa máscara de carnaval favorita
+        </figcaption></figure></section> <section class="single-post__container pb-6"><nav aria-labelledby="title-toc" class="toc"><h2 id="title-toc" class="text-2xl mb-12 font-bold">
+    Índice<span class="text-accent">.</span></h2> <ul class="toc__list"><li><span class="pr-3 text-lightText text-sm">01.</span> <a href="#introducao" class="base-link text-lg md:text-xl"><span>Introdução</span></a></li><li><span class="pr-3 text-lightText text-sm">02.</span> <a href="#semantica-e-finalidade-do-atributo" class="base-link text-lg md:text-xl"><span>Semântica e finalidade do atributo</span></a></li><li><span class="pr-3 text-lightText text-sm">03.</span> <a href="#traz-algum-ganho-para-seo" class="base-link text-lg md:text-xl"><span>Traz algum ganho para SEO?</span></a></li><li><span class="pr-3 text-lightText text-sm">04.</span> <a href="#o-ganho-foi-na-acessibilidade" class="base-link text-lg md:text-xl"><span>O ganho foi na acessibilidade</span></a></li><li><span class="pr-3 text-lightText text-sm">05.</span> <a href="#suporte" class="base-link text-lg md:text-xl"><span>Suporte</span></a></li></ul></nav></section> <section class="single-post__container"><div class="content__default"><h2 id="introducao"><a href="#introducao" aria-label="Anchor" class="header-anchor">#</a> Introdução</h2> <p>Um atributo não muito usado e também não tão conhecido pelos developers é o atributo global <code>hidden</code>, por ser um atributo global ele pode ser inserido em qualquer elemento HTML semelhante ao que acontece com os atributos <code>class</code>, <code>id</code> e <code>style</code>.</p> <figure role="figure" aria-label="Usando attributo hidden em um parágrafo" class="figurecode teste-fig"><div class="figurecode__content"><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">hidden</span><span class="token punctuation">&gt;</span></span>
+  Esse elemento está oculto visualmente e também para tecnologia assistiva
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div> <div slot="copy" class="copy-snippet flex items-center figurecode__copy"><span class="mr-2 opacity-0 transition-opacity duration-500">
+    COPIADO
+  </span> <button aria-label="Copiar código" class="copy-snippet__button p-4"><vp-icon name="copy" class="text-lg text-textDark"></vp-icon> <span class="sr-only">
+      COPIAR
+    </span></button></div></div> <figcaption class="figurecode__caption"><span class='sr-only'>Code snippet:</span> Usando attributo hidden em um parágrafo</figcaption> </figure> <p>Quando aplicado em algum elemento o atributo <code>hidden</code>, ele age de maneira semelhante ao <code>display: none</code> que a gente utiliza no CSS para ocultar elementos, mas como mencionei só é semelhante na questão de visibilidade, pois o atributo hidden também atua de maneira semântica por definir que aquele elemento não é relevante, ou não será mais relevante naquele contexto do documento ou está sendo reutilizado por outras partes da página.</p> <h2 id="semantica-e-finalidade-do-atributo"><a href="#semantica-e-finalidade-do-atributo" aria-label="Anchor" class="header-anchor">#</a> Semântica e finalidade do atributo</h2> <p>Muitos confundem a questão de esconder elementos e utilizam o atributo <code>hidden</code> de maneira exagerada. Todo elemento e atributo do HTML5 tem um sentido intrínseco, um propósito de existir e essa deve ser sua pergunta sempre que for utilizar algum elemento ou atributo.</p> <h3 id="em-que-caso-utilizo-o-atributo-hidden"><a href="#em-que-caso-utilizo-o-atributo-hidden" aria-label="Anchor" class="header-anchor">#</a> Em que caso utilizo o atributo hidden</h3> <ul><li>Conteúdo que não é relevante, mas pode ser em algum momento mais tarde;</li> <li>Conteúdo que algum momento era relevante, mas não será mais usado;</li> <li>Conteúdo reutilizável;</li> <li>Conteúdo descritívos para tecnologia assistiva (leitores de tela);</li></ul> <h3 id="casos-que-nao-se-deve-usar-o-atributo-hidden"><a href="#casos-que-nao-se-deve-usar-o-atributo-hidden" aria-label="Anchor" class="header-anchor">#</a> Casos que não se deve usar o atributo hidden</h3> <ul><li>Não devemos utilizar o atributo hidden para ocultar conteúdo em outra resolução de tela, por exemplo usá-lo para ocultar conteúdo quando mobile;</li> <li>Não ocultar conteúdo que poderão ser expandidos;</li> <li>Não ocultar conteúdo numa interface de alternância como guias ou tabs;</li></ul> <p>Essa confusão de quando ou não usar é normal, principalmente porque o atributo não é tão claro assim, deve ser até por isso que muitos developers não gostam e acham que nem deveria ter um atributo assim porque seus benefícios semânticos e de acessibilidade são poucos, porém não são ruim na minha visão.</p> <h2 id="traz-algum-ganho-para-seo"><a href="#traz-algum-ganho-para-seo" aria-label="Anchor" class="header-anchor">#</a> Traz algum ganho para SEO?</h2> <p>Não diretamente! Mas uma das coisas que acho interessante nesse atributo é que podemos semanticamente informar aos bots dos mecanismos de buscas que esse elemento não é relevante.</p> <h3 id="por-que-isso-e-importante"><a href="#por-que-isso-e-importante" aria-label="Anchor" class="header-anchor">#</a> Por que isso é importante?</h3> <p>É possível que alguns bots inclua conteúdos ocultos via CSS ou JS na sua análise e consequentemente traga resultados de pesquisa menos precisos. Alguns bots atuais já tentam detectar conteúdos ocultos através da análise do CSS e Javascript para poder determinar o conteúdo a ser indexado e a sua importância.</p> <p>Porém existem algumas aplicações que restringem o acesso no robots.txt o download de assets, a fim de economizar recursos do servidor.</p> <div class="custom-block-obs n9m"><p>Não imagino alguém que faça isso atualmente, mas nunca bloqueie CSS e JS para o Google. Ele quer ver seu site do jeito que o visitante humano (usuário) irá ver.</p></div><p>No caso de restrições de acesso ou que algum bot não seja capaz de analisar elementos ocultos via CSS ou Javascript, o atributo <code>hidden</code> tem um uso relevante.</p> <h2 id="o-ganho-foi-na-acessibilidade"><a href="#o-ganho-foi-na-acessibilidade" aria-label="Anchor" class="header-anchor">#</a> O ganho foi na acessibilidade</h2> <p>Muitos não utilizam ou desconhecem o atributo <code>aria-hidden</code>, que é uma maneira de informar as tecnologias assistivas (<abbr title="Interface de programação de aplicativos">API</abbr> de acessibilidade) que ignore esses elementos onde o atributo foi inserido, mas esse elemento mesmo com o aria-hidden ainda permanecerá visível para o usuário no browser, enquanto isso, elementos com atributo hidden ficam inacessíveis/ocultos para qualquer dispositivo.</p> <div class="custom-block-obs n9m"><p>Se você utilizar o hidden não precisa utilizar o aria-hidden=true, mas também não é uma total redundância se utilizar os dois, pois os dispositivos de tecnologia assistiva deveriam também ser mais consistentes/uniformes ao suporte, mas nem sempre é o caso.</p></div><p>Uma opção de uso do atributo hidden para melhorar a acessibilidade que eu utilizo, é criar blocos de conteúdos que detalham algum outro elemento como ícones, search, campos de input ou outros elementos que precisam de uma descrição mais detalhada, em conjunto com o <code>aria-labelledby</code> ou <code>aria-describedby</code>.</p> <p>Por exemplo:<br>
+Em um contexto de checkout:</p> <figure role="figure" aria-label="Campo para &lt;abbr title=&quot;Card Verification Value&quot;&gt;CVV&lt;/abbr&gt; de cartões de crédito com aria-describedby" class="figurecode teste-fig"><div class="figurecode__content"><div class="language-html extra-class"><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br></div><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-group<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>cvv<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>CVV<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span>
+    <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>cvv<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>cvv<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">minlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>3<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">maxlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>4<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">inputmode</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>numeric<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">autocomplete</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>cc-cvv<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">aria-describedby</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>cvv-info<span class="token punctuation">&quot;</span></span>
+  <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">hidden</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>cvv-info<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    Digite os 3 dígitos que está na parte de trás do cartão de crédito
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div> <div slot="copy" class="copy-snippet flex items-center figurecode__copy"><span class="mr-2 opacity-0 transition-opacity duration-500">
+    COPIADO
+  </span> <button aria-label="Copiar código" class="copy-snippet__button p-4"><vp-icon name="copy" class="text-lg text-textDark"></vp-icon> <span class="sr-only">
+      COPIAR
+    </span></button></div></div> <figcaption class="figurecode__caption"><span class='sr-only'>Code snippet:</span> Campo para <abbr title="Card Verification Value">CVV</abbr> de cartões de crédito com aria-describedby</figcaption> </figure> <p>Em outro contexto, em uma edição ou exclusão:</p> <figure role="figure" aria-label="Usando aria-describedby em botão close" class="figurecode teste-fig"><div class="figurecode__content"><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>close<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-describedby</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>descriptionClose<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>X<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>descriptionClose<span class="token punctuation">&quot;</span></span> <span class="token attr-name">hidden</span><span class="token punctuation">&gt;</span></span>
+  Se você cancelar perderá as informações inseridas no campo XXX e será 
+  enviado para a página anterior.
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div> <div slot="copy" class="copy-snippet flex items-center figurecode__copy"><span class="mr-2 opacity-0 transition-opacity duration-500">
+    COPIADO
+  </span> <button aria-label="Copiar código" class="copy-snippet__button p-4"><vp-icon name="copy" class="text-lg text-textDark"></vp-icon> <span class="sr-only">
+      COPIAR
+    </span></button></div></div> <figcaption class="figurecode__caption"><span class='sr-only'>Code snippet:</span> Usando aria-describedby em botão close</figcaption> </figure> <div class="custom-block-obs n9m"><p>Os casos de uso são muitos, mas use com moderação.</p></div><h2 id="suporte"><a href="#suporte" aria-label="Anchor" class="header-anchor">#</a> Suporte</h2> <iframe src="https://caniuse.bitsofco.de/embed/index.html?feat=hidden&amp;periods=future_1,current,past_1,past_2" width="100%" height="420" allowfullscreen="allowfullscreen" frameborder="0" loading="lazy"></iframe> <p>O suporte nesse momento já é praticamente completo entre os browsers e dispositivos.
+Porém existe um forma via CSS que você pode usar quando o browser ou leitor de tela que o usuário esteja acessando não dê suporte.</p> <figure role="figure" aria-label="" class="figurecode teste-fig"><div class="figurecode__content"><div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">[hidden]</span> <span class="token punctuation">{</span> 
+  <span class="token property">display</span><span class="token punctuation">:</span> none <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div> <div slot="copy" class="copy-snippet flex items-center figurecode__copy"><span class="mr-2 opacity-0 transition-opacity duration-500">
+    COPIADO
+  </span> <button aria-label="Copiar código" class="copy-snippet__button p-4"><vp-icon name="copy" class="text-lg text-textDark"></vp-icon> <span class="sr-only">
+      COPIAR
+    </span></button></div></div> <figcaption class="figurecode__caption"><span class='sr-only'>Code snippet:</span> </figcaption> </figure> <p>O engraçado com esse atributo e sua relação com o CSS display é que essa regra evita também que ocorra uma falha sobre a visibilidade entre os elementos com o atributo hidden. É que no CSS ainda sim é possível utilizando o <code>display: block</code>, fazer com que um elemento com o atributo hidden volte a ser exibido. Estranho, mas é possível.</p> <p>O próprio browser adiciona uma regra css como pode ser visto na imagem abaixo:</p> <img loading="lazy" src="/images/posts/2018/08/browser-atributo-hidden.jpg" alt="Imagem do browser console do browser mostrando um elemento p (tag de parágrafo) utilizando o atributo hidden e no lado esquerdo uma regra css inserido pelo próprio browser com um display none', title: 'Imagem do browser console do browser mostrando um elemento p (tag de parágrafo) utilizando o atributo hidden e no lado esquerdo uma regra css inserido pelo próprio browser com um display none"> <p>Mas se houver um seletor mais forte, ele é sobrescrito, por isso o uso do <code>!important</code></p> <p>Por exemplo:<br>
+Revertendo a visibilidade com o CSS <code>display: block</code></p> <figure role="figure" aria-label="" class="figurecode teste-fig"><div class="figurecode__content"><div class="language-html display-block extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">hidden</span><span class="token punctuation">&gt;</span></span>
+  Esses elemento deve ser oculto visualmente e para tecnologia assistiva
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">hidden</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>desc<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  Esse elemento deveria estar oculto, mas foi revelado através 
+  do display: block via CSS
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div> <div slot="copy" class="copy-snippet flex items-center figurecode__copy"><span class="mr-2 opacity-0 transition-opacity duration-500">
+    COPIADO
+  </span> <button aria-label="Copiar código" class="copy-snippet__button p-4"><vp-icon name="copy" class="text-lg text-textDark"></vp-icon> <span class="sr-only">
+      COPIAR
+    </span></button></div></div> <figcaption class="figurecode__caption"><span class='sr-only'>Code snippet:</span> </figcaption> </figure> <figure role="figure" aria-label="" class="figurecode teste-fig"><div class="figurecode__content"><div class="language-css style-display-block extra-class"><pre class="language-css"><code><span class="token selector">.desc</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div> <div slot="copy" class="copy-snippet flex items-center figurecode__copy"><span class="mr-2 opacity-0 transition-opacity duration-500">
+    COPIADO
+  </span> <button aria-label="Copiar código" class="copy-snippet__button p-4"><vp-icon name="copy" class="text-lg text-textDark"></vp-icon> <span class="sr-only">
+      COPIAR
+    </span></button></div></div> <figcaption class="figurecode__caption"><span class='sr-only'>Code snippet:</span> </figcaption> </figure> <div class="my-10"><div tabIndex="-1"></div> <div tabIndex="-1"></div> <div data-lock=""><div class="output flex flex-wrap n9m overflow-hidden"><div class="output__header w-full flex justify-between px-6 py-2 bg-light-200 dark:bg-dark-800"><span class="output__browser-btns"></span> <div class="flex items-center text-xs text-light-700 dark:text-textDark"><span>
+          OUTPUT
+        </span> <button type="button" title="Ver em tela cheia" class="ml-2 p-2"><span class="sr-only">Ver em tela cheia Saída renderizada de um elemento com atributo hidden e com o estilo display block, porém, sem o uso do important</span> <vp-icon name="exit-fullscreen" class="text-xs" style="display:none;"></vp-icon> <vp-icon name="fullscreen" class="text-xs"></vp-icon></button></div></div> <div class="output__body w-full px-6 pt-4 pb-2 bg-light dark:bg-dark dark:text-textDark" style="height:140px;"><iframe aria-hidden="true" title="Saída renderizada de um elemento com atributo hidden e com o estilo display block, porém, sem o uso do important" width="100%" height="100%" frameborder="0" allowfullscreen="allowfullscreen" scrolling="yes">
+        Your browser doesn't support iFrames.
+      </iframe></div></div></div> <div tabIndex="-1"></div></div> <div class="mb-8"><hr></div> <p>Evitando sobrescrita utilizando <code>!important</code></p> <figure role="figure" aria-label="" class="figurecode teste-fig"><div class="figurecode__content"><div class="language-html hidden-display-none-important extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">hidden</span><span class="token punctuation">&gt;</span></span>
+  Esses elemento deve estar oculto visualmente e para tecnologia assistiva
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">hidden</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>desc<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  Esse elemento mesmo com o display: block não é exibido por conta 
+  do !important para todos os elementos com o atributo hidden.
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div> <div slot="copy" class="copy-snippet flex items-center figurecode__copy"><span class="mr-2 opacity-0 transition-opacity duration-500">
+    COPIADO
+  </span> <button aria-label="Copiar código" class="copy-snippet__button p-4"><vp-icon name="copy" class="text-lg text-textDark"></vp-icon> <span class="sr-only">
+      COPIAR
+    </span></button></div></div> <figcaption class="figurecode__caption"><span class='sr-only'>Code snippet:</span> </figcaption> </figure> <figure role="figure" aria-label="" class="figurecode teste-fig"><div class="figurecode__content"><div class="language-css style-hidden-display-none-important extra-class"><pre class="language-css"><code><span class="token selector">[hidden]</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> none <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.desc</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div> <div slot="copy" class="copy-snippet flex items-center figurecode__copy"><span class="mr-2 opacity-0 transition-opacity duration-500">
+    COPIADO
+  </span> <button aria-label="Copiar código" class="copy-snippet__button p-4"><vp-icon name="copy" class="text-lg text-textDark"></vp-icon> <span class="sr-only">
+      COPIAR
+    </span></button></div></div> <figcaption class="figurecode__caption"><span class='sr-only'>Code snippet:</span> </figcaption> </figure> <div class="my-10"><div tabIndex="-1"></div> <div tabIndex="-1"></div> <div data-lock=""><div class="output flex flex-wrap n9m overflow-hidden"><div class="output__header w-full flex justify-between px-6 py-2 bg-light-200 dark:bg-dark-800"><span class="output__browser-btns"></span> <div class="flex items-center text-xs text-light-700 dark:text-textDark"><span>
+          OUTPUT
+        </span> <button type="button" title="Ver em tela cheia" class="ml-2 p-2"><span class="sr-only">Ver em tela cheia Saída renderizada de 2 elementos com atributo hidden, com o estilo display block, porém, não sendo exibido devido ter um display none como importante atrelado ao atributo hidden</span> <vp-icon name="exit-fullscreen" class="text-xs" style="display:none;"></vp-icon> <vp-icon name="fullscreen" class="text-xs"></vp-icon></button></div></div> <div class="output__body w-full px-6 pt-4 pb-2 bg-light dark:bg-dark dark:text-textDark" style="height:100px;"><iframe aria-hidden="true" title="Saída renderizada de 2 elementos com atributo hidden, com o estilo display block, porém, não sendo exibido devido ter um display none como importante atrelado ao atributo hidden" width="100%" height="100%" frameborder="0" allowfullscreen="allowfullscreen" scrolling="yes">
+        Your browser doesn't support iFrames.
+      </iframe></div></div></div> <div tabIndex="-1"></div></div> <p>Se você inspecionar a saída, verá que as tags estão sendo renderizadas, mas não exibidas devido ao uso do important atribuído a todo elemento com atributo <code>hidden</code>, não é nada de novo, mas uma maneira usando CSS de manter o comportamento correto do atributo.</p> <div class="mb-8"><hr></div> <p>Por fim, a cada novidade no uso do hidden, irei colocando sempre updates nesse mesmo post, não se preocupe, vocês sempre serão informados sobre novidades.</p></div></section> <section class="single-post__container single-post__box-share border-t border-light-200 dark:border-dark-200"><div class="share-post"><h2 class="text-2xl font-bold">
+    Contamos com você<span class="text-accent">.</span></h2> <div class="mt-2"><div>
+      Você pode nos ajudar compartilhando e/ou curtindo nossas redes sociais.
+    </div> <ul class="share-post__list mt-12 flex flex-wrap"><li><a href="https://www.facebook.com/sharer/sharer.php?u=https://htmlmoderno.com.br/posts/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo/" target="_blank" class="n9m n9m--active"><span class="sr-only">Compartilhar o post no facebook, abre em uma nova janela</span> <vp-icon name="facebook"></vp-icon></a></li><li><a href="https://twitter.com/share?url=https://htmlmoderno.com.br/posts/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo/&amp;text=Voc%C3%AA%20conhece%20o%20atributo%20HTML%20hidden?%20Saiba%20quando%20utiliz%C3%A1-lo&amp;via=htmlmoderno" target="_blank" class="n9m n9m--active"><span class="sr-only">Compartilhar o post no twitter, abre em uma nova janela</span> <vp-icon name="twitter"></vp-icon></a></li><li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://htmlmoderno.com.br/posts/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo/&amp;title=Voc%C3%AA%20conhece%20o%20atributo%20HTML%20hidden?%20Saiba%20quando%20utiliz%C3%A1-lo&amp;summary=Um%20atributo%20desconhecido%20pelos%20desenvolvedores%20%C3%A9%20o%20atributo%20global%20do%20HTML%20chamado%20&amp;#96;hidden&amp;#96;,%20nesse%20post%20vamos%20abordar%20quando%20utiliz%C3%A1-lo%20da%20melhor%20maneira.&amp;source=website" target="_blank" class="n9m n9m--active"><span class="sr-only">Compartilhar o post no linkedin, abre em uma nova janela</span> <vp-icon name="linkedin"></vp-icon></a></li><li><a href="https://wa.me/?text=Voc%C3%AA%20conhece%20o%20atributo%20HTML%20hidden?%20Saiba%20quando%20utiliz%C3%A1-lo%20-%20https://htmlmoderno.com.br/posts/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo/" target="_blank" class="n9m n9m--active"><span class="sr-only">Compartilhar o post no whatsapp, abre em uma nova janela</span> <vp-icon name="whatsapp"></vp-icon></a></li><li><a href="https://telegram.me/share/url?url=https://htmlmoderno.com.br/posts/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo/&amp;text=Voc%C3%AA%20conhece%20o%20atributo%20HTML%20hidden?%20Saiba%20quando%20utiliz%C3%A1-lo" target="_blank" class="n9m n9m--active"><span class="sr-only">Compartilhar o post no telegram, abre em uma nova janela</span> <vp-icon name="telegram"></vp-icon></a></li><li><a href="mailto:info@example.com?&amp;subject=Voc%C3%AA%20conhece%20o%20atributo%20HTML%20hidden?%20Saiba%20quando%20utiliz%C3%A1-lo&amp;body=https://htmlmoderno.com.br/posts/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo/" target="_blank" class="n9m n9m--active"><span class="sr-only">Compartilhar o post no email, abre em uma nova janela</span> <vp-icon name="email"></vp-icon></a></li></ul> <div class="mt-20">
+      Obrigado pela sua leitura!
+    </div></div></div></section> <script type="application/ld+json">
+      {
+    &quot;@context&quot;: &quot;http://schema.org&quot;,
+    &quot;@type&quot;: &quot;Article&quot;,
+    &quot;@id&quot;: &quot;https://htmlmoderno.com.br/posts/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo/#article&quot;,
+    &quot;mainEntityOfPage&quot;: {
+        &quot;@type&quot;: &quot;WebPage&quot;,
+        &quot;@id&quot;: &quot;https://htmlmoderno.com.br/posts/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo/#webpage&quot;,
+        &quot;url&quot;: &quot;https://htmlmoderno.com.br/posts/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo/&quot;,
+        &quot;isPartOf&quot;: {
+            &quot;@type&quot;: &quot;WebSite&quot;,
+            &quot;@id&quot;: &quot;https://htmlmoderno.com.br/#website&quot;,
+            &quot;url&quot;: &quot;https://htmlmoderno.com.br&quot;,
+            &quot;name&quot;: &quot;HTML Moderno&quot;
+        }
+    },
+    &quot;headline&quot;: &quot;Você conhece o atributo HTML hidden? Saiba quando utilizá-lo&quot;,
+    &quot;description&quot;: &quot;Um atributo desconhecido pelos desenvolvedores é o atributo global do HTML chamado &amp;#96;hidden&amp;#96;, nesse post vamos abordar quando utilizá-lo da melhor maneira.&quot;,
+    &quot;dateModified&quot;: &quot;2020-6-3T23:25:11-03:00&quot;,
+    &quot;author&quot;: {
+        &quot;@type&quot;: &quot;Person&quot;,
+        &quot;@id&quot;: &quot;https://htmlmoderno.com.br/autores/ktquez/#schema-author&quot;,
+        &quot;url&quot;: &quot;https://htmlmoderno.com.br/autores/ktquez/&quot;,
+        &quot;name&quot;: &quot;Alan Albuquerque (Ktquez)&quot;,
+        &quot;image&quot;: {
+            &quot;@type&quot;: &quot;ImageObject&quot;,
+            &quot;@id&quot;: &quot;https://htmlmoderno.com.br/autores/ktquez/#author-image&quot;,
+            &quot;url&quot;: &quot;https://htmlmoderno.com.br/autores/ktquez.png&quot;,
+            &quot;caption&quot;: &quot;Alan Albuquerque (Ktquez)&quot;
+        },
+        &quot;jobTitle&quot;: &quot;Desenvolvedor web na Nyx Technology&quot;,
+        &quot;description&quot;: &quot;Alan Albuquerque é desenvolvedor web a 10 anos, criador de conteúdo em HTML, Acessibilidade, SEO, Vue.js e javascript.&quot;,
+        &quot;sameAs&quot;: [
+          &quot;https://twitter.com/ktquez&quot;,
+          &quot;https://github.com/ktquez&quot;,
+          &quot;https://ktquez.com&quot;
+        ]
+    },
+    &quot;datePublished&quot;: &quot;2018-08-28T00:00:00.000Z&quot;,
+    &quot;url&quot;: &quot;https://htmlmoderno.com.br/posts/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo/&quot;,
+    &quot;image&quot;: [
+        {
+            &quot;@type&quot;: &quot;ImageObject&quot;,
+            &quot;@id&quot;: &quot;https://htmlmoderno.com.br/posts/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo/#post-image&quot;,
+            &quot;url&quot;: &quot;https://htmlmoderno.com.br/images/posts/2018/08/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo.png&quot;,
+            &quot;width&quot;: 1280,
+            &quot;height&quot;: 454
+        }
+    ],
+    &quot;publisher&quot;: {
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;@id&quot;: &quot;https://htmlmoderno.com.br/#organization&quot;,
+      &quot;url&quot;: &quot;https://htmlmoderno.com.br&quot;,
+      &quot;name&quot;: &quot;HTML Moderno&quot;,
+      &quot;logo&quot;: [
+          {
+              &quot;@type&quot;: &quot;ImageObject&quot;,
+              &quot;@id&quot;: &quot;https://htmlmoderno.com.br/#logo&quot;,
+              &quot;url&quot;: &quot;https://htmlmoderno.com.br/images/html-moderno-logo.svg&quot;,
+              &quot;width&quot;: 60,
+              &quot;height&quot;: 60
+          }
+      ],
+      &quot;foundingDate&quot;: &quot;2018&quot;,
+      &quot;sameAs&quot;: [
+          &quot;https://twitter.com/htmlmoderno&quot;,
+          &quot;https://www.facebook.com/htmlmoderno&quot;,
+          &quot;https://www.facebook.com/groups/htmlmoderno&quot;,
+          &quot;https://www.instagram.com/htmlmoderno&quot;,
+          &quot;https://www.youtube.com/channel/UCByMpqccsCqL42LMzKIMnBg&quot;
+      ]
+    }    
+  }
+    </script> <section class="single-post__container single-post__box-comment border-t border-light-200 dark:border-dark-200"><div class="comments"><h2 class="text-2xl mb-12 font-bold">
+    Comentários<span class="text-accent">.</span></h2> <div class="mt-12"><div id="disqus_thread" style="min-height:200px;"></div></div></div></section> <section class="single-post__container single-post__box-comment border-t border-light-200 dark:border-dark-200"><nav class="webmentions" style="display:none;"><h2 class="text-2xl font-bold">
+    (0) Webmentions<span class="text-accent">.</span></h2> <meta itemprop="commentCount" content="0"> <div class="webmentions-interact my-12"><!----> <!----></div> <div class="webmentions-comments mt-24"><h3 class="text-xl mb-12">
+      Comentários na web<span class="text-accent">.</span></h3> <!----></div></nav></section></article></main> <footer><section id="categories" class="layout-section layout-section--border-top dark:border-dark-200" style="display:;"><div class="categories"><div class="flex flex-wrap justify-between items-center"><h2 class="w-full sm:w-1/2 text-center sm:text-left text-3xl md:text-4xl font-bold">
+      Categorias<span class="text-accent">.</span></h2> <div class="w-full sm:w-1/2 mt-10 sm:mt-0 justify-center sm:justify-end flex items-center"><vp-icon name="tag" class="text-xl mt-1"></vp-icon> <a href="/categorias" class="base-link ml-3 text-xs font-bold">
+        VER TODAS AS TAGS
+      </a></div></div> <div class="mt-12"><ul class="categories-list flex flex-wrap"><li><a href="/categorias/semantica" aria-label="Ver posts da categoria semântica" class="block"><div class="card-category n9m n9m--active"><vp-icon name="cat-semantica" class="card-category__icon"></vp-icon> <div class="w-full text-center"><span class="bg-cat-semantica card-category__bar-no-image"></span></div> <span class="text-center font-bold">
+    Semântica
+  </span></div></a></li><li><a href="/categorias/acessibilidade" aria-label="Ver posts da categoria acessibilidade" class="block"><div class="card-category n9m n9m--active"><vp-icon name="cat-acessibilidade" class="card-category__icon"></vp-icon> <div class="w-full text-center"><span class="bg-cat-acessibilidade card-category__bar-no-image"></span></div> <span class="text-center font-bold">
+    Acessibilidade
+  </span></div></a></li><li><a href="/categorias/html5" aria-label="Ver posts da categoria html5" class="block"><div class="card-category n9m n9m--active"><vp-icon name="cat-html5" class="card-category__icon"></vp-icon> <div class="w-full text-center"><span class="bg-cat-html5 card-category__bar-no-image"></span></div> <span class="text-center font-bold">
+    HTML5
+  </span></div></a></li><li><a href="/categorias/seo" aria-label="Ver posts da categoria seo" class="block"><div class="card-category n9m n9m--active"><vp-icon name="cat-seo" class="card-category__icon"></vp-icon> <div class="w-full text-center"><span class="bg-cat-seo card-category__bar-no-image"></span></div> <span class="text-center font-bold">
+    SEO
+  </span></div></a></li><li><a href="/categorias/ux" aria-label="Ver posts da categoria ux" class="block"><div class="card-category n9m n9m--active"><vp-icon name="cat-ux" class="card-category__icon"></vp-icon> <div class="w-full text-center"><span class="bg-cat-ux card-category__bar-no-image"></span></div> <span class="text-center font-bold">
+    UX
+  </span></div></a></li></ul></div></div></section> <section id="newsletter" class="layout-section layout-section--border-top dark:border-dark-200"><div class="hm-newsletter n9m p-6 md:py-12 md:px-16"><div class="relative pb-2"><h2 class="text-3xl md:text-4xl relative z-20 sm:pl-8 font-bold">
+      Newsletter<span class="text-accent font-bold">.</span></h2> <div class="hm-newsletter__pattern patterns absolute z-10 top-0 left-0 w-full"></div></div> <form aria-label="Faça parte e assine a nossa newsletter" class="flex flex-wrap items-end mt-12"><div class="w-full lg:w-2/5 p-0 lg:pr-3"><label for="name-769"><span>Nome</span> <input id="name-769" aria-label=" nome" type="text" required="required" class="n9m n9m--inner py-4 px-6 w-full"></label></div> <div class="w-full lg:w-2/5 p-0 lg:pr-3 my-4 lg:my-0"><label for="email-769"><span>Email</span> <input id="email-769" aria-label="Digite seu email" type="email" required="required" class="n9m n9m--inner py-4 px-6 w-full"></label></div> <div class="w-full lg:w-1/5"><button type="submit" class="n9m w-full bg-accent dark:bg-cat-html-daily text-gray-900 font-bold py-4 px-6">
+        ENVIAR
+        <span class="sr-only"> na Newsletter do HTMl Moderno</span></button></div></form> <span class="hm-newsletter__msg inline-block rounded-lg text-sm mt-4 py-2 px-4" style="display:none;"></span></div></section> <section class="footer flex flex-wrap pb-12 px-0 lg:w-3/4 lg:mx-auto"><div class="w-full md:w-3/5 md:pr-16 text-lg"><div><p>
+          Somos um site sobre desenvolvimento web focado no HTML e suas vertentes como semântica, acessibilidade, SEO, UX e etc.
+        </p> <p class="my-6">
+          A palavra moderno nesse caso não se remete a algo novo especificamente, mas uma forma de desenvolver para web nos tempos atuais sem negligenciar os padrões e boas práticas que o HTML traz para a web...
+        </p></div> <a href="mailto:contato@htmlmoderno.com.br" class="my-12 block sm:my-0 text-3xl md:text-4xl leading-none font-bold hover:underline dark:text-cat-html-daily">
+        Entrar em contato<span class="text-accent">.</span></a></div> <div class="w-full md:mt-0 md:w-2/5"><nav class="md:pl-12 lg:pl-24"><ul><li class="mb-6"><a href="https://www.facebook.com/htmlmoderno/?ref=website" title="Facebook page" target="_blank" class="footer__link base-link">
+              Facebook page <span class="sr-only">, abre em uma nova janela.</span></a></li><li class="mb-6"><a href="https://www.facebook.com/groups/htmlmoderno/?ref=website" title="Facebook group" target="_blank" class="footer__link base-link">
+              Facebook group <span class="sr-only">, abre em uma nova janela.</span></a></li><li class="mb-6"><a href="https://twitter.com/htmlmoderno/?ref=website" title="Twitter" rel="me" target="_blank" class="footer__link base-link">
+              Twitter <span class="sr-only">, abre em uma nova janela.</span></a></li><li class="mb-6"><a href="https://www.youtube.com/channel/UCByMpqccsCqL42LMzKIMnBg/?ref=website" title="Youtube" target="_blank" class="footer__link base-link">
+              Youtube <span class="sr-only">, abre em uma nova janela.</span></a></li><li class="mb-6"><a href="https://htmlmoderno.com.br/rss.xml" title="RSS Feed" target="_blank" class="footer__link base-link">
+              RSS Feed <span class="sr-only">, abre em uma nova janela.</span></a></li><li class="mb-6"><a href="https://github.com/htmlmoderno/press-kit" title="Presskit" target="_blank" class="footer__link base-link">
+              Presskit <span class="sr-only">, abre em uma nova janela.</span></a></li></ul></nav></div> <div class="w-full text-sm mt-20">&copy; HTML Moderno</div></section> <div class="back-to-top"><a class="back-to-top__link"><vp-icon name="back-to-top-button" class="back-to-top__icon text-6xl"></vp-icon></a></div></footer></div><div class="global-ui"><!----><div></div><!----></div></div>
+    <script src="/assets/js/app.39af4cd9.js" defer></script><script src="/assets/js/26.87902612.js" defer></script><script src="/assets/js/11.ea6fcb29.js" defer></script><script src="/assets/js/42.670107ae.js" defer></script><script src="/assets/js/24.7580b18e.js" defer></script><script src="/assets/js/22.440d7093.js" defer></script><script src="/assets/js/19.d7c01cdb.js" defer></script><script src="/assets/js/4.bc1fe0c9.js" defer></script><script src="/assets/js/20.3211ccb2.js" defer></script><script src="/assets/js/21.124d2dd2.js" defer></script><script src="/assets/js/14.7af6e202.js" defer></script><script src="/assets/js/10.3f18a032.js" defer></script><script src="/assets/js/17.28dc9aec.js" defer></script><script src="/assets/js/12.5cad923d.js" defer></script><script src="/assets/js/13.bbada050.js" defer></script>
+  </body>
+</html>
