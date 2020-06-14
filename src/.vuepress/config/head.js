@@ -59,7 +59,7 @@ module.exports = [
   ['link', { rel: 'icon', type: 'image/png', href: '/favicon/favicon-16x16.png', sizes: '16x16' }],
 
   ['link', { rel: 'mask-icon', href: '/favicon/safari-pinned-tab.svg', color: '#ff5733' }],
-  ['link', { id: 'favicon', rel: 'icon', href: '/favicon/favicon.ico' }],
+  ['link', { id: 'favicon', rel: 'icon', href: '/favicon/favicon.svg' }],
 
   ['link', { rel: 'preconnect', href: 'https://connect.facebook.net/' }],
   ['link', { rel: 'preconnect', href: 'https://platform.twitter.com/' }],
