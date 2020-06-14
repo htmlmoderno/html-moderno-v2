@@ -16,7 +16,7 @@ export default ({ Vue, router, isServer }) => {
 
   Vue.use(VueCompositionApi)
   Vue.use(VueMasonry)
-  Vue.use(VueDisqus, { shortname: 'htmlmodernotest' })
+  Vue.use(VueDisqus, { shortname: process.env.DISQUS_SHORTNAME })
 
   if (!isServer) {
     Vue.use(VueSkipTo)
