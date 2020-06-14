@@ -21,7 +21,8 @@ if (process.env.NODE_ENV !== 'development') {
         /-cat-/
       ],
       whitelistPatternsChildren: [
-        /content__default$/
+        /content__default$/,
+        /search-box$/
       ],
       content: ['./src/.vuepress/**/*.vue'],
       defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
