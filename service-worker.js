@@ -27,15 +27,15 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "d68c0be329d510b991b961829b4ed8db"
+    "revision": "c9ce4eaca100990d39d41ebd66d53bca"
   },
   {
     "url": "acessibilidade/index.html",
-    "revision": "25baacf1428c0263a9680eb58e47abbe"
+    "revision": "2e5a84587dcd5c111233c4505e067712"
   },
   {
-    "url": "assets/css/0.styles.1651f40f.css",
-    "revision": "ecb920e30fbb4e525caedba6df8fcb80"
+    "url": "assets/css/0.styles.5b89a1fa.css",
+    "revision": "905da4ca32e18d39416c52c10e8a9597"
   },
   {
     "url": "assets/img/search-dark.f2e16bc5.svg",
@@ -106,8 +106,8 @@ self.__precacheManifest = [
     "revision": "f6785f804cf57d16ed50542b57c9cd38"
   },
   {
-    "url": "assets/js/23.cacd4c48.js",
-    "revision": "06d00aa2c2ccb5775e2f7be958db0f74"
+    "url": "assets/js/23.5e331835.js",
+    "revision": "f0ced265b25f3541dc7231109c1318d6"
   },
   {
     "url": "assets/js/24.7580b18e.js",
@@ -130,56 +130,56 @@ self.__precacheManifest = [
     "revision": "a19c7edbbfc14c5a3cca9d67fe78e4fc"
   },
   {
-    "url": "assets/js/29.60969f0e.js",
-    "revision": "280e6ba415ec9734d4f9503470760981"
+    "url": "assets/js/29.bbbe5e40.js",
+    "revision": "fc4cf9eedbf99cdbc87808b40885abf9"
   },
   {
-    "url": "assets/js/30.68837ab8.js",
-    "revision": "b2f8ab8495a5e60c607d6722d207d427"
+    "url": "assets/js/30.f9482984.js",
+    "revision": "5848f6274166d728eb1e1fe6faae1457"
   },
   {
-    "url": "assets/js/31.80e1b8a9.js",
-    "revision": "25e542df8863bfed7bb256e3dc09a79f"
+    "url": "assets/js/31.365474dc.js",
+    "revision": "a4049c7ab320c6757b268958768a1c99"
   },
   {
-    "url": "assets/js/32.70622cb9.js",
-    "revision": "961d96e41e229b39e24d2ac58d40f06a"
+    "url": "assets/js/32.7e6f90b9.js",
+    "revision": "ce846815729fa45073a32d7db349394f"
   },
   {
-    "url": "assets/js/33.6ea61a87.js",
-    "revision": "7866c4371900e4158fe602c01205dd08"
+    "url": "assets/js/33.1dd743d8.js",
+    "revision": "ec31cd9d14dea3c396b8423d17ec1993"
   },
   {
-    "url": "assets/js/34.84709cc8.js",
-    "revision": "2796766c4887a53ddbc9d0068b142939"
+    "url": "assets/js/34.f931f795.js",
+    "revision": "a0ddfbeab461bc00dcfff88f2189760a"
   },
   {
-    "url": "assets/js/35.1eebc8e0.js",
-    "revision": "34c9796e856d8b89cc8a1261fe9e2a3a"
+    "url": "assets/js/35.825682be.js",
+    "revision": "e3534ca0d4deb906094c82433c792699"
   },
   {
-    "url": "assets/js/36.7e4bfb95.js",
-    "revision": "7655da08dd29624117e2cf3f3dfad933"
+    "url": "assets/js/36.31efe59c.js",
+    "revision": "d0c87883a68aa60612c7e1981fa2f407"
   },
   {
-    "url": "assets/js/37.647e33d5.js",
-    "revision": "4bb5af98188e7bc68fe5033ad40c214e"
+    "url": "assets/js/37.5855c493.js",
+    "revision": "bbc5411207bb073cb0da843f60c4461e"
   },
   {
     "url": "assets/js/38.e232c9c6.js",
     "revision": "f8ec2efb5717cb474af675cc481eb99d"
   },
   {
-    "url": "assets/js/39.d4e9c1ff.js",
-    "revision": "f2227417ad9e7180cc637aef0a14edb6"
+    "url": "assets/js/39.00f3bd47.js",
+    "revision": "a71f9530149a6d6b5a06026f3fad5503"
   },
   {
     "url": "assets/js/4.bc1fe0c9.js",
     "revision": "1ad434ee984f41880c28da589c97ff81"
   },
   {
-    "url": "assets/js/40.a157bad9.js",
-    "revision": "bb941e20ec7e801f534b5ec5a88670d5"
+    "url": "assets/js/40.40b590e1.js",
+    "revision": "66d800d8248a212eb3ac3fa8408365f2"
   },
   {
     "url": "assets/js/41.8cbea6fc.js",
@@ -222,12 +222,12 @@ self.__precacheManifest = [
     "revision": "3db20264b03e96e4e1012940b06307a0"
   },
   {
-    "url": "assets/js/9.127e22f4.js",
-    "revision": "ba8a58a0d65cef3186064486538829cd"
+    "url": "assets/js/9.0387d38c.js",
+    "revision": "1200f6f4fa983e92356cbf644843d5a7"
   },
   {
-    "url": "assets/js/app.2bc77df6.js",
-    "revision": "934c9896f32f9d78b1d9081e249d5925"
+    "url": "assets/js/app.783f689e.js",
+    "revision": "dc501ab06b357cb2abbc21816e96e476"
   },
   {
     "url": "assets/js/vuejs-paginate.0c563c1c.js",
@@ -239,51 +239,51 @@ self.__precacheManifest = [
   },
   {
     "url": "autores/ktquez/index.html",
-    "revision": "7fdf5e27631c40643a1d4895fd6abd85"
+    "revision": "a3fc9fd8d8efbd45b6d93fb92579d795"
   },
   {
     "url": "categorias/acessibilidade/index.html",
-    "revision": "2783307ee50bfb3218fef62410d00795"
+    "revision": "41e981ad842e92f99e727994028c7451"
   },
   {
     "url": "categorias/html-daily/index.html",
-    "revision": "eccffeb2b2bfb444beac223b47d5ba74"
+    "revision": "8474e12062cf66c08465aef54e54c07d"
   },
   {
     "url": "categorias/html5/index.html",
-    "revision": "d73825592d9e76d3ad6e3452328493bf"
+    "revision": "230f4d8efcd53d25f7e67dd5d12559ae"
   },
   {
     "url": "categorias/index.html",
-    "revision": "470648a9cfd8dab22579c5e362daf5e1"
+    "revision": "edbd5ffa98632f9ba5e1c1ea0b089f8f"
   },
   {
     "url": "categorias/seguranca/index.html",
-    "revision": "49f9b0b1529ead4e472b74beb12dc9d6"
+    "revision": "39e4b5228fb9fbe7d00722d140be49e3"
   },
   {
     "url": "categorias/semantica/index.html",
-    "revision": "54006fa1481293b210cf66f874d25355"
+    "revision": "f271ee826287be9f0c504826778cf496"
   },
   {
     "url": "categorias/seo/index.html",
-    "revision": "ed18d1d8cfad22a475003e91d026fa01"
+    "revision": "fb51eab393f1350f53a82185c50d7378"
   },
   {
     "url": "categorias/ux/index.html",
-    "revision": "8fdc26d65c071d53df2d2201a08cf764"
+    "revision": "ce284f285544870df89a43059a36596a"
   },
   {
     "url": "categorias/videos/index.html",
-    "revision": "4453cdeb42b895ec564fa790cb5cceab"
+    "revision": "197684c1c6825cf67c185346b770944d"
   },
   {
     "url": "categorias/web-components/index.html",
-    "revision": "2b58eb8ea42b8f45e305eb6293bbf588"
+    "revision": "0422f51c3bb18d160559e750cacee565"
   },
   {
     "url": "categorias/web-performance/index.html",
-    "revision": "0b5259c527f23ef3c974f5f043bbd224"
+    "revision": "36084ab29bc52a5c94b173827303dbaa"
   },
   {
     "url": "favicon/android-chrome-192x192.png",
@@ -483,51 +483,51 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "5e048ad2d0f59b4810716d139bd7c19f"
+    "revision": "dcdc1bbb873f67e9c63ea95b961dd58c"
   },
   {
     "url": "posts/index.html",
-    "revision": "f6a139d36bac971bb09fbe43fcbc3420"
+    "revision": "affa1b23c87eaf44b562cd0c2a84549b"
   },
   {
     "url": "posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade/index.html",
-    "revision": "f6b657d090d1f7b317bd6358fca1da77"
+    "revision": "0a33f6cb0a2674751a820626b2977a33"
   },
   {
     "url": "posts/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo/index.html",
-    "revision": "d88ca51bd124480ff104955b7fdd7e07"
+    "revision": "7f680afc45672cf878560d6e932b31db"
   },
   {
     "url": "sobre/index.html",
-    "revision": "4102917925e26b2a9f0c58618b8a05fa"
+    "revision": "627d541cf4f296d86ccd02456d1cf624"
   },
   {
     "url": "tags/a11y/index.html",
-    "revision": "8f0a438b65644ca6a998b6085d8f7231"
+    "revision": "6ac833f5bc6b8d3780450275f57195c7"
   },
   {
     "url": "tags/Atributos/index.html",
-    "revision": "96db3c3cde95f56a8bce872fbdc99553"
+    "revision": "423b00a3ba82494109408930f1cfcb3e"
   },
   {
     "url": "tags/heading/index.html",
-    "revision": "f1435514aadb109a0f94de38568b0cef"
+    "revision": "088b905147ffbdc311a6ed9fd55d3ed6"
   },
   {
     "url": "tags/HTML5/index.html",
-    "revision": "08d215a54cdb031ddbe89020f6f88141"
+    "revision": "fa6c83d1384796f102468a4d7c4d207f"
   },
   {
     "url": "tags/index.html",
-    "revision": "a18397fa8b3e757631e78710b246c3ca"
+    "revision": "66b27d099b68bfe54d6f4194bbd5ab26"
   },
   {
     "url": "tags/SEO/index.html",
-    "revision": "86ff20552893f194d6aa80cceff9063c"
+    "revision": "f7d02fa26b076b254fb9d0cb4134b81b"
   },
   {
     "url": "tags/W3C/index.html",
-    "revision": "33b2e2ed3a3eb9204821001d9ba150a0"
+    "revision": "ce820a6a56577e277654ada3d7f78915"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
