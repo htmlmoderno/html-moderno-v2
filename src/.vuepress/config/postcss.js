@@ -12,6 +12,7 @@ if (process.env.NODE_ENV !== 'development') {
       whitelist: [
         'html',
         'body',
+        'app',
         'mode-dark',
         'icon',
         'outbound'
