@@ -98,8 +98,10 @@ export default {
 
     onMounted(() => {
       root.$nextTick(() => {
-        insertContent(refs.outputIframe, selector)
-        insertStyle(refs.outputIframe, styleSelector)
+        setTimeout(() => { // Firefox support
+          insertContent(refs.outputIframe, selector)
+          insertStyle(refs.outputIframe, styleSelector)
+        }, 2000)
       })
     })
 
@@ -122,7 +124,7 @@ export default {
       document.getElementsByTagName('body')[0].style.overflow = isFullScreen.value ? 'hidden' : 'auto'
     }
 
-    function insertContent (iframe) {
+    function insertContent (iframe, selector) {
       const snippet = document.querySelector(`${selector} > pre`)
       const iframeBody = iframe.contentDocument.getElementsByTagName('body')[0]
       iframeBody.innerHTML = snippet.textContent
