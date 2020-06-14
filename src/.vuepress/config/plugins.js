@@ -73,7 +73,10 @@ module.exports = [
     {
       serviceWorker: true,
       popupComponent: 'SWUPopup',
-      updatePopup: true
+      updatePopup: {
+        message: 'Novas mudanças no site do HTML Moderno',
+        buttonText: 'Atualizar'
+      }
     }
   ],
   // https://github.com/ntnyq/vuepress-plugin-svg-icons
