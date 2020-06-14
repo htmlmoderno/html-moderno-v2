@@ -46,7 +46,7 @@
       <div class="w-full lg:w-1/5">
         <button
           type="submit"
-          class="n9m w-full bg-accent text-white font-bold py-4"
+          class="n9m w-full bg-accent dark:bg-cat-html-daily text-gray-900 font-bold py-4"
           :class="{ 'px-3': small, 'px-6': !small, 'opacity-50': isSubmitted }"
           :disabled="isSubmitted"
         >
