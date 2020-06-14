@@ -74,6 +74,8 @@
               <a
                 :href="link.link"
                 class="flex justify-between items-center py-4 border-b border-solid border-cat-semantica dark:border-dark-200 hover:underline"
+                target="_blank"
+                rel="noopener"
               >
                 <span>
                   {{ link.label }}
