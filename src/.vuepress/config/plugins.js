@@ -68,16 +68,12 @@ module.exports = [
       notFoundPath: '/404.html'
     }
   ],
-  // https://vuepress.vuejs.org/plugin/official/plugin-pwa.html#install
+  // https://vuepress.vuejs.org/plugin/official/plugin-pwa.html
   [
     '@vuepress/pwa',
     {
       serviceWorker: true,
-      popupComponent: 'SWUPopup',
-      updatePopup: {
-        message: 'Novas mudanças no site do HTML Moderno',
-        buttonText: 'Atualizar'
-      }
+      updatePopup: false
     }
   ],
   // https://github.com/ntnyq/vuepress-plugin-svg-icons

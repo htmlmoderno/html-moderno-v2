@@ -1,5 +1,6 @@
 import VueAnnouncer from '@vue-a11y/announcer'
 import VueCompositionApi from '@vue/composition-api'
+import event from '@vuepress/plugin-pwa/lib/event'
 import VueDisqus from 'vue-disqus'
 import VueMasonry from 'vue-masonry-css'
 import VueSkipTo from 'vue-skip-to'
@@ -9,6 +10,10 @@ import FigureCodeCaption from './components/FigureCodeCaption.vue'
 import WarningOpenLinkNewWindow from './components/WarningOpenLinkNewWindow.vue'
 
 export default ({ Vue, router, isServer }) => {
+  if (process.env.NODE_ENV === 'production') {
+    event.$on('sw-updated', e => e.skipWaiting().then(() => location.reload(true))) // Auto reload pwa
+  }
+
   // built-in components
   Vue.component('WarningOpenLinkNewWindow', WarningOpenLinkNewWindow)
   Vue.component('FigureCode', FigureCode)
@@ -20,6 +25,8 @@ export default ({ Vue, router, isServer }) => {
 
   if (!isServer) {
     Vue.use(VueSkipTo)
-    Vue.use(VueAnnouncer, {}, router)
+    Vue.use(VueAnnouncer, {
+      complementRoute: 'foi carregada'
+    }, router)
   }
 }
