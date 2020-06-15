@@ -5,7 +5,8 @@ const resolve = pathName => path.join(__dirname, pathName)
 let caption = ''
 
 module.exports = [
-  'vuepress-plugin-nprogress',
+  // https://vuepress.vuejs.org/plugin/official/plugin-nprogress.html,
+  '@vuepress/nprogress',
   [
     // https://github.com/vuepressjs/vuepress-plugin-blog
     '@vuepress/blog',
