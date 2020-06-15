@@ -7,7 +7,7 @@ const publisher = `{
           {
               "@type": "ImageObject",
               "@id": "${process.env.URL_BASE}/#logo",
-              "url": "${process.env.URL_BASE}/images/html-moderno-logo.svg",
+              "url": "${process.env.URL_BASE}/images/html-moderno-logo.png",
               "width": 60,
               "height": 60
           }

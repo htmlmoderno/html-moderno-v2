@@ -61,9 +61,8 @@
       <component
         :is="'script'"
         type="application/ld+json"
-      >
-        {{ schema.trim() }}
-      </component>
+        v-html="schema.trim()"
+      />
 
       <section class="single-post__container single-post__box-comment border-t border-light-200 dark:border-dark-200">
         <comments />
