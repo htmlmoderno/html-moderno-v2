@@ -158,7 +158,12 @@ O engraçado com esse atributo e sua relação com o CSS display é que essa reg
 
 O próprio browser adiciona uma regra css como pode ser visto na imagem abaixo:
 
-<img loading="lazy" src="/images/posts/2018/08/browser-atributo-hidden.jpg" alt="Imagem do browser console do browser mostrando um elemento p (tag de parágrafo) utilizando o atributo hidden e no lado esquerdo uma regra css inserido pelo próprio browser com um display none', title: 'Imagem do browser console do browser mostrando um elemento p (tag de parágrafo) utilizando o atributo hidden e no lado esquerdo uma regra css inserido pelo próprio browser com um display none" />
+<img
+  loading="lazy"
+  src="/images/posts/2018/08/browser-atributo-hidden.jpg"
+  alt="Imagem do browser mostrando um elemento p (tag de parágrafo) utilizando o atributo hidden e no lado esquerdo uma regra css inserido pelo próprio browser com um display none"
+  title="Imagem do browser mostrando um elemento p (tag de parágrafo) utilizando o atributo hidden e no lado esquerdo uma regra css inserido pelo próprio browser com um display none"
+/>
 
 Mas se houver um seletor mais forte, ele é sobrescrito, por isso o uso do `!important`
 

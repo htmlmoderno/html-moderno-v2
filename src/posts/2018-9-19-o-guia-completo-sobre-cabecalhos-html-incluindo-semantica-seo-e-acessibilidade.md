@@ -222,7 +222,12 @@ As tags H1 são muito subestimadas quando se trata de marketing de conteúdo, al
 
 Um exemplo que encontrei sobre o exagero de palavras chaves em um H1:  
 
-<img src="/images/posts/2018/09/titulo-com-muitas-palavras-chave-html-moderno.png" alt="Produto na amazon com imagem de um iphone na cor rose no lado esquerdo e um título no lado direito" loading="lazy" />
+<img
+  src="/images/posts/2018/09/titulo-com-muitas-palavras-chave-html-moderno.png"
+  alt="Produto na amazon com imagem de um iphone na cor rose no lado esquerdo e um título no lado direito"
+  title="Produto na amazon com imagem de um iphone na cor rose no lado esquerdo e um título no lado direito"
+  loading="lazy"
+/>
 
 Normalmente as pessoas usam o H1 para a seção hero do site (landing pages), título de posts (blog), título de produtos (ecommerce) e além de estarem bem destacadas o conteúdo da tag H1 antecipa ao usuário leitor o tipo de conteúdo que ele terá no decorrer da página.
 
@@ -321,11 +326,19 @@ Particularmente gosto de ver como os grandes players estruturam seus cabeçalhos
 
 Existe uma extensão para chrome chamada <span lang="en">[Headings Map](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=en)</span> que expõe os cabeçalhos de uma página de maneira organizada, tanto a estrutura de cabeçalho, quanto HTML5 outline.
 
-<img src="/images/posts/2018/09/plugin-headingmap-exemplo-html-moderno.jpg" alt="3 títulos com o mesmo nível H1 no lado direito e ao lado esquerdo o plugin HeadingsMap mostrando a estrutura do cabeçalho" loading="lazy" />
+<img
+  src="/images/posts/2018/09/plugin-headingmap-exemplo-html-moderno.jpg"
+  alt="3 títulos com o mesmo nível H1 no lado direito e ao lado esquerdo o plugin HeadingsMap mostrando a estrutura do cabeçalho"
+  loading="lazy"
+/>
 
 Também é possível ver o outline de uma página através do [validador HTML da w3c](https://validator.w3.org/), basta inserir o link e clicar no checkbox `outline` e o resultado é exibido, como na imagem abaixo:
 
-<img src="/images/posts/2018/09/html-validator-outline-html-moderno.png" alt="Input de pesquisa do validador da W3C e abaixo a estrutura de cabeçalhos de um dos posts do nosso blog" loading="lazy" />
+<img
+  src="/images/posts/2018/09/html-validator-outline-html-moderno.png"
+  alt="Input de pesquisa do validador da W3C e abaixo a estrutura de cabeçalhos de um dos posts do nosso blog"
+  loading="lazy"
+/>
 
 ## Cabeçalhos e acessibilidade
 Os usuários de tecnologia assistiva, assim como os de visão, também conseguem navegar em páginas através de estrutura de cabeçalho. De acordo com uma [pesquisa da WebAIM de 2012](https://webaim.org/projects/screenreadersurvey4/#levels) mostra de cerca de 47,4% acham muito úteis os cabeçalhos e 34,7% afirmam ter alguma utilidade, mostrando que os cabeçalhos são úteis para cerca de 82% dos usuários de leitores de tela que participaram da pesquisa.
