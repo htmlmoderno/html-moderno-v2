@@ -4,19 +4,13 @@
       Comentários<span class="text-accent">.</span>
     </h2>
     <div class="mt-12">
-      <Disqus />
+      <Disqus :lazy-config="{ root: null, rootMargin: '1000px', threshold: 0.5 }" />
     </div>
   </div>
 </template>
 
 <script>
-import Comment from '@vuepress/plugin-blog/lib/client/components/Comment'
 export default {
-  name: 'Comments',
-  components: {
-    Comment
-  }
+  name: 'Comments'
 }
 </script>
-
-<style lang="scss"></style>
