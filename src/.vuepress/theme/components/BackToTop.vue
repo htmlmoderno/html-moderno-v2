@@ -1,18 +1,17 @@
 <template>
   <div class="back-to-top">
-    <!-- eslint-disable -->
-    <a
+    <button
       ref="arrowTop"
-      class="back-to-top__link"
-      :class="{ 'back-to-top__link--show': show, 'back-to-top__link--fire': fire }"
+      class="back-to-top__btn"
+      :class="{ 'back-to-top__btn--show': show, 'back-to-top__btn--fire': fire }"
       @click="fired"
     >
-    <!-- eslint-enable -->
+      <span class="sr-only">Voltar ao topo</span>
       <vp-icon
         name="back-to-top-button"
         class="back-to-top__icon text-6xl"
       />
-    </a>
+    </button>
   </div>
 </template>
 
@@ -66,7 +65,7 @@ export default {
   position: relative;
   z-index: 99;
 
-  &__link {
+  &__btn {
     position: fixed;
     border-radius: 50%;
     display: inline-block;
