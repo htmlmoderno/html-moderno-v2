@@ -20,7 +20,6 @@ author: ktquez
 date: 2018-08-28
 
 meta:
-  # Facebook
   - name: og:url
     content: https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade
   - name: og:title
@@ -29,7 +28,6 @@ meta:
     content: Um atributo desconhecido pelos desenvolvedores é o atributo global do HTML chamado &#96;hidden&#96;, nesse post vamos abordar quando utilizá-lo da melhor maneira.
   - name: og:image
     content: https://htmlmoderno.com.br/images/posts/2018/08/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo.png
-  # Twitter
   - name: twitter:url
     content: https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade
   - name: twitter:title
