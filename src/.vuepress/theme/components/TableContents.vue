@@ -15,12 +15,10 @@
         :key="header.slug"
       >
         <span class="pr-3 text-lightText text-sm">{{ index > 9 ? index : `0${index + 1}` }}.</span>
-        <!-- eslint-disable -->
         <a
           class="base-link text-lg md:text-xl"
           :href="`#${header.slug}`"
         >
-        <!-- eslint-enable -->
           <span>{{ header.title }}</span>
         </a>
       </li>

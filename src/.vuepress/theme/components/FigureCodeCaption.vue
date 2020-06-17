@@ -1,5 +1,4 @@
 <template functional>
-  <!-- eslint-disable -->
   <figcaption
     class="figurecode__caption"
     v-html="`&lt;span class='sr-only'&gt;Code snippet:&lt;/span&gt; ${props.caption}`"

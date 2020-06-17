@@ -6,7 +6,6 @@
         class="my-sw-update-popup"
       >
         {{ message }}<br>
-        <!-- eslint-disable-next-line -->
         <button @click="reload">
           {{ buttonText }}
         </button>

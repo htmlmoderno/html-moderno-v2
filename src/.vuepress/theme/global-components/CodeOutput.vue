@@ -11,14 +11,12 @@
           <span>
             {{ console ? 'CONSOLE' : 'OUTPUT' }}
           </span>
-          <!-- eslint-disable -->
           <button
             type="button"
             class="ml-2 p-2"
             :title="ariaLabel"
             @click="toggleFullScreen"
           >
-          <!-- eslint-enable -->
             <span class="sr-only">{{ ariaLabel }} {{ title }}</span>
             <vp-icon
               v-show="isFullScreen"
