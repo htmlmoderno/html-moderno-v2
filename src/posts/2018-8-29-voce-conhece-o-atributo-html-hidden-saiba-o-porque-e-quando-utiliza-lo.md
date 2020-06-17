@@ -163,6 +163,8 @@ O próprio browser adiciona uma regra css como pode ser visto na imagem abaixo:
   src="/images/posts/2018/08/browser-atributo-hidden.jpg"
   alt="Imagem do browser mostrando um elemento p (tag de parágrafo) utilizando o atributo hidden e no lado esquerdo uma regra css inserido pelo próprio browser com um display none"
   title="Imagem do browser mostrando um elemento p (tag de parágrafo) utilizando o atributo hidden e no lado esquerdo uma regra css inserido pelo próprio browser com um display none"
+  width="1244"
+  height="192"
 />
 
 Mas se houver um seletor mais forte, ele é sobrescrito, por isso o uso do `!important`

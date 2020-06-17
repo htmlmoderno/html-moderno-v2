@@ -227,6 +227,8 @@ Um exemplo que encontrei sobre o exagero de palavras chaves em um H1:
   alt="Produto na amazon com imagem de um iphone na cor rose no lado esquerdo e um título no lado direito"
   title="Produto na amazon com imagem de um iphone na cor rose no lado esquerdo e um título no lado direito"
   loading="lazy"
+  width="1080"
+  height="346"
 />
 
 Normalmente as pessoas usam o H1 para a seção hero do site (landing pages), título de posts (blog), título de produtos (ecommerce) e além de estarem bem destacadas o conteúdo da tag H1 antecipa ao usuário leitor o tipo de conteúdo que ele terá no decorrer da página.
@@ -330,6 +332,8 @@ Existe uma extensão para chrome chamada <span lang="en">[Headings Map](https://
   src="/images/posts/2018/09/plugin-headingmap-exemplo-html-moderno.jpg"
   alt="3 títulos com o mesmo nível H1 no lado direito e ao lado esquerdo o plugin HeadingsMap mostrando a estrutura do cabeçalho"
   loading="lazy"
+  width="710"
+  height="209"
 />
 
 Também é possível ver o outline de uma página através do [validador HTML da w3c](https://validator.w3.org/), basta inserir o link e clicar no checkbox `outline` e o resultado é exibido, como na imagem abaixo:
@@ -338,6 +342,8 @@ Também é possível ver o outline de uma página através do [validador HTML da
   src="/images/posts/2018/09/html-validator-outline-html-moderno.png"
   alt="Input de pesquisa do validador da W3C e abaixo a estrutura de cabeçalhos de um dos posts do nosso blog"
   loading="lazy"
+  width="1005"
+  height="738"
 />
 
 ## Cabeçalhos e acessibilidade
