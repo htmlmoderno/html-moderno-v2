@@ -4,7 +4,9 @@
       Comentários<span class="text-accent">.</span>
     </h2>
     <div class="mt-12">
-      <Disqus :lazy-config="{ root: null, rootMargin: '1000px', threshold: 0.5 }" />
+      <ClientOnly>
+        <Disqus :lazy-config="{ root: null, rootMargin: '1000px', threshold: 0.5 }" />
+      </ClientOnly>
     </div>
   </div>
 </template>
