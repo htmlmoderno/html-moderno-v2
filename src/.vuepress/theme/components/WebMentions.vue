@@ -39,6 +39,7 @@
               :aria-label="`Ir para o site do ${like.author.name}`"
               rel="nofollow"
             >
+              <span class="sr-only">{{ like.author.name }}</span>
               <img
                 class="rounded-full"
                 :src="like.author.photo"
@@ -82,6 +83,7 @@
               :aria-label="`Ir para o site do ${repost.author.name}`"
               rel="nofollow"
             >
+              <span class="sr-only">{{ repost.author.name }}</span>
               <img
                 class="rounded-full"
                 :src="repost.author.photo"
@@ -136,6 +138,7 @@
                 rel="nofollow"
                 itemprop="url"
               >
+                <span class="sr-only">{{ mention.author.name }}</span>
                 <img
                   id="author-comment-image"
                   class="rounded-full"
