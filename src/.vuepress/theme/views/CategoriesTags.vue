@@ -37,6 +37,7 @@
               >
                 <router-link
                   class="tags-page-list__link"
+                  rel="noindex"
                   :to="`/tags/${encodeURI(tag)}`"
                 >
                   {{ tag }}
