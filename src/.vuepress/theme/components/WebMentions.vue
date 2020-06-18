@@ -7,11 +7,6 @@
       ({{ webmentions.length }}) Webmentions<span class="text-accent">.</span>
     </h2>
 
-    <meta
-      itemprop="commentCount"
-      :content="mentions.length"
-    >
-
     <div class="webmentions-interact my-12">
       <div
         v-if="likes.length"
