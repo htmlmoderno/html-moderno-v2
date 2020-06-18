@@ -1,12 +1,13 @@
 <template>
   <picture>
-    <source
-      v-for="size in config.breakpoints"
-      v-show="config.active"
-      :key="size"
-      :media="`(max-width: ${size}px)`"
-      :srcset="sources[size]"
-    >
+    <template v-if="config.active">
+      <source
+        v-for="size in config.breakpoints"
+        :key="size"
+        :media="`(max-width: ${size}px)`"
+        :srcset="sources[size]"
+      >
+    </template>
     <slot />
   </picture>
 </template>
