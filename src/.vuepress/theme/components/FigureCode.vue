@@ -1,7 +1,5 @@
 <template functional>
-  <!-- eslint-disable vuejs-accessibility/no-redundant-roles -->
   <figure
-    role="figure"
     :aria-label="props.caption"
     class="figurecode teste-fig"
   >
