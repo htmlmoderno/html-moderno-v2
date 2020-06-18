@@ -1,21 +1,22 @@
 <template>
   <div class="tags-page">
-    <section>
-      <presentation
-        class="py-4"
-        first-title="HTML Moderno"
-        :second-title="$frontmatter.title"
-      />
-    </section>
+    <presentation
+      class="py-4"
+      first-title="HTML Moderno"
+      :second-title="$frontmatter.title"
+    />
     <the-main>
-      <div class="w-full layout-section pb-0">
-        <section
+      <ul class="w-full layout-section pb-0">
+        <li
           v-for="category in getCategories"
           :key="category.key"
           class="tags-page-section"
         >
           <div class="w-full sm:w-1/3 lg:w-1/4 pr-0 sm:pr-12 lg:pr-20">
-            <router-link :to="`/categorias/${category.frontmatter.slug}`">
+            <router-link
+              :to="`/categorias/${category.frontmatter.slug}`"
+              class="block"
+            >
               <card-category
                 :label="category.title"
                 :icon-name="`cat-${category.frontmatter.slug}`"
@@ -51,8 +52,8 @@
               Sem tags até o momento.
             </div>
           </div>
-        </section>
-      </div>
+        </li>
+      </ul>
     </the-main>
   </div>
 </template>
