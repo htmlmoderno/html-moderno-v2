@@ -12,6 +12,7 @@
     <div
       class="nav-menu__content fixed z-30 w-full h-full sm:w-1/2 md:w-4/12 top-0 bg-light dark:bg-dark overflow-auto px-6 md:p-12 py-16 shadow-md"
       :class="{ 'nav-menu__content--show': show }"
+      :aria-hidden="!show"
     >
       <FocusLock>
         <button
@@ -30,12 +31,14 @@
           aria-labelledby="title-nav-menu"
           class="mt-12"
         >
-          <h2
+          <span
             id="title-nav-menu"
+            role="heading"
+            aria-level="2"
             class="text-3xl font-bold mb-8"
           >
             Menu de Navegação
-          </h2>
+          </span>
 
           <ul>
             <li
@@ -56,12 +59,14 @@
           aria-labelledby="title-nav-menu-social"
           class="mt-12"
         >
-          <h2
+          <span
             id="title-nav-menu-social"
+            role="heading"
+            aria-level="2"
             class="text-3xl font-bold mb-8"
           >
-            Redes sociais
-          </h2>
+            <span class="sr-only">Menu de navegação para as </span> Redes sociais
+          </span>
 
           <ul>
             <li
