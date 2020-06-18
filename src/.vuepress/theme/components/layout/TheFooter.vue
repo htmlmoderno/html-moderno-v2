@@ -44,7 +44,7 @@
               <a
                 :href="item.link"
                 :title="item.label"
-                :rel="item.rel"
+                :rel="item.label === 'Twitter' ? 'me noopener' : 'noopener'"
                 target="_blank"
                 class="footer__link base-link"
               >
