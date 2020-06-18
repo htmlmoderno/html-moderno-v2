@@ -9,7 +9,7 @@
       @click="$emit('onClose')"
       @keyup.enter="$emit('onClose')"
     />
-    <section
+    <div
       class="nav-menu__content fixed z-30 w-full h-full sm:w-1/2 md:w-4/12 top-0 bg-light dark:bg-dark overflow-auto px-6 md:p-12 py-16 shadow-md"
       :class="{ 'nav-menu__content--show': show }"
     >
@@ -23,10 +23,7 @@
         </button>
 
         <div class="block sm:hidden w-full mt-10">
-          <search-box
-            placeholder="Tecle 's' para pesquisar"
-            class="n9m-search n9m--inner"
-          />
+          <search-box class="n9m-search n9m--inner" />
         </div>
 
         <nav
@@ -87,7 +84,7 @@
           </ul>
         </nav>
       </FocusLock>
-    </section>
+    </div>
   </div>
 </template>
 
