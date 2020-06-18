@@ -139,7 +139,7 @@ Os casos de uso são muitos, mas use com moderação.
 
 ## Suporte
 
-<iframe src="https://caniuse.bitsofco.de/embed/index.html?feat=hidden&periods=future_1,current,past_1,past_2" width="100%" height="420" allowfullscreen="true" loading="lazy"></iframe>
+<iframe src="https://caniuse.bitsofco.de/embed/index.html?feat=hidden&periods=future_1,current,past_1,past_2" height="420" allowfullscreen="true" style="width: 100%"></iframe>
 
 O suporte nesse momento já é praticamente completo entre os browsers e dispositivos.
 Porém existe um forma via CSS que você pode usar quando o browser ou leitor de tela que o usuário esteja acessando não dê suporte.

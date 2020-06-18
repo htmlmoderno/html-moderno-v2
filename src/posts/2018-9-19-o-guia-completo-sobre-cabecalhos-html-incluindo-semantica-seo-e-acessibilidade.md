@@ -128,10 +128,10 @@ Quando se trata de SEO também não tem problemas utilizar mais de um H1 na pág
   <figcaption class="text-base">Tweet de resposta do John</figcaption>
   <iframe
     src="https://twitframe.com/show?url=https://twitter.com/JohnMu/status/852131231928135680?ref_src=twsrc%5Etfw"
-    width="100%"
     height="280"
     allowfullscreen="true"
     title="Tweet de resposta do John"
+    style="width: 100%"
   ></iframe>
 </figure>
 
