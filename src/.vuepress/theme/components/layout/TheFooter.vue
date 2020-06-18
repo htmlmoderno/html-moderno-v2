@@ -1,7 +1,7 @@
 <template>
   <footer>
     <section
-      v-show="$frontmatter.view !== 'CategoriesTags'"
+      v-if="$frontmatter.view !== 'CategoriesTags'"
       id="categories"
       class="layout-section layout-section--border-top dark:border-dark-200"
     >
@@ -14,6 +14,9 @@
       <newsletter aria-label="Faça parte e assine a nossa newsletter" />
     </section>
     <section class="footer flex flex-wrap pb-12 px-0 lg:w-3/4 lg:mx-auto">
+      <h2 class="sr-only">
+        Sobre o HTML Moderno
+      </h2>
       <div class="w-full md:w-3/5 md:pr-16 text-lg">
         <div>
           <p>
