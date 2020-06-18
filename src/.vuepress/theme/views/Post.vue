@@ -65,7 +65,14 @@
       />
 
       <section class="single-post__container single-post__box-comment border-t border-light-200 dark:border-dark-200">
-        <comments />
+        <h2 class="text-2xl mb-12 font-bold">
+          Comentários<span class="text-accent">.</span>
+        </h2>
+        <div class="mt-12">
+          <ClientOnly>
+            <Disqus :lazy-config="{ root: null, rootMargin: '1000px', threshold: 0.5 }" />
+          </ClientOnly>
+        </div>
       </section>
 
       <section class="single-post__container single-post__box-comment border-t border-light-200 dark:border-dark-200">
@@ -87,8 +94,7 @@ export default {
     TableContents,
     ResponsivePicture,
     WebMentions: () => import('@theme/components/WebMentions'),
-    SharePost: () => import('@theme/components/SharePost'),
-    Comments: () => import('@theme/components/Comments')
+    SharePost: () => import('@theme/components/SharePost')
   },
   setup (_, { root }) {
     const fm = root.$frontmatter
