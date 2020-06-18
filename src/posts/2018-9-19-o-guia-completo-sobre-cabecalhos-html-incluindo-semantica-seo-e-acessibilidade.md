@@ -10,8 +10,8 @@ announcer: Postagem %title% %complementRoute%
 cover: 
   - extension: png
     path: /images/posts/2018/09/
-    alternativeText: Texto alternativo
-    caption: Nossa máscara de carnaval favorita
+    alternativeText: Imagem de capa na cor de fundo salmão e um ícone com 3 traços no centro na cor vermelha sendo o último traço menor e o primeiro maior mostrando hierarquia
+    caption: Hierarquia de cabeçalhos
 categories: [html5, seo, semantica, acessibilidade]
 tags: [HTML5, heading, SEO, W3C]
 author: ktquez
@@ -132,8 +132,6 @@ Quando se trata de SEO também não tem problemas utilizar mais de um H1 na pág
     height="280"
     allowfullscreen="true"
     title="Tweet de resposta do John"
-    frameborder="0"
-    loading="lazy"
   ></iframe>
 </figure>
 

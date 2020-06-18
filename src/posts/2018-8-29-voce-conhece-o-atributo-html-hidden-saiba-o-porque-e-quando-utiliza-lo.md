@@ -10,8 +10,8 @@ announcer: Postagem %title% %complementRoute%
 cover: 
   - extension: png
     path: /images/posts/2018/08/
-    alternativeText: Texto alternativo
-    caption: Nossa máscara de carnaval favorita
+    alternativeText: Imagem de capa na cor de fundo salmão e um ícone de mascara de carnaval na cor vermelha
+    caption: 
 demo: https://thepaciellogroup.github.io/AT-browser-tests/test-files/hidden-att.html
 audio: https://api.soundcloud.com/tracks/492895791
 categories: [html5, acessibilidade]
@@ -139,7 +139,7 @@ Os casos de uso são muitos, mas use com moderação.
 
 ## Suporte
 
-<iframe src="https://caniuse.bitsofco.de/embed/index.html?feat=hidden&periods=future_1,current,past_1,past_2" width="100%" height="420" allowfullscreen="true" frameborder="0" loading="lazy"></iframe>
+<iframe src="https://caniuse.bitsofco.de/embed/index.html?feat=hidden&periods=future_1,current,past_1,past_2" width="100%" height="420" allowfullscreen="true" loading="lazy"></iframe>
 
 O suporte nesse momento já é praticamente completo entre os browsers e dispositivos.
 Porém existe um forma via CSS que você pode usar quando o browser ou leitor de tela que o usuário esteja acessando não dê suporte.
