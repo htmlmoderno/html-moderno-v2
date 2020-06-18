@@ -56,8 +56,7 @@ module.exports = {
       },
       {
         label: 'Twitter',
-        link: 'https://twitter.com/htmlmoderno/?ref=website',
-        rel: 'me'
+        link: 'https://twitter.com/htmlmoderno/?ref=website'
       },
       {
         label: 'Youtube',

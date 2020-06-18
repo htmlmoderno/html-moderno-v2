@@ -1,6 +1,8 @@
 
 module.exports = [
   ['meta', { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' }],
+  ['meta', { charset: 'utf-8' }],
+  ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1' }],
   ['meta', { name: 'apple-mobile-web-app-title', content: 'HTML Moderno | Tornando o HTML ainda mais interessante.' }],
   ['meta', { name: 'theme-color', content: '#F4F1EC' }],
   ['meta', { name: 'msapplication-navbutton-color', content: '#fe5634' }],
@@ -61,16 +63,9 @@ module.exports = [
   ['link', { rel: 'mask-icon', href: '/favicon/safari-pinned-tab.svg', color: '#ff5733' }],
   ['link', { id: 'favicon', rel: 'icon', href: '/favicon/favicon.svg' }],
 
-  ['link', { rel: 'preconnect', href: 'https://connect.facebook.net/' }],
-  ['link', { rel: 'preconnect', href: 'https://platform.twitter.com/' }],
-  ['link', { rel: 'preconnect', href: 'https://widget.sndcdn.com/' }],
-  ['link', { rel: 'preconnect', href: 'https://api-widget.soundcloud.com/' }],
-  ['link', { rel: 'preconnect', href: 'https://www.youtube.com/' }],
   ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com/' }],
   ['link', { rel: 'preconnect', href: 'https://c.disquscdn.com/' }],
   ['link', { rel: 'preconnect', href: 'https://disqus.com/' }],
   ['link', { rel: 'preconnect', href: 'https://www.google-analytics.com/' }],
-  ['link', { rel: 'preconnect', href: 'https://stats.g.doubleclick.net' }],
-
-  ['link', { rel: 'preload', href: 'https://www.google-analytics.com/analytics.js', as: 'script' }]
+  ['link', { rel: 'preconnect', href: 'https://stats.g.doubleclick.net' }]
 ]
