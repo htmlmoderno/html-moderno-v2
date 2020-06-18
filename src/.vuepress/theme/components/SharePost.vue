@@ -46,23 +46,23 @@ export default {
       },
       {
         name: 'twitter',
-        link: `https://twitter.com/share?url=${currentURL}&text=${encodeURI(title)}&via=htmlmoderno`
+        link: `https://twitter.com/share?url=${currentURL}&text=${encodeURIComponent(title)}&via=htmlmoderno`
       },
       {
         name: 'linkedin',
-        link: `https://www.linkedin.com/shareArticle?mini=true&url=${currentURL}&title=${encodeURI(title)}&summary=${encodeURI(description)}&source=website`
+        link: `https://www.linkedin.com/shareArticle?mini=true&url=${currentURL}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}&source=website`
       },
       {
         name: 'whatsapp',
-        link: `https://wa.me/?text=${encodeURI(title + ' - ' + currentURL)}`
+        link: `https://wa.me/?text=${encodeURIComponent(title + ' - ' + currentURL)}`
       },
       {
         name: 'telegram',
-        link: `https://telegram.me/share/url?url=${currentURL}&text=${encodeURI(title)}`
+        link: `https://telegram.me/share/url?url=${currentURL}&text=${encodeURIComponent(title)}`
       },
       {
         name: 'email',
-        link: `mailto:info@example.com?&subject=${encodeURI(title)}&body=${currentURL}`
+        link: `mailto:info@example.com?&subject=${encodeURIComponent(title)}&body=${currentURL}`
       }
     ]
 
