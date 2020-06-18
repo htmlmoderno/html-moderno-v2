@@ -41,8 +41,6 @@
           ref="outputIframe"
           aria-hidden="true"
           :title="title"
-          width="100%"
-          height="100%"
           allowfullscreen="true"
         />
       </div>
@@ -175,6 +173,13 @@ export default {
       height: 11px;
       background-color: #d1c1a7;
       box-shadow: 18px 0 0 0 #d1c1a7, 36px 0 0 0 #d1c1a7;
+    }
+  }
+
+  &__body {
+    iframe {
+      width: 100%;
+      height: 100%;
     }
   }
 }
