@@ -1,5 +1,5 @@
 <template>
-  <nav
+  <section
     v-show="webmentions.length"
     class="webmentions"
   >
@@ -168,7 +168,7 @@
         </li>
       </ul>
     </div>
-  </nav>
+  </section>
 </template>
 
 <script>

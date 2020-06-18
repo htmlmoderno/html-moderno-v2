@@ -27,28 +27,31 @@
           </div>
         </div>
       </div>
-      <section v-if="post.cover && post.cover.path">
-        <figure :aria-label="post.cover.caption">
-          <responsive-picture
-            :cover-name="post.cover.path"
-            class="n9m block mt-12 w-full p-4"
-          >
-            <img
-              class="w-full inline rounded-lg"
-              :src="`${post.cover.path}.${post.cover.extension}`"
-              :title="post.cover.alternativeText"
-              :alt="post.cover.alternativeText"
-            >
-          </responsive-picture>
-          <figcaption class="text-center mt-4 text-lightText">
-            {{ post.cover.caption }}
-          </figcaption>
-        </figure>
-      </section>
 
-      <section class="single-post__container pb-6">
-        <table-contents :headers="post.headers" />
-      </section>
+      <figure
+        v-if="post.cover && post.cover.path"
+        :aria-label="post.cover.caption"
+      >
+        <responsive-picture
+          :cover-name="post.cover.path"
+          class="n9m block mt-12 w-full p-4"
+        >
+          <img
+            class="w-full inline rounded-lg"
+            :src="`${post.cover.path}.${post.cover.extension}`"
+            :title="post.cover.alternativeText"
+            :alt="post.cover.alternativeText"
+          >
+        </responsive-picture>
+        <figcaption class="text-center mt-4 text-lightText">
+          {{ post.cover.caption }}
+        </figcaption>
+      </figure>
+
+      <table-contents
+        class="single-post__container pb-6"
+        :headers="post.headers"
+      />
 
       <section class="single-post__container">
         <Content />
@@ -64,20 +67,8 @@
         v-html="schema.trim()"
       />
 
-      <section class="single-post__container single-post__box-comment border-t border-light-200 dark:border-dark-200">
-        <h2 class="text-2xl mb-12 font-bold">
-          Comentários<span class="text-accent">.</span>
-        </h2>
-        <div class="mt-12">
-          <ClientOnly>
-            <Disqus :lazy-config="{ root: null, rootMargin: '1000px', threshold: 0.5 }" />
-          </ClientOnly>
-        </div>
-      </section>
-
-      <section class="single-post__container single-post__box-comment border-t border-light-200 dark:border-dark-200">
-        <web-mentions />
-      </section>
+      <comments class="single-post__container single-post__box-comment border-t border-light-200 dark:border-dark-200" />
+      <web-mentions class="single-post__container single-post__box-comment border-t border-light-200 dark:border-dark-200" />
     </article>
   </main>
 </template>
@@ -94,7 +85,8 @@ export default {
     TableContents,
     ResponsivePicture,
     WebMentions: () => import('@theme/components/WebMentions'),
-    SharePost: () => import('@theme/components/SharePost')
+    SharePost: () => import('@theme/components/SharePost'),
+    Comments: () => import('@theme/components/Comments')
   },
   setup (_, { root }) {
     const fm = root.$frontmatter
