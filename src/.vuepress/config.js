@@ -13,6 +13,7 @@ const resolve = pathName => path.join(__dirname, pathName)
 module.exports = {
   base: '/',
   description: 'No HTML Moderno você fica atualizado com artigos e vídeos sobre o que tem de mais moderno em HTML5, semântica, acessibilidade, SEO, UX e performance web.',
+  evergreen: true,
   head,
   themeConfig,
   plugins,
