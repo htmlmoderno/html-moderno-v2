@@ -67,6 +67,7 @@
         v-html="schema.trim()"
       />
 
+      <last-update class="single-post__container" />
       <comments class="single-post__container single-post__box-comment border-t border-light-200 dark:border-dark-200" />
       <web-mentions class="single-post__container single-post__box-comment border-t border-light-200 dark:border-dark-200" />
     </article>
@@ -75,17 +76,17 @@
 
 <script>
 import ResponsivePicture from '@theme/components/ResponsivePicture'
-import TableContents from '@theme/components/TableContents'
 import { getSlugPost } from '@theme/utils'
 import { generateSchemaPost } from '@theme/utils/generateSchema'
 
 export default {
   name: 'Post',
   components: {
-    TableContents,
     ResponsivePicture,
+    TableContents: () => import('@theme/components/TableContents'),
     WebMentions: () => import('@theme/components/WebMentions'),
     SharePost: () => import('@theme/components/SharePost'),
+    LastUpdate: () => import('@theme/components/LastUpdate'),
     Comments: () => import('@theme/components/Comments')
   },
   setup (_, { root }) {
@@ -101,7 +102,7 @@ export default {
       updated_at: root.$page.lastUpdated,
       headers: [],
       date: {
-        short: new Intl.DateTimeFormat('default', { month: 'short', day: 'numeric' }).format(datePost),
+        short: datePost.toLocaleDateString('pt-BR', { month: 'short', day: 'numeric' }),
         datetime: fm.date
       },
       cover: {}

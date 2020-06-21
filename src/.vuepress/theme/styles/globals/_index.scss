@@ -20,6 +20,14 @@
 	}
 }
 
+.uc-first {
+	text-transform: lowercase;
+
+	&::first-letter {
+		text-transform: uppercase;
+	}
+}
+
 .container {
 	transition: max-width .5s;
 }

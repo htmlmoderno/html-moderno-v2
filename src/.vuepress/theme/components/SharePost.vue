@@ -23,10 +23,6 @@
           </a>
         </li>
       </ul>
-
-      <div class="mt-20">
-        Obrigado pela sua leitura!
-      </div>
     </div>
   </div>
 </template>
