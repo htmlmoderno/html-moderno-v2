@@ -12,8 +12,9 @@ cover:
     path: /images/posts/2018/08/
     alternativeText: Imagem de capa na cor de fundo salmão e um ícone de mascara de carnaval na cor vermelha
     caption: 
+
 demo: https://thepaciellogroup.github.io/AT-browser-tests/test-files/hidden-att.html
-audio: https://api.soundcloud.com/tracks/492895791
+audio: 492895791
 categories: [html5, acessibilidade]
 tags: [a11y, Atributos]
 author: ktquez

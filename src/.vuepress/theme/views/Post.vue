@@ -53,6 +53,18 @@
         :headers="post.headers"
       />
 
+      <div class="single-post__container">
+        <intersection-observer>
+          <template v-slot:default="{ show }">
+            <player
+              v-if="show && post.audio"
+              :track="post.audio"
+              :title="post.title"
+            />
+          </template>
+        </intersection-observer>
+      </div>
+
       <section class="single-post__container">
         <Content />
       </section>
@@ -75,6 +87,7 @@
 </template>
 
 <script>
+import IntersectionObserver from '@theme/components/IntersectionObserver'
 import ResponsivePicture from '@theme/components/ResponsivePicture'
 import { getSlugPost } from '@theme/utils'
 import { generateSchemaPost } from '@theme/utils/generateSchema'
@@ -83,7 +96,9 @@ export default {
   name: 'Post',
   components: {
     ResponsivePicture,
+    IntersectionObserver,
     TableContents: () => import('@theme/components/TableContents'),
+    Player: () => import('@theme/components/Player'),
     WebMentions: () => import('@theme/components/WebMentions'),
     SharePost: () => import('@theme/components/SharePost'),
     LastUpdate: () => import('@theme/components/LastUpdate'),
@@ -96,6 +111,7 @@ export default {
     const author = root.$site.pages.find(page => page.frontmatter.nickname === fm.author)
     const post = {
       title: fm.title,
+      audio: fm.audio || null,
       description: fm.description,
       author: author,
       mainCategory: fm.categories[0],
