@@ -1,6 +1,6 @@
 <template>
   <div
-    class="nav-menu fixed w-full h-full z-30 top-0 left-0 invisible opacity-0"
+    class="nav-menu"
     :class="{ 'nav-menu--show': show }"
   >
     <div
@@ -127,7 +127,9 @@ export default {
     }
 
     function toggleOverflow (overflow) {
-      document.body.style.overflow = overflow
+      setTimeout(() => {
+        document.body.style.overflow = overflow
+      }, 500)
     }
 
     function menuOpen () {
@@ -143,8 +145,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .nav-menu {
+  @apply fixed w-full h-full z-30 top-0 left-0 invisible opacity-0;
   transition: visibility .3s .5s, opacity .3s .5s;
   &--show {
     visibility: visible;
