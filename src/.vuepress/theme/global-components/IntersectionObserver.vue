@@ -16,7 +16,7 @@ export default {
       default: () => [0, 0.2]
     },
     root: {
-      type: [HTMLElement, Object],
+      type: typeof HTMLElement !== 'undefined' ? HTMLElement : Object,
       default: () => null
     },
     rootMargin: {
