@@ -12,7 +12,7 @@ module.exports = {
   responsive: {
     active: true,
     extension: 'png',
-    breakpoints: [400, 640, 800, 1024]
+    breakpoints: [480, 640, 800, 1024]
   },
   webmentions: {
     active: true,
