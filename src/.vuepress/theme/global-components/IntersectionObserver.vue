@@ -1,9 +1,5 @@
 <template>
-  <div
-    ref="ioWrapper"
-    class="h-10"
-    :class="{ 'h-auto': show }"
-  >
+  <div ref="ioWrapper">
     <slot :show="show" />
   </div>
 </template>

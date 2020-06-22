@@ -58,6 +58,8 @@
           <template v-slot:default="{ show }">
             <player
               v-if="show && post.audio"
+              class="h-40"
+              :class="{ 'h-auto': show }"
               :track="post.audio"
               :title="post.title"
             />
@@ -87,7 +89,6 @@
 </template>
 
 <script>
-import IntersectionObserver from '@theme/components/IntersectionObserver'
 import ResponsivePicture from '@theme/components/ResponsivePicture'
 import { getSlugPost } from '@theme/utils'
 import { generateSchemaPost } from '@theme/utils/generateSchema'
@@ -96,7 +97,6 @@ export default {
   name: 'Post',
   components: {
     ResponsivePicture,
-    IntersectionObserver,
     TableContents: () => import('@theme/components/TableContents'),
     Player: () => import('@theme/components/Player'),
     WebMentions: () => import('@theme/components/WebMentions'),
