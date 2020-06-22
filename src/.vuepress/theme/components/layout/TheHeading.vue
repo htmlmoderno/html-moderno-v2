@@ -71,15 +71,14 @@ import { DarkMode } from '@vue-a11y/dark-mode'
 import { onMounted, watch } from '@vue/composition-api'
 
 import SearchBox from '@SearchBox'
-import NavMenu from '@theme/components/NavMenu'
 import useDisclosure from '@theme/composable/useDisclosure'
 
 export default {
   name: 'TheHeading',
   components: {
-    NavMenu,
     DarkMode,
-    SearchBox
+    SearchBox,
+    NavMenu: () => import(/* webpackChunkName: "NavMenu" */ '@theme/components/NavMenu')
   },
   setup (_, { refs, root }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
