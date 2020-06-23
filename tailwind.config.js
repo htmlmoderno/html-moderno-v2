@@ -49,7 +49,7 @@ module.exports = {
     }
   },
   variants: {
-    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover'],
+    backgroundColor: ['responsive', 'dark', 'dark-hover', 'dark-group-hover'],
     borderColor: ['dark', 'dark-focus', 'dark-focus-within'],
     textColor: ['dark', 'dark-hover', 'dark-active', 'hover'],
     margin: ['responsive', 'hover', 'focus', 'last']
