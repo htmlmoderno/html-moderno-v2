@@ -9,6 +9,15 @@ module.exports = {
       families: [process.env.GOOGLE_FONT]
     }
   },
+  colorMode: {
+    defaultMode: 'light',
+    className: 'mode-%cm',
+    favicon: '#favicon',
+    metaThemeColor: {
+      light: '#f4f1ec',
+      dark: '#343743'
+    }
+  },
   responsive: {
     active: true,
     extension: 'png',
@@ -39,11 +48,11 @@ module.exports = {
       {
         label: 'Categorias',
         to: '/categorias/'
+      },
+      {
+        label: 'Preferências',
+        to: '/preferencias/'
       }
-      // {
-      //   label: 'Acessibilidade',
-      //   to: '/acessibilidade/'
-      // }
     ],
     social: [
       {

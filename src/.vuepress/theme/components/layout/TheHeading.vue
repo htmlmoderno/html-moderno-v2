@@ -21,12 +21,7 @@
         <div class="border-r dark:border-dark-200 border-textLight">
           <ClientOnly>
             <DarkMode
-              class-name="mode-%cm"
-              :meta-theme-color="{
-                light: '#f4f1ec',
-                dark: '#343743'
-              }"
-              favicon="#favicon"
+              v-bind="colorModeConfig"
               class="px-6 py-2"
               @click.native="resetDisqus"
             >
@@ -68,7 +63,7 @@
 
 <script>
 import { DarkMode } from '@vue-a11y/dark-mode'
-import { onMounted, watch } from '@vue/composition-api'
+import { onMounted, ref, watch } from '@vue/composition-api'
 
 import SearchBox from '@SearchBox'
 import useDisclosure from '@theme/composable/useDisclosure'
@@ -83,12 +78,18 @@ export default {
   setup (_, { refs, root }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
+    const colorModeConfig = ref(root.$themeConfig.colorMode)
+
     onMounted(() => refs.searchBox.$el.querySelector('input').setAttribute('aria-label', 'Pesquisar no site'))
 
     watch(() => root.$route, () => {
       if (isOpen.value) {
         onClose()
       }
+    })
+
+    watch(() => colorModeConfig, newConfig => {
+      colorModeConfig.value = { ...newConfig }
     })
 
     function resetDisqus (e) {
@@ -99,7 +100,8 @@ export default {
       isOpen,
       onOpen,
       onClose,
-      resetDisqus
+      resetDisqus,
+      colorModeConfig
     }
   }
 }
