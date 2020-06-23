@@ -85,7 +85,7 @@ export default {
 
     onMounted(() => refs.searchBox.$el.querySelector('input').setAttribute('aria-label', 'Pesquisar no site'))
 
-    watch('$route', () => {
+    watch(() => root.$route, () => {
       if (isOpen.value) {
         onClose()
       }

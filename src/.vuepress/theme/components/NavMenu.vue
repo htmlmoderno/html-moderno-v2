@@ -115,10 +115,10 @@ export default {
   },
 
   setup ({ show }, { emit }) {
-    watch('show', (val) => {
+    watch(() => show, (val) => {
       if (val) return menuOpen()
       menuClose()
-    }, { lazy: true })
+    })
 
     function escFullScreen (e) {
       if (e.key === 'Escape') {
