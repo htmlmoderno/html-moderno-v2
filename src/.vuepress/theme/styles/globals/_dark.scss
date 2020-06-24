@@ -1,6 +1,13 @@
 .mode-dark {
 	body {
-		@apply bg-dark text-textDark;    
+		@apply bg-dark text-textDark;
+
+    &.pref-no-shadows {
+      .n9m, .n9m--inner {
+        @apply border border-solid border-cat-html-daily;
+        box-shadow: none;
+      }
+    }
 	}
 
   input::placeholder {
