@@ -15,9 +15,9 @@
             <div>
               <check-field
                 id="reduce-animation"
-                v-model="motion['reduce-motion']"
+                v-model="motion['pref-reduce-motion']"
                 name="reduce-animation"
-                :checked="motion['reduce-motion']"
+                :checked="motion['pref-reduce-motion']"
               >
                 <span class="ml-2">Reduzir animações</span>
               </check-field>
@@ -32,6 +32,8 @@
 <script>
 import { ref, watch, onMounted } from '@vue/composition-api'
 
+import usePreferences from '@theme/composable/usePreferences'
+
 export default {
   name: 'MotionPreferencies',
 
@@ -40,8 +42,10 @@ export default {
   },
 
   setup () {
+    const { toggleClassByObject } = usePreferences()
+
     const motion = ref({
-      'reduce-motion': false
+      'pref-reduce-motion': false
     })
 
     watch(motion, setMotion, { deep: true })
@@ -57,11 +61,7 @@ export default {
 
     function setMotion (data) {
       const pref = JSON.parse(localStorage.getItem('preferences'))
-      const body = document.body
-      Object.keys(data).forEach(key => {
-        if (data[key]) return body.classList.add(key)
-        body.classList.remove(key)
-      })
+      toggleClassByObject(data)
       localStorage.setItem('preferences', JSON.stringify({ ...pref, motion: data }))
     }
 

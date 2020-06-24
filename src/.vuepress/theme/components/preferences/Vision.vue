@@ -15,9 +15,9 @@
             <div>
               <check-field
                 id="vision-contrast"
-                v-model="vision['high-contrast']"
+                v-model="vision['pref-high-contrast']"
                 name="vision-contrast"
-                :checked="vision['high-contrast']"
+                :checked="vision['pref-high-contrast']"
               >
                 <span class="ml-2">Aumentar contraste</span>
               </check-field>
@@ -32,9 +32,9 @@
             <div>
               <check-field
                 id="vision-noShadows"
-                v-model="vision['no-shadows']"
+                v-model="vision['pref-no-shadows']"
                 name="vision-noShadows"
-                :checked="vision['no-shadows']"
+                :checked="vision['pref-no-shadows']"
               >
                 <span class="ml-2">Desabilitar sombras</span>
               </check-field>
@@ -59,9 +59,11 @@ export default {
   },
 
   setup () {
+    const { toggleClassByObject } = usePreferences()
+
     const vision = ref({
-      'high-contrast': false,
-      'no-shadows': false
+      'pref-high-contrast': false,
+      'pref-no-shadows': false
     })
 
     watch(vision, setVision, { deep: true })
@@ -75,11 +77,7 @@ export default {
 
     function setVision (data) {
       const pref = JSON.parse(localStorage.getItem('preferences'))
-      const body = document.body
-      Object.keys(data).forEach(key => {
-        if (data[key]) return body.classList.add(key)
-        body.classList.remove(key)
-      })
+      toggleClassByObject(data)
       localStorage.setItem('preferences', JSON.stringify({ ...pref, vision: data }))
     }
 

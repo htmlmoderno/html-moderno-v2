@@ -10,26 +10,26 @@ html {
 	}
 }
 
-body.font-dyslexic {
+body.pref-font-dyslexic {
 	.content__default {
 		font-family: 'OpenDyslexic';
 	}
 }
 
-body.font-monospace {
+body.pref-font-monospace {
 	.content__default {
 		font-family: monospace;
 	}
 }
 
-body.no-shadows {
+body.pref-no-shadows {
 	.n9m, .n9m--inner {
 		@apply border border-solid border-textLight;
 		box-shadow: none;
 	}
 }
 
-body.reduce-motion * {
+body.pref-reduce-motion * {
 	transition: none !important;
 	animation: none !important;
 }

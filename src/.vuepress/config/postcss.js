@@ -18,7 +18,8 @@ if (process.env.NODE_ENV !== 'development') {
         'outbound'
       ],
       whitelistPatterns: [
-        /-cat-/
+        /-cat-/,
+        /pref-/
       ],
       whitelistPatternsChildren: [
         /content__default$/,

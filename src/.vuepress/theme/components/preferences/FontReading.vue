@@ -18,8 +18,8 @@
                 v-model="font"
                 type="radio"
                 name="font"
-                val="sintony"
-                :checked="font === 'sintony'"
+                val="pref-font-sintony"
+                :checked="font === 'pref-font-sintony'"
               >
                 <span class="ml-2">Sans serif (Sintony)</span>
               </check-field>
@@ -37,8 +37,8 @@
                 v-model="font"
                 type="radio"
                 name="font"
-                val="dyslexic"
-                :checked="font === 'dyslexic'"
+                val="pref-font-dyslexic"
+                :checked="font === 'pref-font-dyslexic'"
               >
                 <span class="btn-font-dyslexic ml-2">Open dyslexic</span>
               </check-field>
@@ -56,8 +56,8 @@
                 v-model="font"
                 type="radio"
                 name="font"
-                val="monospace"
-                :checked="font === 'monospace'"
+                val="pref-font-monospace"
+                :checked="font === 'pref-font-monospace'"
               >
                 <span class="btn-font-monospace ml-2">Monospace</span>
               </check-field>
@@ -72,6 +72,8 @@
 <script>
 import { ref, watch, onMounted } from '@vue/composition-api'
 
+import usePreferences from '@theme/composable/usePreferences'
+
 export default {
   name: 'FontReadingPreferencies',
 
@@ -80,20 +82,19 @@ export default {
   },
 
   setup () {
+    const { toggleClass } = usePreferences()
     const font = ref(null)
 
     watch(font, setFontReading)
 
     onMounted(() => {
       const pref = JSON.parse(localStorage.getItem('preferences'))
-      font.value = pref ? pref.font : 'sintony'
+      font.value = pref ? pref.font : 'pref-font-sintony'
     })
 
     function setFontReading (val, old) {
       if (!val) return
-      const body = document.body
-      if (old) body.classList.remove(`font-${old}`)
-      body.classList.add(`font-${val}`)
+      toggleClass(val, old)
       const pref = JSON.parse(localStorage.getItem('preferences'))
       localStorage.setItem('preferences', JSON.stringify(pref ? { ...pref, font: val } : { font: val }))
     }
