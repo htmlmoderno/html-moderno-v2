@@ -1,12 +1,35 @@
-@media (prefers-reduced-motion: reduce) {
-	*, :before, :after {
-		transition: none !important;
+html {
+	@media(prefers-reduced-motion: reduce) {
+		*,
+		*::before,
+		*::after {
+			transition: none !important;
+			animation: none !important;
+			scroll-behavior: auto !important;
+		}
 	}
 }
 
-
-html {
-	@media (prefers-reduced-motion: reduce) {
-		scroll-behavior: auto !important;
+body.font-dyslexic {
+	.content__default {
+		font-family: 'OpenDyslexic';
 	}
+}
+
+body.font-monospace {
+	.content__default {
+		font-family: monospace;
+	}
+}
+
+body.no-shadows {
+	.n9m, .n9m--inner {
+		@apply border border-solid border-textLight;
+		box-shadow: none;
+	}
+}
+
+body.reduce-motion * {
+	transition: none !important;
+	animation: none !important;
 }

@@ -16,6 +16,7 @@
 import { computed, onMounted } from '@vue/composition-api'
 
 import TheHeading from '@theme/components/layout/TheHeading'
+import usePreferences from '@theme/composable/usePreferences'
 
 export default {
   name: 'GlobalLayout',
@@ -23,12 +24,16 @@ export default {
     TheHeading,
     TheFooter: () => import('@theme/components/layout/TheFooter')
   },
+
   setup (_, { root }) {
+    const { init: initPreferences } = usePreferences()
     const layout = computed(() => {
       if (!root.$page.path) return 'NotFound'
       if (root.$frontmatter.layout) return root.$frontmatter.layout
       return 'Layout'
     })
+
+    initPreferences()
 
     onMounted(() => {
       import('webfontloader')
