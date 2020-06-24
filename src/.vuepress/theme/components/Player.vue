@@ -16,11 +16,11 @@ export default {
 
   props: {
     title: {
-      type: [String, Number],
+      type: String,
       default: ''
     },
     track: {
-      type: String,
+      type: [String, Number],
       required: true
     }
   }

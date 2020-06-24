@@ -86,7 +86,7 @@ export default {
     watch(isFullScreen, (val) => {
       if (val) return openFullScreen()
       closeFullScreen()
-    }, { lazy: true })
+    })
 
     onMounted(() => {
       root.$nextTick(() => {
