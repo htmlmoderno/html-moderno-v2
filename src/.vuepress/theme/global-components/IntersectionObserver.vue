@@ -13,7 +13,7 @@ export default {
   props: {
     threshold: {
       type: Array,
-      default: () => [0, 0.2]
+      default: () => [0]
     },
     root: {
       type: typeof HTMLElement !== 'undefined' ? HTMLElement : Object,
@@ -21,7 +21,7 @@ export default {
     },
     rootMargin: {
       type: String,
-      default: () => '0px'
+      default: () => '300px'
     }
   },
 
