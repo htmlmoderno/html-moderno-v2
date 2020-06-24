@@ -55,7 +55,7 @@ export default {
     const posts = ref([])
     const allPosts = filterPosts(root.$site.pages)
 
-    watch('$route.path', () => {
+    watch(() => root.$route.path, () => {
       const postsByCurrentCategory = allPosts.filter(page => page.frontmatter.categories.includes(root.$frontmatter.slug))
       posts.value = prepareCardPost(sortPostsByDate(postsByCurrentCategory, true))
     })
