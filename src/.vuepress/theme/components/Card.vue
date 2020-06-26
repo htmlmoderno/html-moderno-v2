@@ -1,5 +1,5 @@
 <template>
-  <div class="card n9m p-4">
+  <article class="card n9m p-4">
     <router-link
       :to="post.to"
       class="w-full block rounded-lg overflow-hidden"
@@ -55,7 +55,7 @@
         ACESSAR POST
       </span>
     </router-link>
-  </div>
+  </article>
 </template>
 
 <script>
