@@ -1,7 +1,6 @@
 
 module.exports = [
   ['meta', { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' }],
-  ['meta', { charset: 'utf-8' }],
   ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1' }],
   ['meta', { name: 'apple-mobile-web-app-title', content: 'HTML Moderno | Tornando o HTML ainda mais interessante.' }],
   ['meta', { name: 'theme-color', content: '#F4F1EC' }],
