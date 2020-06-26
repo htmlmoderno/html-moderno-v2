@@ -37,7 +37,8 @@
           class="n9m block mt-12 w-full p-4"
         >
           <img
-            class="w-full inline rounded-lg"
+            class="w-full rounded-lg bg-light-200 inline-block"
+            style="min-height: 400px;"
             :src="`${post.cover.path}.${post.cover.extension}`"
             :title="post.cover.alternativeText"
             :alt="post.cover.alternativeText"
