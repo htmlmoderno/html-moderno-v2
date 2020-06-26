@@ -88,6 +88,9 @@ export default {
 <style lang="scss">
 .tags-page-section {
   @apply flex flex-wrap py-24;
+  &:first-child {
+    @apply pt-0 mt-12;
+  }
   &:not(:last-child) {
     @apply border-b border-light-200;
   }

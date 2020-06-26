@@ -1,7 +1,7 @@
 <template>
   <section
     role="complementary"
-    class="presentation relative mt-16 sm:mt-32"
+    class="presentation relative mt-16 sm:mt-48"
   >
     <div class="relative z-20">
       <h1 class="font-bold w-full sm:w-3/4 lg:w-2/4">

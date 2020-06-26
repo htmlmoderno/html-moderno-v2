@@ -1,7 +1,7 @@
 <template>
   <main
     id="main"
-    class="mt-12 sm:mt-32"
+    class="mt-12 sm:mt-24"
   >
     <slot />
   </main>
