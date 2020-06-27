@@ -28,7 +28,7 @@ input::placeholder {
   transition: outline-offset .1s ease;
 }
 
-:focus {
+*:focus {
   outline-color: #573E48;
   outline-offset: 3px;
 }
