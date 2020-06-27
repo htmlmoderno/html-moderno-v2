@@ -1,5 +1,5 @@
 <template>
-  <div class="global-layout container mx-auto">
+  <div class="global-layout container mx-auto" dir="ltr">
     <the-heading />
     <transition
       name="fade"
