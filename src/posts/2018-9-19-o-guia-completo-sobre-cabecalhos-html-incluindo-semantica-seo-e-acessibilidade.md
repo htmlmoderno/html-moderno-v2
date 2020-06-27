@@ -10,7 +10,7 @@ announcer: Postagem %title% %complementRoute%
 cover: 
   - extension: png
     path: /images/posts/2018/09/
-    alternativeText: Imagem de capa na cor de fundo salmão e uma ilustração da janela de um browser contendo um artigo
+    alternativeText: Imagem de capa background salmão e uma ilustração da janela de um browser contendo um artigo
     caption: Hierarquia de cabeçalhos
 
 categories: [html5, seo, semantica, acessibilidade]

@@ -10,7 +10,7 @@ announcer: Postagem %title% %complementRoute%
 cover: 
   - extension: png
     path: /images/posts/2018/08/
-    alternativeText: Imagem de capa na cor de fundo salmão e uma ilustração com 3 cards, com um simulando não estar visível
+    alternativeText: Imagem de capa background salmão e uma ilustração com 3 cards, com um simulando não estar visível
     caption: 
 
 demo: https://thepaciellogroup.github.io/AT-browser-tests/test-files/hidden-att.html

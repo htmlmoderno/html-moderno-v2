@@ -13,7 +13,7 @@
           <img
             class="inline"
             src="/images/html-moderno-logo.svg"
-            alt="Logo do HTML Moderno 4 quadrados laranja com 1 letra do HTML cada mais símbolo universal acessibilidade no centro"
+            alt="Logo HTML Moderno 4 quadrados laranja com 1 letra do HTML cada e símbolo universal de acessibilidade no centro"
           >
         </router-link>
       </div>
