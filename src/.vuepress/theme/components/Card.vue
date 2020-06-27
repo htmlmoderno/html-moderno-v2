@@ -32,7 +32,7 @@
         :to="`/autores/${encodeURI(post.author.toLowerCase())}`"
         class="underline"
       >
-        {{ post.author }}
+        <span class="sr-only">Colunista: </span> {{ post.author }}
       </router-link>
       <span :class="`mx-2 font-bold text-cat-${post.category}`">//</span>
       <DisqusCount
