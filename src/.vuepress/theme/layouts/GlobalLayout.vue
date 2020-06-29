@@ -20,8 +20,8 @@ import { computed } from '@vue/composition-api'
 
 import TheHeading from '@theme/components/layout/TheHeading'
 import usePreferences from '@theme/composable/usePreferences'
-import NProgressMixin from '@theme/mixins/NProgress'
-import WebFontLoaderMixin from '@theme/mixins/WebFontLoader'
+import NProgressMixin from '@theme/mixins/nProgress'
+import WebFontLoaderMixin from '@theme/mixins/webFontLoader'
 
 export default {
   name: 'GlobalLayout',

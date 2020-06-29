@@ -4,6 +4,7 @@
     :class="{ 'nav-menu--show': show }"
   >
     <div
+      v-show="show"
       class="nav-menu__overlay z-20 w-full h-full top-0 left-0 fixed bg-overlay"
       aria-hidden="true"
       @click="$emit('onClose')"
@@ -95,7 +96,6 @@
 
 <script>
 import { watch } from '@vue/composition-api'
-import FocusLock from 'vue-focus-lock'
 
 import SearchBox from '@SearchBox'
 
@@ -103,8 +103,8 @@ export default {
   name: 'NavMenu',
 
   components: {
-    FocusLock,
-    SearchBox
+    SearchBox,
+    FocusLock: () => import(/* webpackChunkName: "FocusLock" */ 'vue-focus-lock')
   },
 
   props: {
