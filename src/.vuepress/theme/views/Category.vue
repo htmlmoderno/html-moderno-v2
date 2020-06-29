@@ -58,6 +58,8 @@ export default {
     watch(() => root.$route.path, () => {
       const postsByCurrentCategory = allPosts.filter(page => page.frontmatter.categories.includes(root.$frontmatter.slug))
       posts.value = prepareCardPost(sortPostsByDate(postsByCurrentCategory, true))
+    }, {
+      immediate: true
     })
 
     return {
