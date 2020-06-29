@@ -37,8 +37,7 @@
           class="n9m block mt-12 w-full p-4"
         >
           <img
-            class="w-full rounded-lg bg-light-200 inline-block"
-            style="min-height: 400px;"
+            class="single-post__img-cover w-full rounded-lg bg-light-200 inline-block"
             :src="`${post.cover.path}.${post.cover.extension}`"
             :title="post.cover.alternativeText"
             :alt="post.cover.alternativeText"
@@ -151,6 +150,11 @@ export default {
 
 <style lang="scss">
 .single-post {
+  &__img-cover {
+    @screen lg {
+      min-height: 400px;
+    }
+  }
   &__container {
     @apply w-full mx-auto mt-24;
 
