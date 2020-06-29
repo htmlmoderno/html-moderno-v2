@@ -55,7 +55,7 @@
       />
 
       <div class="single-post__container">
-        <intersection-observer>
+        <intersection-observer root-margin="300px">
           <template v-slot:default="{ show }">
             <player
               v-if="show && post.audio"
