@@ -1,5 +1,8 @@
 <template>
-  <div class="global-layout container mx-auto" dir="ltr">
+  <div
+    class="global-layout container mx-auto"
+    dir="ltr"
+  >
     <the-heading />
     <transition
       name="fade"
@@ -13,17 +16,22 @@
 </template>
 
 <script>
-import { computed, onMounted } from '@vue/composition-api'
+import { computed } from '@vue/composition-api'
 
 import TheHeading from '@theme/components/layout/TheHeading'
 import usePreferences from '@theme/composable/usePreferences'
+import NProgressMixin from '@theme/mixins/NProgress'
+import WebFontLoaderMixin from '@theme/mixins/WebFontLoader'
 
 export default {
   name: 'GlobalLayout',
+
   components: {
     TheHeading,
-    TheFooter: () => import('@theme/components/layout/TheFooter')
+    TheFooter: () => import(/* webpackChunkName: "TheFooter" */ '@theme/components/layout/TheFooter')
   },
+
+  mixins: [NProgressMixin, WebFontLoaderMixin],
 
   setup (_, { root }) {
     const { init: initPreferences } = usePreferences()
@@ -34,13 +42,6 @@ export default {
     })
 
     initPreferences()
-
-    onMounted(() => {
-      import('webfontloader')
-        .then(module => {
-          module.default.load({ ...root.$themeConfig.webFontLoader })
-        })
-    })
 
     return {
       layout

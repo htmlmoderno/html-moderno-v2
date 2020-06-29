@@ -27,7 +27,25 @@ div.n9m-search.search-box {
   }
 }
 
-#nprogress .bar {
-  @apply bg-accent #{!important};
-  height: 5px;
+#nprogress {
+  pointer-events: none;
+
+  .bar {
+    @apply bg-accent;
+    position: fixed;
+    z-index: 1031;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+  }
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+
+  #nprogress .bar {
+    position: absolute;
+  }
 }
