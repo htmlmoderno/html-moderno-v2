@@ -25,7 +25,7 @@
         >
           <router-link
             class="block"
-            :to="`/categorias/${category.frontmatter.slug}`"
+            :to="`/categorias/${category.frontmatter.slug}/`"
             :aria-label="`Ver posts da categoria ${category.title.toLowerCase()}`"
           >
             <card-category

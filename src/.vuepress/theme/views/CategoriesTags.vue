@@ -14,7 +14,7 @@
         >
           <div class="w-full sm:w-1/3 lg:w-1/4 pr-0 sm:pr-12 lg:pr-20">
             <router-link
-              :to="`/categorias/${category.frontmatter.slug}`"
+              :to="`/categorias/${category.frontmatter.slug}/`"
               class="block"
             >
               <card-category
@@ -39,7 +39,7 @@
                 <router-link
                   class="tags-page-list__link"
                   rel="noindex"
-                  :to="`/tags/${encodeURI(tag)}`"
+                  :to="`/tags/${encodeURI(tag)}/`"
                 >
                   {{ tag }}
                 </router-link>
