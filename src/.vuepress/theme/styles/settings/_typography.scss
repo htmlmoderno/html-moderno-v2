@@ -15,3 +15,11 @@ $font-stack: 'Sintony', 'Segoe UI', 'Arial', 'Geneva';
   font-style: normal;
   font-display: auto;
 }
+
+@font-face {
+  font-family: 'Hack';
+  src: url('../../public/fonts/hack-regular.woff2?sha=3114f1256') format('woff2'), url('../../public/fonts/hack-regular.woff?sha=3114f1256') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}

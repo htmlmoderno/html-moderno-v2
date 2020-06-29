@@ -195,8 +195,8 @@
     text-align: center;
   }
 
-  code[class*=language-] ,pre[class*=language-] {
-    font-size: 1.10rem;
+  code[class*=language-], pre[class*=language-] {
+    @apply text-base;
     background: none;
     text-align: left;
     white-space: pre;
@@ -224,6 +224,7 @@
     code {
       margin: 0;
       padding: 0;
+      font-family: 'Hack', monospace;
 
       &:before {
         position: absolute;
