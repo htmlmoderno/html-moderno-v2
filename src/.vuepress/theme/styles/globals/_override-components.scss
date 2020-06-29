@@ -2,14 +2,14 @@ div.n9m-search.search-box {
   @apply rounded-lg w-full;
   
   > input {
-    @apply w-full left-0 bg-transparent h-auto border-none rounded-lg py-2 px-4;
+    @apply w-full left-0 bg-transparent h-auto border-none rounded-lg py-2 px-4 text-dark;
     background-image: url(~@theme/assets/sprite/svg/search.svg);
     background-position: 95%;
     background-repeat:  no-repeat;
     background-size: 18px;
 
     &:focus {
-      @apply shadow-outline;
+      outline: auto;
     }
   }
 
