@@ -96,6 +96,7 @@
 
 <script>
 import { watch } from '@vue/composition-api'
+import FocusLock from 'vue-focus-lock'
 
 import SearchBox from '@SearchBox'
 
@@ -104,7 +105,7 @@ export default {
 
   components: {
     SearchBox,
-    FocusLock: () => import(/* webpackChunkName: "FocusLock" */ 'vue-focus-lock')
+    FocusLock
   },
 
   props: {
