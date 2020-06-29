@@ -50,6 +50,7 @@
               <router-link
                 :to="link.to"
                 class="flex justify-between items-center py-4 border-b border-solid border-cat-semantica dark:border-dark-200 hover:underline"
+                :aria-label="`Ir para a página ${link.label}`"
                 v-text="link.label"
               />
             </li>
@@ -79,11 +80,10 @@
                 class="flex justify-between items-center py-4 border-b border-solid border-cat-semantica dark:border-dark-200 hover:underline"
                 target="_blank"
                 rel="noopener"
+                :title="`Ir para o ${link.label} do HTML Moderno`"
+                :aria-label="`Ir para o ${link.label} do HTML Moderno, abre em uma nova janela`"
               >
-                <span>
-                  {{ link.label }}
-                  <span class="sr-only">, abre em uma nova janela</span>
-                </span>
+                <span v-text="link.label" />
                 <vp-icon name="external-link" />
               </a>
             </li>

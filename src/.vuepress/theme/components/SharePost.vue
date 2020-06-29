@@ -17,8 +17,9 @@
             :href="social.link"
             target="_blank"
             class="n9m n9m--active"
+            :title="`Compartilhar o post ${social.name === 'email' ? 'via' : 'no'} ${social.name}`"
+            :aria-label="`Compartilhar o post no ${social.name}, abre em uma nova janela`"
           >
-            <span class="sr-only">Compartilhar o post no {{ social.name }}, abre em uma nova janela</span>
             <vp-icon :name="social.name" />
           </a>
         </li>

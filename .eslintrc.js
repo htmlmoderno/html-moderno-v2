@@ -17,6 +17,7 @@ module.exports = {
     'eslint-plugin-import-helpers'
   ],
   rules: {
+    'vuejs-accessibility/anchor-has-content': "off",
     'import-helpers/order-imports': [
       'warn',
       {
