@@ -125,7 +125,7 @@ Quando se trata de SEO também não tem problemas utilizar mais de um H1 na pág
 
 [John Mueller](https://twitter.com/JohnMu) Webmaster Trends Analyst na Google, muito conhecido dentre os que trabalham com SEO, respondeu a um tweet sobre esse assunto:
 
-<intersection-observer rootMargin="300px">
+<intersection-observer rootMargin="700px">
   <template v-slot="data">
     <figure v-if="data.show">
       <figcaption class="text-base">Tweet de resposta do John</figcaption>

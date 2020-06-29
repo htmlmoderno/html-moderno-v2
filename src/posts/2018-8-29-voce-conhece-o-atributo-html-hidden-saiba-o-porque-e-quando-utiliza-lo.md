@@ -140,7 +140,7 @@ Os casos de uso são muitos, mas use com moderação.
 
 ## Suporte
 
-<intersection-observer rootMargin="300px">
+<intersection-observer rootMargin="600px">
   <template v-slot="data">
     <iframe v-if="data.show" src="https://caniuse.bitsofco.de/embed/index.html?feat=hidden&periods=future_1,current,past_1,past_2" height="420" allowfullscreen="true" style="width: 100%"></iframe>
   </template>
