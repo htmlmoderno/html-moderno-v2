@@ -6,18 +6,18 @@
     "description": "No HTML Moderno você fica atualizado com artigos e vídeos sobre o que tem de mais moderno em HTML5, semântica, acessibilidade, SEO, UX e performance web.",
     "items": [
         {
-            "id": "https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade/",
-            "url": "https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade/",
-            "title": "O guia completo sobre cabeçalhos HTML incluindo semântica, SEO e acessibilidade",
-            "summary": "Tags de cabeçalhos HTML H1-H6 indicam a relevância entre os títulos, otimiza para mecanismos de busca e estrutura de maneira semântica para acessibilidade.",
-            "date_modified": "2018-09-19T00:00:00.000Z"
-        },
-        {
             "id": "https://htmlmoderno.com.br/posts/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo/",
             "url": "https://htmlmoderno.com.br/posts/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo/",
             "title": "Você conhece o atributo HTML hidden? Saiba quando utilizá-lo",
             "summary": "Um atributo desconhecido pelos desenvolvedores é o atributo global do HTML chamado &#96;hidden&#96;, nesse post vamos abordar quando utilizá-lo da melhor maneira.",
             "date_modified": "2018-08-28T00:00:00.000Z"
+        },
+        {
+            "id": "https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade/",
+            "url": "https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade/",
+            "title": "O guia completo sobre cabeçalhos HTML incluindo semântica, SEO e acessibilidade",
+            "summary": "Tags de cabeçalhos HTML H1-H6 indicam a relevância entre os títulos, otimiza para mecanismos de busca e estrutura de maneira semântica para acessibilidade.",
+            "date_modified": "2018-09-19T00:00:00.000Z"
         }
     ]
 }

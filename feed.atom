@@ -2,19 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://htmlmoderno.com.br</id>
     <title></title>
-    <updated>2020-06-27T01:48:05.039Z</updated>
+    <updated>2020-06-29T02:37:47.079Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://htmlmoderno.com.br"/>
     <link rel="self" href="https://htmlmoderno.com.br/feed.atom"/>
     <subtitle>No HTML Moderno você fica atualizado com artigos e vídeos sobre o que tem de mais moderno em HTML5, semântica, acessibilidade, SEO, UX e performance web.</subtitle>
-    <entry>
-        <title type="html"><![CDATA[O guia completo sobre cabeçalhos HTML incluindo semântica, SEO e acessibilidade]]></title>
-        <id>https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade/</id>
-        <link href="https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade/">
-        </link>
-        <updated>2018-09-19T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Tags de cabeçalhos HTML H1-H6 indicam a relevância entre os títulos, otimiza para mecanismos de busca e estrutura de maneira semântica para acessibilidade.]]></summary>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Você conhece o atributo HTML hidden? Saiba quando utilizá-lo]]></title>
         <id>https://htmlmoderno.com.br/posts/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo/</id>
@@ -22,5 +14,13 @@
         </link>
         <updated>2018-08-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Um atributo desconhecido pelos desenvolvedores é o atributo global do HTML chamado &#96;hidden&#96;, nesse post vamos abordar quando utilizá-lo da melhor maneira.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[O guia completo sobre cabeçalhos HTML incluindo semântica, SEO e acessibilidade]]></title>
+        <id>https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade/</id>
+        <link href="https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade/">
+        </link>
+        <updated>2018-09-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Tags de cabeçalhos HTML H1-H6 indicam a relevância entre os títulos, otimiza para mecanismos de busca e estrutura de maneira semântica para acessibilidade.]]></summary>
     </entry>
 </feed>
