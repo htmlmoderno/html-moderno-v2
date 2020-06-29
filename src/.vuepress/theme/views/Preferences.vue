@@ -26,10 +26,10 @@ export default {
   name: 'Preferences',
 
   components: {
-    Theme: () => import('@theme/components/preferences/Theme'),
-    FontReading: () => import('@theme/components/preferences/FontReading'),
-    Vision: () => import('@theme/components/preferences/Vision'),
-    Motion: () => import('@theme/components/preferences/Motion')
+    Theme: () => import(/* webpackChunkName: "Theme" */ '@theme/components/preferences/Theme'),
+    FontReading: () => import(/* webpackChunkName: "FontReading" */ '@theme/components/preferences/FontReading'),
+    Vision: () => import(/* webpackChunkName: "Vision" */ '@theme/components/preferences/Vision'),
+    Motion: () => import(/* webpackChunkName: "Motio" */ '@theme/components/preferences/Motion')
   }
 }
 </script>

@@ -98,12 +98,12 @@ export default {
   name: 'Post',
   components: {
     ResponsivePicture,
-    TableContents: () => import('@theme/components/TableContents'),
-    Player: () => import('@theme/components/Player'),
-    WebMentions: () => import('@theme/components/WebMentions'),
-    SharePost: () => import('@theme/components/SharePost'),
-    LastUpdate: () => import('@theme/components/LastUpdate'),
-    Comments: () => import('@theme/components/Comments')
+    TableContents: () => import(/* webpackChunkName: "TableContents" */ '@theme/components/TableContents'),
+    Player: () => import(/* webpackChunkName: "Player" */ '@theme/components/Player'),
+    WebMentions: () => import(/* webpackChunkName: "WebMentions" */ '@theme/components/WebMentions'),
+    SharePost: () => import(/* webpackChunkName: "SharePost" */ '@theme/components/SharePost'),
+    LastUpdate: () => import(/* webpackChunkName: "LastUpdate" */ '@theme/components/LastUpdate'),
+    Comments: () => import(/* webpackChunkName: "Comment" */ '@theme/components/Comments')
   },
   setup (_, { root }) {
     const fm = root.$frontmatter

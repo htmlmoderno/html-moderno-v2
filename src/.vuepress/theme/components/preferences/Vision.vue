@@ -55,7 +55,7 @@ export default {
   name: 'VisionPreferencies',
 
   components: {
-    CheckField: () => import('@theme/components/CheckField')
+    CheckField: () => import(/* webpackChunkName: "CheckField" */ '@theme/components/CheckField')
   },
 
   setup () {

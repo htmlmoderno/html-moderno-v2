@@ -38,7 +38,7 @@ export default {
   name: 'MotionPreferencies',
 
   components: {
-    CheckField: () => import('@theme/components/CheckField')
+    CheckField: () => import(/* webpackChunkName: "CheckField" */ '@theme/components/CheckField')
   },
 
   setup () {

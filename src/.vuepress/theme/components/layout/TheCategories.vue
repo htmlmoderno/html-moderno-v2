@@ -45,7 +45,7 @@ import Views from '@theme/utils/views'
 export default {
   name: 'TheCategories',
   components: {
-    CardCategory: () => import('@theme/components/CardCategory')
+    CardCategory: () => import(/* webpackChunkName: "CardCategory" */ '@theme/components/CardCategory')
   },
   setup (_, { root }) {
     const getCategories = Views(root.$site.pages)

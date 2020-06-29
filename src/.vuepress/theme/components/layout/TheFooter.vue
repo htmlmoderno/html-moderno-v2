@@ -67,8 +67,8 @@
 export default {
   name: 'TheFooter',
   components: {
-    BackToTop: () => import('@theme/components/BackToTop'),
-    TheCategories: () => import('@theme/components/layout/TheCategories')
+    BackToTop: () => import(/* webpackChunkName: "BackToTop" */ '@theme/components/BackToTop'),
+    TheCategories: () => import(/* webpackChunkName: "TheCategories" */ '@theme/components/layout/TheCategories')
   },
   setup (_, { root }) {
     const links = [...root.$themeConfig.links.social, ...root.$themeConfig.links.footer]

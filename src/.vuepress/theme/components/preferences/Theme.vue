@@ -88,7 +88,7 @@ export default {
   name: 'ThemePreferencies',
 
   components: {
-    CheckField: () => import('@theme/components/CheckField')
+    CheckField: () => import(/* webpackChunkName: "CheckField" */ '@theme/components/CheckField')
   },
 
   setup (_, { root }) {
