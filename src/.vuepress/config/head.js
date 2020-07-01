@@ -72,10 +72,7 @@ module.exports = [
     (function () {
       const colorMode = localStorage.getItem('colorMode');
       const colorModePrefer = localStorage.getItem('colorModePrefer');
-      const mode = colorMode === 'system' ? colorModePrefer : colorMode
-      if (!document.documentElement.classList.contains('mode-' + mode)) {
-        document.documentElement.classList.add('mode-' + mode)
-      }
+      document.documentElement.classList.add('mode-' + (colorMode === 'system' ? colorModePrefer : colorMode))
     })()
   `]
 ]
