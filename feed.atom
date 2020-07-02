@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://htmlmoderno.com.br</id>
     <title></title>
-    <updated>2020-06-29T20:18:15.524Z</updated>
+    <updated>2020-07-02T13:42:50.206Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://htmlmoderno.com.br"/>
     <link rel="self" href="https://htmlmoderno.com.br/feed.atom"/>
@@ -14,6 +14,14 @@
         </link>
         <updated>2018-08-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Um atributo desconhecido pelos desenvolvedores é o atributo global do HTML chamado &#96;hidden&#96;, nesse post vamos abordar quando utilizá-lo da melhor maneira.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Você sempre vê o DOCTYPE na primeira linha do HTML, mas você sabe o por quê?]]></title>
+        <id>https://htmlmoderno.com.br/posts/voce-sempre-ve-o-doctype-ali-na-primeira-linha-mas-voce-sabe-o-por-que/</id>
+        <link href="https://htmlmoderno.com.br/posts/voce-sempre-ve-o-doctype-ali-na-primeira-linha-mas-voce-sabe-o-por-que/">
+        </link>
+        <updated>2018-09-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Essencial no HTML, a declaração do DOCTYPE atualmente está mais curta e simples, porém nem sempre foi assim. Fique sabendo mais sobre o seu papel.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[O guia completo sobre cabeçalhos HTML incluindo semântica, SEO e acessibilidade]]></title>
