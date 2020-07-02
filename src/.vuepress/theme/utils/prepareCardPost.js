@@ -18,10 +18,11 @@ export default function prepareCardPost (posts) {
       data.category = post.frontmatter.categories[0]
     }
 
-    if (post.frontmatter.cover) {
+    const image = post.frontmatter.thumb || post.frontmatter.cover
+    if (image) {
       data.image = {
-        src: `${post.frontmatter.cover[0].path}${slug},w_640.${post.frontmatter.cover[0].extension}`,
-        alt: post.frontmatter.cover[0].alternativeText
+        src: `${image[0].path}${slug},w_480.${image[0].extension}`,
+        alt: image[0].alternativeText
       }
     }
 
