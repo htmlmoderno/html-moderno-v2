@@ -4,7 +4,7 @@
         <title></title>
         <link>https://htmlmoderno.com.br</link>
         <description>No HTML Moderno você fica atualizado com artigos e vídeos sobre o que tem de mais moderno em HTML5, semântica, acessibilidade, SEO, UX e performance web.</description>
-        <lastBuildDate>Thu, 02 Jul 2020 13:42:50 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 02 Jul 2020 19:43:54 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://htmlmoderno.com.br/feed.atom" rel="self" type="application/rss+xml"/>
