@@ -52,7 +52,7 @@ export function generateSchemaPost (post) {
     },
     "headline": "${post.title}",
     "description": "${post.description}",
-    "dateModified": "${post.updated_at.replace(' ', 'T')}-03:00",
+    "dateModified": "${post.updated_at && post.updated_at.replace(' ', 'T')}-03:00",
     "author": {
         "@type": "Person",
         "@id": "${process.env.URL_BASE}${post.author.path}#schema-author",
