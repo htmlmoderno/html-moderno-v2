@@ -27,7 +27,7 @@ module.exports = [
   ['meta', { property: 'og:type', content: 'website' }],
   ['meta', { property: 'og:site_name', content: 'HTML Moderno' }],
   ['meta', { property: 'og:image:height', content: '1200' }],
-  ['meta', { property: 'og:image:width', content: '360' }],
+  ['meta', { property: 'og:image:width', content: '630' }],
   ['meta', { property: 'og:image:type', content: 'image/png' }],
   ['meta', { property: 'og:url', content: 'https://htmlmoderno.com.br/' }],
 
