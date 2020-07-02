@@ -11,7 +11,7 @@
       @keyup.enter="$emit('onClose')"
     />
     <div
-      class="nav-menu__content fixed z-30 w-full h-full sm:w-1/2 md:w-4/12 top-0 bg-light dark:bg-dark overflow-auto px-6 md:p-12 py-16 shadow-md"
+      class="nav-menu__content fixed z-30 w-full h-full sm:w-1/2 lg:w-4/12 top-0 bg-light dark:bg-dark overflow-auto px-6 md:p-12 py-16 shadow-md"
       :class="{ 'nav-menu__content--show': show }"
       :aria-hidden="!show"
     >
