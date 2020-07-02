@@ -1,8 +1,8 @@
 ---
-order: 9
+order: 5
 view: Category
 lang: pt-br
-active: false
+active: true
 
 title: Segurança
 description: Segurança web é algo importantíssimo e uma boa escrita HTML garante menos vulnerabilidade em seu documento. Dicas, boas práticas e muito mais.

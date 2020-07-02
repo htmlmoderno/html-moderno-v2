@@ -1,8 +1,8 @@
 ---
-order: 5
+order: 9
 view: Category
 lang: pt-br
-active: true
+active: false
 
 title: UX
 description: Focar na experiência do usuário é essencial quando usam o seu produto ou serviço, aqui você conhecerá algumas táticas de UX utilizando o HTML moderno
