@@ -28,7 +28,7 @@ meta:
   - name: og:description
     content: Um atributo desconhecido pelos desenvolvedores é o atributo global do HTML chamado &#96;hidden&#96;, nesse post vamos abordar quando utilizá-lo da melhor maneira.
   - name: og:image
-    content: https://htmlmoderno.com.br/images/posts/2018/08/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo.png
+    content: https://htmlmoderno.com.br/images/posts/2018/08/facebook-voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo.png
   - name: twitter:url
     content: https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade
   - name: twitter:title
@@ -36,7 +36,7 @@ meta:
   - name: twitter:description
     content: Um atributo desconhecido pelos desenvolvedores é o atributo global do HTML chamado &#96;hidden&#96;, nesse post vamos abordar quando utilizá-lo da melhor maneira.
   - name: twitter:image
-    content: https://htmlmoderno.com.br/images/posts/2018/08/voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo.png
+    content: https://htmlmoderno.com.br/images/posts/2018/08/twitter-voce-conhece-o-atributo-html-hidden-saiba-o-porque-e-quando-utiliza-lo.png
 
 ---
 

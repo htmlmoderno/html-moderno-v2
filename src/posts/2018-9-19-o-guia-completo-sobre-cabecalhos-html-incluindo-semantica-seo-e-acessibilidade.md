@@ -26,7 +26,7 @@ meta:
   - name: og:description
     content: Tags de cabeçalhos HTML H1-H6 indicam a relevância entre os títulos, otimiza para mecanismos de busca e estrutura de maneira semântica para acessibilidade.
   - name: og:image
-    content: https://htmlmoderno.com.br/images/posts/2018/09/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade.png
+    content: https://htmlmoderno.com.br/images/posts/2018/09/facebook-o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade.png
   - name: twitter:url
     content: https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade/
   - name: twitter:title
@@ -34,7 +34,7 @@ meta:
   - name: twitter:description
     content: Tags de cabeçalhos HTML H1-H6 indicam a relevância entre os títulos, otimiza para mecanismos de busca e estrutura de maneira semântica para acessibilidade.
   - name: twitter:image
-    content: https://htmlmoderno.com.br/images/posts/2018/09/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade.png
+    content: https://htmlmoderno.com.br/images/posts/2018/09/twitter-o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade.png
 
 
 ---

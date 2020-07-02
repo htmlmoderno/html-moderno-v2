@@ -25,7 +25,7 @@ meta:
   - name: og:description
     content: Essencial no HTML, a declaração do DOCTYPE atualmente está mais curta e simples, porém nem sempre foi assim. Fique sabendo mais sobre o seu papel.
   - name: og:image
-    content: https://htmlmoderno.com.br/images/posts/2018/09/voce-sempre-ve-o-doctype-ali-na-primeira-linha-mas-voce-sabe-o-por-que.png
+    content: https://htmlmoderno.com.br/images/posts/2018/09/facebook-voce-sempre-ve-o-doctype-ali-na-primeira-linha-mas-voce-sabe-o-por-que.png
   - name: twitter:url
     content: https://htmlmoderno.com.br/posts/voce-sempre-ve-o-doctype-ali-na-primeira-linha-mas-voce-sabe-o-por-que/
   - name: twitter:title
@@ -33,7 +33,7 @@ meta:
   - name: twitter:description
     content: Essencial no HTML, a declaração do DOCTYPE atualmente está mais curta e simples, porém nem sempre foi assim. Fique sabendo mais sobre o seu papel.
   - name: twitter:image
-    content: https://htmlmoderno.com.br/images/posts/2018/09/voce-sempre-ve-o-doctype-ali-na-primeira-linha-mas-voce-sabe-o-por-que.png
+    content: https://htmlmoderno.com.br/images/posts/2018/09/twitter-voce-sempre-ve-o-doctype-ali-na-primeira-linha-mas-voce-sabe-o-por-que.png
 
 ---
 
