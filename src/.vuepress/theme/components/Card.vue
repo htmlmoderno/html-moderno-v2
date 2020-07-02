@@ -7,12 +7,17 @@
       tabindex="-1"
     >
       <img
-        v-if="post.image.src"
+        v-show="post.image.src"
         class="w-full"
         :src="post.image.src"
         :alt="post.image.alt"
       >
     </router-link>
+    <div
+      v-show="!post.image.src"
+      :class="`w-full rounded-lg bg-cat-${post.category} mb-4`"
+      style="height: 10px;"
+    />
     <h2
       class="card-title text-lg font-bold leading-tight"
       :class="{ 'mt-3': post.image.src }"
@@ -34,12 +39,6 @@
       >
         <span class="sr-only">Colunista: </span> {{ post.author }}
       </router-link>
-      <span :class="`mx-2 font-bold text-cat-${post.category}`">//</span>
-      <DisqusCount
-        :url="`${getUrlBase}${post.to}`"
-        :identifier="post.to"
-        v-text="'0 comments'"
-      />
     </div>
     <router-link
       :to="post.to"
