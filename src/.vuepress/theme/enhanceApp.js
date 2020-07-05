@@ -1,9 +1,9 @@
 import VueAnnouncer from '@vue-a11y/announcer'
+import VueSkipTo from '@vue-a11y/skip-to'
 import VueCompositionApi from '@vue/composition-api'
 import event from '@vuepress/plugin-pwa/lib/event'
 import VueDisqus from 'vue-disqus'
 import VueMasonry from 'vue-masonry-css'
-import VueSkipTo from 'vue-skip-to'
 
 import FigureCode from './components/FigureCode.vue'
 import FigureCodeCaption from './components/FigureCodeCaption.vue'

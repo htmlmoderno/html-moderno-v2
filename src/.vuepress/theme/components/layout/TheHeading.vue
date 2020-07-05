@@ -1,7 +1,7 @@
 <template>
   <header class="flex flex-wrap pt-8 lg:pt-16">
     <ClientOnly>
-      <VueSkipTo />
+      <VueSkipTo label="Pular para o conteúdo principal" />
       <VueAnnouncer />
     </ClientOnly>
     <div class="flex w-full">
