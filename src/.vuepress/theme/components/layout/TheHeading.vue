@@ -43,7 +43,7 @@
         </div>
         <button
           class="ml-2 px-4 py-2 text-sm font-bold"
-          aria-label="Abrir menu de navegaçãao"
+          aria-label="Abrir menu de navegação"
           aria-controls="nav-menu"
           :disabled="isOpen"
           :aria-expanded="isOpen ? 'true' : 'false'"
