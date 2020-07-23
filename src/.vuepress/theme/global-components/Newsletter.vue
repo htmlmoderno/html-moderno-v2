@@ -18,10 +18,10 @@
       @submit.prevent="submitNewsletter"
     >
       <div class="w-full lg:w-2/5 p-0 lg:pr-3">
-        <label :for="`name-${random}`">
+        <label :for="nameLabel">
           <span>Nome</span>
           <input
-            :id="`name-${random}`"
+            :id="nameLabel"
             v-model="name"
             class="n9m n9m--inner py-4 px-6 w-full"
             aria-label=" nome"
@@ -31,10 +31,10 @@
         </label>
       </div>
       <div class="w-full lg:w-2/5 p-0 lg:pr-3 my-4 lg:my-0">
-        <label :for="`email-${random}`">
+        <label :for="emailLabel">
           <span>Email</span>
           <input
-            :id="`email-${random}`"
+            :id="emailLabel"
             v-model="email"
             class="n9m n9m--inner py-4 px-6 w-full"
             aria-label="Digite seu email"
@@ -82,7 +82,10 @@ export default {
     const email = ref(null)
     const message = ref({})
     const isSubmitted = ref(false)
+    
     const random = Math.floor(Math.random() * 1000)
+    const nameLabel = `name-${random}`
+    const emailLabel = `email-${random}`
 
     async function submitNewsletter () {
       isSubmitted.value = true
@@ -98,7 +101,8 @@ export default {
     return {
       name,
       email,
-      random,
+      nameLabel,
+      emailLabel,
       message,
       isSubmitted,
       submitNewsletter
