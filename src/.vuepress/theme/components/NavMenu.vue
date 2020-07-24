@@ -81,7 +81,7 @@
                 target="_blank"
                 rel="noopener"
                 :title="`Ir para o ${link.label} do HTML Moderno`"
-                :aria-label="`Ir para o ${link.label} do HTML Moderno, abre em uma nova janela`"
+                :aria-label="`Ir para o ${link.label} do HTML Moderno, abre em uma nova aba`"
               >
                 <span v-text="link.label" />
                 <vp-icon name="external-link" />
