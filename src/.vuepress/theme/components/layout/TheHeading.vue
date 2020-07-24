@@ -6,14 +6,11 @@
     </ClientOnly>
     <div class="flex w-full">
       <div class="w-3/12 md:w-1/3 lg:w-1/4">
-        <router-link
-          to="/"
-          title="HTML Moderno"
-        >
+        <router-link to="/">
           <img
             class="inline"
             src="/images/html-moderno-logo.svg"
-            alt="Logo HTML Moderno 4 quadrados laranja com 1 letra do HTML cada e símbolo universal de acessibilidade no centro"
+            alt="Logo HTML Moderno 4 quadrados laranja com 1 letra do HTML em cada e símbolo universal de acessibilidade no centro"
           >
         </router-link>
       </div>
@@ -23,6 +20,8 @@
             <DarkMode
               v-bind="colorModeConfig"
               class="px-6 py-2"
+              ariaLabel="Mudar para o mode de cor %cm."
+              ariaLive="Modo de cor %cm foi selecionado."
               @click.native="resetDisqus"
             >
               <template v-slot:default="{ mode }">
