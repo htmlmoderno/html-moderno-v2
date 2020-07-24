@@ -42,14 +42,13 @@
           />
         </div>
         <button
-          class="ml-2 px-4 py-2 text-sm font-bold"
-          aria-label="Abrir menu de navegação"
+          class="ml-2 px-4 py-2 text-sm font-bold uppercase"
           aria-controls="nav-menu"
           :disabled="isOpen"
           :aria-expanded="isOpen ? 'true' : 'false'"
           @click="onOpen"
         >
-          MENU
+          <span class="sr-only">Abrir</span> menu
         </button>
       </div>
     </div>
