@@ -32,3 +32,7 @@ input::placeholder {
   outline-color: #573E48;
   outline-offset: 3px;
 }
+
+[tabindex="-1"] {
+	outline: 0
+}
