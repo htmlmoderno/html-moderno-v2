@@ -84,7 +84,7 @@ module.exports = {
     ]
   },
   footer: {
-    mailto: 'contato@htmlmoderno.com.br',
+    mailto: 'htmlmoderno@gmail.com',
     copy: '&copy; HTML Moderno'
   },
   locales: {
