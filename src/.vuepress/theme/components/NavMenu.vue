@@ -15,7 +15,7 @@
       :class="{ 'nav-menu__content--show': show }"
       :aria-hidden="!show"
     >
-      <FocusLock>
+      <FocusLoop>
         <button
           aria-label="Fechar menu de navegação"
           class="absolute text-4xl px-4 top-0 left-0 mt-4 ml-2 md:ml-8"
@@ -50,7 +50,7 @@
               <router-link
                 :to="link.to"
                 class="flex justify-between items-center py-4 border-b border-solid border-cat-semantica dark:border-dark-200 hover:underline"
-                :aria-label="`Ir para a página ${link.label}`"
+                :aria-label="`Ir para a página ${link.label}.`"
                 v-text="link.label"
               />
             </li>
@@ -67,7 +67,7 @@
             aria-level="2"
             class="text-3xl font-bold mb-8"
           >
-            <span class="sr-only">Menu de navegação para as </span> Redes sociais
+            <span class="sr-only">Menu de navegação para as </span> Redes sociais <span class="sr-only">do HTML Moderno.</span>
           </span>
 
           <ul>
@@ -80,8 +80,7 @@
                 class="flex justify-between items-center py-4 border-b border-solid border-cat-semantica dark:border-dark-200 hover:underline"
                 target="_blank"
                 rel="noopener"
-                :title="`Ir para o ${link.label} do HTML Moderno`"
-                :aria-label="`Ir para o ${link.label} do HTML Moderno, abre em uma nova aba`"
+                :aria-label="`Ir para o ${link.label}, abre em uma nova aba.`"
               >
                 <span v-text="link.label" />
                 <vp-icon name="external-link" />
@@ -89,14 +88,14 @@
             </li>
           </ul>
         </nav>
-      </FocusLock>
+      </FocusLoop>
     </div>
   </div>
 </template>
 
 <script>
+import { FocusLoop } from '@vue-a11y/focus-loop'
 import { watch } from '@vue/composition-api'
-import FocusLock from 'vue-focus-lock'
 
 import SearchBox from '@SearchBox'
 
@@ -105,7 +104,7 @@ export default {
 
   components: {
     SearchBox,
-    FocusLock
+    FocusLoop
   },
 
   props: {
