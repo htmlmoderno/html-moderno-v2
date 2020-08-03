@@ -17,6 +17,7 @@
     >
       <FocusLoop>
         <button
+          type="button"
           aria-label="Fechar menu de navegação"
           class="absolute text-4xl px-4 top-0 left-0 mt-4 ml-2 md:ml-8"
           @click="$emit('onClose')"

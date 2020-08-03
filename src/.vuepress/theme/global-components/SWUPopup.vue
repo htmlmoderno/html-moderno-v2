@@ -6,7 +6,7 @@
         class="my-sw-update-popup"
       >
         {{ message }}<br>
-        <button @click="reload">
+        <button type="button" @click="reload">
           {{ buttonText }}
         </button>
       </div>

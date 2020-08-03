@@ -1,6 +1,7 @@
 <template>
   <div class="back-to-top">
     <button
+      type="button"
       ref="arrowTop"
       class="back-to-top__btn"
       :class="{ 'back-to-top__btn--show': show, 'back-to-top__btn--fire': fire }"

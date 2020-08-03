@@ -41,6 +41,7 @@
           />
         </div>
         <button
+          type="button"
           class="ml-2 px-4 py-2 text-sm font-bold uppercase"
           aria-controls="nav-menu"
           :disabled="isOpen"

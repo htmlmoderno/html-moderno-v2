@@ -4,8 +4,8 @@
     class="figurecode teste-fig"
   >
     <slot name="content" />
-    <slot name="caption" />
     <slot name="copy" />
+    <slot name="caption" />
   </figure>
 </template>
 

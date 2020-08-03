@@ -26,6 +26,7 @@
             IR PARA HOME
           </router-link>
           <button
+            type="button"
             title="voltar para página anterior"
             class="n9m px-6 py-4 bg-light dark:bg-dark dark:text-textDark font-bold ml-5"
             @click="$router.go(-1)"

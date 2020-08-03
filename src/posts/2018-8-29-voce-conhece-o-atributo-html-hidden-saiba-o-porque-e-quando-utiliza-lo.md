@@ -126,7 +126,7 @@ Em outro contexto, em uma edição ou exclusão:
 
 ::: figurecode Usando aria-describedby em botão close
 ```html
-<button aria-label="close" aria-describedby="descriptionClose">X</button>
+<button type="button" aria-label="close" aria-describedby="descriptionClose">X</button>
 <div id="descriptionClose" hidden>
   Se você cancelar perderá as informações inseridas no campo XXX e será 
   enviado para a página anterior.

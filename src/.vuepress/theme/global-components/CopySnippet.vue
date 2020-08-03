@@ -10,6 +10,7 @@
       COPIADO
     </span>
     <button
+      type="button"
       class="copy-snippet__button p-4"
       aria-label="Copiar código"
       @click="copy"
