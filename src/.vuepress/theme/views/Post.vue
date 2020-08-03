@@ -39,7 +39,6 @@
           <img
             class="single-post__img-cover w-full rounded-lg bg-light-200 inline-block"
             :src="`${post.cover.path}.${post.cover.extension}`"
-            :title="post.cover.alternativeText"
             :alt="post.cover.alternativeText"
           >
         </responsive-picture>
