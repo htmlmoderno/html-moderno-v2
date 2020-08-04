@@ -25,6 +25,16 @@
               <span>{{ post.author.frontmatter.name }}</span>
             </router-link>
           </div>
+          <span :class="`mx-2 font-bold text-cat-${post.mainCategory}`">//</span>
+          <div class="inline">
+            <a
+              :href="post.issue"
+              class="underline"
+              aria-label="Ir para issue do artigo no Github"
+            >
+              Issue
+            </a>
+          </div>
         </div>
       </div>
 
@@ -112,6 +122,7 @@ export default {
       title: fm.title,
       audio: fm.audio || null,
       description: fm.description,
+      issue: fm.issue,
       author: author,
       mainCategory: fm.categories[0],
       updated_at: root.$page.lastUpdated,
