@@ -21,7 +21,6 @@ import { computed } from '@vue/composition-api'
 import TheHeading from '@theme/components/layout/TheHeading'
 import usePreferences from '@theme/composable/usePreferences'
 import NProgressMixin from '@theme/mixins/nProgress'
-import WebFontLoaderMixin from '@theme/mixins/webFontLoader'
 
 export default {
   name: 'GlobalLayout',
@@ -31,7 +30,7 @@ export default {
     TheFooter: () => import(/* webpackChunkName: "TheFooter" */ '@theme/components/layout/TheFooter')
   },
 
-  mixins: [NProgressMixin, WebFontLoaderMixin],
+  mixins: [NProgressMixin],
 
   setup (_, { root }) {
     const { init: initPreferences } = usePreferences()

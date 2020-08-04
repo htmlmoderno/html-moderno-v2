@@ -58,11 +58,13 @@ module.exports = [
   ['link', { rel: 'icon', type: 'image/png', href: '/favicon/favicon-96x96.png', sizes: '96x96' }],
   ['link', { rel: 'icon', type: 'image/png', href: '/favicon/favicon-32x32.png', sizes: '32x32' }],
   ['link', { rel: 'icon', type: 'image/png', href: '/favicon/favicon-16x16.png', sizes: '16x16' }],
+  ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Sintony:wght@400;700&display=swap' }],
 
   ['link', { rel: 'mask-icon', href: '/favicon/safari-pinned-tab.svg', color: '#ff5733' }],
   ['link', { id: 'favicon', rel: 'icon', href: '/favicon/favicon.svg' }],
 
   ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com/' }],
+  ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com/' }],
   ['link', { rel: 'preconnect', href: 'https://c.disquscdn.com/' }],
   ['link', { rel: 'preconnect', href: 'https://disqus.com/' }],
   ['link', { rel: 'preconnect', href: 'https://www.google-analytics.com/' }],
