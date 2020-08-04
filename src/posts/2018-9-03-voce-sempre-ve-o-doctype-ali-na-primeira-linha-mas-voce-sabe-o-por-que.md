@@ -12,6 +12,7 @@ thumb:
     path: /images/posts/2018/09/
     alternativeText: Imagem de capa background roxo pastel e uma ilustração de 3 documentos
 
+issue: https://github.com/htmlmoderno/forum/issues/3
 categories: [seguranca, semantica, html5]
 tags: [HTML5, Seguranca web]
 author: ktquez

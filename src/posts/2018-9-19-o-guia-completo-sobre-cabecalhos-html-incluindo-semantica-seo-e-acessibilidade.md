@@ -13,6 +13,7 @@ cover:
     alternativeText: Imagem de capa background salmão e uma ilustração da janela de um browser contendo um artigo
     caption: Hierarquia de cabeçalhos
 
+issue: https://github.com/htmlmoderno/forum/issues/2
 categories: [html5, seo, semantica, acessibilidade]
 tags: [HTML5, heading, SEO, W3C]
 author: ktquez

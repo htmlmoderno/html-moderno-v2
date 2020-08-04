@@ -15,6 +15,7 @@ cover:
 
 demo: https://thepaciellogroup.github.io/AT-browser-tests/test-files/hidden-att.html
 audio: 492895791
+issue: https://github.com/htmlmoderno/forum/issues/1
 categories: [html5, acessibilidade]
 tags: [a11y, Atributos]
 author: ktquez
