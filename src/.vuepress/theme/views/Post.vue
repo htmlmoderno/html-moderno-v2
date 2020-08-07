@@ -3,7 +3,10 @@
     id="main"
     class="single-post"
   >
-    <article class="w-full layout-section">
+    <article
+      class="w-full layout-section"
+      role="main"
+    >
       <div class="single-post__container single-post__container--no-mt">
         <h1 class="w-full text-3xl sm:text-4xl font-bold">
           {{ post.title }}<span class="text-accent">.</span>
@@ -76,13 +79,13 @@
         </intersection-observer>
       </div>
 
-      <section class="single-post__container">
+      <div class="single-post__container">
         <Content />
-      </section>
+      </div>
 
-      <section class="single-post__container single-post__box-share border-t border-light-200 dark:border-dark-200">
+      <div class="single-post__container single-post__box-share border-t border-light-200 dark:border-dark-200">
         <share-post />
-      </section>
+      </div>
 
       <component
         :is="'script'"
