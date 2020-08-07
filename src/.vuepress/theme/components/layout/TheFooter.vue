@@ -47,7 +47,7 @@
                 :rel="item.label === 'Twitter' ? 'me noopener' : 'noopener'"
                 target="_blank"
                 class="footer__link base-link"
-                :aria-label="`${item.label}, abre em uma nova janela.`"
+                :aria-label="`${item.label}, abre em uma nova aba.`"
               >
                 {{ item.label }}
               </a>

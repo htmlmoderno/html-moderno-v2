@@ -22,7 +22,7 @@ module.exports = {
   locales: {
     '/': {
       lang: 'pt-br',
-      externalLinkTextSrOnly: 'abre em uma nova janela'
+      externalLinkTextSrOnly: 'abre em uma nova aba'
     }
   },
   chainMarkdown,

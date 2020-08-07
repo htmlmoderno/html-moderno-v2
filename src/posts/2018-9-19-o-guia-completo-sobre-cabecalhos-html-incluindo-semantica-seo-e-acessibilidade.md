@@ -214,7 +214,7 @@ Em um [hangout para webmasters](https://www.youtube.com/watch?v=6MNzdm0K-zE) no 
 
 <q>Às vezes você tem várias [tags] h1, às vezes [...] a ordem é um pouco diferente por causa de seu modelo ou algo em sua página e isso é perfeitamente aceitável.</q>
 
-<footer>-- John Miller, <cite> <a href="https://www.youtube.com/watch?v=6MNzdm0K-zE" target="_blank" rel="noopener noreferrer">English Google Webmaster Central office-hours hangout <span class="sr-only">, abre em uma nova janela</span> <OutboundLink /></a>, 2018</cite></footer>
+<footer>-- John Miller, <cite> <a href="https://www.youtube.com/watch?v=6MNzdm0K-zE" target="_blank" rel="noopener noreferrer">English Google Webmaster Central office-hours hangout <span class="sr-only">, abre em uma nova aba</span> <OutboundLink /></a>, 2018</cite></footer>
 :::
 
 Acho importante sempre estar antenado nas opiniões de especialistas do Google quando se trata de SEO, mas em alguns casos como falamos até aqui neste artigo, uma estrutura consistente e dentro das recomendações do HTML5 beneficiará tanto o SEO, quanto a experiência de usuários de tecnologia assistiva.
