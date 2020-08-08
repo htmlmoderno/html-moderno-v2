@@ -13,18 +13,18 @@
             "date_modified": "2018-08-28T00:00:00.000Z"
         },
         {
-            "id": "https://htmlmoderno.com.br/posts/voce-sempre-ve-o-doctype-ali-na-primeira-linha-mas-voce-sabe-o-por-que/",
-            "url": "https://htmlmoderno.com.br/posts/voce-sempre-ve-o-doctype-ali-na-primeira-linha-mas-voce-sabe-o-por-que/",
-            "title": "Você sempre vê o DOCTYPE na primeira linha do HTML, mas você sabe o por quê?",
-            "summary": "Essencial no HTML, a declaração do DOCTYPE atualmente está mais curta e simples, porém nem sempre foi assim. Fique sabendo mais sobre o seu papel.",
-            "date_modified": "2018-09-03T00:00:00.000Z"
-        },
-        {
             "id": "https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade/",
             "url": "https://htmlmoderno.com.br/posts/o-guia-completo-sobre-cabecalhos-html-incluindo-semantica-seo-e-acessibilidade/",
             "title": "O guia completo sobre cabeçalhos HTML incluindo semântica, SEO e acessibilidade",
             "summary": "Tags de cabeçalhos HTML H1-H6 indicam a relevância entre os títulos, otimiza para mecanismos de busca e estrutura de maneira semântica para acessibilidade.",
             "date_modified": "2018-09-19T00:00:00.000Z"
+        },
+        {
+            "id": "https://htmlmoderno.com.br/posts/voce-sempre-ve-o-doctype-ali-na-primeira-linha-mas-voce-sabe-o-por-que/",
+            "url": "https://htmlmoderno.com.br/posts/voce-sempre-ve-o-doctype-ali-na-primeira-linha-mas-voce-sabe-o-por-que/",
+            "title": "Você sempre vê o DOCTYPE na primeira linha do HTML, mas você sabe o por quê?",
+            "summary": "Essencial no HTML, a declaração do DOCTYPE atualmente está mais curta e simples, porém nem sempre foi assim. Fique sabendo mais sobre o seu papel.",
+            "date_modified": "2018-09-03T00:00:00.000Z"
         }
     ]
 }
