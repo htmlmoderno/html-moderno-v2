@@ -3,10 +3,7 @@
     id="main"
     class="single-post"
   >
-    <article
-      class="w-full layout-section"
-      role="main"
-    >
+    <article class="w-full layout-section">
       <div class="single-post__container single-post__container--no-mt">
         <h1 class="w-full text-3xl sm:text-4xl font-bold">
           {{ post.title }}<span class="text-accent">.</span>
