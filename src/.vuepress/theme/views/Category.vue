@@ -7,7 +7,7 @@
       class="py-4"
     />
     <the-main>
-      <section class="w-full layout-section">
+      <div class="w-full layout-section">
         <masonry
           v-show="posts.length"
           :cols="{default: 3, 1024: 2, 600: 1}"
@@ -30,7 +30,7 @@
             Em breve teremos artigos para essa categoria.
           </span>
         </div>
-      </section>
+      </div>
     </the-main>
   </div>
 </template>

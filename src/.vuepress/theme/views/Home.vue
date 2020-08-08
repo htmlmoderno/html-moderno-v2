@@ -5,7 +5,7 @@
       second-title="Tornando o desenvolvimento web ainda mais interessante"
     />
     <the-main>
-      <section class="w-full layout-section">
+      <div class="w-full layout-section">
         <masonry
           :cols="{default: 3, 1024: 2, 600: 1}"
           :gutter="50"
@@ -33,7 +33,7 @@
             />
           </router-link>
         </div>
-      </section>
+      </div>
     </the-main>
   </div>
 </template>
