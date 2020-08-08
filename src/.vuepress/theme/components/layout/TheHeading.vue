@@ -20,8 +20,8 @@
             <DarkMode
               v-bind="colorModeConfig"
               class="px-6 py-2"
-              ariaLabel="Mudar para o mode de cor %cm."
-              ariaLive="Modo de cor %cm foi selecionado."
+              aria-label="Mudar para o mode de cor %cm."
+              aria-live="Modo de cor %cm foi selecionado."
               @click.native="resetDisqus"
             >
               <template v-slot:default="{ mode }">
@@ -37,6 +37,7 @@
         <div class="hidden sm:block sm:w-2/3 lg:w-2/5 ml-8">
           <search-box
             ref="searchBox"
+            role="search"
             class="n9m-search n9m--inner"
           />
         </div>

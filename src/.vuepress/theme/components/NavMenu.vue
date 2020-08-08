@@ -26,7 +26,10 @@
         </button>
 
         <div class="block sm:hidden w-full mt-10">
-          <search-box class="n9m-search n9m--inner" />
+          <search-box
+            role="search"
+            class="n9m-search n9m--inner"
+          />
         </div>
 
         <nav
